@@ -1,0 +1,2020 @@
+{
+  "districts": [
+    {
+      "slug": "senopati",
+      "name": "Senopati",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Senopati - Untuk Restoran Mewah, Cafe Premium dan Hotel Bintang 5",
+      "angle": "Pemasok sayuran premium untuk chef eksekutif di restoran fine dining",
+      "seoContent": "Kami memahami kebutuhan chef profesional di kawasan Senopati akan bahan baku berkualitas tinggi. Microgreens, edible flowers, dan sayuran organik dari Cipanas kami panen dini hari untuk menjamin kesegaran maksimal. Tekstur renyah dan warna cerah alami sayuran pegunungan sangat cocok untuk plating premium di restoran fine dining. Pengiriman kami sebelum jam 06.30 pagi memastikan bahan siap digunakan untuk breakfast service hotel bintang 5. Sistem cold chain dari kebun ke dapur menjaga kualitas optimal setiap produk.",
+      "metaDescription": "Supplier sayur Senopati untuk restoran mewah dan hotel bintang 5. Sayuran premium dari Cipanas, pengiriman pagi, kualitas chef grade.",
+      "clientFocus": "Restoran Fine Dining, Hotel Bintang 5, Cafe Premium, Executive Chef",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tol Dalam Kota-Sudirman-Senopati",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.30 (batch 1), 09.30 (batch 2)",
+        "title": "Layanan Premium untuk Chef Profesional",
+        "desc": "Panen subuh khusus untuk restoran fine dining, quality control ketat untuk plating premium"
+      }
+    },
+    {
+      "slug": "gunawarman",
+      "name": "Gunawarman",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Gunawarman - Untuk Restoran Konsep, Bistro dan Coffee Shop Eksklusif",
+      "angle": "Penyedia bahan baku kreatif untuk chef inovatif di bistro premium",
+      "seoContent": "Chef kreatif di kawasan Gunawarman membutuhkan sayuran dengan karakter kuat untuk menu signature mereka. Kale, arugula, dan microgreens dari Cipanas memiliki rasa yang lebih intens berkat pertumbuhan di dataran tinggi. Kami menyediakan varietas khusus seperti baby carrots rainbow dan heirloom tomatoes yang sempurna untuk bistro konsep. Pengiriman dua kali sehari mendukung prep time yang berbeda untuk lunch dan dinner service. Konsistensi kualitas menjadi prioritas kami untuk mendukung reputasi restoran Anda.",
+      "metaDescription": "Supplier sayur Gunawarman untuk restoran konsep dan bistro premium. Bahan baku kreatif dari Cipanas, konsistensi kualitas terjamin.",
+      "clientFocus": "Restoran Konsep, Bistro Premium, Coffee Shop Eksklusif, Chef Kreatif",
+      "deliveryRoute": "Cipanas-Cianjur-Puncak-Jagorawi-Gatot Subroto-Gunawarman",
+      "logistics": {
+        "time": "03.00-05.30 (panen), 06.45 (batch 1), 10.00 (batch 2)",
+        "title": "Dual Delivery untuk Operasional Restoran",
+        "desc": "Dua kali pengiriman harian untuk lunch dan dinner prep, packaging khusus untuk sayuran premium, real-time order tracking"
+      }
+    },
+    {
+      "slug": "scbd",
+      "name": "SCBD",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur SCBD - Untuk Kantin Perusahaan, Food Court, Restoran Premium dan Catering Kantor",
+      "angle": "Solusi logistik terintegrasi untuk kompleks bisnis premium",
+      "seoContent": "Kawasan SCBD dengan kompleksitas operasional yang tinggi membutuhkan supplier yang memahami deadline ketat. Kami mengoptimalkan rute pengiriman untuk mencapai setiap titik sebelum jam operasional dimulai. Food court mendapat pasokan ultra-pagi pukul 05.30, kantin perusahaan sebelum jam 07.00, dan restoran premium sebelum prep time siang. Sayuran dari Cipanas memiliki daya tahan lebih lama, ideal untuk volume besar di catering perusahaan. Sistem inventory management kami membantu mengurangi food waste.",
+      "metaDescription": "Supplier sayur SCBD untuk kompleks bisnis premium. Logistik terintegrasi, pengiriman tepat waktu, solusi volume besar.",
+      "clientFocus": "Kantin Perusahaan, Food Court, Restoran Premium, Catering Kantor, Mall Restaurants",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tol Dalam Kota-Sudirman-SCBD",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.00 (batch 1), 10.00-11.30 (batch 2)",
+        "title": "Time-Critical Delivery System",
+        "desc": "Jadwal pengiriman berdasarkan jam operasional client, priority delivery untuk restoran premium, bulk handling untuk catering"
+      }
+    },
+    {
+      "slug": "kebayoran-baru",
+      "name": "Kebayoran Baru",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Kebayoran Baru - Untuk Restoran Keluarga, Warung Sehat, Cafe dan Usaha Takeaway",
+      "angle": "Penyedia sayuran segar dengan harga kompetitif untuk bisnis kuliner harian",
+      "seoContent": "Bisnis kuliner di Kebayoran Baru mengutamakan kesegaran dengan budget efisien. Sayuran dari Cipanas menawarkan nilai terbaik dengan tekstur renyah yang tahan lama. Restoran keluarga mendapat keuntungan dari harga grosir dengan kualitas konsisten. Warung sehat dapat mengandalkan sayuran organik untuk pelanggan kesehatan. Cafe mendapatkan bahan premium untuk Western menu dengan harga terjangkau. Pengiriman pagi sebelum jam 08.30 memastikan kesiapan untuk lunch rush.",
+      "metaDescription": "Supplier sayur Kebayoran Baru untuk bisnis kuliner harian. Harga kompetitif, kualitas segar, pengiriman pagi tepat waktu.",
+      "clientFocus": "Restoran Keluarga, Warung Sehat, Cafe, Usaha Takeaway, Rumah Makan",
+      "deliveryRoute": "Cipanas-Cianjur-Puncak-Jagorawi-Blok M-Kebayoran Baru",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.30 (utama), 14.00-16.00 (tambahan)",
+        "title": "Ekonomis dan Efisien",
+        "desc": "Harga grosir untuk volume tertentu, free delivery untuk order besar, flexible payment terms"
+      }
+    },
+    {
+      "slug": "menteng-dalam",
+      "name": "Menteng Dalam",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Menteng Dalam - Untuk Rumah Makan, Depot, Restoran Fusion dan Usaha Catering",
+      "angle": "Fleksibilitas pasokan untuk berbagai model bisnis kuliner",
+      "seoContent": "Dari rumah makan tradisional hingga restoran fusion, kami menyediakan solusi pasokan yang sesuai. Depot dengan turnover cepat mendapat pasokan harian yang andal. Restoran fusion mendapatkan sayuran unik untuk kreasi menu. Usaha catering mendapat harga spesial untuk volume besar. Minimum order yang rendah memungkinkan usaha kecil tetap mendapat kualitas premium. Sistem JIT (Just In Time) mengurangi inventory cost dan food waste.",
+      "metaDescription": "Supplier sayur Menteng Dalam untuk semua jenis usaha kuliner. Fleksibel untuk berbagai skala, minimum order rendah, kualitas premium.",
+      "clientFocus": "Rumah Makan, Depot, Restoran Fusion, Usaha Catering, Warung Nasi",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cawang-Tebet-Menteng Dalam",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-09.00 (utama), 15.00-17.00 (emergency)",
+        "title": "Fleksibel untuk Semua Skala",
+        "desc": "No minimum order policy, JIT delivery system, emergency order sampai jam 12.00"
+      }
+    },
+    {
+      "slug": "dharmawangsa",
+      "name": "Dharmawangsa",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Dharmawangsa - Untuk Fine Dining, Luxury Hotel, Private Club dan Event Organizer",
+      "angle": "Penyedia produk eksklusif untuk pengalaman kuliner premium",
+      "seoContent": "Fine dining restaurant di Dharmawangsa membutuhkan sayuran dengan standar estetika tertinggi. Edible flowers, microgreens, dan heirloom vegetables dari Cipanas memiliki visual perfection untuk plating artistik. Luxury hotel mengandalkan konsistensi kami untuk banquet service besar. Private club memerlukan produk khusus untuk member eksklusif. Event organizer mempercayai kami untuk wedding dan acara premium. White-glove delivery service memastikan penanganan terbaik.",
+      "metaDescription": "Supplier sayur Dharmawangsa untuk fine dining dan acara premium. Produk eksklusif, layanan white-glove, standar hospitality tertinggi.",
+      "clientFocus": "Fine Dining, Luxury Hotel, Private Club, Event Organizer, Catering Eksklusif",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Kuningan-Dharmawangsa",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 05.00-06.30 (luxury), 09.00-10.30 (premium)",
+        "title": "Layanan Hospitality Premium",
+        "desc": "White-glove delivery, custom packaging dengan branding client, temperature & humidity controlled transport"
+      }
+    },
+    {
+      "slug": "cipete-raya",
+      "name": "Cipete Raya",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Cipete Raya - Untuk Cafe Instagramable, Coffee Shop, Bakery dan Salad Bar",
+      "angle": "Penyedia sayuran photogenic untuk bisnis makanan kekinian",
+      "seoContent": "Visual appeal menjadi kunci sukses bisnis kuliner di Cipete Raya. Sayuran dari Cipanas memiliki warna cerah alami dan bentuk sempurna yang Instagramable. Cafe kekinian mendapatkan produk yang meningkatkan aesthetic plating. Coffee shop mendapat bahan fresh untuk sandwich dan wrap yang menarik. Bakery membutuhkan greens untuk healthy pastry yang eye-catching. Salad bar mengandalkan kesegaran kami untuk topping yang crispy. Same-day delivery untuk kebutuhan content shooting tersedia.",
+      "metaDescription": "Supplier sayur Cipete Raya untuk bisnis makanan kekinian. Sayuran Instagramable, warna cerah alami, perfect untuk plating aesthetic.",
+      "clientFocus": "Cafe Instagramable, Coffee Shop, Bakery, Salad Bar, Healthy Food Joint",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tol Dalam Kota-Cipete Raya",
+      "logistics": {
+        "time": "03.00-05.30 (panen), 06.00-08.00 (utama), 12.00 cutoff (emergency)",
+        "title": "Visual Quality Focus",
+        "desc": "Color-graded produce selection, same-day delivery untuk content creation, packaging aesthetic-friendly"
+      }
+    },
+    {
+      "slug": "kemang-pratama",
+      "name": "Kemang Pratama",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Kemang Pratama - Untuk Restoran, Perumahan Premium, Office Pantry dan Home Catering",
+      "angle": "Solusi hybrid untuk lingkungan residential-komersial terpadu",
+      "seoContent": "Kemang Pratama membutuhkan sistem pasokan yang melayani B2B dan B2C secara efisien. Restoran mendapat morning delivery untuk operasional harian. Perumahan premium mendapat afternoon delivery untuk kebutuhan residential. Office pantry mendapatkan supply teratur untuk employee wellness. Home catering business mendapat support untuk home-based operation. Sistem payment terpisah: cash untuk perorangan, invoice untuk bisnis. Packaging berbeda untuk komersial vs konsumen.",
+      "metaDescription": "Supplier sayur Kemang Pratama untuk lingkungan hybrid. Layanan B2B & B2C terpadu, jadwal pengiriman fleksibel, sistem pembayaran berbeda.",
+      "clientFocus": "Restoran, Perumahan Premium, Office Pantry, Home Catering, Private Chef",
+      "deliveryRoute": "Cipanas-Cianjur-Puncak-JORR-Kemang Pratama",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-09.00 (komersial), 14.00-16.00 (residential)",
+        "title": "Hybrid Distribution Model",
+        "desc": "Commercial route pagi hari, residential route sore hari, packaging berbeda B2B vs B2C, payment system terpisah"
+      }
+    },
+    {
+      "slug": "bangka",
+      "name": "Bangka",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Bangka - Untuk Rumah Makan Padang, Restoran Tradisional, Depot Masakan Indonesia dan Catering Rapat",
+      "angle": "Spesialis sayuran lokal untuk masakan Indonesia otentik",
+      "seoContent": "Kami memahami kebutuhan spesifik masakan Indonesia di kawasan Bangka. Rumah makan Padang membutuhkan daun singkong dan nangka muda dalam volume besar setiap hari. Restoran tradisional mengandalkan kami untuk sayur asam, lodeh, dan gulai. Depot masakan Indonesia mendapat pasokan harian yang konsisten. Catering rapat mempercayai kami untuk nasi kotak dalam jumlah banyak. Harga grosir untuk volume besar, dengan kualitas yang tetap terjaga. Pengiriman ultra-pagi untuk restoran yang buka 24 jam.",
+      "metaDescription": "Supplier sayur Bangka spesialis masakan Indonesia. Sayuran lokal lengkap, harga grosir volume besar, pengiriman pagi untuk restoran 24 jam.",
+      "clientFocus": "Rumah Makan Padang, Restoran Tradisional, Depot Masakan Indonesia, Catering Rapat, Warung Nasi",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tebet-Mampang-Bangka",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (volume besar), 13.00 cutoff (order besok)",
+        "title": "Bulk Supply System",
+        "desc": "Gunny sack packaging untuk sayuran daun, harga khusus volume besar, daily delivery untuk restoran 24 jam"
+      }
+    },
+    {
+      "slug": "pondok-indah",
+      "name": "Pondok Indah",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pondok Indah - Untuk Mall Restaurants, Food Court, Cinema Cafe dan Food Hall Tenant",
+      "angle": "Supplier compliant dengan regulasi mall untuk tenant makanan",
+      "seoContent": "Pengiriman ke kompleks mall membutuhkan kepatuhan terhadap protokol ketat. Kami terlatih dalam loading dock delivery dengan time slot yang ditentukan. Mall restaurants mendapat supply teratur dengan dokumentasi lengkap. Food court tenant mendapatkan pasokan ultra-pagi untuk persiapan buka. Cinema cafe mendapat snack vegetables untuk operational hours panjang. Food hall tenant mengandalkan kami untuk produk premium dengan traceability. Semua pengiriman dilengkapi hygiene certificate dan delivery permit.",
+      "metaDescription": "Supplier sayur Pondok Indah untuk kompleks mall. Compliant dengan mall regulation, delivery sesuai time slot, dokumentasi lengkap.",
+      "clientFocus": "Mall Restaurants, Food Court, Cinema Cafe, Food Hall Tenant, Kios Makanan",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tol Lingkar Luar-Pondok Indah",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 05.00-06.30 (early batch), 08.30-10.30 (main batch)",
+        "title": "Mall-Compliant Logistics",
+        "desc": "Loading dock delivery dengan time slot, hygiene certificate setiap kiriman, koordinasi dengan mall management"
+      }
+    },
+    {
+      "slug": "cilandak",
+      "name": "Cilandak",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Cilandak - Untuk Restoran Komersial, Office Catering, Kafe dan Usaha Makanan Rumahan",
+      "angle": "Pemasok sayuran untuk mixed-use area dengan berbagai jenis bisnis F&B",
+      "seoContent": "Area komersial Cilandak memiliki beragam jenis bisnis makanan dengan kebutuhan berbeda. Restoran komersial membutuhkan menu lengkap dengan cost control yang ketat. Office catering memerlukan sayuran sehat untuk corporate lunch program. Kafe modern menginginkan bahan premium untuk Western menu. Usaha makanan rumahan membutuhkan bahan fresh untuk home-based business. Kami menyediakan tiered system: Basic untuk usaha mikro, Business untuk UMKM, Corporate untuk perusahaan besar. Semua dapat kualitas sama dari Cipanas.",
+      "metaDescription": "Supplier sayur Cilandak untuk semua jenis bisnis makanan. Tiered system untuk berbagai skala usaha, kualitas konsisten dari Cipanas.",
+      "clientFocus": "Restoran Komersial, Office Catering, Kafe, Usaha Makanan Rumahan, UMKM Kuliner",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cilandak Town Square",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (restoran), 09.00-11.00 (kantor & catering)",
+        "title": "Sistem Bertingkat",
+        "desc": "Basic: minimal service, Business: scheduled delivery, Corporate: account manager + monthly report"
+      }
+    },
+    {
+      "slug": "lebak-bulus",
+      "name": "Lebak Bulus",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Lebak Bulus - Untuk Restoran, Cafe, Warung Sehat dan Catering Sekolah",
+      "angle": "Penyuplai sayuran untuk bisnis makanan di area residential komersial",
+      "seoContent": "Lebak Bulus sebagai area residential komersial membutuhkan supplier yang memahami kebutuhan community-based business. Restoran lokal memerlukan sayuran segar untuk daily specials yang berubah setiap hari. Cafe neighborhood mengandalkan kami untuk brunch menu yang fresh. Warung sehat membutuhkan organic vegetables untuk health-conscious residents. Catering sekolah memerlukan sayuran murah namun berkualitas untuk student meals. Kami menawarkan community pricing untuk bisnis lokal dengan komitmen jangka panjang.",
+      "metaDescription": "Supplier sayur Lebak Bulus untuk bisnis makanan komunitas. Community pricing khusus, pengiriman lokal, dukungan untuk usaha sekitar.",
+      "clientFocus": "Restoran Lokal, Cafe Neighborhood, Warung Sehat, Catering Sekolah, Bisnis Komunitas",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cilandak-Lebak Bulus",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (utama), 14.00-16.00 (sekolah)",
+        "title": "Community-Based Service",
+        "desc": "Local community pricing, group delivery untuk area yang sama, support untuk usaha lokal berkembang"
+      }
+    },
+    {
+      "slug": "permata-hijau",
+      "name": "Permata Hijau",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Permata Hijau - Untuk Restoran Eksklusif, Hotel Boutique, Private Dining dan Catering Premium",
+      "angle": "Penyedia sayuran untuk lingkungan residential eksklusif dengan bisnis kuliner terpilih",
+      "seoContent": "Permata Hijau sebagai kawasan eksklusif membutuhkan standar yang tinggi untuk bisnis kuliner. Restoran eksklusif di area ini memerlukan sayuran dengan aesthetic perfection untuk fine dining experience. Hotel boutique menginginkan produk yang unique untuk differentiate dari chain hotel. Private dining service membutuhkan bahan premium untuk intimate dining experience. Catering premium untuk residence memerlukan sayuran dengan presentation terbaik. Kami menyediakan exclusive varieties yang tidak tersedia di pasaran umum.",
+      "metaDescription": "Supplier sayur Permata Hijau untuk lingkungan eksklusif. Produk premium exclusive, presentation perfect, layanan personalized.",
+      "clientFocus": "Restoran Eksklusif, Hotel Boutique, Private Dining, Catering Premium, Residence Service",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tol Lingkar Luar-Permata Hijau",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 05.30-07.00 (batch 1), 09.30-11.00 (batch 2)",
+        "title": "Exclusive Service Protocol",
+        "desc": "Unlisted varieties only, personalized packaging, discrete delivery untuk privacy client"
+      }
+    },
+    {
+      "slug": "tb-simatupang",
+      "name": "TB Simatupang",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur TB Simatupang - Untuk Restoran Kantor, Food Park, Coffee Shop dan Catering Perusahaan",
+      "angle": "Pemasok sayuran untuk kawasan koridor bisnis dengan kebutuhan operasional tinggi",
+      "seoContent": "TB Simatupang sebagai koridor bisnis utama memiliki kebutuhan operasional yang intens. Restoran kantor membutuhkan supply yang reliable untuk employee dining. Food park dengan multiple vendors memerlukan sistem distribusi yang terkoordinasi. Coffee shop di area perkantoran membutuhkan bahan fresh untuk daily rush. Catering perusahaan memerlukan volume besar dengan jadwal ketat. Kami mengoptimalkan rute untuk mengcover seluruh area koridor bisnis secara efisien, dengan time slot yang tepat untuk setiap jenis bisnis.",
+      "metaDescription": "Supplier sayur TB Simatupang untuk koridor bisnis. Rute teroptimasi untuk perkantoran, jadwal ketat, volume besar untuk catering.",
+      "clientFocus": "Restoran Kantor, Food Park, Coffee Shop Perkantoran, Catering Perusahaan, Kantin Gedung",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-TB Simatupang Corridor",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (perkantoran), 10.00-12.00 (catering)",
+        "title": "Business Corridor Optimization",
+        "desc": "Optimized corridor route, corporate time slots, volume discount untuk gedung perkantoran"
+      }
+    },
+    {
+      "slug": "mega-kuningan",
+      "name": "Mega Kuningan",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Mega Kuningan - Untuk Restoran Hotel, Cafe Eksklusif, Fine Dining dan Corporate Dining",
+      "angle": "Penyedia sayuran untuk kawasan bisnis premium dengan standar internasional",
+      "seoContent": "Mega Kuningan sebagai pusat bisnis premium membutuhkan supplier dengan standar internasional. Restoran hotel bintang memerlukan sayuran dengan sertifikasi keamanan pangan lengkap. Cafe eksklusif menginginkan produk imported quality dengan harga lokal. Fine dining restaurant membutuhkan consistency yang sempurna untuk Michelin-standard plating. Corporate dining untuk eksekutif memerlukan premium vegetables untuk executive lunch. Kami memenuhi semua requirement dengan sistem quality control yang ketat dan dokumentasi lengkap.",
+      "metaDescription": "Supplier sayur Mega Kuningan untuk bisnis premium. Standar internasional, sertifikasi lengkap, kualitas konsisten untuk fine dining.",
+      "clientFocus": "Restoran Hotel Bintang, Cafe Eksklusif, Fine Dining, Corporate Dining, Executive Catering",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Kuningan-Mega Kuningan",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 05.00-06.30 (hotel), 08.30-10.30 (restoran)",
+        "title": "International Standard Protocol",
+        "desc": "HACCP certified process, complete food safety documentation, international quality standards"
+      }
+    },
+    {
+      "slug": "setiabudi",
+      "name": "Setiabudi",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Setiabudi - Untuk Restoran Korporat, Cafe Kantor, Catering Meeting dan Business Lunch",
+      "angle": "Pemasok sayuran untuk lingkungan bisnis korporat dengan kebutuhan terstruktur",
+      "seoContent": "Kawasan Setiabudi dipenuhi oleh perusahaan-perusahaan dengan kebutuhan food service yang terstruktur. Restoran korporat membutuhkan sistem supply yang integrated dengan corporate procurement. Cafe kantor memerlukan bahan yang sesuai dengan employee wellness program. Catering meeting membutuhkan sayuran praktis untuk business events. Business lunch service memerlukan bahan fresh untuk executive meals. Kami menyediakan corporate account system dengan monthly billing, detailed reporting, dan procurement integration.",
+      "metaDescription": "Supplier sayur Setiabudi untuk lingkungan korporat. Corporate account system, monthly billing, procurement integration.",
+      "clientFocus": "Restoran Korporat, Cafe Kantor, Catering Meeting, Business Lunch, Corporate Food Service",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Setiabudi",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (korporat), 09.30-11.30 (meeting)",
+        "title": "Corporate Procurement Integration",
+        "desc": "Corporate account management, monthly consolidated billing, procurement system integration, usage reporting"
+      }
+    },
+    {
+      "slug": "rasuna-said",
+      "name": "Rasuna Said",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Rasuna Said - Untuk Hotel Bintang 5, Restoran Internasional, Cafe Premium dan Banquet Service",
+      "angle": "Penyuplai sayuran untuk golden triangle bisnis dengan kebutuhan hospitality tinggi",
+      "seoContent": "Rasuna Said sebagai bagian dari golden triangle bisnis Jakarta memiliki konsentrasi hospitality business yang tinggi. Hotel bintang 5 membutuhkan volume besar untuk banquet dan restaurant operations. Restoran internasional memerlukan sayuran dengan karakteristik spesifik sesuai cuisine. Cafe premium menginginkan bahan dengan aesthetic value tinggi. Banquet service membutuhkan consistency across large volumes. Kami memiliki kapasitas dan expertise untuk memenuhi kebutuhan skala besar dengan standar tertinggi.",
+      "metaDescription": "Supplier sayur Rasuna Said untuk golden triangle bisnis. Kapasitas besar untuk hotel dan banquet, standar hospitality tinggi.",
+      "clientFocus": "Hotel Bintang 5, Restoran Internasional, Cafe Premium, Banquet Service, Convention Catering",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Rasuna Said",
+      "logistics": {
+        "time": "01.30-03.30 (panen), 04.30-06.30 (hotel), 08.00-10.00 (restoran)",
+        "title": "Hospitality Scale Operations",
+        "desc": "High-volume capacity, banquet-scale delivery, 24/7 support untuk hotel operations"
+      }
+    },
+    {
+      "slug": "pejaten-elit",
+      "name": "Pejaten Elit",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pejaten Elit - Untuk Restoran Keluarga Eksklusif, Cafe Taman, Bistro dan Private Event",
+      "angle": "Pemasok sayuran untuk lingkungan residential premium dengan lifestyle dining",
+      "seoContent": "Pejaten Elit sebagai kawasan residential premium memiliki bisnis kuliner yang fokus pada lifestyle dining. Restoran keluarga eksklusif membutuhkan sayuran premium untuk family fine dining experience. Cafe taman memerlukan bahan fresh untuk outdoor dining setting. Bistro cozy menginginkan vegetables dengan homey feel. Private event di residence membutuhkan sayuran dengan presentation khusus. Kami memahami nuansa lifestyle dining dan menyediakan produk yang sesuai dengan atmosphere yang diinginkan.",
+      "metaDescription": "Supplier sayur Pejaten Elit untuk lifestyle dining. Produk sesuai atmosphere, presentation khusus, layanan personalized.",
+      "clientFocus": "Restoran Keluarga Eksklusif, Cafe Taman, Bistro, Private Event, Residence Catering",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tebet-Pejaten",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (restoran), 12.00-14.00 (private event)",
+        "title": "Lifestyle Dining Support",
+        "desc": "Atmosphere-appropriate produce selection, event-specific packaging, flexible timing untuk private events"
+      }
+    },
+    {
+      "slug": "ampera",
+      "name": "Ampera",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Ampera - Untuk Rumah Makan Sunda, Restoran Familly, Depot dan Catering Acara",
+      "angle": "Penyedia sayuran untuk bisnis makanan tradisional dan keluarga di kawasan established",
+      "seoContent": "Kawasan Ampera yang established memiliki banyak bisnis makanan tradisional dan keluarga yang telah beroperasi puluhan tahun. Rumah makan Sunda membutuhkan sayuran segar untuk lalapan dan sayur tradisional. Restoran family memerlukan bahan yang terjangkau untuk menu harian. Depot dengan pelanggan setia menginginkan consistency di atas segalanya. Catering acara keluarga membutuhkan volume besar untuk hajatan. Kami menghargai tradisi dan konsistensi yang menjadi nilai utama bisnis-bisnis ini.",
+      "metaDescription": "Supplier sayur Ampera untuk bisnis makanan tradisional. Konsistensi jangka panjang, harga stabil, dukungan untuk usaha keluarga.",
+      "clientFocus": "Rumah Makan Sunda, Restoran Family, Depot, Catering Acara, Warung Tradisional",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cilandak-Ampéra",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (utama), 13.00-15.00 (catering)",
+        "title": "Traditional Business Partnership",
+        "desc": "Long-term price stability, consistent quality over years, understanding of traditional business values"
+      }
+    },
+    {
+      "slug": "mampang-prapatan",
+      "name": "Mampang Prapatan",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Mampang Prapatan - Untuk Restoran, Cafe, Warung Makan dan Usaha Kuliner Kreatif",
+      "angle": "Pemasok sayuran untuk kawasan dengan mix bisnis kuliner established dan kreatif",
+      "seoContent": "Mampang Prapatan memiliki karakter unik dengan campuran bisnis kuliner established dan usaha kreatif baru. Restoran lama membutuhkan reliabilitas pasokan untuk operasional harian. Cafe baru memerlukan bahan Instagramable untuk menarik pelanggan muda. Warung makan membutuhkan harga kompetitif untuk survive bisnis. Usaha kuliner kreatif menginginkan unique ingredients untuk diferensiasi. Kami melayani semua dengan approach yang berbeda sesuai karakter masing-masing bisnis.",
+      "metaDescription": "Supplier sayur Mampang Prapatan untuk mix bisnis established dan kreatif. Pendekatan berbeda per segment, dukungan untuk usaha baru.",
+      "clientFocus": "Restoran Established, Cafe Baru, Warung Makan, Usaha Kuliner Kreatif, F&B Startup",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Mampang",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (established), 09.30-11.30 (kreatif)",
+        "title": "Dual-Segment Approach",
+        "desc": "Reliable service untuk bisnis established, creative support untuk startup, different delivery protocols"
+      }
+    },
+    {
+      "slug": "tebet",
+      "name": "Tebet (Area Komersial)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Tebet - Untuk Restoran Komersial, Cafe Urban, Food Hall dan Catering Kantor",
+      "angle": "Penyuplai sayuran untuk kawasan urban yang sedang berkembang pesat",
+      "seoContent": "Tebet sebagai kawasan urban yang berkembang pesat memiliki dinamika bisnis kuliner yang tinggi. Restoran komersial membutuhkan supply chain yang efisien untuk competitive pricing. Cafe urban memerlukan bahan trendy untuk menu yang selalu update. Food hall dengan multiple concepts membutuhkan variasi produk yang luas. Catering kantor di gedung-gedung baru memerlukan service yang reliable. Kami mengikuti perkembangan kawasan dengan penyediaan produk dan layanan yang sesuai dengan trend terkini.",
+      "metaDescription": "Supplier sayur Tebet untuk kawasan urban berkembang. Produk sesuai trend, layanan efisien, mengikuti perkembangan kawasan.",
+      "clientFocus": "Restoran Komersial, Cafe Urban, Food Hall, Catering Kantor, Bisnis Urban",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tebet",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (komersial), 09.30-11.30 (kantor)",
+        "title": "Urban Development Responsive",
+        "desc": "Adaptive to area development, trend-responsive product selection, efficient urban logistics"
+      }
+    },
+    {
+      "slug": "pasar-minggu",
+      "name": "Pasar Minggu (Pejaten Timur)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pasar Minggu - Untuk Restoran, Cafe, Depot dan Catering Skala Menengah",
+      "angle": "Pemasok sayuran untuk kawasan dengan konsentrasi usaha kuliner menengah yang padat",
+      "seoContent": "Pasar Minggu memiliki konsentrasi usaha kuliner menengah yang sangat padat dengan karakter yang beragam. Restoran dengan kapasitas menengah membutuhkan volume tertentu dengan kualitas konsisten. Cafe di area ini memerlukan bahan yang balance antara kualitas dan harga. Depot dengan operational efficiency tinggi menginginkan sistem yang streamlined. Catering skala menengah membutuhkan reliability untuk memenuhi order harian. Kami mengoptimalkan rute untuk efisiensi di kawasan dengan density bisnis tinggi ini.",
+      "metaDescription": "Supplier sayur Pasar Minggu untuk usaha kuliner menengah padat. Rute teroptimasi untuk density tinggi, solusi untuk skala menengah.",
+      "clientFocus": "Restoran Menengah, Cafe, Depot, Catering Skala Menengah, Usaha Kuliner Padat",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Pasar Minggu",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.30 (rute padat), 13.00-15.00 (tambahan)",
+        "title": "High-Density Optimization",
+        "desc": "Optimized route untuk area padat, time-efficient delivery system, volume discount untuk cluster bisnis"
+      }
+    },
+    {
+      "slug": "jagakarsa",
+      "name": "Jagakarsa (Kebagusan)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Jagakarsa - Untuk Rumah Makan, Cafe Neighborhood, Warung dan Catering Lokal",
+      "angle": "Penyedia sayuran untuk kawasan residential dengan bisnis kuliner berbasis komunitas",
+      "seoContent": "Jagakarsa sebagai kawasan residential yang solid memiliki bisnis kuliner yang sangat berbasis komunitas. Rumah makan melayani warga sekitar dengan menu keluarga. Cafe neighborhood menjadi tempat berkumpul warga lokal. Warung dengan pelanggan tetap membutuhkan konsistensi di atas segalanya. Catering lokal untuk acara warga memerlukan kepercayaan dan reliability. Kami menjadi bagian dari komunitas dengan menyediakan layanan yang memahami dinamika lokal dan membangun hubungan jangka panjang.",
+      "metaDescription": "Supplier sayur Jagakarsa untuk bisnis kuliner komunitas. Memahami dinamika lokal, hubungan jangka panjang, bagian dari komunitas.",
+      "clientFocus": "Rumah Makan Komunitas, Cafe Neighborhood, Warung, Catering Lokal, Bisnis Warga",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Lenteng Agung-Jagakarsa",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (komunitas), 14.00-16.00 (lokal)",
+        "title": "Community-Integrated Service",
+        "desc": "Local community understanding, long-term relationship building, flexible terms untuk usaha warga"
+      }
+    },
+    {
+      "slug": "kebayoran-lama",
+      "name": "Kebayoran Lama (Pakubuwono)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Kebayoran Lama - Untuk Restoran Established, Cafe, Rumah Makan dan Catering Keluarga",
+      "angle": "Pemasok sayuran untuk kawasan established dengan bisnis kuliner yang telah mapan",
+      "seoContent": "Kebayoran Lama sebagai kawasan established memiliki bisnis kuliner yang telah mapan dan memiliki pelanggan setia. Restoran established membutuhkan pasokan yang tidak pernah putus untuk menjaga reputasi. Cafe dengan heritage memerlukan bahan yang sesuai dengan karakter tempat. Rumah makan keluarga dengan generasi penerus menginginkan konsistensi antar generasi. Catering keluarga untuk acara tradisional membutuhkan pemahaman akan tradisi dan kebiasaan. Kami menghormati heritage bisnis-bisnis ini dengan memberikan layanan yang terpercaya dan konsisten.",
+      "metaDescription": "Supplier sayur Kebayoran Lama untuk bisnis kuliner mapan. Layanan terpercaya untuk usaha established, menjaga reputasi bisnis lama.",
+      "clientFocus": "Restoran Established, Cafe Heritage, Rumah Makan Keluarga, Catering Tradisional, Bisnis Turun Temurun",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Kebayoran Lama",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (established), 12.00-14.00 (tradisional)",
+        "title": "Heritage Business Support",
+        "desc": "Uninterrupted supply guarantee, generational consistency, understanding of traditional business needs"
+      }
+    },
+    {
+      "slug": "gandaria",
+      "name": "Gandaria",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Gandaria - Untuk Restoran Keluarga, Cafe Santai, Bistro dan Catering Residence",
+      "angle": "Penyuplai sayuran untuk kawasan residential nyaman dengan bisnis kuliner casual",
+      "seoContent": "Gandaria sebagai kawasan residential yang nyaman memiliki bisnis kuliner dengan atmosfer casual dan family-friendly. Restoran keluarga membutuhkan sayuran segar untuk menu yang disukai semua usia. Cafe santai memerlukan bahan yang sesuai dengan relaxed atmosphere. Bistro dengan konsep cozy menginginkan vegetables yang memberikan comfort feel. Catering residence untuk acara keluarga membutuhkan presentasi yang baik namun tidak terlalu formal. Kami menyediakan produk dan layanan yang sesuai dengan karakter casual dan nyaman kawasan ini.",
+      "metaDescription": "Supplier sayur Gandaria untuk bisnis kuliner casual. Atmosfer nyaman, family-friendly, produk sesuai karakter kawasan.",
+      "clientFocus": "Restoran Keluarga, Cafe Santai, Bistro Cozy, Catering Residence, Bisnis Casual",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cilandak-Gandaria",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (keluarga), 13.00-15.00 (residence)",
+        "title": "Casual Dining Support",
+        "desc": "Family-friendly product selection, relaxed delivery schedule, understanding of casual dining needs"
+      }
+    },
+    {
+      "slug": "fatmawati",
+      "name": "Fatmawati",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Fatmawati - Untuk Restoran, Cafe, Depot dan Catering di Koridor Utama",
+      "angle": "Pemasok sayuran untuk bisnis kuliner di sepanjang koridor utama yang sibuk",
+      "seoContent": "Koridor Fatmawati yang selalu sibuk membutuhkan supplier yang memahami tantangan logistik area utama. Restoran di koridor sibuk membutuhkan pengiriman di waktu yang tepat untuk menghindari macet. Cafe dengan akses mudah perlu pasokan yang tidak terganggu lalu lintas. Depot dengan turnover cepat menginginkan sistem yang efisien. Catering di sepanjang koridor memerlukan rute yang teroptimasi. Kami memiliki pengalaman mengelola logistik di koridor sibuk dengan sistem time slot yang ketat dan rute alternatif yang selalu siap.",
+      "metaDescription": "Supplier sayur Fatmawati untuk koridor utama sibuk. Logistik teroptimasi untuk area padat, manajemen waktu ketat, rute alternatif.",
+      "clientFocus": "Restoran Koridor, Cafe Akses Mudah, Depot, Catering Koridor, Bisnis Jalan Utama",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Fatmawati Corridor",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (avoid traffic), 10.00-12.00 (secondary)",
+        "title": "Major Corridor Logistics",
+        "desc": "Traffic-aware delivery scheduling, alternative route planning, strict time window management"
+      }
+    },
+    {
+      "slug": "pancoran",
+      "name": "Pancoran",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pancoran - Untuk Restoran, Cafe, Warung dan Catering di Simpang Strategis",
+      "angle": "Penyedia sayuran untuk bisnis kuliner di simpang strategis dengan akses multi-arah",
+      "seoContent": "Pancoran sebagai simpang strategis dengan akses ke berbagai arah membutuhkan supplier dengan fleksibilitas rute. Restoran di simpang strategis melayani pelanggan dari berbagai arah dengan menu yang beragam. Cafe di lokasi strategis membutuhkan bahan yang selalu tersedia untuk high traffic. Warung dengan visibilitas tinggi menginginkan konsistensi untuk membangun reputasi. Catering dengan coverage area luas memerlukan base location yang strategis. Kami memanfaatkan lokasi strategis untuk efisiensi distribusi ke berbagai arah.",
+      "metaDescription": "Supplier sayur Pancoran untuk lokasi strategis. Base location untuk distribusi multi-arah, akses mudah dari segala penjuru.",
+      "clientFocus": "Restoran Simpang, Cafe Strategis, Warung, Catering Multi-Arah, Bisnis Lokasi Prime",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Pancoran Roundabout",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (strategis), 11.00-13.00 (multi-arah)",
+        "title": "Strategic Intersection Hub",
+        "desc": "Multi-directional distribution hub, strategic location advantage, efficient coverage radius"
+      }
+    },
+    {
+      "slug": "gatot-subroto",
+      "name": "Gatot Subroto",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Gatot Subroto - Untuk Hotel Bintang, Restoran Gedung, Cafe dan Catering Perkantoran",
+      "angle": "Pemasok sayuran untuk koridor bisnis premium dengan gedung-gedung tinggi",
+      "seoContent": "Koridor Gatot Subroto dipenuhi gedung-gedung tinggi dengan kebutuhan food service yang kompleks. Hotel bintang di gedung tinggi membutuhkan vertical logistics management. Restoran di lantai atas gedung memerlukan sistem pengiriman yang terkoordinasi dengan building management. Cafe di plaza gedung menginginkan bahan yang sesuai dengan corporate environment. Catering perkantoran skyscraper membutuhkan timing yang tepat dengan elevator access restrictions. Kami memiliki protocol khusus untuk pengiriman ke gedung-gedung tinggi dengan koordinasi building management yang baik.",
+      "metaDescription": "Supplier sayur Gatot Subroto untuk gedung-gedung tinggi. Vertical logistics management, koordinasi building management, protocol khusus.",
+      "clientFocus": "Hotel Bintang Gedung, Restoran Lantai Atas, Cafe Plaza, Catering Skyscraper, Bisnis Vertical",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Gatot Subroto",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.30 (before traffic), 09.00-11.00 (gedung)",
+        "title": "Vertical Building Logistics",
+        "desc": "Building management coordination, elevator scheduling, loading dock protocol, security clearance management"
+      }
+    },
+    {
+      "slug": "hang-lekir",
+      "name": "Hang Lekir",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Hang Lekir - Untuk Restoran Eksklusif, Cafe Kecil, Bistro dan Private Dining",
+      "angle": "Penyuplai sayuran untuk kawasan dengan bisnis kuliner eksklusif berskala kecil-menengah",
+      "seoContent": "Hang Lekir dikenal dengan bisnis kuliner eksklusif berskala intimate. Restoran eksklusif dengan kapasitas terbatas membutuhkan bahan premium dalam volume tepat. Cafe kecil dengan konsep unique menginginkan produk yang mendukung diferensiasi. Bistro dengan atmosphere khusus memerlukan sayuran dengan karakter kuat. Private dining experience membutuhkan attention to detail yang tinggi. Kami melayani skala kecil dengan kualitas besar, memberikan perhatian penuh pada detail dan preferensi spesifik setiap bisnis.",
+      "metaDescription": "Supplier sayur Hang Lekir untuk bisnis eksklusif kecil. Perhatian pada detail, preferensi spesifik, kualitas premium untuk skala intimate.",
+      "clientFocus": "Restoran Eksklusif Kecil, Cafe Unique, Bistro Intimate, Private Dining, Bisnis Skala Premium",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Sudirman-Hang Lekir",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.00 (intimate), 10.00-11.30 (premium)",
+        "title": "Intimate Scale Premium Service",
+        "desc": "Attention to small details, customized per client preference, premium service untuk small volume"
+      }
+    },
+    {
+      "slug": "senayan",
+      "name": "Senayan",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Senayan - Untuk Restoran Event, Cafe Sport, Catering Stadion dan Bisnis Arena",
+      "angle": "Pemasok sayuran untuk kawasan event dan olahraga dengan kebutuhan fluktuatif",
+      "seoContent": "Kawasan Senayan dengan berbagai venue event dan olahraga memiliki kebutuhan yang sangat fluktuatif. Restoran di sekitar venue event membutuhkan capacity flexibility untuk menghadapi crowd besar. Cafe di area sport memerlukan bahan yang tahan lama untuk operational hours panjang. Catering untuk event stadion membutuhkan volume sangat besar dalam waktu singkat. Bisnis di sekitar arena olahraga menginginkan sistem yang responsive terhadap jadwal event. Kami memiliki sistem scalable yang bisa menyesuaikan kapasitas dengan cepat berdasarkan kalender event.",
+      "metaDescription": "Supplier sayur Senayan untuk kawasan event dan olahraga. Kapasitas fleksibel, responsive terhadap jadwal event, siap untuk crowd besar.",
+      "clientFocus": "Restoran Event, Cafe Sport, Catering Stadion, Bisnis Arena, Venue Catering",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Senayan",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.30 (pre-event), 08.00-10.00 (event day)",
+        "title": "Event-Based Scalable System",
+        "desc": "Event calendar integration, scalable capacity management, rapid response untuk last-minute orders"
+      }
+    },
+    {
+      "slug": "menteng",
+      "name": "Menteng (Pusat)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Menteng - Untuk Restoran Heritage, Cafe Klasik, Fine Dining dan Catering Diplomat",
+      "angle": "Penyedia sayuran untuk kawasan bersejarah dengan bisnis kuliner berkelas",
+      "seoContent": "Menteng sebagai kawasan bersejarah memiliki bisnis kuliner dengan heritage dan kelas yang terjaga. Restoran heritage membutuhkan bahan yang sesuai dengan reputasi historis mereka. Cafe klasik menginginkan produk dengan timeless quality. Fine dining di area elite memerlukan standar yang sangat tinggi. Catering untuk komunitas diplomat membutuhkan international standard dengan local freshness. Kami menghormati heritage kawasan ini dengan memberikan layanan yang refined dan sesuai dengan karakter klasik namun tetap modern.",
+      "metaDescription": "Supplier sayur Menteng untuk kawasan bersejarah. Layanan refined, standar tinggi, menghormati heritage kuliner.",
+      "clientFocus": "Restoran Heritage, Cafe Klasik, Fine Dining Elite, Catering Diplomat, Bisnis Berkelas",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Menteng",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-07.30 (heritage), 09.00-10.30 (fine dining)",
+        "title": "Heritage Refined Service",
+        "desc": "Discreet delivery untuk area elite, refined handling protocol, heritage-appropriate product selection"
+      }
+    },
+    {
+      "slug": "thamrin",
+      "name": "Thamrin",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Thamrin - Untuk Hotel Internasional, Restoran Chain, Cafe Premium dan Corporate Catering",
+      "angle": "Pemasok sayuran untuk jantung bisnis Jakarta dengan standar global",
+      "seoContent": "Thamrin sebagai jantung bisnis Jakarta membutuhkan supplier dengan kemampuan memenuhi standar global. Hotel internasional dengan brand world-wide memerlukan consistency across global standards. Restoran chain premium menginginkan sistem yang terintegrasi dengan central kitchen. Cafe premium di gedung perkantoran membutuhkan bahan yang sesuai dengan corporate image. Corporate catering untuk multinational companies memerlukan compliance dengan berbagai international protocols. Kami memenuhi semua requirement dengan sistem yang terstandardisasi namun tetap fleksibel.",
+      "metaDescription": "Supplier sayur Thamrin untuk bisnis dengan standar global. Sistem terstandardisasi, compliance international, integrasi dengan chain operations.",
+      "clientFocus": "Hotel Internasional, Restoran Chain, Cafe Premium, Corporate Catering MNC, Bisnis Global",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Thamrin",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.00-06.30 (hotel), 08.30-10.00 (corporate)",
+        "title": "Global Standard Compliance",
+        "desc": "International standard protocols, chain restaurant integration, MNC compliance requirements"
+      }
+    },
+    {
+      "slug": "sudirman",
+      "name": "Sudirman",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Sudirman - Untuk Restoran CBD, Cafe Gedung, Food Court dan Office Catering",
+      "angle": "Penyuplai sayuran untuk Central Business District dengan efisiensi operasional tinggi",
+      "seoContent": "CBD Sudirman menuntut efisiensi operasional yang sangat tinggi dari setiap supplier. Restoran di CBD membutuhkan supply chain yang seamless untuk menjaga produktivitas. Cafe di dalam gedung perkantoran menginginkan sistem yang tidak mengganggu operasional gedung. Food court dengan multiple vendors memerlukan koordinasi yang tepat. Office catering untuk ribuan karyawan membutuhkan reliability yang absolut. Kami mengoptimalkan setiap aspek logistik untuk memberikan efisiensi maksimal di lingkungan CBD yang kompetitif.",
+      "metaDescription": "Supplier sayur Sudirman untuk CBD Jakarta. Efisiensi operasional maksimal, seamless supply chain, reliability absolut.",
+      "clientFocus": "Restoran CBD, Cafe Gedung, Food Court, Office Catering Besar, Bisnis Perkantoran",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Sudirman",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.00 (ultra-early), 08.00-09.30 (CBD)",
+        "title": "CBD Efficiency Optimization",
+        "desc": "Seamless CBD integration, building operational harmony, high-volume efficiency systems"
+      }
+    },
+    {
+      "slug": "tanah-abang",
+      "name": "Tanah Abang (KH Mas Mansyur)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Tanah Abang - Untuk Restoran Cepat Saji, Depot, Warung dan Catering Pasar",
+      "angle": "Pemasok sayuran untuk kawasan komersial padat dengan turnover sangat tinggi",
+      "seoContent": "Tanah Abang sebagai kawasan komersial terpadat membutuhkan supplier yang tahan terhadap tekanan operasional tinggi. Restoran cepat saji dengan customer flow sangat tinggi membutuhkan supply yang tidak pernah putus. Depot di sekitar pasar memerlukan bahan dengan harga sangat kompetitif. Warung yang melayani pedagang pasar menginginkan sistem yang simple dan reliable. Catering untuk pekerja pasar membutuhkan volume besar dengan budget ketat. Kami telah terbiasa dengan lingkungan high-pressure dan memberikan solusi yang robust untuk kebutuhan ekstrem.",
+      "metaDescription": "Supplier sayur Tanah Abang untuk kawasan komersial padat. Sistem robust untuk high-pressure environment, harga sangat kompetitif.",
+      "clientFocus": "Restoran Cepat Saji, Depot Pasar, Warung, Catering Pasar, Bisnis High-Turnover",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tanah Abang",
+      "logistics": {
+        "time": "01.30-03.30 (panen), 04.00-05.30 (sebelum pasar), 07.00-09.00 (operasional)",
+        "title": "High-Density Commercial Logistics",
+        "desc": "Extreme pressure耐受系统, sebelum jam sibuk delivery, volume extreme handling"
+      }
+    },
+    {
+      "slug": "cikini",
+      "name": "Cikini",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Cikini - Untuk Restoran Artistic, Cafe Boheme, Bistro dan Catering Creative",
+      "angle": "Penyedia sayuran untuk kawasan artistic dengan bisnis kuliner kreatif",
+      "seoContent": "Cikini sebagai kawasan artistic memiliki konsentrasi bisnis kuliner yang sangat kreatif. Restoran dengan konsep artistic membutuhkan bahan sebagai medium kreativitas chef. Cafe dengan vibe boheme menginginkan produk yang unconventional dan inspiring. Bistro dengan menu experimental memerlukan sayuran dengan karakter unik. Catering untuk event creative membutuhkan presentasi yang out of the box. Kami mendukung kreativitas dengan menyediakan produk yang tidak biasa dan layanan yang flexible untuk eksperimen kuliner.",
+      "metaDescription": "Supplier sayur Cikini untuk bisnis kuliner kreatif. Produk unconventional, dukungan untuk eksperimen, layanan flexible untuk kreativitas.",
+      "clientFocus": "Restoran Artistic, Cafe Boheme, Bistro Experimental, Catering Creative, Bisnis Kreatif",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cikini",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.00 (creative), 10.00-11.30 (experimental)",
+        "title": "Creative Industry Support",
+        "desc": "Unconventional product sourcing, flexible order untuk eksperimen, creative presentation support"
+      }
+    },
+    {
+      "slug": "kebon-sirih",
+      "name": "Kebon Sirih",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Kebon Sirih - Untuk Restoran Kantor Pemerintah, Cafe, Depot dan Catering Instansi",
+      "angle": "Pemasok sayuran untuk kawasan instansi pemerintah dengan protokol khusus",
+      "seoContent": "Kebon Sirih dengan konsentrasi instansi pemerintah membutuhkan supplier yang memahami protokol khusus. Restoran yang melayani pegawai pemerintah membutuhkan sistem yang compliant dengan aturan instansi. Cafe di sekitar kantor pemerintah menginginkan layanan yang discreet dan professional. Depot untuk kebutuhan harian instansi memerlukan dokumentasi yang lengkap. Catering untuk acara pemerintah membutuhkan prosedur yang sesuai dengan ketentuan. Kami familiar dengan berbagai protokol pemerintahan dan memastikan setiap pengiriman memenuhi semua requirement.",
+      "metaDescription": "Supplier sayur Kebon Sirih untuk instansi pemerintah. Compliant dengan protokol pemerintah, dokumentasi lengkap, layanan professional.",
+      "clientFocus": "Restoran Instansi, Cafe Pemerintah, Depot, Catering Pemerintah, Bisnis Sekitar Kantor Negara",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Kebon Sirih",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-07.30 (instansi), 09.00-10.30 (acara)",
+        "title": "Government Protocol Compliance",
+        "desc": "Government clearance procedures, official documentation, protocol-specific delivery methods"
+      }
+    },
+    {
+      "slug": "sabang",
+      "name": "Sabang",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Sabang - Untuk Restoran Legendary, Cafe Iconic, Warung Tua dan Catering Traditional",
+      "angle": "Penyuplai sayuran untuk kawasan kuliner legendaris Jakarta",
+      "seoContent": "Sabang sebagai kawasan kuliner legendaris memiliki bisnis yang telah menjadi ikon Jakarta. Restoran legendary yang telah puluhan tahun beroperasi membutuhkan konsistensi mutu yang terjaga. Cafe iconic dengan pelanggan lintas generasi menginginkan rasa yang tidak berubah. Warung tua yang menjadi heritage kuliner memerlukan bahan dengan karakter asli. Catering untuk acara tradisional Jakarta membutuhkan authentic ingredients. Kami menjaga warisan kuliner Jakarta dengan menyediakan produk yang mempertahankan karakter asli yang telah dicintai puluhan tahun.",
+      "metaDescription": "Supplier sayur Sabang untuk kawasan kuliner legendaris. Menjaga warisan kuliner, konsistensi puluhan tahun, authentic ingredients.",
+      "clientFocus": "Restoran Legendary, Cafe Iconic, Warung Tua, Catering Traditional Jakarta, Bisnis Heritage",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Sabang",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-07.30 (legendaris), 11.00-13.00 (tradisional)",
+        "title": "Culinary Heritage Preservation",
+        "desc": "Consistency maintenance systems, heritage recipe understanding, traditional preparation methods"
+      }
+    },
+    {
+      "slug": "gambir",
+      "name": "Gambir",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Gambir - Untuk Restoran Stasiun, Cafe Transport, Depot dan Catering Travel",
+      "angle": "Pemasok sayuran untuk kawasan transportasi dengan kebutuhan 24/7",
+      "seoContent": "Gambir sebagai pusat transportasi membutuhkan supplier dengan operational hours yang extended. Restoran di sekitar stasiun kereta membutuhkan pasokan untuk pelanggan yang datang terus menerus. Cafe yang melayani traveler menginginkan bahan yang tahan untuk long hours. Depot dengan jam operasional panjang memerlukan sistem yang reliable. Catering untuk kebutuhan travel dan transport membutuhkan flexibility waktu. Kami memiliki sistem shift yang memungkinkan pengiriman di berbagai jam untuk mendukung operasional 24/7 kawasan transportasi.",
+      "metaDescription": "Supplier sayur Gambir untuk kawasan transportasi. Operational hours extended, sistem shift, dukungan untuk bisnis 24/7.",
+      "clientFocus": "Restoran Stasiun, Cafe Transport, Depot 24 Jam, Catering Travel, Bisnis Transportasi",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Gambir",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.30 (shift 1), 14.00-16.00 (shift 2), 22.00-24.00 (shift 3)",
+        "title": "24/7 Transportation Hub Support",
+        "desc": "Multiple shift operations, extended hours delivery, travel industry understanding"
+      }
+    },
+    {
+      "slug": "bendungan-hilir",
+      "name": "Bendungan Hilir",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Bendungan Hilir - Untuk Restoran Mix-Use, Cafe Plaza, Food Hall dan Catering Kompleks",
+      "angle": "Penyedia sayuran untuk kawasan mixed-use development terpadu",
+      "seoContent": "Bendungan Hilir dengan development mixed-use yang terintegrasi membutuhkan supplier dengan kemampuan multi-segment. Restoran di kompleks terpadu membutuhkan koordinasi dengan building management yang ketat. Cafe di dalam plaza memerlukan sistem yang harmonis dengan retail operations. Food hall dengan berbagai konsep menginginkan variasi produk yang luas. Catering untuk seluruh kompleks membutuhkan capacity yang besar. Kami memiliki experience dalam melayani mixed-use development dengan sistem yang terintegrasi namun flexible untuk berbagai kebutuhan berbeda.",
+      "metaDescription": "Supplier sayur Bendungan Hilir untuk mixed-use development. Sistem terintegrasi untuk kompleks terpadu, koordinasi multi-tenant.",
+      "clientFocus": "Restoran Kompleks, Cafe Plaza, Food Hall, Catering Development, Bisnis Mixed-Use",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Bendungan Hilir",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-07.30 (plaza), 09.00-11.00 (kompleks)",
+        "title": "Integrated Complex Management",
+        "desc": "Mixed-use complex coordination, multi-tenant integration, centralized delivery management"
+      }
+    },
+    {
+      "slug": "kemayoran",
+      "name": "Kemayoran",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Kemayoran - Untuk Restoran Convention, Cafe Exhibition, Catering Event dan Bisnis Pameran",
+      "angle": "Pemasok sayuran untuk kawasan convention dan exhibition center",
+      "seoContent": "Kemayoran sebagai pusat convention dan exhibition memiliki kebutuhan yang sangat event-driven. Restoran di sekitar convention center membutuhkan predictive ordering berdasarkan event calendar. Cafe di exhibition hall menginginkan bahan yang bisa menyesuaikan dengan foot traffic fluktuatif. Catering untuk event besar memerlukan kemampuan logistics skala massive. Bisnis di area pameran membutuhkan responsiveness terhadap last-minute changes. Kami memiliki sistem event intelligence yang memprediksi kebutuhan berdasarkan jenis dan skala event.",
+      "metaDescription": "Supplier sayur Kemayoran untuk convention dan exhibition. Event intelligence system, predictive ordering, massive scale capability.",
+      "clientFocus": "Restoran Convention, Cafe Exhibition, Catering Event Besar, Bisnis Pameran, Venue Catering",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Kemayoran",
+      "logistics": {
+        "time": "01.30-03.30 (panen), 04.00-06.00 (pre-event), 07.30-10.00 (event day)",
+        "title": "Event-Driven Supply Chain",
+        "desc": "Event calendar integration, demand prediction algorithms, massive event scale operations"
+      }
+    },
+    {
+      "slug": "cempaka-putih",
+      "name": "Cempaka Putih",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Cempaka Putih - Untuk Restoran Ruko, Cafe, Depot dan Catering Kawasan",
+      "angle": "Penyuplai sayuran untuk kawasan dengan konsentrasi ruko dan bisnis lokal",
+      "seoContent": "Cempaka Putih dengan karakter kawasan ruko yang padat membutuhkan supplier yang memahami dinamika bisnis skala menengah. Restoran di ruko membutuhkan solusi space-efficient untuk storage terbatas. Cafe di lingkungan ruko menginginkan bahan dengan margin yang ketat. Depot dengan pelanggan tetap memerlukan reliability untuk menjaga bisnis harian. Catering untuk komunitas ruko membutuhkan harga kompetitif. Kami memberikan solusi customized untuk bisnis ruko dengan constraint space dan budget yang spesifik.",
+      "metaDescription": "Supplier sayur Cempaka Putih untuk bisnis ruko. Solusi space-efficient, margin management, customized untuk constraint ruko.",
+      "clientFocus": "Restoran Ruko, Cafe, Depot, Catering Kawasan, Bisnis Ruko",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cempaka Putih",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (ruko), 13.00-15.00 (tambahan)",
+        "title": "Ruko Business Solutions",
+        "desc": "Space-efficient packaging, ruko storage solutions, margin optimization systems"
+      }
+    },
+    {
+      "slug": "cideng",
+      "name": "Cideng",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Cideng - Untuk Rumah Makan, Warung, Depot dan Catering Komunitas",
+      "angle": "Pemasok sayuran untuk kawasan dengan bisnis kuliner sangat lokal",
+      "seoContent": "Cideng memiliki karakter bisnis kuliner yang sangat lokal dan berbasis komunitas kuat. Rumah makan dengan pelanggan tetangga membutuhkan hubungan personal dengan supplier. Warung yang melayani warga sekitar menginginkan sistem yang simple dan mudah. Depot dengan operasional sederhana memerlukan bantuan dalam inventory management. Catering untuk acara komunitas membutuhkan trust dan reliability. Kami membangun hubungan personal dengan setiap pemilik bisnis dan menjadi bagian dari komunitas kuliner lokal.",
+      "metaDescription": "Supplier sayur Cideng untuk bisnis kuliner sangat lokal. Hubungan personal, bagian dari komunitas, trust-based service.",
+      "clientFocus": "Rumah Makan Lokal, Warung, Depot, Catering Komunitas, Bisnis Tetangga",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cideng",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (komunitas), 14.00-16.00 (lokal)",
+        "title": "Hyperlocal Community Service",
+        "desc": "Personal relationship building, community integration, trust-based business practices"
+      }
+    },
+    {
+      "slug": "petojo",
+      "name": "Petojo",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Petojo - Untuk Restoran Keluarga, Cafe, Warung dan Catering Tradisional",
+      "angle": "Penyedia sayuran untuk kawasan dengan budaya kuliner Betawi yang kental",
+      "seoContent": "Petojo dengan budaya Betawi yang masih kental membutuhkan supplier yang memahami kebutuhan kuliner tradisional. Restoran keluarga Betawi membutuhkan sayuran untuk masakan khas seperti sayur besan dan semur. Cafe dengan sentuhan tradisional menginginkan bahan yang autentik namun tetap modern. Warung yang menyajikan makanan Betawi memerlukan ingredients yang tepat. Catering untuk acara adat Betawi membutuhkan pemahaman akan tradisi dan ritual. Kami menghormati dan mendukung pelestarian kuliner Betawi dengan menyediakan bahan yang autentik.",
+      "metaDescription": "Supplier sayur Petojo untuk kuliner Betawi. Bahan autentik tradisional, dukungan pelestarian budaya, pemahaman kuliner khas.",
+      "clientFocus": "Restoran Keluarga Betawi, Cafe Tradisional, Warung Betawi, Catering Adat, Bisnis Budaya",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Petojo",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (tradisional), 12.00-14.00 (adat)",
+        "title": "Cultural Heritage Support",
+        "desc": "Traditional ingredient sourcing, cultural ceremony understanding, heritage preservation support"
+      }
+    },
+    {
+      "slug": "salemba",
+      "name": "Salemba",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Salemba - Untuk Restoran Kampus, Cafe Mahasiswa, Depot dan Catering Akademik",
+      "angle": "Pemasok sayuran untuk kawasan pendidikan dengan siklus akademik",
+      "seoContent": "Salemba sebagai kawasan pendidikan memiliki dinamika yang mengikuti siklus akademik. Restoran di sekitar kampus membutuhkan adaptasi terhadap kalender akademik dan ujian. Cafe yang melayani mahasiswa menginginkan bahan dengan harga student-friendly. Depot dengan pelanggan komunitas kampus memerlukan flexibility selama masa liburan. Catering untuk event akademik membutuhkan penyesuaian dengan jadwal perkuliahan. Kami memahami siklus akademik dan menyesuaikan layanan sesuai dengan kebutuhan yang berubah setiap semester.",
+      "metaDescription": "Supplier sayur Salemba untuk kawasan pendidikan. Adaptasi siklus akademik, harga student-friendly, understanding kalender kampus.",
+      "clientFocus": "Restoran Kampus, Cafe Mahasiswa, Depot, Catering Akademik, Bisnis Pendidikan",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Salemba",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (semester), 10.00-12.00 (event)",
+        "title": "Academic Cycle Management",
+        "desc": "Academic calendar integration, student budget optimization, semester-based planning"
+      }
+    },
+    {
+      "slug": "tanah-abang-hotel",
+      "name": "Tanah Abang (Area Hotel)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Tanah Abang Hotel - Untuk Hotel Bintang, Restoran Hotel, Cafe Lobby dan Room Service",
+      "angle": "Penyuplai sayuran untuk konsentrasi hotel di sekitar Tanah Abang",
+      "seoContent": "Area hotel di Tanah Abang memiliki kebutuhan hospitality yang sangat spesifik. Hotel bintang dengan business travelers membutuhkan breakfast service yang sangat early. Restoran hotel yang melayani tamu menginginkan bahan dengan presentation perfect. Cafe di lobby hotel memerlukan supply yang tidak mengganggu tamu. Room service membutuhkan bahan yang siap dengan cepat untuk order spontan. Kami memiliki protocol khusus untuk hotel service dengan emphasis pada discretion dan ketepatan waktu.",
+      "metaDescription": "Supplier sayur Tanah Abang untuk area hotel. Protocol khusus hospitality, early breakfast support, discreet hotel service.",
+      "clientFocus": "Hotel Bintang, Restoran Hotel, Cafe Lobby, Room Service, Bisnis Hospitality",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tanah Abang Hotel Area",
+      "logistics": {
+        "time": "01.30-03.30 (panen), 04.00-05.30 (hotel breakfast), 08.00-09.30 (hotel ops)",
+        "title": "Hotel Hospitality Protocol",
+        "desc": "Discreet hotel delivery, early morning breakfast support, room service responsiveness"
+      }
+    },
+    {
+      "slug": "pik-1",
+      "name": "PIK 1 (Pantai Indah Kapuk)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur PIK 1 - Untuk Restoran Waterfront, Cafe Eksklusif, Seafood Restaurant dan Catering Resort",
+      "angle": "Pemasok sayuran untuk kawasan waterfront premium dengan konsep dining experience",
+      "seoContent": "PIK 1 sebagai kawasan waterfront premium membutuhkan supplier yang memahami konsep dining experience. Restoran dengan view waterfront membutuhkan bahan yang mendukung atmosphere special. Cafe eksklusif di tepi pantai menginginkan produk premium untuk sophisticated customers. Seafood restaurant memerlukan sayuran segar sebagai complement untuk seafood. Catering untuk resort dan clubhouse membutuhkan bahan yang sesuai dengan luxury lifestyle. Kami menyediakan produk yang mendukung dining experience premium di lingkungan waterfront.",
+      "metaDescription": "Supplier sayur PIK 1 untuk kawasan waterfront premium. Dining experience support, luxury lifestyle products, waterfront atmosphere.",
+      "clientFocus": "Restoran Waterfront, Cafe Eksklusif, Seafood Restaurant, Catering Resort, Bisnis Premium",
+      "deliveryRoute": "Cipanas-Puncak-JORR-PIK 1",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (waterfront), 09.00-11.00 (resort)",
+        "title": "Waterfront Premium Service",
+        "desc": "Lifestyle dining support, waterfront location optimization, luxury experience enhancement"
+      }
+    },
+    {
+      "slug": "pik-2",
+      "name": "PIK 2 (Kawasan Baru)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur PIK 2 - Untuk Restoran Development, Cafe Baru, Food Hall dan Catering Proyek",
+      "angle": "Penyedia sayuran untuk kawasan development baru yang sedang berkembang",
+      "seoContent": "PIK 2 sebagai kawasan development baru membutuhkan supplier yang bisa berkembang bersama area. Restoran di development baru membutuhkan partner yang memahami fase awal bisnis. Cafe yang baru buka menginginkan guidance dalam supply chain setup. Food hall di kawasan baru memerlukan sistem yang scalable seiring perkembangan. Catering untuk proyek development membutuhkan kemampuan beradaptasi dengan perubahan. Kami menjadi growth partner untuk bisnis di kawasan baru dengan layanan yang berkembang sesuai kebutuhan.",
+      "metaDescription": "Supplier sayur PIK 2 untuk kawasan development baru. Growth partnership, scalable systems, support untuk bisnis baru.",
+      "clientFocus": "Restoran Development, Cafe Baru, Food Hall, Catering Proyek, Bisnis Startup Kawasan",
+      "deliveryRoute": "Cipanas-Puncak-JORR-PIK 2",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (development), 10.00-12.00 (proyek)",
+        "title": "Development Area Partnership",
+        "desc": "Growth-oriented partnership, scalable infrastructure, new business setup support"
+      }
+    },
+    {
+      "slug": "kelapa-gading",
+      "name": "Kelapa Gading (Bulevar)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Kelapa Gading - Untuk Restoran Mall, Cafe Boulevard, Food Court dan Catering Residential",
+      "angle": "Pemasok sayuran untuk kawasan lifestyle terintegrasi yang komprehensif",
+      "seoContent": "Kelapa Gading sebagai kawasan lifestyle terintegrasi memiliki kebutuhan yang sangat komprehensif. Restoran di dalam mall membutuhkan sistem yang terintegrasi dengan mall operations. Cafe di sepanjang boulevard menginginkan bahan yang sesuai dengan lifestyle image. Food court dengan berbagai konsep memerlukan variasi produk yang luas. Catering untuk residential cluster membutuhkan layanan yang personalized. Kami memiliki pengalaman melayani kawasan terintegrasi dengan sistem yang menghubungkan berbagai segment secara seamless.",
+      "metaDescription": "Supplier sayur Kelapa Gading untuk kawasan lifestyle terintegrasi. Sistem komprehensif, mall integration, lifestyle product range.",
+      "clientFocus": "Restoran Mall, Cafe Boulevard, Food Court, Catering Residential, Bisnis Lifestyle",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Kelapa Gading",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (mall), 09.00-11.00 (residential)",
+        "title": "Integrated Lifestyle Service",
+        "desc": "Mall operations integration, lifestyle product curation, comprehensive area coverage"
+      }
+    },
+    {
+      "slug": "pluit",
+      "name": "Pluit",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pluit - Untuk Restoran Perumahan, Cafe Pantai, Seafood Restaurant dan Catering Apartemen",
+      "angle": "Penyuplai sayuran untuk kawasan coastal residential dengan karakter khusus",
+      "seoContent": "Pluit sebagai kawasan coastal residential memiliki karakter yang unik dengan pengaruh maritime. Restoran di perumahan tepi pantai membutuhkan bahan yang tahan terhadap udara laut. Cafe dengan view pantai menginginkan produk fresh untuk coastal dining experience. Seafood restaurant memerlukan sayuran sebagai complement perfect untuk hidangan laut. Catering untuk apartemen tinggi dengan view laut membutuhkan bahan dengan aesthetic value tinggi. Kami memahami dinamika coastal living dan menyediakan produk yang sesuai dengan lingkungan pantai.",
+      "metaDescription": "Supplier sayur Pluit untuk kawasan coastal residential. Coastal living understanding, seafood complement products, beach atmosphere support.",
+      "clientFocus": "Restoran Perumahan Pantai, Cafe Pantai, Seafood Restaurant, Catering Apartemen, Bisnis Coastal",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Pluit",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (coastal), 10.00-12.00 (apartemen)",
+        "title": "Coastal Area Specialization",
+        "desc": "Coastal environment adaptation, seafood pairing expertise, beach lifestyle understanding"
+      }
+    },
+    {
+      "slug": "muara-karang",
+      "name": "Muara Karang",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Muara Karang - Untuk Restoran Keluarga, Cafe, Depot dan Catering Komunitas",
+      "angle": "Pemasok sayuran untuk kawasan residential established dengan komunitas kuat",
+      "seoContent": "Muara Karang sebagai kawasan residential established memiliki komunitas yang solid dan loyal. Restoran keluarga yang telah puluhan tahun beroperasi membutuhkan konsistensi yang terjaga. Cafe dengan pelanggan warga sekitar menginginkan hubungan yang personal. Depot yang melayani kebutuhan harian warga memerlukan reliability yang tinggi. Catering untuk acara komunitas membutuhkan pemahaman akan tradisi lokal. Kami menjadi bagian dari komunitas dengan membangun hubungan jangka panjang dan memahami dinamika sosial kawasan.",
+      "metaDescription": "Supplier sayur Muara Karang untuk komunitas residential established. Hubungan jangka panjang, pemahaman komunitas, konsistensi untuk bisnis keluarga.",
+      "clientFocus": "Restoran Keluarga, Cafe Komunitas, Depot, Catering Warga, Bisnis Established",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Muara Karang",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (komunitas), 13.00-15.00 (warga)",
+        "title": "Established Community Integration",
+        "desc": "Long-term community relationships, local tradition understanding, established business partnership"
+      }
+    },
+    {
+      "slug": "sunter-griya",
+      "name": "Sunter Griya",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Sunter Griya - Untuk Restoran Cluster, Cafe Residence, Depot dan Catering Perumahan",
+      "angle": "Penyedia sayuran untuk kawasan cluster housing dengan karakter terencana",
+      "seoContent": "Sunter Griya sebagai kawasan cluster housing memiliki karakter yang sangat terencana dan terstruktur. Restoran di dalam cluster membutuhkan sistem yang harmonis dengan aturan kompleks. Cafe yang melayani residents menginginkan bahan yang sesuai dengan lifestyle terencana. Depot dengan operasional teratur memerlukan jadwal yang predictable. Catering untuk acara di clubhouse membutuhkan koordinasi dengan management kompleks. Kami memahami struktur dan aturan cluster housing dan memberikan layanan yang compliant dengan sistem yang ada.",
+      "metaDescription": "Supplier sayur Sunter Griya untuk kawasan cluster housing. Compliant dengan aturan kompleks, terstruktur, sesuai lifestyle terencana.",
+      "clientFocus": "Restoran Cluster, Cafe Residence, Depot, Catering Perumahan, Bisnis Terencana",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Sunter",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (cluster), 10.00-12.00 (residence)",
+        "title": "Cluster Housing Compliance",
+        "desc": "Complex regulation compliance, structured delivery systems, planned community understanding"
+      }
+    },
+    {
+      "slug": "ancol",
+      "name": "Ancol",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Ancol - Untuk Restoran Wisata, Cafe Taman Hiburan, Food Court dan Catering Event",
+      "angle": "Pemasok sayuran untuk kawasan wisata dan hiburan dengan seasonal patterns",
+      "seoContent": "Ancol sebagai kawasan wisata memiliki pola permintaan yang sangat seasonal dan weather-dependent. Restoran di area wisata membutuhkan predictive systems berdasarkan cuaca dan hari libur. Cafe di taman hiburan menginginkan bahan yang bisa menyesuaikan dengan visitor numbers. Food court dengan traffic turis memerlukan capacity yang flexible. Catering untuk event di venue wisata membutuhkan understanding akan pola kunjungan. Kami memiliki systems yang memprediksi kebutuhan berdasarkan calendar wisata, cuaca, dan event khusus.",
+      "metaDescription": "Supplier sayur Ancol untuk kawasan wisata. Seasonal prediction systems, weather-dependent planning, tourism calendar integration.",
+      "clientFocus": "Restoran Wisata, Cafe Taman Hiburan, Food Court, Catering Event Wisata, Bisnis Pariwisata",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Ancol",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.30 (wisata), 08.00-10.00 (event)",
+        "title": "Tourism Industry Specialization",
+        "desc": "Tourism calendar prediction, weather-based planning, visitor pattern analysis"
+      }
+    },
+    {
+      "slug": "pantai-mutiara",
+      "name": "Pantai Mutiara",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pantai Mutiara - Untuk Restoran Exclusive, Cafe Private, Seafood Fine Dining dan Catering Elite",
+      "angle": "Penyuplai sayuran untuk kawasan sangat eksklusif dengan privacy tinggi",
+      "seoContent": "Pantai Mutiara sebagai kawasan sangat eksklusif membutuhkan supplier dengan tingkat discretion yang tinggi. Restoran exclusive dengan clientele terpilih membutuhkan layanan yang sangat personalized. Cafe private untuk residents elite menginginkan produk yang exclusive dan tidak umum. Seafood fine dining memerlukan sayuran dengan presentation impeccable. Catering untuk residence mewah membutuhkan protocol khusus untuk menjaga privacy. Kami memiliki service protocol yang sangat discreet dengan emphasis pada privacy dan exclusivity.",
+      "metaDescription": "Supplier sayur Pantai Mutiara untuk kawasan sangat eksklusif. Service highly discreet, privacy protocol, exclusive products only.",
+      "clientFocus": "Restoran Exclusive, Cafe Private, Seafood Fine Dining, Catering Elite, Bisnis Sangat Eksklusif",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Pantai Mutiara",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.00 (exclusive), 09.00-10.30 (private)",
+        "title": "Ultra-Exclusive Service Protocol",
+        "desc": "Maximum discretion protocols, privacy guarantee systems, exclusive client handling"
+      }
+    },
+    {
+      "slug": "pademangan",
+      "name": "Pademangan",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pademangan - Untuk Restoran Lokal, Cafe, Warung dan Catering Traditional",
+      "angle": "Pemasok sayuran untuk kawasan dengan mix budaya dan kuliner yang beragam",
+      "seoContent": "Pademangan memiliki karakter budaya yang sangat beragam dengan pengaruh berbagai etnis. Restoran lokal dengan pengaruh multi-budaya membutuhkan bahan yang versatile untuk berbagai cuisine. Cafe dengan atmosphere mix culture menginginkan produk yang merefleksikan diversity. Warung yang menyajikan makanan berbagai etnis memerlukan ingredients yang spesifik. Catering untuk komunitas multikultural membutuhkan understanding akan berbagai tradisi makanan. Kami menghargai diversity dan menyediakan produk yang mendukung berbagai jenis kuliner yang ada.",
+      "metaDescription": "Supplier sayur Pademangan untuk kawasan multikultural. Support untuk diverse cuisines, understanding berbagai tradisi, produk versatile.",
+      "clientFocus": "Restoran Multikultural, Cafe Beragam, Warung Etnis, Catering Komunitas, Bisnis Beragam Budaya",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Pademangan",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (multikultural), 12.00-14.00 (komunitas)",
+        "title": "Multicultural Culinary Support",
+        "desc": "Diverse cuisine expertise, cultural tradition understanding, versatile product range"
+      }
+    },
+    {
+      "slug": "danau-sunter",
+      "name": "Danau Sunter",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Danau Sunter - Untuk Restoran Danau, Cafe Waterfront, Bistro dan Catering Lingkungan",
+      "angle": "Penyedia sayuran untuk kawasan danau dengan atmosphere natural",
+      "seoContent": "Danau Sunter menawarkan atmosphere natural yang mempengaruhi karakter bisnis kuliner di sekitarnya. Restoran dengan view danau membutuhkan bahan yang mendukung natural dining experience. Cafe waterfront menginginkan produk fresh yang selaras dengan lingkungan alami. Bistro dengan konsep nature-inspired memerlukan sayuran yang organic dan natural-looking. Catering untuk acara di tepi danau membutuhkan presentasi yang sesuai dengan outdoor setting. Kami menyediakan produk yang enhance natural atmosphere dengan emphasis pada kesegaran dan natural appearance.",
+      "metaDescription": "Supplier sayur Danau Sunter untuk atmosphere natural. Natural dining experience support, organic focus, outdoor setting appropriate.",
+      "clientFocus": "Restoran Danau, Cafe Waterfront, Bistro Natural, Catering Lingkungan, Bisnis Alam",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Danau Sunter",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (natural), 10.00-12.00 (outdoor)",
+        "title": "Natural Environment Service",
+        "desc": "Organic product focus, natural appearance selection, outdoor event expertise"
+      }
+    },
+    {
+      "slug": "puri-indah",
+      "name": "Puri Indah",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Puri Indah - Untuk Restoran Perumahan, Cafe Exclusive, Bistro dan Catering Residence",
+      "angle": "Pemasok sayuran untuk kawasan residential premium terencana",
+      "seoContent": "Puri Indah sebagai kawasan residential premium memiliki standar yang tinggi untuk bisnis kuliner di dalamnya. Restoran di perumahan premium membutuhkan bahan dengan aesthetic value tinggi. Cafe exclusive untuk residents menginginkan produk premium yang sesuai dengan lifestyle. Bistro dengan atmosphere sophisticated memerlukan sayuran dengan presentation impeccable. Catering untuk acara residence membutuhkan layanan yang discreet dan professional. Kami memahami expectations tinggi residents premium dan memenuhi standar tersebut dengan produk dan layanan terbaik.",
+      "metaDescription": "Supplier sayur Puri Indah untuk residential premium. Standar tinggi residents, aesthetic value focus, premium lifestyle support.",
+      "clientFocus": "Restoran Perumahan Premium, Cafe Exclusive, Bistro Sophisticated, Catering Residence, Bisnis Premium",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Puri Indah",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (premium), 09.30-11.30 (residence)",
+        "title": "Premium Residential Service",
+        "desc": "High aesthetic standards, premium lifestyle understanding, discreet residential service"
+      }
+    },
+    {
+      "slug": "kedoya",
+      "name": "Kedoya",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Kedoya - Untuk Restoran Komersial, Cafe, Depot dan Catering Kawasan",
+      "angle": "Penyuplai sayuran untuk kawasan komersial berkembang dengan traffic tinggi",
+      "seoContent": "Kedoya sebagai kawasan komersial yang berkembang pesat membutuhkan supplier yang bisa mengikuti pertumbuhan. Restoran komersial dengan customer flow tinggi membutuhkan supply chain yang robust. Cafe di area berkembang menginginkan bahan yang sesuai dengan evolving customer base. Depot dengan operasional efisien memerlukan sistem yang streamlined. Catering untuk bisnis di kawasan membutuhkan reliability untuk mendukung operasional klien. Kami menjadi partner growth untuk bisnis di kawasan berkembang dengan layanan yang scalable.",
+      "metaDescription": "Supplier sayur Kedoya untuk kawasan komersial berkembang. Partner growth untuk bisnis, scalable systems, support perkembangan area.",
+      "clientFocus": "Restoran Komersial, Cafe Berkembang, Depot, Catering Kawasan, Bisnis Growing",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Kedoya",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (komersial), 10.00-12.00 (kawasan)",
+        "title": "Growing Area Partnership",
+        "desc": "Scalable growth support, evolving area adaptation, business development partnership"
+      }
+    },
+    {
+      "slug": "kebon-jeruk",
+      "name": "Kebon Jeruk (Intercon)",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Kebon Jeruk - Untuk Restoran Intercon, Cafe, Food Hall dan Catering Kompleks",
+      "angle": "Pemasok sayuran untuk kawasan interchange dengan akses strategis",
+      "seoContent": "Kebon Jeruk di area interchange memiliki posisi strategis dengan akses dari berbagai arah. Restoran di lokasi interchange membutuhkan bahan untuk pelanggan yang datang dari berbagai wilayah. Cafe dengan visibility tinggi dari jalan tol menginginkan produk yang menarik perhatian. Food hall di kompleks interchange memerlukan variasi untuk diverse customer base. Catering untuk kantor di sekitar interchange membutuhkan efisiensi logistik. Kami memanfaatkan lokasi strategis untuk memberikan layanan efisien dengan coverage area yang luas.",
+      "metaDescription": "Supplier sayur Kebon Jeruk untuk area interchange strategis. Akses multi-arah, visibility tinggi, coverage area luas.",
+      "clientFocus": "Restoran Intercon, Cafe Visibility Tinggi, Food Hall, Catering Kompleks, Bisnis Strategis",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Kebon Jeruk Interchange",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (intercon), 09.00-11.00 (kompleks)",
+        "title": "Interchange Logistics Optimization",
+        "desc": "Multi-directional access advantage, high visibility location strategy, wide area coverage efficiency"
+      }
+    },
+    {
+      "slug": "tanjung-duren",
+      "name": "Tanjung Duren",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Tanjung Duren - Untuk Restoran Established, Cafe, Warung dan Catering Komunitas",
+      "angle": "Penyedia sayuran untuk kawasan established dengan sejarah panjang",
+      "seoContent": "Tanjung Duren sebagai kawasan established memiliki bisnis kuliner dengan sejarah dan tradisi panjang. Restoran yang telah bertahun-tahun beroperasi membutuhkan konsistensi dalam kualitas bahan. Cafe dengan pelanggan generasi kedua menginginkan produk yang mempertahankan karakter asli. Warung yang menjadi bagian dari kehidupan warga memerlukan reliability untuk menjaga kepercayaan. Catering untuk acara komunitas established membutuhkan pemahaman akan tradisi lokal. Kami menghormati sejarah kawasan dan menjaga konsistensi yang telah dibangun bertahun-tahun.",
+      "metaDescription": "Supplier sayur Tanjung Duren untuk kawasan established. Menjaga konsistensi sejarah, tradisi panjang, reliability untuk kepercayaan.",
+      "clientFocus": "Restoran Established, Cafe Tradisional, Warung Komunitas, Catering Sejarah, Bisnis Berpengalaman",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tanjung Duren",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (established), 12.00-14.00 (komunitas)",
+        "title": "Historical Area Stewardship",
+        "desc": "Consistency preservation systems, historical business understanding, traditional practice respect"
+      }
+    },
+    {
+      "slug": "grogol",
+      "name": "Grogol",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Grogol - Untuk Restoran Pendidikan, Cafe Kampus, Depot dan Catering Akademik",
+      "angle": "Pemasok sayuran untuk kawasan dengan konsentrasi institusi pendidikan",
+      "seoContent": "Grogol dengan berbagai institusi pendidikan membutuhkan supplier yang memahami siklus akademik. Restoran yang melayani mahasiswa dan dosen membutuhkan adaptasi terhadap kalender akademik. Cafe di lingkungan kampus menginginkan bahan dengan harga student-friendly namun berkualitas. Depot dengan pelanggan komunitas pendidikan memerlukan flexibility selama masa liburan. Catering untuk event akademik membutuhkan penyesuaian dengan jadwal perkuliahan. Kami memiliki pengalaman melayani lingkungan pendidikan dengan sistem yang responsive terhadap kebutuhan akademik.",
+      "metaDescription": "Supplier sayur Grogol untuk kawasan pendidikan. Adaptasi kalender akademik, harga student-friendly, understanding kebutuhan kampus.",
+      "clientFocus": "Restoran Kampus, Cafe Mahasiswa, Depot, Catering Akademik, Bisnis Pendidikan",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Grogol",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (kampus), 10.00-12.00 (akademik)",
+        "title": "Academic Environment Specialization",
+        "desc": "Academic calendar integration, student budget optimization, educational institution protocols"
+      }
+    },
+    {
+      "slug": "slipi",
+      "name": "Slipi",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Slipi - Untuk Restoran Koridor, Cafe, Food Court dan Catering Perkantoran",
+      "angle": "Penyuplai sayuran untuk koridor bisnis utama dengan traffic padat",
+      "seoContent": "Slipi sebagai koridor bisnis utama menghadapi tantangan logistik yang kompleks. Restoran di koridor sibuk membutuhkan pengiriman di time window yang tepat untuk menghindari macet. Cafe dengan akses mudah dari berbagai arah menginginkan sistem yang resilient terhadap kondisi jalan. Food court di gedung perkantoran memerlukan koordinasi yang tepat dengan building management. Catering untuk kantor di sepanjang koridor membutuhkan rute yang teroptimasi. Kami menguasai logistik koridor utama dengan sistem time slot management yang ketat.",
+      "metaDescription": "Supplier sayur Slipi untuk koridor bisnis utama. Time slot management ketat, resilient terhadap macet, koridor logistics expertise.",
+      "clientFocus": "Restoran Koridor, Cafe Akses Mudah, Food Court, Catering Perkantoran, Bisnis Jalan Utama",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Slipi",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.30 (avoid peak), 08.00-10.00 (koridor)",
+        "title": "Major Corridor Time Management",
+        "desc": "Peak traffic avoidance strategies, strict time window compliance, corridor route optimization"
+      }
+    },
+    {
+      "slug": "green-lake-city",
+      "name": "Green Lake City",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Green Lake City - Untuk Restoran Township, Cafe Taman, Food Hall dan Catering Komunitas",
+      "angle": "Pemasok sayuran untuk township terintegrasi dengan konsep green living",
+      "seoContent": "Green Lake City sebagai township dengan konsep green living membutuhkan supplier yang sejalan dengan filosofi tersebut. Restoran di township eco-friendly membutuhkan bahan organik dan sustainable. Cafe dengan konsep green menginginkan produk yang mendukung eco-conscious lifestyle. Food hall di lingkungan hijau memerlukan sayuran dengan natural appeal. Catering untuk komunitas yang peduli lingkungan membutuhkan bahan dengan traceability jelas. Kami mendukung green lifestyle dengan produk organik dan praktik bisnis yang sustainable.",
+      "metaDescription": "Supplier sayur Green Lake City untuk township hijau. Support green lifestyle, produk organik, sustainable practices.",
+      "clientFocus": "Restoran Eco-Friendly, Cafe Green Concept, Food Hall, Catering Komunitas Hijau, Bisnis Sustainable",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Cengkareng-Green Lake City",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (township), 10.00-12.00 (komunitas)",
+        "title": "Green Township Partnership",
+        "desc": "Sustainable supply chain practices, organic product focus, eco-community understanding"
+      }
+    },
+    {
+      "slug": "citra-garden",
+      "name": "Citra Garden",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Citra Garden - Untuk Restoran Perumahan, Cafe, Depot dan Catering Keluarga",
+      "angle": "Penyedia sayuran untuk kawasan perumahan keluarga dengan kebutuhan harian",
+      "seoContent": "Citra Garden sebagai kawasan perumahan keluarga memiliki kebutuhan kuliner yang praktis dan terjangkau. Restoran keluarga membutuhkan bahan untuk menu yang disukai semua usia. Cafe dengan atmosphere family-friendly menginginkan produk yang aman dan sehat untuk anak-anak. Depot dengan pelanggan ibu rumah tangga memerlukan harga kompetitif dengan kualitas terjaga. Catering untuk acara keluarga membutuhkan porsi besar dengan budget reasonable. Kami memahami kebutuhan keluarga dengan menawarkan produk yang praktis, sehat, dan terjangkau.",
+      "metaDescription": "Supplier sayur Citra Garden untuk perumahan keluarga. Produk praktis keluarga, harga terjangkau, sehat untuk anak-anak.",
+      "clientFocus": "Restoran Keluarga, Cafe Family-Friendly, Depot, Catering Keluarga, Bisnis Rumah Tangga",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Citra Garden",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (keluarga), 13.00-15.00 (rumah tangga)",
+        "title": "Family-Centric Service",
+        "desc": "Family budget optimization, child-safe product selection, practical family solutions"
+      }
+    },
+    {
+      "slug": "daan-mogot",
+      "name": "Daan Mogot",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Daan Mogot - Untuk Restoran Industrial, Cafe, Depot dan Catering Kawasan",
+      "angle": "Pemasok sayuran untuk kawasan industrial dengan kebutuhan praktis",
+      "seoContent": "Daan Mogot sebagai kawasan industrial memiliki karakter bisnis yang praktis dan efisien. Restoran yang melayani pekerja industri membutuhkan bahan untuk menu mengenyangkan dengan harga terjangkau. Cafe dengan atmosphere industrial menginginkan produk yang robust dan tahan lama. Depot dengan pelanggan buruh dan karyawan memerlukan sistem yang reliable untuk shift kerja. Catering untuk perusahaan industri membutuhkan volume besar dengan efisiensi tinggi. Kami memberikan solusi praktis untuk lingkungan industrial dengan emphasis pada reliability dan efisiensi.",
+      "metaDescription": "Supplier sayur Daan Mogot untuk kawasan industrial. Solusi praktis industri, reliable untuk shift kerja, efisiensi tinggi.",
+      "clientFocus": "Restoran Industrial, Cafe, Depot Buruh, Catering Perusahaan, Bisnis Industri",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Daan Mogot",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (shift pagi), 14.00-16.00 (shift sore)",
+        "title": "Industrial Zone Efficiency",
+        "desc": "Shift work accommodation, industrial zone logistics, practical efficiency focus"
+      }
+    },
+    {
+      "slug": "tomang",
+      "name": "Tomang",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Tomang - Untuk Restoran Komersial, Cafe, Warung dan Catering Kawasan",
+      "angle": "Penyuplai sayuran untuk kawasan komersial padat dengan diversitas bisnis",
+      "seoContent": "Tomang sebagai kawasan komersial padat memiliki diversitas bisnis kuliner yang sangat tinggi. Restoran dengan berbagai konsep membutuhkan bahan yang sesuai dengan target market masing-masing. Cafe dengan pelanggan beragam menginginkan produk yang bisa memenuhi berbagai selera. Warung yang melayani kebutuhan harian memerlukan konsistensi dalam ketersediaan. Catering untuk berbagai jenis bisnis membutuhkan flexibility dalam pelayanan. Kami memiliki kemampuan melayani diversitas kebutuhan dengan product range yang luas dan layanan yang customizable.",
+      "metaDescription": "Supplier sayur Tomang untuk kawasan komersial beragam. Product range luas, customizable service, kemampuan layani diversitas.",
+      "clientFocus": "Restoran Beragam, Cafe Multisegmen, Warung, Catering Berbagai Bisnis, Kawasan Komersial",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tomang",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (komersial), 10.00-12.00 (beragam)",
+        "title": "Diverse Commercial Support",
+        "desc": "Wide product range management, customizable service protocols, diverse business understanding"
+      }
+    },
+    {
+      "slug": "bsd-city-breeze",
+      "name": "BSD City The Breeze",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur BSD The Breeze - Untuk Restoran Lifestyle Mall, Cafe Premium, Food Hall dan Catering",
+      "angle": "Pemasok sayuran untuk lifestyle mall dengan konsep modern",
+      "seoContent": "The Breeze BSD sebagai lifestyle mall membutuhkan supplier yang memahami retail food service modern. Restoran di lifestyle mall membutuhkan bahan dengan visual appeal tinggi untuk Instagrammable dishes. Cafe premium dengan atmosphere modern menginginkan produk yang trendy dan up-to-date. Food hall dengan berbagai konsep kekinian memerlukan ingredients yang sesuai dengan food trends. Catering untuk event di mall membutuhkan presentasi yang contemporary. Kami mengikuti food trends terkini dan menyediakan produk yang sesuai dengan selera modern.",
+      "metaDescription": "Supplier sayur BSD The Breeze untuk lifestyle mall modern. Instagrammable products, trendy ingredients, contemporary presentation.",
+      "clientFocus": "Restoran Lifestyle Mall, Cafe Premium, Food Hall, Catering Event, Bisnis Modern",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-BSD",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (mall), 09.00-11.00 (lifestyle)",
+        "title": "Modern Mall Logistics",
+        "desc": "Trend-responsive product sourcing, social media worthy selection, contemporary retail support"
+      }
+    },
+    {
+      "slug": "bsd-city-foresta",
+      "name": "BSD City Foresta",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur BSD Foresta - Untuk Restoran Alam, Cafe Konsep, Bistro dan Catering Lingkungan",
+      "angle": "Penyedia sayuran untuk kawasan dengan konsep forest living",
+      "seoContent": "Foresta BSD dengan konsep forest living menciptakan atmosphere yang unik untuk bisnis kuliner. Restoran dengan konsep alam membutuhkan bahan yang natural dan organic. Cafe dengan atmosphere hutan menginginkan produk yang selaras dengan lingkungan hijau. Bistro dengan nuansa alam memerlukan sayuran dengan rustic appearance. Catering untuk acara di lingkungan hutan membutuhkan presentasi yang natural. Kami mendukung forest living concept dengan produk yang enhance natural atmosphere dan sustainable practices.",
+      "metaDescription": "Supplier sayur BSD Foresta untuk konsep forest living. Natural products focus, rustic appearance, sustainable forest concept.",
+      "clientFocus": "Restoran Alam, Cafe Hutan, Bistro Natural, Catering Lingkungan, Bisnis Konsep Hijau",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-BSD Forester",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (alam), 10.00-12.00 (natural)",
+        "title": "Forest Living Support",
+        "desc": "Natural product curation, rustic appearance selection, forest environment compatibility"
+      }
+    },
+    {
+      "slug": "bsd-city-greenwich",
+      "name": "BSD City Greenwich",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur BSD Greenwich - Untuk Restoran Tema, Cafe Konsep, Food Court dan Catering Keluarga",
+      "angle": "Pemasok sayuran untuk family entertainment center dengan berbagai tema",
+      "seoContent": "Greenwich BSD sebagai family entertainment center memiliki berbagai bisnis kuliner dengan tema khusus. Restoran dengan tema tertentu membutuhkan bahan yang mendukung storytelling konsep. Cafe dengan konsep keluarga menginginkan produk yang aman dan menyenangkan untuk anak-anak. Food court dengan berbagai wahana memerlukan ingredients yang praktis untuk keluarga. Catering untuk event keluarga membutuhkan porsi besar dengan variasi. Kami memahami kebutuhan family entertainment dengan produk yang fun, safe, dan sesuai berbagai tema.",
+      "metaDescription": "Supplier sayur BSD Greenwich untuk family entertainment. Produk family-friendly, tema support, safe untuk anak-anak.",
+      "clientFocus": "Restoran Bertema, Cafe Keluarga, Food Court, Catering Wahana, Bisnis Family Entertainment",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-BSD Greenwich",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (keluarga), 10.00-12.00 (entertainment)",
+        "title": "Family Entertainment Specialization",
+        "desc": "Theme-appropriate product selection, child safety focus, family-sized packaging"
+      }
+    },
+    {
+      "slug": "bintaro-sektor-7",
+      "name": "Bintaro Sektor 7",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Bintaro Sektor 7 - Untuk Restoran Komersial, Cafe, Depot dan Catering Perumahan",
+      "angle": "Penyuplai sayuran untuk sektor perumahan dengan aktivitas komersial padat",
+      "seoContent": "Bintaro Sektor 7 memiliki mix residential dan komersial yang seimbang dengan kebutuhan spesifik. Restoran komersial di area perumahan membutuhkan bahan untuk menu yang appealing bagi residents dan visitors. Cafe dengan atmosphere neighborhood menginginkan produk yang sesuai dengan lifestyle warga. Depot yang melayani kebutuhan harian memerlukan reliability untuk pelanggan tetap. Catering untuk acara di perumahan membutuhkan layanan yang mengenal komunitas. Kami memahami dinamika mixed-use sector dengan layanan yang menghubungkan kebutuhan residential dan komersial.",
+      "metaDescription": "Supplier sayur Bintaro Sektor 7 untuk area mixed-use. Hubungkan residential dan komersial, pahami dinamika sector, layanan komunitas.",
+      "clientFocus": "Restoran Mixed-Use, Cafe Neighborhood, Depot, Catering Perumahan, Bisnis Sector",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Bintaro Sektor 7",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (sektor), 12.00-14.00 (perumahan)",
+        "title": "Sector-Based Service",
+        "desc": "Mixed-use area understanding, sector-specific solutions, community integration approach"
+      }
+    },
+    {
+      "slug": "bintaro-sektor-9",
+      "name": "Bintaro Sektor 9",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Bintaro Sektor 9 - Untuk Restoran Eksklusif, Cafe Premium, Bistro dan Catering Residence",
+      "angle": "Pemasok sayuran untuk sektor premium dengan standar tinggi",
+      "seoContent": "Bintaro Sektor 9 dikenal sebagai area premium dengan residents yang menuntut standar tinggi. Restoran eksklusif di sector premium membutuhkan bahan dengan quality guarantee. Cafe premium untuk residents menginginkan produk yang merefleksikan status dan selera. Bistro dengan atmosphere sophisticated memerlukan sayuran dengan presentation impeccable. Catering untuk acara di residence premium membutuhkan layanan yang discreet. Kami memenuhi expectations tinggi sector premium dengan produk terpilih dan layanan personalized.",
+      "metaDescription": "Supplier sayur Bintaro Sektor 9 untuk area premium. Standar tinggi residents, quality guarantee, personalized premium service.",
+      "clientFocus": "Restoran Eksklusif, Cafe Premium, Bistro Sophisticated, Catering Residence, Bisnis Premium Sector",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Bintaro Sektor 9",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (premium), 09.30-11.30 (residence)",
+        "title": "Premium Sector Protocol",
+        "desc": "High-standard quality assurance, premium sector expectations, discreet personalized service"
+      }
+    },
+    {
+      "slug": "bintaro-sektor-3-5",
+      "name": "Bintaro Sektor 3-5",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Bintaro Sektor 3-5 - Untuk Restoran Keluarga, Cafe, Warung dan Catering Komunitas",
+      "angle": "Penyedia sayuran untuk sektor established dengan komunitas solid",
+      "seoContent": "Sektor 3-5 Bintaro sebagai area established memiliki komunitas yang solid dan loyal. Restoran keluarga dengan pelanggan generasi kedua membutuhkan konsistensi rasa dan kualitas. Cafe dengan pelanggan warga sekitar menginginkan produk yang telah dikenal dan dipercaya. Warung yang menjadi bagian kehidupan sehari-hari memerlukan reliability absolut. Catering untuk acara komunitas established membutuhkan pemahaman akan tradisi dan hubungan. Kami menjadi bagian dari komunitas established dengan membangun kepercayaan melalui konsistensi dan reliability.",
+      "metaDescription": "Supplier sayur Bintaro Sektor 3-5 untuk komunitas established. Konsistensi untuk generasi, kepercayaan komunitas, reliability established.",
+      "clientFocus": "Restoran Keluarga Established, Cafe Komunitas, Warung, Catering Tradisi, Bisnis Terpercaya",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Bintaro Sektor 3-5",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (established), 13.00-15.00 (komunitas)",
+        "title": "Established Community Trust",
+        "desc": "Generational consistency systems, community trust building, established relationship maintenance"
+      }
+    },
+    {
+      "slug": "alam-sutera",
+      "name": "Alam Sutera",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Alam Sutera - Untuk Restoran Township, Cafe Premium, Food Hall dan Catering Komunitas",
+      "angle": "Pemasok sayuran untuk township besar dengan fasilitas lengkap",
+      "seoContent": "Alam Sutera sebagai township besar membutuhkan supplier dengan kapasitas dan kemampuan komprehensif. Restoran di township terintegrasi membutuhkan bahan untuk berbagai jenis cuisine yang ditawarkan. Cafe premium di lingkungan township menginginkan produk yang sesuai dengan lifestyle residents. Food hall dengan banyak pilihan memerlukan variasi produk yang luas. Catering untuk komunitas besar membutuhkan kemampuan handling volume tinggi. Kami memiliki kapasitas dan expertise untuk melayani township skala besar dengan sistem yang terintegrasi.",
+      "metaDescription": "Supplier sayur Alam Sutera untuk township besar. Kapasitas tinggi, variasi luas, sistem terintegrasi untuk komunitas besar.",
+      "clientFocus": "Restoran Township, Cafe Premium, Food Hall, Catering Komunitas Besar, Bisnis Skala Township",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-Alam Sutera",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.30 (township), 08.00-10.00 (komunitas)",
+        "title": "Large Township Management",
+        "desc": "High-capacity operations, wide variety management, integrated township systems"
+      }
+    },
+    {
+      "slug": "gading-serpong-summarecon",
+      "name": "Gading Serpong Summarecon",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Gading Serpong Summarecon - Untuk Restoran Mall, Cafe, Food Court dan Catering Kompleks",
+      "angle": "Penyuplai sayuran untuk mixed-use development terintegrasi besar",
+      "seoContent": "Gading Serpong Summarecon sebagai mixed-use development besar memiliki kompleksitas operasional tinggi. Restoran di dalam mall dan kompleks membutuhkan koordinasi dengan berbagai management entities. Cafe dengan multiple outlets menginginkan sistem supply yang terintegrasi. Food court dengan berbagai tenant memerlukan koordinasi distribusi yang tepat. Catering untuk seluruh kompleks membutuhkan capacity planning yang cermat. Kami memiliki experience dalam handling complex mixed-use developments dengan sistem multi-stakeholder coordination.",
+      "metaDescription": "Supplier sayur Gading Serpong Summarecon untuk mixed-use complex. Multi-stakeholder coordination, integrated supply systems, complex management.",
+      "clientFocus": "Restoran Kompleks, Cafe Multi-Outlet, Food Court, Catering Development, Bisnis Terintegrasi",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-Gading Serpong",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (complex), 09.00-11.00 (development)",
+        "title": "Complex Development Logistics",
+        "desc": "Multi-entity coordination, complex scheduling systems, integrated development management"
+      }
+    },
+    {
+      "slug": "gading-serpong-paramount",
+      "name": "Gading Serpong Paramount",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Gading Serpong Paramount - Untuk Restoran Residence, Cafe Eksklusif, Bistro dan Catering Premium",
+      "angle": "Pemasok sayuran untuk kawasan residential premium dengan fasilitas eksklusif",
+      "seoContent": "Paramount Gading Serpong sebagai kawasan residential premium menawarkan lifestyle eksklusif dengan standar tinggi. Restoran di residence premium membutuhkan bahan dengan aesthetic dan kualitas terbaik. Cafe eksklusif untuk residents menginginkan produk yang rare dan premium. Bistro dengan atmosphere luxurious memerlukan sayuran dengan presentation perfect. Catering untuk acara eksklusif membutuhkan layanan yang highly personalized. Kami memenuhi tuntutan eksklusivitas dengan produk limited edition dan service yang sangat personalized.",
+      "metaDescription": "Supplier sayur Gading Serpong Paramount untuk residential eksklusif. Limited edition products, highly personalized service, luxury standards.",
+      "clientFocus": "Restoran Residence Premium, Cafe Eksklusif, Bistro Luxurious, Catering Eksklusif, Bisnis Very Premium",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-Gading Serpong Paramount",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (exclusive), 10.00-12.00 (luxury)",
+        "title": "Ultra-Premium Service",
+        "desc": "Limited product sourcing, ultra-personalized service, luxury standard compliance"
+      }
+    },
+    {
+      "slug": "serpong",
+      "name": "Serpong",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Serpong - Untuk Restoran Kota, Cafe, Depot dan Catering Kawasan",
+      "angle": "Penyedia sayuran untuk pusat kota satelit dengan kebutuhan komprehensif",
+      "seoContent": "Serpong sebagai pusat kota satelit memiliki kebutuhan kuliner yang sangat komprehensif dan beragam. Restoran dengan berbagai segment membutuhkan bahan sesuai target market masing-masing. Cafe dengan pelanggan dari berbagai background menginginkan produk yang versatile. Depot yang melayani kebutuhan harian kota memerlukan reliability untuk operasional terus menerus. Catering untuk berbagai event di kota satelit membutuhkan flexibility dan kapasitas. Kami memahami kompleksitas kota satelit dengan layanan yang comprehensive dan adaptable.",
+      "metaDescription": "Supplier sayur Serpong untuk kota satelit. Comprehensive city needs, versatile product range, adaptable untuk berbagai segment.",
+      "clientFocus": "Restoran Kota, Cafe Beragam, Depot, Catering Kota, Bisnis Kota Satelit",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-Serpong Kota",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (kota), 09.00-11.00 (satelit)",
+        "title": "Satellite City Solutions",
+        "desc": "Comprehensive city coverage, diverse segment adaptation, satellite city dynamics understanding"
+      }
+    },
+    {
+      "slug": "ciputat-elit",
+      "name": "Ciputat Elit",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Ciputat Elit - Untuk Restoran Premium, Cafe Eksklusif, Bistro dan Catering Residence",
+      "angle": "Pemasok sayuran untuk kawasan elite dengan komunitas eksklusif",
+      "seoContent": "Ciputat Elit sebagai kawasan dengan residents high-profile membutuhkan supplier yang memahami kebutuhan eksklusif. Restoran premium untuk elite community membutuhkan bahan dengan provenance jelas dan kualitas terjamin. Cafe eksklusif dengan clientele terpilih menginginkan produk yang tidak biasa dan high-end. Bistro dengan atmosphere sophisticated memerlukan sayuran dengan visual perfection. Catering untuk acara elite membutuhkan discretion dan service level sangat tinggi. Kami melayani komunitas elite dengan produk terpilih dan layanan yang sangat discreet.",
+      "metaDescription": "Supplier sayur Ciputat Elit untuk komunitas elite. Produk high-end, service sangat discreet, pemahaman kebutuhan eksklusif.",
+      "clientFocus": "Restoran Premium Elite, Cafe Eksklusif, Bistro Sophisticated, Catering High-Profile, Bisnis Very Exclusive",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Ciputat Elit",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (elite), 10.00-12.00 (exclusive)",
+        "title": "Elite Community Service",
+        "desc": "High-profile client protocols, exclusive product sourcing, maximum discretion systems"
+      }
+    },
+    {
+      "slug": "pamulang-equestrian",
+      "name": "Pamulang Equestrian",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pamulang Equestrian - Untuk Restoran Club, Cafe Resort, Bistro dan Catering Event",
+      "angle": "Penyuplai sayuran untuk kawasan resort dan club dengan atmosphere khusus",
+      "seoContent": "Pamulang Equestrian sebagai kawasan resort dan club memiliki atmosphere yang unique dengan pengaruh equestrian lifestyle. Restoran di club resort membutuhkan bahan yang sesuai dengan active outdoor lifestyle. Cafe dengan view padang kuda menginginkan produk fresh dan energizing. Bistro dengan atmosphere resort memerlukan sayuran yang mendukung relaxation feel. Catering untuk event equestrian membutuhkan understanding akan budaya dan tradisi klub. Kami memahami resort lifestyle dan menyediakan produk yang enhance experience khusus tersebut.",
+      "metaDescription": "Supplier sayur Pamulang Equestrian untuk resort dan club. Equestrian lifestyle understanding, resort atmosphere products, club event expertise.",
+      "clientFocus": "Restoran Club, Cafe Resort, Bistro, Catering Event Equestrian, Bisnis Resort Lifestyle",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Pamulang Equestrian",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (resort), 11.00-13.00 (event)",
+        "title": "Resort and Club Specialization",
+        "desc": "Resort lifestyle product selection, club culture understanding, event-based service optimization"
+      }
+    },
+    {
+      "slug": "graha-raya",
+      "name": "Graha Raya",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Graha Raya - Untuk Restoran Township, Cafe Premium, Food Hall dan Catering Komunitas",
+      "angle": "Pemasok sayuran untuk township eksklusif dengan fasilitas lengkap",
+      "seoContent": "Graha Raya sebagai township eksklusif memiliki komunitas dengan ekspektasi tinggi terhadap kualitas hidup. Restoran di township premium membutuhkan bahan dengan standar konsistensi tertinggi. Cafe premium untuk residents menginginkan produk yang merefleksikan investment lifestyle. Food hall dengan berbagai pilihan memerlukan variasi premium. Catering untuk komunitas eksklusif membutuhkan layanan yang personalized dan reliable. Kami memenuhi ekspektasi tinggi township premium dengan produk konsisten dan layanan terpercaya.",
+      "metaDescription": "Supplier sayur Graha Raya untuk township eksklusif. Konsistensi tinggi, premium lifestyle products, reliable untuk komunitas eksklusif.",
+      "clientFocus": "Restoran Township Premium, Cafe Eksklusif, Food Hall, Catering Komunitas, Bisnis Eksklusif",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Graha Raya",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (township), 09.30-11.30 (premium)",
+        "title": "Exclusive Township Service",
+        "desc": "High consistency standards, premium community expectations, exclusive township protocols"
+      }
+    },
+    {
+      "slug": "pondok-cabe",
+      "name": "Pondok Cabe",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pondok Cabe - Untuk Restoran Lokal, Cafe, Depot dan Catering Komunitas",
+      "angle": "Penyedia sayuran untuk kawasan dengan karakter komunitas lokal yang kuat",
+      "seoContent": "Pondok Cabe memiliki karakter komunitas lokal yang solid dengan bisnis kuliner yang melayani warga sekitar. Restoran lokal dengan pelanggan tetangga membutuhkan bahan yang terjangkau namun tetap berkualitas. Cafe dengan atmosphere neighborhood menginginkan produk yang familiar dan dipercaya. Depot yang menjadi bagian rutinitas warga memerlukan konsistensi dalam pelayanan. Catering untuk acara komunitas membutuhkan pemahaman akan dinamika sosial lokal. Kami menjadi bagian dari komunitas dengan membangun hubungan personal dan memahami kebutuhan spesifik warga.",
+      "metaDescription": "Supplier sayur Pondok Cabe untuk komunitas lokal. Hubungan personal dengan warga, pemahaman kebutuhan lokal, bagian dari komunitas.",
+      "clientFocus": "Restoran Lokal, Cafe Neighborhood, Depot, Catering Komunitas, Bisnis Warga",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Pondok Cabe",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (lokal), 13.00-15.00 (komunitas)",
+        "title": "Local Community Integration",
+        "desc": "Personal community relationships, local needs understanding, neighborhood-based service"
+      }
+    },
+    {
+      "slug": "ciater-bsd",
+      "name": "Ciater BSD",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Ciater BSD - Untuk Restoran Resort, Cafe Alam, Bistro dan Catering Lingkungan",
+      "angle": "Pemasok sayuran untuk kawasan dengan konsep alam dan resort living",
+      "seoContent": "Ciater BSD menawarkan konsep living yang dekat dengan alam dengan atmosphere resort-style. Restoran dengan konsep alam membutuhkan bahan organik dan natural. Cafe dengan atmosphere resort menginginkan produk yang segar dan menyegarkan. Bistro dengan nuansa alam memerlukan sayuran dengan rustic charm. Catering untuk acara di lingkungan resort membutuhkan presentasi yang natural dan elegant. Kami mendukung resort living concept dengan produk yang enhance natural experience dan sustainable practices.",
+      "metaDescription": "Supplier sayur Ciater BSD untuk resort living. Natural and organic focus, resort atmosphere support, sustainable practices.",
+      "clientFocus": "Restoran Resort, Cafe Alam, Bistro Natural, Catering Lingkungan, Bisnis Resort Style",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-Ciater BSD",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (resort), 10.00-12.00 (alam)",
+        "title": "Resort Lifestyle Support",
+        "desc": "Natural product selection, resort atmosphere enhancement, sustainable resort practices"
+      }
+    },
+    {
+      "slug": "lippo-karawaci",
+      "name": "Lippo Karawaci",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Lippo Karawaci - Untuk Restoran Township, Cafe, Food Court dan Catering Komunitas Besar",
+      "angle": "Penyuplai sayuran untuk township besar dengan fasilitas komprehensif",
+      "seoContent": "Lippo Karawaci sebagai township besar memiliki kebutuhan kuliner yang sangat kompleks dan beragam. Restoran di township terintegrasi membutuhkan bahan untuk berbagai jenis masakan internasional dan lokal. Cafe dengan multiple concepts menginginkan produk yang sesuai dengan masing-masing tema. Food court dengan puluhan tenant memerlukan sistem distribusi yang terkoordinasi. Catering untuk komunitas besar membutuhkan kapasitas dan reliability tinggi. Kami memiliki pengalaman melayani township skala besar dengan sistem logistik yang sophisticated.",
+      "metaDescription": "Supplier sayur Lippo Karawaci untuk township besar. Sistem logistik sophisticated, kapasitas tinggi, pengalaman township besar.",
+      "clientFocus": "Restoran Township, Cafe Multi-Konsep, Food Court, Catering Komunitas Besar, Bisnis Skala Besar",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Tangerang-Lippo Karawaci",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.30 (township), 08.00-10.00 (komunitas)",
+        "title": "Large-Scale Township Logistics",
+        "desc": "Sophisticated distribution systems, high-capacity operations, large community service protocols"
+      }
+    },
+    {
+      "slug": "modernland",
+      "name": "Modernland",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Modernland - Untuk Restoran Komersial, Cafe, Depot dan Catering Kawasan",
+      "angle": "Pemasok sayuran untuk kawasan bisnis dan komersial terpadu",
+      "seoContent": "Modernland sebagai kawasan bisnis dan komersial memiliki karakter yang dinamis dengan berbagai jenis usaha. Restoran komersial dengan target pekerja dan pengunjung membutuhkan bahan untuk menu praktis dan lezat. Cafe dengan atmosphere business-friendly menginginkan produk yang sesuai dengan corporate crowd. Depot yang melayani kebutuhan cepat memerlukan sistem yang efisien. Catering untuk perusahaan di kawasan membutuhkan reliability untuk meeting dan event. Kami memahami dinamika kawasan bisnis dengan layanan yang efisien dan professional.",
+      "metaDescription": "Supplier sayur Modernland untuk kawasan bisnis. Layanan efisien untuk corporate needs, understanding business district dynamics.",
+      "clientFocus": "Restoran Komersial, Cafe Bisnis, Depot, Catering Perusahaan, Bisnis Kawasan",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Tangerang-Modernland",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (bisnis), 10.00-12.00 (corporate)",
+        "title": "Business District Efficiency",
+        "desc": "Corporate needs optimization, business hour scheduling, professional business service"
+      }
+    },
+    {
+      "slug": "banjar-wijaya",
+      "name": "Banjar Wijaya",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Banjar Wijaya - Untuk Restoran Keluarga, Cafe, Warung dan Catering Lokal",
+      "angle": "Penyedia sayuran untuk kawasan dengan karakter komunitas tradisional",
+      "seoContent": "Banjar Wijaya mempertahankan karakter komunitas tradisional dengan nilai-nilai kekeluargaan yang kuat. Restoran keluarga dengan pelanggan setempat membutuhkan bahan yang terjangkau dan familiar. Cafe dengan atmosphere traditional menginginkan produk yang autentik dan local. Warung yang melayani kebutuhan sehari-hari memerlukan konsistensi dalam kualitas. Catering untuk acara adat dan keluarga membutuhkan pemahaman akan tradisi lokal. Kami menghormati nilai-nilai tradisional dan menjadi bagian dari jaringan kepercayaan komunitas.",
+      "metaDescription": "Supplier sayur Banjar Wijaya untuk komunitas tradisional. Menghormati nilai tradisional, bagian dari jaringan kepercayaan, autentik dan lokal.",
+      "clientFocus": "Restoran Keluarga Tradisional, Cafe Lokal, Warung, Catering Adat, Bisnis Komunitas",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tangerang-Banjar Wijaya",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (tradisional), 12.00-14.00 (adat)",
+        "title": "Traditional Community Service",
+        "desc": "Traditional value respect, community trust building, local authenticity focus"
+      }
+    },
+    {
+      "slug": "suvarna-sutera",
+      "name": "Suvarna Sutera",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Suvarna Sutera - Untuk Restoran Premium, Cafe Eksklusif, Bistro dan Catering Residence",
+      "angle": "Pemasok sayuran untuk kawasan residential sangat eksklusif",
+      "seoContent": "Suvarna Sutera sebagai kawasan residential sangat eksklusif menuntut standar tertinggi dalam setiap aspek. Restoran premium untuk residents elite membutuhkan bahan dengan provenance terjamin dan kualitas konsisten. Cafe eksklusif dengan clientele terpilih menginginkan produk rare dan premium. Bistro dengan atmosphere luxurious memerlukan sayuran dengan visual perfection. Catering untuk acara high-profile membutuhkan discretion mutlak dan service impeccable. Kami melayani kebutuhan eksklusif dengan produk terpilih dan protokol layanan yang sangat ketat.",
+      "metaDescription": "Supplier sayur Suvarna Sutera untuk residential sangat eksklusif. Produk rare dan premium, discretion mutlak, service impeccable untuk elite.",
+      "clientFocus": "Restoran Premium Elite, Cafe Sangat Eksklusif, Bistro Luxurious, Catering High-Profile, Bisnis Ultra-Exclusive",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Tangerang-Suvarna Sutera",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (ultra-exclusive), 10.00-12.00 (high-profile)",
+        "title": "Ultra-Exclusive Protocol",
+        "desc": "Maximum discretion systems, rare product sourcing, elite client protocols"
+      }
+    },
+    {
+      "slug": "lavon-swan-city",
+      "name": "Lavon Swan City",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Lavon Swan City - Untuk Restoran Konsep, Cafe Premium, Bistro dan Catering Komunitas",
+      "angle": "Penyuplai sayuran untuk kawasan dengan konsep living tertentu",
+      "seoContent": "Lavon Swan City menawarkan konsep living yang spesifik dengan atmosphere yang terencana. Restoran dengan konsep tertentu membutuhkan bahan yang mendukung theme execution. Cafe premium di lingkungan terencana menginginkan produk yang sesuai dengan masterplan konsep. Bistro dengan atmosphere curated memerlukan sayuran dengan karakter tertentu. Catering untuk acara komunitas terencana membutuhkan alignment dengan overall concept. Kami memahami importance of concept execution dan menyediakan produk yang mendukung visi pengembangan kawasan.",
+      "metaDescription": "Supplier sayur Lavon Swan City untuk kawasan berkonsep. Support concept execution, alignment dengan masterplan, produk sesuai tema.",
+      "clientFocus": "Restoran Konsep, Cafe Premium, Bistro Curated, Catering Komunitas, Bisnis Terencana",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tangerang-Lavon Swan City",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (konsep), 10.00-12.00 (terencana)",
+        "title": "Concept Development Support",
+        "desc": "Theme-appropriate product selection, concept alignment systems, planned community integration"
+      }
+    },
+    {
+      "slug": "scientia-square",
+      "name": "Scientia Square",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Scientia Square - Untuk Restoran Pendidikan, Cafe Kampus, Food Hall dan Catering Akademik",
+      "angle": "Pemasok sayuran untuk kawasan pendidikan dengan komunitas akademik",
+      "seoContent": "Scientia Square sebagai bagian dari lingkungan pendidikan memiliki karakter akademik yang kuat. Restoran yang melayani komunitas kampus membutuhkan bahan untuk menu yang brain-fueling dan sehat. Cafe dengan atmosphere intellectual menginginkan produk yang mendukung focus dan productivity. Food hall di lingkungan pendidikan memerlukan variasi untuk diverse student body. Catering untuk event akademik membutuhkan penyesuaian dengan academic calendar. Kami memahami kebutuhan komunitas akademik dengan produk yang mendukung intellectual lifestyle.",
+      "metaDescription": "Supplier sayur Scientia Square untuk lingkungan pendidikan. Produk brain-fueling, academic calendar understanding, intellectual lifestyle support.",
+      "clientFocus": "Restoran Kampus, Cafe Akademik, Food Hall, Catering Pendidikan, Bisnis Lingkungan Belajar",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Gading Serpong-Scientia",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (akademik), 10.00-12.00 (kampus)",
+        "title": "Academic Environment Service",
+        "desc": "Academic schedule adaptation, intellectual lifestyle products, educational community understanding"
+      }
+    },
+    {
+      "slug": "shila-at-sawangan",
+      "name": "Shila at Sawangan",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Shila at Sawangan - Untuk Restoran Perumahan, Cafe, Depot dan Catering Komunitas",
+      "angle": "Penyedia sayuran untuk kawasan perumahan dengan atmosphere terencana",
+      "seoContent": "Shila at Sawangan sebagai kawasan perumahan terencana memiliki komunitas dengan lifestyle tertentu. Restoran di perumahan terencana membutuhkan bahan untuk menu keluarga yang sehat dan praktis. Cafe dengan atmosphere community menginginkan produk yang sesuai dengan values residents. Depot yang melayani kebutuhan harian memerlukan sistem yang reliable untuk rutinitas. Catering untuk acara komunitas terencana membutuhkan koordinasi dengan community management. Kami memahami planned community dynamics dengan layanan yang terintegrasi dengan lifestyle residents.",
+      "metaDescription": "Supplier sayur Shila at Sawangan untuk perumahan terencana. Integrated dengan community lifestyle, understanding planned community, reliable untuk rutinitas.",
+      "clientFocus": "Restoran Perumahan, Cafe Komunitas, Depot, Catering Residence, Bisnis Terencana",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Sawangan-Shila",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (perumahan), 13.00-15.00 (komunitas)",
+        "title": "Planned Community Integration",
+        "desc": "Community lifestyle understanding, planned neighborhood protocols, integrated residence service"
+      }
+    },
+    {
+      "slug": "citra-raya-premium",
+      "name": "Citra Raya Premium",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Citra Raya Premium - Untuk Restoran Township, Cafe Eksklusif, Bistro dan Catering Premium",
+      "angle": "Pemasok sayuran untuk township premium dengan standar tinggi",
+      "seoContent": "Citra Raya Premium sebagai township dengan positioning high-end memiliki ekspektasi kualitas yang sangat tinggi. Restoran premium di township eksklusif membutuhkan bahan dengan quality guarantee dan consistency. Cafe eksklusif untuk residents premium menginginkan produk yang merefleksikan investment value. Bistro dengan atmosphere sophisticated memerlukan sayuran dengan aesthetic perfection. Catering untuk acara premium membutuhkan layanan yang flawless dan impressive. Kami memenuhi standar tinggi township premium dengan produk terpilih dan service excellence.",
+      "metaDescription": "Supplier sayur Citra Raya Premium untuk township high-end. Quality guarantee, aesthetic perfection, service excellence untuk premium community.",
+      "clientFocus": "Restoran Premium Township, Cafe Eksklusif, Bistro Sophisticated, Catering Premium, Bisnis High-End",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tangerang-Citra Raya Premium",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (premium), 09.30-11.30 (township)",
+        "title": "Premium Township Standards",
+        "desc": "High-end quality assurance, premium aesthetic standards, township excellence protocols"
+      }
+    },
+    {
+      "slug": "legok-cluster",
+      "name": "Legok Cluster",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Legok Cluster - Untuk Restoran Cluster, Cafe, Depot dan Catering Perumahan",
+      "angle": "Penyuplai sayuran untuk kawasan cluster housing dengan sistem teratur",
+      "seoContent": "Legok Cluster sebagai kawasan cluster housing memiliki sistem dan aturan yang sangat terstruktur. Restoran di dalam cluster membutuhkan bahan dengan sistem pengiriman yang compliant dengan cluster rules. Cafe yang melayani residents cluster menginginkan produk yang sesuai dengan cluster lifestyle. Depot dengan operasional teratur memerlukan jadwal yang predictable dan reliable. Catering untuk acara di cluster membutuhkan koordinasi dengan cluster management. Kami memahami cluster housing systems dengan layanan yang terintegrasi dengan aturan dan kebiasaan setempat.",
+      "metaDescription": "Supplier sayur Legok Cluster untuk cluster housing. Compliant dengan cluster rules, understanding cluster lifestyle, terintegrasi dengan sistem.",
+      "clientFocus": "Restoran Cluster, Cafe Residence, Depot, Catering Perumahan, Bisnis Cluster",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Legok Cluster",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (cluster), 10.00-12.00 (residence)",
+        "title": "Cluster Housing Compliance",
+        "desc": "Cluster regulation adherence, structured delivery systems, cluster community understanding"
+      }
+    },
+    {
+      "slug": "curug-baru",
+      "name": "Curug Baru",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Curug Baru - Untuk Restoran Lokal, Cafe, Warung dan Catering Komunitas",
+      "angle": "Pemasok sayuran untuk kawasan dengan karakter semi-urban yang berkembang",
+      "seoContent": "Curug Baru memiliki karakter semi-urban dengan perkembangan yang sedang berlangsung. Restoran lokal di kawasan berkembang membutuhkan bahan dengan harga kompetitif namun kualitas terjaga. Cafe dengan atmosphere growing community menginginkan produk yang mendukung perkembangan. Warung yang melayani kebutuhan dasar memerlukan reliability untuk bisnis harian. Catering untuk acara komunitas berkembang membutuhkan flexibility dan understanding. Kami menjadi partner perkembangan kawasan dengan layanan yang scalable dan adaptif terhadap perubahan.",
+      "metaDescription": "Supplier sayur Curug Baru untuk kawasan berkembang. Partner perkembangan area, layanan scalable, adaptif terhadap perubahan.",
+      "clientFocus": "Restoran Lokal Berkembang, Cafe, Warung, Catering Komunitas, Bisnis Growing Area",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Curug Baru",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (berkembang), 13.00-15.00 (komunitas)",
+        "title": "Developing Area Partnership",
+        "desc": "Scalable growth support, area development adaptation, growing community understanding"
+      }
+    },
+    {
+      "slug": "tangerang-kota",
+      "name": "Tangerang Kota Pasar Lama",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Tangerang Kota - Untuk Restoran Historis, Cafe Tradisional, Warung dan Catering Budaya",
+      "angle": "Penyedia sayuran untuk kawasan bersejarah dengan warisan kuliner kaya",
+      "seoContent": "Tangerang Kota Pasar Lama memiliki sejarah panjang dengan warisan kuliner yang sangat kaya. Restoran historis dengan resep turun-temurun membutuhkan bahan yang autentik untuk menjaga originalitas. Cafe tradisional dengan atmosphere old town menginginkan produk yang menghormati sejarah. Warung yang telah beroperasi puluhan tahun memerlukan konsistensi untuk menjaga legacy. Catering untuk acara budaya membutuhkan pemahaman akan tradisi lokal. Kami menghormati warisan kuliner dengan menyediakan bahan autentik dan menjaga konsistensi rasa.",
+      "metaDescription": "Supplier sayur Tangerang Kota untuk kawasan bersejarah. Bahan autentik untuk resep historis, menghormati warisan kuliner, konsistensi legacy.",
+      "clientFocus": "Restoran Historis, Cafe Tradisional, Warung Legacy, Catering Budaya, Bisnis Heritage",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tangerang Kota",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (historisch), 12.00-14.00 (budaya)",
+        "title": "Historical Area Preservation",
+        "desc": "Authentic ingredient sourcing, historical recipe understanding, cultural heritage respect"
+      }
+    },
+    {
+      "slug": "pinang",
+      "name": "Pinang",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pinang - Untuk Restoran Komersial, Cafe, Depot dan Catering Kawasan",
+      "angle": "Pemasok sayuran untuk kawasan komersial padat dengan aktivitas tinggi",
+      "seoContent": "Pinang sebagai kawasan komersial padat memiliki dinamika bisnis yang sangat intens. Restoran komersial dengan customer flow tinggi membutuhkan supply chain yang robust dan reliable. Cafe dengan atmosphere urban menginginkan produk yang trendy dan up-to-date. Depot yang melayani kebutuhan cepat memerlukan sistem yang efisien dan tidak pernah gagal. Catering untuk bisnis di kawasan membutuhkan ketepatan waktu yang absolut. Kami telah terbukti di lingkungan high-pressure dengan sistem yang resilient dan reliable.",
+      "metaDescription": "Supplier sayur Pinang untuk kawasan komersial padat. Sistem robust dan reliable, resilient di high-pressure environment, ketepatan waktu absolut.",
+      "clientFocus": "Restoran Komersial, Cafe Urban, Depot, Catering Bisnis, Kawasan High-Traffic",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Pinang",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (komersial), 09.00-11.00 (urban)",
+        "title": "High-Traffic Area Logistics",
+        "desc": "High-pressure resilience, robust supply systems, absolute timing reliability"
+      }
+    },
+    {
+      "slug": "karang-tengah",
+      "name": "Karang Tengah",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Karang Tengah - Untuk Restoran Lokal, Cafe, Warung dan Catering Komunitas",
+      "angle": "Penyuplai sayuran untuk kawasan dengan karakter komunitas menengah yang solid",
+      "seoContent": "Karang Tengah memiliki karakter komunitas menengah yang solid dengan nilai-nilai kekeluargaan. Restoran lokal dengan pelanggan warga sekitar membutuhkan bahan yang terjangkau namun tetap berkualitas. Cafe dengan atmosphere community menginginkan produk yang familiar dan dipercaya. Warung yang menjadi bagian kehidupan sehari-hari memerlukan konsistensi dalam pelayanan. Catering untuk acara komunitas membutuhkan pemahaman akan hubungan sosial. Kami membangun hubungan personal dengan setiap pemilik bisnis dan menjadi bagian dari jaringan sosial komunitas.",
+      "metaDescription": "Supplier sayur Karang Tengah untuk komunitas menengah. Hubungan personal dengan pemilik bisnis, bagian dari jaringan sosial, memahami dinamika komunitas.",
+      "clientFocus": "Restoran Lokal, Cafe Komunitas, Warung, Catering Warga, Bisnis Middle-Class",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Karang Tengah",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (komunitas), 13.00-15.00 (lokal)",
+        "title": "Middle-Class Community Service",
+        "desc": "Personal business relationships, community social understanding, middle-class value alignment"
+      }
+    },
+    {
+      "slug": "ciledug-raya",
+      "name": "Ciledug Raya",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Ciledug Raya - Untuk Restoran Koridor, Cafe, Depot dan Catering Kawasan",
+      "angle": "Pemasok sayuran untuk koridor komersial utama dengan traffic tinggi",
+      "seoContent": "Ciledug Raya sebagai koridor komersial utama menghadapi tantangan logistik yang signifikan. Restoran di koridor sibuk membutuhkan pengiriman di time window yang tepat untuk menghindari kemacetan. Cafe dengan visibility tinggi menginginkan bahan dengan visual appeal untuk menarik perhatian. Depot dengan operasional efisien memerlukan sistem yang streamlined. Catering untuk bisnis di sepanjang koridor membutuhkan rute yang teroptimasi. Kami menguasai logistik koridor utama dengan sistem time management yang sophisticated dan route optimization.",
+      "metaDescription": "Supplier sayur Ciledug Raya untuk koridor komersial. Time management sophisticated, route optimization, koridor logistics expertise.",
+      "clientFocus": "Restoran Koridor, Cafe, Depot, Catering Kawasan, Bisnis Jalan Utama",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Ciledug Raya",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.30 (avoid peak), 08.00-10.00 (koridor)",
+        "title": "Major Corridor Optimization",
+        "desc": "Peak traffic management, sophisticated time windows, corridor route expertise"
+      }
+    },
+    {
+      "slug": "bandara-soekarno-hatta",
+      "name": "Bandara Soekarno-Hatta",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Bandara Soekarno-Hatta - Untuk Restoran Airport, Cafe Transit, Food Court dan Catering Penerbangan",
+      "angle": "Penyedia sayuran untuk kompleks bandara dengan operasional 24/7",
+      "seoContent": "Bandara Soekarno-Hatta sebagai hub internasional memiliki kebutuhan operasional yang sangat kompleks dan 24/7. Restoran di bandara membutuhkan bahan untuk pelanggan dengan waktu terbatas dan berbagai kebangsaan. Cafe di area transit menginginkan produk yang praktis dan travel-friendly. Food court dengan passenger flow tinggi memerlukan sistem supply yang sangat reliable. Catering untuk airline dan flight kitchen membutuhkan compliance dengan standar aviation security. Kami memahami aviation industry requirements dengan sistem yang compliant dan reliable untuk operasional 24/7.",
+      "metaDescription": "Supplier sayur Bandara Soekarno-Hatta untuk aviation industry. Compliance dengan aviation security, reliable 24/7 operations, understanding airport dynamics.",
+      "clientFocus": "Restoran Airport, Cafe Transit, Food Court, Catering Penerbangan, Bisnis Aviation",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Bandara Soekarno-Hatta",
+      "logistics": {
+        "time": "01.30-03.30 (panen), 04.00-06.00 (airport), 08.00-10.00 (flight kitchen), 14.00-16.00 (transit), 20.00-22.00 (late shift)",
+        "title": "Aviation Industry Logistics",
+        "desc": "24/7 shift operations, aviation security compliance, airport authority coordination"
+      }
+    },
+    {
+      "slug": "summarecon-bekasi",
+      "name": "Summarecon Bekasi",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Summarecon Bekasi - Untuk Restoran Mall, Cafe, Food Court dan Catering Kompleks",
+      "angle": "Pemasok sayuran untuk mixed-use development besar di Bekasi",
+      "seoContent": "Summarecon Bekasi sebagai mixed-use development besar memiliki kompleksitas operasional yang signifikan. Restoran di mall dan kompleks membutuhkan koordinasi dengan berbagai management entities. Cafe dengan multiple locations menginginkan sistem supply yang terintegrasi. Food court dengan berbagai tenant memerlukan distribusi yang terkoordinasi dengan presisi. Catering untuk seluruh kompleks membutuhkan capacity planning yang matang. Kami memiliki experience dalam menangani large-scale mixed-use developments dengan sistem multi-stakeholder management yang efektif.",
+      "metaDescription": "Supplier sayur Summarecon Bekasi untuk mixed-use complex besar. Multi-stakeholder management efektif, large-scale capacity, integrated complex systems.",
+      "clientFocus": "Restoran Mall, Cafe Multi-Lokasi, Food Court, Catering Kompleks, Bisnis Development Besar",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Bekasi-Summarecon",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (complex), 09.00-11.00 (development)",
+        "title": "Large-Scale Complex Logistics",
+        "desc": "Multi-entity coordination systems, large capacity management, complex development expertise"
+      }
+    },
+    {
+      "slug": "kemang-pratama-bekasi",
+      "name": "Kemang Pratama Bekasi",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Kemang Pratama Bekasi - Untuk Restoran Perumahan, Cafe, Depot dan Catering Komunitas",
+      "angle": "Penyuplai sayuran untuk kawasan perumahan besar dengan komunitas terencana",
+      "seoContent": "Kemang Pratama Bekasi sebagai kawasan perumahan besar memiliki komunitas yang terencana dengan kebutuhan terstruktur. Restoran di perumahan besar membutuhkan bahan untuk menu yang sesuai dengan keluarga berbagai usia. Cafe dengan atmosphere community menginginkan produk yang mendukung social interactions. Depot yang melayani kebutuhan harian memerlukan sistem yang reliable untuk rutinitas warga. Catering untuk acara komunitas besar membutuhkan kapasitas dan koordinasi. Kami memahami dynamics of large planned communities dengan layanan yang scalable dan terintegrasi.",
+      "metaDescription": "Supplier sayur Kemang Pratama Bekasi untuk perumahan besar. Scalable untuk large community, understanding planned neighborhood, integrated residence service.",
+      "clientFocus": "Restoran Perumahan Besar, Cafe Komunitas, Depot, Catering Residence, Bisnis Large Community",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Bekasi-Kemang Pratama",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (perumahan), 12.00-14.00 (komunitas)",
+        "title": "Large Community Service",
+        "desc": "Scalable community systems, large neighborhood understanding, integrated residential logistics"
+      }
+    },
+    {
+      "slug": "galaxi-bekasi",
+      "name": "Galaxi Bekasi",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Galaxi Bekasi - Untuk Restoran Mall, Cafe Modern, Food Hall dan Catering Lifestyle",
+      "angle": "Pemasok sayuran untuk lifestyle mall dengan konsep kontemporer",
+      "seoContent": "Galaxi Bekasi sebagai lifestyle mall kontemporer membutuhkan supplier yang memahami retail food service modern. Restoran di mall modern membutuhkan bahan dengan visual appeal tinggi untuk social media worthy dishes. Cafe dengan atmosphere contemporary menginginkan produk yang trendy dan Instagramable. Food hall dengan berbagai konsep kekinian memerlukan ingredients yang sesuai dengan food trends. Catering untuk event di mall membutuhkan presentasi yang modern dan engaging. Kami mengikuti perkembangan food trends terkini dengan produk yang sesuai selera generasi muda.",
+      "metaDescription": "Supplier sayur Galaxi Bekasi untuk lifestyle mall modern. Social media worthy products, trendy ingredients, contemporary presentation untuk generasi muda.",
+      "clientFocus": "Restoran Mall Modern, Cafe Contemporary, Food Hall, Catering Event, Bisnis Generasi Muda",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Bekasi-Galaxi",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (mall), 09.00-11.00 (lifestyle)",
+        "title": "Contemporary Mall Logistics",
+        "desc": "Trend-responsive sourcing, social media optimization, modern retail support"
+      }
+    },
+    {
+      "slug": "harapan-indah",
+      "name": "Harapan Indah",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Harapan Indah - Untuk Restoran Township, Cafe, Food Court dan Catering Komunitas",
+      "angle": "Penyedia sayuran untuk township terintegrasi dengan fasilitas lengkap",
+      "seoContent": "Harapan Indah sebagai township terintegrasi memiliki kebutuhan kuliner yang sangat beragam dan kompleks. Restoran di township membutuhkan bahan untuk berbagai jenis cuisine sesuai demografi residents. Cafe dengan multiple concepts menginginkan produk yang sesuai dengan masing-masing segment. Food court dengan berbagai pilihan memerlukan variasi produk yang luas. Catering untuk komunitas township membutuhkan kapasitas dan reliability tinggi. Kami memiliki kemampuan melayani township terintegrasi dengan sistem supply chain yang comprehensive.",
+      "metaDescription": "Supplier sayur Harapan Indah untuk township terintegrasi. Comprehensive supply chain, diverse product range, township-scale capacity.",
+      "clientFocus": "Restoran Township, Cafe Multi-Konsep, Food Court, Catering Komunitas, Bisnis Township",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Bekasi-Harapan Indah",
+      "logistics": {
+        "time": "02.00-04.00 (panen), 04.30-06.30 (township), 08.00-10.00 (komunitas)",
+        "title": "Integrated Township Management",
+        "desc": "Comprehensive supply systems, diverse needs accommodation, township-scale operations"
+      }
+    },
+    {
+      "slug": "jatiwaringin",
+      "name": "Jatiwaringin",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Jatiwaringin - Untuk Restoran Lokal, Cafe, Depot dan Catering Kawasan",
+      "angle": "Pemasok sayuran untuk kawasan dengan karakter urban yang established",
+      "seoContent": "Jatiwaringin sebagai kawasan urban established memiliki bisnis kuliner dengan basis pelanggan yang stabil. Restoran lokal dengan pelanggan tetap membutuhkan konsistensi dalam kualitas bahan. Cafe dengan atmosphere established menginginkan produk yang telah terbukti dan dipercaya. Depot yang menjadi bagian rutinitas warga memerlukan reliability untuk operasional harian. Catering untuk acara di kawasan established membutuhkan pemahaman akan dinamika lokal. Kami membangun hubungan jangka panjang dengan bisnis established berdasarkan kepercayaan dan konsistensi.",
+      "metaDescription": "Supplier sayur Jatiwaringin untuk kawasan established. Hubungan jangka panjang, konsistensi untuk bisnis mapan, kepercayaan berdasarkan track record.",
+      "clientFocus": "Restoran Established, Cafe, Depot, Catering Kawasan, Bisnis Urban Mapan",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Jatiwaringin",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (established), 12.00-14.00 (kawasan)",
+        "title": "Established Urban Service",
+        "desc": "Long-term relationship building, consistency maintenance, established business understanding"
+      }
+    },
+    {
+      "slug": "pekayon",
+      "name": "Pekayon",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pekayon - Untuk Restoran Komunitas, Cafe, Warung dan Catering Lokal",
+      "angle": "Penyuplai sayuran untuk kawasan dengan karakter komunitas menengah-bawah",
+      "seoContent": "Pekayon memiliki karakter komunitas menengah-bawah dengan prioritas pada nilai dan kepraktisan. Restoran komunitas dengan budget ketat membutuhkan bahan yang terjangkau namun tetap memenuhi standar kesehatan. Cafe dengan atmosphere sederhana menginginkan produk yang praktis dan tidak berlebihan. Warung yang melayani kebutuhan dasar memerlukan sistem yang simple dan mudah. Catering untuk acara sederhana membutuhkan solusi yang ekonomis namun tetap layak. Kami memahami prioritas komunitas dengan menawarkan nilai terbaik dalam setiap budget.",
+      "metaDescription": "Supplier sayur Pekayon untuk komunitas menengah-bawah. Nilai terbaik setiap budget, solusi ekonomis, understanding prioritas praktis.",
+      "clientFocus": "Restoran Komunitas, Cafe Sederhana, Warung, Catering Lokal, Bisnis Budget Conscious",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Pekayon",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (komunitas), 13.00-15.00 (lokal)",
+        "title": "Value-Conscious Community Service",
+        "desc": "Budget optimization systems, practical solution focus, value-conscious community understanding"
+      }
+    },
+    {
+      "slug": "lippo-cikarang",
+      "name": "Lippo Cikarang",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Lippo Cikarang - Untuk Restoran Township, Cafe, Food Court dan Catering Industrial",
+      "angle": "Pemasok sayuran untuk township di kawasan industrial",
+      "seoContent": "Lippo Cikarang sebagai township di kawasan industrial memiliki karakter unik dengan mix residential dan industrial. Restoran di township industrial membutuhkan bahan untuk menu yang mengenyangkan dengan harga kompetitif. Cafe dengan atmosphere industrial community menginginkan produk yang robust dan praktis. Food court dengan pelanggan pekerja industri memerlukan sistem yang efficient untuk rush hours. Catering untuk perusahaan industri membutuhkan volume besar dengan efisiensi tinggi. Kami memahami dinamika industrial township dengan solusi yang mengoptimalkan efisiensi dan nilai.",
+      "metaDescription": "Supplier sayur Lippo Cikarang untuk industrial township. Solusi efisiensi tinggi, understanding industrial community, volume besar untuk perusahaan.",
+      "clientFocus": "Restoran Industrial Township, Cafe, Food Court, Catering Perusahaan, Bisnis Kawasan Industri",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Cikarang-Lippo",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (industrial), 09.00-11.00 (township)",
+        "title": "Industrial Township Logistics",
+        "desc": "Industrial efficiency optimization, shift work accommodation, industrial community dynamics"
+      }
+    },
+    {
+      "slug": "jababeka",
+      "name": "Jababeka",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Jababeka - Untuk Restoran Industrial, Cafe, Food Court dan Catering Perusahaan",
+      "angle": "Penyedia sayuran untuk kawasan industri besar dengan kebutuhan massal",
+      "seoContent": "Jababeka sebagai kawasan industri terbesar membutuhkan supplier dengan kapasitas dan efisiensi tinggi. Restoran di kawasan industri membutuhkan bahan untuk menu volume besar dengan konsistensi tinggi. Cafe yang melayani ribuan pekerja menginginkan sistem supply yang tidak pernah gagal. Food court dengan multiple tenant memerlukan distribusi yang terkoordinasi dengan presisi. Catering untuk perusahaan industri skala besar membutuhkan kemampuan handling ekstrem. Kami memiliki infrastruktur dan sistem untuk memenuhi kebutuhan massal kawasan industri dengan reliability tertinggi.",
+      "metaDescription": "Supplier sayur Jababeka untuk kawasan industri besar. Kapasitas massal, reliability tertinggi, sistem untuk kebutuhan ekstrem industri.",
+      "clientFocus": "Restoran Kawasan Industri, Cafe Pekerja, Food Court, Catering Perusahaan Besar, Bisnis Industrial Scale",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Cikarang-Jababeka",
+      "logistics": {
+        "time": "01.30-03.30 (panen), 04.00-06.00 (industrial), 08.00-10.00 (massal)",
+        "title": "Industrial Scale Operations",
+        "desc": "Massive capacity infrastructure, extreme reliability systems, industrial scale coordination"
+      }
+    },
+    {
+      "slug": "delta-mas",
+      "name": "Delta Mas",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Delta Mas - Untuk Restoran Komersial, Cafe, Depot dan Catering Kawasan",
+      "angle": "Pemasok sayuran untuk kawasan bisnis dan komersial berkembang",
+      "seoContent": "Delta Mas sebagai kawasan bisnis yang sedang berkembang membutuhkan supplier yang bisa tumbuh bersama. Restoran di kawasan berkembang membutuhkan bahan dengan harga kompetitif untuk membangun basis pelanggan. Cafe dengan atmosphere growth menginginkan produk yang mendukung positioning baru. Depot yang melayani kebutuhan bisnis baru memerlukan flexibility dalam layanan. Catering untuk perusahaan di kawasan berkembang membutuhkan partner yang memahami fase growth. Kami menjadi growth partner dengan layanan yang scalable dan adaptif terhadap perkembangan bisnis.",
+      "metaDescription": "Supplier sayur Delta Mas untuk kawasan berkembang. Growth partnership, scalable services, adaptif terhadap perkembangan bisnis.",
+      "clientFocus": "Restoran Berkembang, Cafe, Depot, Catering Perusahaan, Bisnis Growth Phase",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Cikarang-Delta Mas",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (berkembang), 10.00-12.00 (growth)",
+        "title": "Growth Area Partnership",
+        "desc": "Scalable growth systems, business development support, adaptive service protocols"
+      }
+    },
+    {
+      "slug": "grand-wisata",
+      "name": "Grand Wisata",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Grand Wisata - Untuk Restoran Township, Cafe, Food Hall dan Catering Komunitas",
+      "angle": "Penyuplai sayuran untuk township dengan konsep living tertentu",
+      "seoContent": "Grand Wisata sebagai township dengan konsep tertentu membutuhkan supplier yang memahami positioning dan target market. Restoran di township berkonsep membutuhkan bahan yang sesuai dengan theme dan atmosphere. Cafe dengan konsep terintegrasi menginginkan produk yang mendukung overall experience. Food hall dengan berbagai pilihan memerlukan variasi yang tetap dalam koridor konsep. Catering untuk komunitas township membutuhkan alignment dengan lifestyle positioning. Kami memahami importance of concept consistency dan menyediakan produk yang mendukung positioning township.",
+      "metaDescription": "Supplier sayur Grand Wisata untuk township berkonsep. Concept consistency support, theme-appropriate products, lifestyle alignment.",
+      "clientFocus": "Restoran Township Berkonsep, Cafe Terintegrasi, Food Hall, Catering Komunitas, Bisnis Themed Living",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Cikarang-Grand Wisata",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (township), 10.00-12.00 (konsep)",
+        "title": "Concept Township Support",
+        "desc": "Theme consistency management, concept-aligned product selection, lifestyle positioning support"
+      }
+    },
+    {
+      "slug": "cikarang-pusat",
+      "name": "Cikarang Pusat",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Cikarang Pusat - Untuk Restoran Kota, Cafe, Depot dan Catering Perkantoran",
+      "angle": "Pemasok sayuran untuk pusat kota dengan aktivitas bisnis padat",
+      "seoContent": "Cikarang Pusat sebagai jantung kota memiliki konsentrasi bisnis dan perkantoran yang tinggi. Restoran di pusat kota membutuhkan bahan untuk menu yang menarik berbagai segment pelanggan. Cafe dengan atmosphere urban menginginkan produk yang trendy dan up-to-date. Depot yang melayani kebutuhan cepat perkantoran memerlukan sistem yang sangat efisien. Catering untuk kantor dan institusi membutuhkan ketepatan waktu dan reliability. Kami menguasai logistik pusat kota dengan sistem time management yang ketat dan route optimization.",
+      "metaDescription": "Supplier sayur Cikarang Pusat untuk jantung kota. Time management ketat, route optimization, understanding urban center dynamics.",
+      "clientFocus": "Restoran Pusat Kota, Cafe Urban, Depot, Catering Perkantoran, Bisnis City Center",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Cikarang-Pusat Kota",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (city center), 09.00-11.00 (perkantoran)",
+        "title": "City Center Logistics",
+        "desc": "Urban center optimization, business district scheduling, city logistics expertise"
+      }
+    },
+    {
+      "slug": "ejip",
+      "name": "EJIP",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur EJIP - Untuk Restoran Industrial Park, Cafe, Food Court dan Catering Perusahaan",
+      "angle": "Penyedia sayuran untuk kawasan industri terencana dengan standar tinggi",
+      "seoContent": "EJIP sebagai kawasan industri terencana memiliki standar operasional yang sangat tinggi. Restoran di industrial park premium membutuhkan bahan dengan quality control ketat dan konsistensi. Cafe dengan atmosphere professional menginginkan produk yang sesuai dengan corporate environment. Food court di kawasan industri terencana memerlukan sistem yang terintegrasi dengan park management. Catering untuk perusahaan di park membutuhkan compliance dengan berbagai standar industri. Kami memahami industrial park protocols dengan layanan yang compliant dan professional.",
+      "metaDescription": "Supplier sayur EJIP untuk industrial park premium. Compliant dengan park protocols, quality control ketat, professional industrial service.",
+      "clientFocus": "Restoran Industrial Park, Cafe Professional, Food Court, Catering Perusahaan, Bisnis Park Terencana",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Cikarang-EJIP",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (industrial park), 10.00-12.00 (corporate)",
+        "title": "Industrial Park Protocols",
+        "desc": "Park regulation compliance, industrial quality standards, professional park service"
+      }
+    },
+    {
+      "slug": "mm2100",
+      "name": "MM2100",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur MM2100 - Untuk Restoran Kawasan Industri, Cafe, Depot dan Catering Pabrik",
+      "angle": "Pemasok sayuran untuk kawasan industri established dengan kebutuhan rutin",
+      "seoContent": "MM2100 sebagai kawasan industri established memiliki pola operasional yang stabil dan terprediksi. Restoran di kawasan industri mapan membutuhkan bahan dengan konsistensi tinggi untuk operasional harian. Cafe dengan pelanggan pekerja tetap menginginkan produk yang reliable dan familiar. Depot yang melayani shift kerja memerlukan sistem yang sesuai dengan jadwal pabrik. Catering untuk perusahaan established membutuhkan partnership jangka panjang. Kami membangun hubungan stabil dengan bisnis industri berdasarkan reliability dan konsistensi.",
+      "metaDescription": "Supplier sayur MM2100 untuk kawasan industri established. Konsistensi untuk operasional harian, reliability untuk shift kerja, partnership jangka panjang.",
+      "clientFocus": "Restoran Industri Mapan, Cafe Pekerja, Depot, Catering Pabrik, Bisnis Industrial Established",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Cikarang-MM2100",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (shift pagi), 14.00-16.00 (shift sore)",
+        "title": "Established Industrial Service",
+        "desc": "Shift work optimization, industrial consistency systems, long-term partnership approach"
+      }
+    },
+    {
+      "slug": "narogong",
+      "name": "Narogong",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Narogong - Untuk Restoran Lokal, Cafe, Warung dan Catering Komunitas",
+      "angle": "Penyuplai sayuran untuk kawasan dengan karakter semi-rural yang berkembang",
+      "seoContent": "Narogong memiliki karakter semi-rural dengan perkembangan menuju urbanisasi. Restoran lokal di kawasan transisi membutuhkan bahan yang terjangkau dengan kualitas terjaga. Cafe dengan atmosphere growing community menginginkan produk yang mendukung perkembangan. Warung yang melayani kebutuhan dasar memerlukan sistem yang simple namun reliable. Catering untuk acara komunitas transisi membutuhkan understanding akan perubahan dinamika. Kami menjadi partner transisi dengan layanan yang adaptif terhadap perubahan karakter kawasan.",
+      "metaDescription": "Supplier sayur Narogong untuk kawasan transisi. Adaptif terhadap perubahan, understanding semi-rural development, partner untuk urbanisasi.",
+      "clientFocus": "Restoran Lokal, Cafe Berkembang, Warung, Catering Komunitas, Bisnis Transisi",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Narogong",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (transisi), 13.00-15.00 (komunitas)",
+        "title": "Transition Area Service",
+        "desc": "Area development adaptation, transitional community understanding, adaptive service systems"
+      }
+    },
+    {
+      "slug": "tambun-elit",
+      "name": "Tambun Elit",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Tambun Elit - Untuk Restoran Premium, Cafe Eksklusif, Bistro dan Catering Residence",
+      "angle": "Pemasok sayuran untuk kawasan residential premium dengan standar tinggi",
+      "seoContent": "Tambun Elit sebagai kawasan residential premium menawarkan lifestyle eksklusif dengan ekspektasi kualitas tertinggi. Restoran premium untuk residents elite membutuhkan bahan dengan provenance jelas dan standar konsistensi. Cafe eksklusif dengan clientele terpilih menginginkan produk yang rare dan premium. Bistro dengan atmosphere luxurious memerlukan sayuran dengan visual perfection. Catering untuk acara high-profile membutuhkan service yang flawless dan impressive. Kami memenuhi tuntutan eksklusivitas dengan produk terpilih dan protokol layanan yang sangat ketat.",
+      "metaDescription": "Supplier sayur Tambun Elit untuk residential premium. Produk rare dan premium, service flawless, protokol ketat untuk eksklusivitas.",
+      "clientFocus": "Restoran Premium Elite, Cafe Sangat Eksklusif, Bistro Luxurious, Catering High-Profile, Bisnis Ultra-Premium",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Bekasi-Tambun Elit",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (premium), 10.00-12.00 (exclusive)",
+        "title": "Premium Residential Excellence",
+        "desc": "Exclusive product sourcing, flawless service protocols, premium residential standards"
+      }
+    },
+    {
+      "slug": "sentul-city",
+      "name": "Sentul City",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Sentul City - Untuk Restoran Resort, Cafe Alam, Bistro dan Catering Lingkungan",
+      "angle": "Penyedia sayuran untuk kawasan resort city dengan konsep living in nature",
+      "seoContent": "Sentul City sebagai resort city menawarkan konsep living in nature dengan atmosphere yang unique. Restoran dengan konsep alam membutuhkan bahan organik dan natural untuk authentic experience. Cafe dengan atmosphere resort menginginkan produk yang segar dan menyegarkan. Bistro dengan nuansa alam memerlukan sayuran dengan rustic charm. Catering untuk acara di lingkungan resort membutuhkan presentasi yang natural dan elegant. Kami mendukung resort living concept dengan produk yang enhance natural experience dan sustainable practices.",
+      "metaDescription": "Supplier sayur Sentul City untuk resort city. Natural and organic focus, resort atmosphere support, sustainable practices untuk living in nature.",
+      "clientFocus": "Restoran Resort, Cafe Alam, Bistro Natural, Catering Lingkungan, Bisnis Resort City",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Jagorawi-Sentul City",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (resort), 10.00-12.00 (alam)",
+        "title": "Resort City Lifestyle Support",
+        "desc": "Natural product curation, resort atmosphere enhancement, sustainable resort city practices"
+      }
+    },
+    {
+      "slug": "pajajaran-bogor",
+      "name": "Pajajaran Bogor",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pajajaran Bogor - Untuk Restoran Pendidikan, Cafe Kampus, Depot dan Catering Akademik",
+      "angle": "Pemasok sayuran untuk kawasan pendidikan dengan konsentrasi kampus",
+      "seoContent": "Pajajaran Bogor sebagai kawasan pendidikan tinggi memiliki karakter akademik yang sangat kuat. Restoran yang melayani mahasiswa dan dosen membutuhkan bahan untuk menu yang brain-fueling dan terjangkau. Cafe dengan atmosphere intellectual menginginkan produk yang mendukung study sessions. Depot dengan pelanggan komunitas kampus memerlukan flexibility selama masa ujian dan liburan. Catering untuk event akademik membutuhkan penyesuaian dengan academic calendar. Kami memahami siklus akademik dengan sistem yang responsive terhadap kebutuhan pendidikan tinggi.",
+      "metaDescription": "Supplier sayur Pajajaran Bogor untuk kawasan pendidikan tinggi. Responsif terhadap academic calendar, brain-fueling products, understanding komunitas kampus.",
+      "clientFocus": "Restoran Kampus, Cafe Akademik, Depot, Catering Pendidikan Tinggi, Bisnis Lingkungan Universitas",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Pajajaran Bogor",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (kampus), 10.00-12.00 (akademik)",
+        "title": "Higher Education Specialization",
+        "desc": "Academic calendar responsiveness, student budget optimization, university community understanding"
+      }
+    },
+    {
+      "slug": "bogor-baru",
+      "name": "Bogor Baru",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Bogor Baru - Untuk Restoran Perumahan, Cafe, Depot dan Catering Komunitas",
+      "angle": "Penyuplai sayuran untuk kawasan perumahan baru dengan komunitas berkembang",
+      "seoContent": "Bogor Baru sebagai kawasan perumahan baru memiliki komunitas yang sedang membentuk identitasnya. Restoran di perumahan baru membutuhkan bahan untuk menu yang menarik residents dan membangun kebiasaan. Cafe dengan atmosphere new community menginginkan produk yang mendukung social interactions. Depot yang melayani kebutuhan awal memerlukan sistem yang membantu membangun rutinitas. Catering untuk acara pembentukan komunitas membutuhkan understanding akan dinamika baru. Kami menjadi partner pembentukan komunitas dengan layanan yang membantu membangun kebiasaan baik.",
+      "metaDescription": "Supplier sayur Bogor Baru untuk perumahan baru. Partner pembentukan komunitas, membantu bangun rutinitas, understanding dinamika baru.",
+      "clientFocus": "Restoran Perumahan Baru, Cafe Komunitas Baru, Depot, Catering Residence, Bisnis New Community",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Bogor Baru",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (perumahan), 13.00-15.00 (komunitas)",
+        "title": "New Community Development",
+        "desc": "Community formation support, new routine establishment, developing neighborhood understanding"
+      }
+    },
+    {
+      "slug": "baranangsiang",
+      "name": "Baranangsiang",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Baranangsiang - Untuk Restoran Komersial, Cafe, Food Court dan Catering Perkantoran",
+      "angle": "Pemasok sayuran untuk kawasan komersial utama Bogor",
+      "seoContent": "Baranangsiang sebagai kawasan komersial utama Bogor memiliki aktivitas bisnis yang sangat padat. Restoran komersial dengan customer flow tinggi membutuhkan supply chain yang robust dan efficient. Cafe dengan atmosphere urban Bogor menginginkan produk yang sesuai dengan karakter kota. Food court dengan berbagai pilihan memerlukan distribusi yang terkoordinasi. Catering untuk kantor dan institusi membutuhkan ketepatan waktu di tengah traffic Bogor. Kami menguasai logistik kawasan komersial Bogor dengan understanding akan karakteristik kota.",
+      "metaDescription": "Supplier sayur Baranangsiang untuk kawasan komersial Bogor. Understanding karakteristik Bogor, efficient untuk traffic kota, robust supply chain.",
+      "clientFocus": "Restoran Komersial Bogor, Cafe Urban, Food Court, Catering Perkantoran, Bisnis Kota Bogor",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Baranangsiang",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (Bogor), 09.00-11.00 (komersial)",
+        "title": "Bogor Urban Logistics",
+        "desc": "Bogor city characteristics understanding, urban traffic optimization, city commercial logistics"
+      }
+    },
+    {
+      "slug": "suryakencana",
+      "name": "Suryakencana",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Suryakencana - Untuk Restoran Chinese, Cafe, Depot dan Catering Komunitas",
+      "angle": "Penyedia sayuran untuk kawasan dengan konsentrasi bisnis Chinese",
+      "seoContent": "Suryakencana sebagai kawasan dengan konsentrasi bisnis Chinese memiliki karakter kuliner yang spesifik. Restoran Chinese dengan menu autentik membutuhkan sayuran spesifik untuk masakan Tionghoa. Cafe dengan atmosphere Chinese heritage menginginkan produk yang sesuai dengan budaya. Depot yang melayani komunitas Tionghoa memerlukan understanding akan preferensi dan kebiasaan. Catering untuk acara komunitas Chinese membutuhkan pengetahuan akan tradisi dan kebutuhan khusus. Kami memahami kebutuhan kuliner Chinese dengan produk spesifik dan pengetahuan budaya.",
+      "metaDescription": "Supplier sayur Suryakencana untuk kuliner Chinese. Produk spesifik masakan Tionghoa, pengetahuan budaya Chinese, understanding preferensi komunitas.",
+      "clientFocus": "Restoran Chinese, Cafe Chinese Heritage, Depot, Catering Komunitas Tionghoa, Bisnis Chinese Community",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Suryakencana",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (Chinese), 12.00-14.00 (komunitas)",
+        "title": "Chinese Culinary Specialization",
+        "desc": "Chinese cuisine specific products, cultural understanding, community preference knowledge"
+      }
+    },
+    {
+      "slug": "rancamaya",
+      "name": "Rancamaya",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Rancamaya - Untuk Restoran Resort, Cafe Golf, Bistro dan Catering Eksklusif",
+      "angle": "Pemasok sayuran untuk kawasan resort dan golf estate premium",
+      "seoContent": "Rancamaya sebagai kawasan resort dan golf estate menawarkan lifestyle sangat eksklusif dengan standar tertinggi. Restoran di resort premium membutuhkan bahan dengan aesthetic perfection dan kualitas konsisten. Cafe dengan view golf course menginginkan produk yang luxurious dan refined. Bistro dengan atmosphere country club memerlukan sayuran dengan presentation impeccable. Catering untuk acara eksklusif membutuhkan service yang flawless dan sophisticated. Kami memenuhi standar sangat tinggi resort living dengan produk terpilih dan service excellence.",
+      "metaDescription": "Supplier sayur Rancamaya untuk resort dan golf estate. Aesthetic perfection, luxurious products, flawless service untuk lifestyle eksklusif.",
+      "clientFocus": "Restoran Resort Premium, Cafe Golf, Bistro Country Club, Catering Eksklusif, Bisnis Very Exclusive",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Rancamaya",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (resort), 10.00-12.00 (golf)",
+        "title": "Premium Resort Service",
+        "desc": "Aesthetic quality standards, luxurious product selection, exclusive resort protocols"
+      }
+    },
+    {
+      "slug": "tanah-sareal",
+      "name": "Tanah Sareal",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Tanah Sareal - Untuk Restoran Lokal, Cafe, Warung dan Catering Komunitas",
+      "angle": "Penyuplai sayuran untuk kawasan dengan karakter urban menengah",
+      "seoContent": "Tanah Sareal memiliki karakter urban menengah dengan komunitas yang stabil dan established. Restoran lokal dengan pelanggan warga sekitar membutuhkan bahan yang terjangkau dengan kualitas konsisten. Cafe dengan atmosphere neighborhood menginginkan produk yang familiar dan dipercaya. Warung yang menjadi bagian kehidupan sehari-hari memerlukan reliability untuk operasional harian. Catering untuk acara komunitas established membutuhkan pemahaman akan dinamika sosial. Kami membangun hubungan jangka panjang berdasarkan kepercayaan dan konsistensi dengan bisnis lokal.",
+      "metaDescription": "Supplier sayur Tanah Sareal untuk komunitas urban menengah. Hubungan jangka panjang, konsistensi untuk bisnis lokal, kepercayaan komunitas.",
+      "clientFocus": "Restoran Lokal, Cafe Neighborhood, Warung, Catering Komunitas, Bisnis Urban Menengah",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tanah Sareal",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (lokal), 13.00-15.00 (komunitas)",
+        "title": "Established Urban Community",
+        "desc": "Long-term local relationships, community trust maintenance, established neighborhood service"
+      }
+    },
+    {
+      "slug": "gadog-ciawi",
+      "name": "Gadog Ciawi",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Gadog Ciawi - Untuk Restoran Wisata, Cafe Puncak, Bistro dan Catering Resort",
+      "angle": "Pemasok sayuran untuk kawasan wisata Puncak dengan karakter khusus",
+      "seoContent": "Gadog Ciawi sebagai bagian dari kawasan wisata Puncak memiliki karakter tourism-driven dengan pola musiman. Restoran wisata dengan pengunjung weekend membutuhkan predictive ordering berdasarkan pola kunjungan. Cafe dengan view Puncak menginginkan bahan yang fresh dan Instagramable. Bistro dengan atmosphere mountain resort memerlukan sayuran yang sesuai dengan cool climate dining. Catering untuk acara di villa dan resort membutuhkan flexibility dengan last-minute changes. Kami memahami tourism patterns Puncak dengan sistem yang responsive terhadap pola musiman.",
+      "metaDescription": "Supplier sayur Gadog Ciawi untuk kawasan wisata Puncak. Understanding tourism patterns, responsive terhadap pola musiman, produk untuk cool climate dining.",
+      "clientFocus": "Restoran Wisata Puncak, Cafe View, Bistro Mountain Resort, Catering Villa, Bisnis Tourism",
+      "deliveryRoute": "Cipanas-Cianjur-Puncak-Gadog Ciawi",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (wisata), 10.00-12.00 (resort)",
+        "title": "Tourism Area Specialization",
+        "desc": "Tourism pattern prediction, seasonal demand management, cool climate product selection"
+      }
+    },
+    {
+      "slug": "babakan-madang",
+      "name": "Babakan Madang",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Babakan Madang - Untuk Restoran Perumahan, Cafe, Depot dan Catering Komunitas",
+      "angle": "Penyedia sayuran untuk kawasan perumahan dengan atmosphere suburban",
+      "seoContent": "Babakan Madang sebagai kawasan perumahan suburban menawarkan atmosphere yang lebih relaxed daripada pusat kota. Restoran di perumahan suburban membutuhkan bahan untuk menu keluarga dengan emphasis pada kenyamanan. Cafe dengan atmosphere suburban menginginkan produk yang sesuai dengan relaxed lifestyle. Depot yang melayani kebutuhan harian memerlukan sistem yang reliable untuk rutinitas keluarga. Catering untuk acara komunitas suburban membutuhkan understanding akan dinamika neighborhood. Kami memahami suburban lifestyle dengan layanan yang menunjang kenyamanan dan rutinitas keluarga.",
+      "metaDescription": "Supplier sayur Babakan Madang untuk suburban lifestyle. Support kenyamanan keluarga, understanding suburban dynamics, reliable untuk rutinitas.",
+      "clientFocus": "Restoran Suburban, Cafe Neighborhood, Depot, Catering Keluarga, Bisnis Suburban Living",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Babakan Madang",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (suburban), 13.00-15.00 (keluarga)",
+        "title": "Suburban Lifestyle Support",
+        "desc": "Family comfort optimization, suburban dynamics understanding, neighborhood routine support"
+      }
+    },
+    {
+      "slug": "cinere-elit",
+      "name": "Cinere Elit",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Cinere Elit - Untuk Restoran Premium, Cafe Eksklusif, Bistro dan Catering Residence",
+      "angle": "Pemasok sayuran untuk kawasan residential sangat eksklusif di Cinere",
+      "seoContent": "Cinere Elit sebagai kawasan residential sangat eksklusif memiliki residents dengan expectations tertinggi. Restoran premium untuk elite community membutuhkan bahan dengan provenance terjamin dan quality guarantee. Cafe eksklusif dengan clientele high-profile menginginkan produk yang rare dan sophisticated. Bistro dengan atmosphere luxurious memerlukan sayuran dengan aesthetic perfection. Catering untuk acara very exclusive membutuhkan service yang impeccable dan highly personalized. Kami melayani kebutuhan sangat eksklusif dengan produk limited edition dan protokol layanan yang sangat ketat.",
+      "metaDescription": "Supplier sayur Cinere Elit untuk residential sangat eksklusif. Limited edition products, impeccable service, protokol sangat ketat untuk elite clientele.",
+      "clientFocus": "Restoran Premium Elite, Cafe Very Exclusive, Bistro Luxurious, Catering High-Profile, Bisnis Ultra-Exclusive",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Cinere Elit",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (ultra-exclusive), 10.00-12.00 (high-profile)",
+        "title": "Ultra-Exclusive Residential Service",
+        "desc": "Limited product sourcing, maximum discretion protocols, elite residential standards"
+      }
+    },
+    {
+      "slug": "margonda-raya",
+      "name": "Margonda Raya",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Margonda Raya - Untuk Restoran Pendidikan, Cafe Mahasiswa, Food Court dan Catering Kampus",
+      "angle": "Penyuplai sayuran untuk koridor pendidikan dengan konsentrasi kampus tinggi",
+      "seoContent": "Margonda Raya sebagai koridor pendidikan memiliki konsentrasi kampus dan mahasiswa yang sangat tinggi. Restoran yang melayani mahasiswa membutuhkan bahan untuk menu yang terjangkau namun tetap bergizi. Cafe dengan atmosphere student life menginginkan produk yang sesuai dengan budget dan selera muda. Food court di lingkungan kampus memerlukan variasi untuk diverse student body. Catering untuk event kampus membutuhkan penyesuaian dengan academic calendar. Kami memahami student lifestyle dengan produk dan layanan yang optimized untuk kebutuhan mahasiswa.",
+      "metaDescription": "Supplier sayur Margonda Raya untuk koridor pendidikan. Optimized untuk student lifestyle, understanding academic calendar, products untuk budget mahasiswa.",
+      "clientFocus": "Restoran Mahasiswa, Cafe Student Life, Food Court, Catering Kampus, Bisnis Pendidikan",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Margonda Raya",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (kampus), 10.00-12.00 (mahasiswa)",
+        "title": "Student Corridor Specialization",
+        "desc": "Student budget optimization, academic schedule adaptation, youth lifestyle understanding"
+      }
+    },
+    {
+      "slug": "pesona-khayangan",
+      "name": "Pesona Khayangan",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Pesona Khayangan - Untuk Restoran Perumahan, Cafe, Depot dan Catering Komunitas",
+      "angle": "Pemasok sayuran untuk kawasan perumahan dengan konsep living tertentu",
+      "seoContent": "Pesona Khayangan sebagai kawasan perumahan dengan konsep tertentu memiliki komunitas dengan lifestyle terencana. Restoran di perumahan berkonsep membutuhkan bahan yang sesuai dengan theme dan positioning. Cafe dengan atmosphere community menginginkan produk yang mendukung konsep living. Depot yang melayani kebutuhan residents memerlukan sistem yang terintegrasi dengan community management. Catering untuk acara komunitas membutuhkan alignment dengan overall concept. Kami memahami importance of concept execution dan menyediakan produk yang mendukung positioning perumahan.",
+      "metaDescription": "Supplier sayur Pesona Khayangan untuk perumahan berkonsep. Support concept execution, alignment dengan positioning, produk sesuai tema living.",
+      "clientFocus": "Restoran Perumahan Berkonsep, Cafe Community, Depot, Catering Residence, Bisnis Themed Living",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Depok-Pesona Khayangan",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (perumahan), 12.00-14.00 (komunitas)",
+        "title": "Concept Residence Support",
+        "desc": "Theme-appropriate selection, concept alignment systems, planned community integration"
+      }
+    },
+    {
+      "slug": "grand-depok-city",
+      "name": "Grand Depok City",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Grand Depok City - Untuk Restoran Township, Cafe, Food Hall dan Catering Komunitas",
+      "angle": "Penyedia sayuran untuk township besar dengan fasilitas lengkap",
+      "seoContent": "Grand Depok City sebagai township besar memiliki kebutuhan kuliner yang sangat komprehensif dan beragam. Restoran di township terintegrasi membutuhkan bahan untuk berbagai jenis cuisine sesuai demografi residents. Cafe dengan multiple concepts menginginkan produk yang sesuai dengan masing-masing segment. Food hall dengan berbagai pilihan memerlukan variasi produk yang luas. Catering untuk komunitas township membutuhkan kapasitas dan reliability tinggi. Kami memiliki kemampuan melayani township terintegrasi dengan sistem supply chain yang comprehensive.",
+      "metaDescription": "Supplier sayur Grand Depok City untuk township besar. Comprehensive supply chain, diverse product range, township-scale capacity.",
+      "clientFocus": "Restoran Township, Cafe Multi-Konsep, Food Hall, Catering Komunitas, Bisnis Township Scale",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Tol Depok-Grand Depok City",
+      "logistics": {
+        "time": "02.30-04.30 (panen), 05.30-07.30 (township), 09.00-11.00 (komunitas)",
+        "title": "Large Township Operations",
+        "desc": "Comprehensive supply systems, diverse needs accommodation, large-scale community service"
+      }
+    },
+    {
+      "slug": "sawangan-bojongsari",
+      "name": "Sawangan Bojongsari",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Sawangan Bojongsari - Untuk Restoran Lokal, Cafe, Depot dan Catering Komunitas",
+      "angle": "Pemasok sayuran untuk kawasan dengan karakter urban berkembang",
+      "seoContent": "Sawangan Bojongsari sebagai kawasan urban yang sedang berkembang memiliki dinamika bisnis yang menarik. Restoran lokal di area berkembang membutuhkan bahan dengan harga kompetitif untuk membangun basis pelanggan. Cafe dengan atmosphere growing community menginginkan produk yang mendukung positioning baru. Depot yang melayani kebutuhan berkembang memerlukan flexibility dalam layanan. Catering untuk acara komunitas berkembang membutuhkan partner yang memahami fase growth. Kami menjadi growth partner dengan layanan yang scalable dan adaptif terhadap perkembangan.",
+      "metaDescription": "Supplier sayur Sawangan Bojongsari untuk kawasan berkembang. Growth partnership, scalable services, adaptif terhadap perkembangan komunitas.",
+      "clientFocus": "Restoran Berkembang, Cafe, Depot, Catering Komunitas, Bisnis Growing Area",
+      "deliveryRoute": "Cipanas-Puncak-JORR-Sawangan Bojongsari",
+      "logistics": {
+        "time": "03.30-05.30 (panen), 06.30-08.30 (berkembang), 13.00-15.00 (komunitas)",
+        "title": "Developing Urban Service",
+        "desc": "Scalable growth support, urban development adaptation, growing community partnership"
+      }
+    },
+    {
+      "slug": "tapos-podomoro-golf",
+      "name": "Tapos Podomoro Golf View",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Tapos Podomoro Golf - Untuk Restoran Golf, Cafe Resort, Bistro dan Catering Eksklusif",
+      "angle": "Penyuplai sayuran untuk kawasan golf estate dengan lifestyle premium",
+      "seoContent": "Tapos Podomoro Golf View sebagai kawasan golf estate menawarkan lifestyle sangat premium dengan standar tertinggi. Restoran dengan view golf course membutuhkan bahan dengan aesthetic perfection dan visual appeal. Cafe di lingkungan golf estate menginginkan produk yang luxurious dan refined. Bistro dengan atmosphere country club memerlukan sayuran dengan presentation impeccable. Catering untuk acara eksklusif di golf estate membutuhkan service yang flawless dan sophisticated. Kami memenuhi standar sangat tinggi golf estate living dengan produk terpilih dan service excellence.",
+      "metaDescription": "Supplier sayur Tapos Podomoro Golf untuk golf estate. Aesthetic perfection, luxurious products, flawless service untuk premium golf lifestyle.",
+      "clientFocus": "Restoran Golf Estate, Cafe Resort, Bistro Country Club, Catering Eksklusif, Bisnis Premium Golf",
+      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tapos Podomoro Golf",
+      "logistics": {
+        "time": "03.00-05.00 (panen), 06.00-08.00 (golf), 10.00-12.00 (resort)",
+        "title": "Golf Estate Premium Service",
+        "desc": "Aesthetic quality standards, luxurious product curation, exclusive golf estate protocols"
+      }
+    },
+    {
+      "slug": "jakarta-selatan-comprehensive",
+      "name": "Jakarta Selatan Comprehensive",
+      "origin": "CV Green Fresh Cipanas",
+      "title": "Supplier Sayur Jakarta Selatan - Solusi Lengkap untuk Seluruh Bisnis F&B di Jakarta Selatan",
+      "angle": "Pemasok terintegrasi untuk semua jenis bisnis makanan di Jakarta Selatan",
+      "seoContent": "Sebagai supplier sayur terlengkap untuk Jakarta Selatan, kami melayani seluruh spektrum bisnis F&B dari Senopati hingga Cilandak, dari SCBD hingga Kebayoran Baru. Fine dining restaurant dapat microgreens premium, hotel bintang 5 dapat pasokan breakfast ultra-early, cafe kekinian dapat Instagramable vegetables, restoran keluarga dapat bahan terjangkau, catering perusahaan dapat volume besar. Sistem kami terintegrasi dengan multiple delivery routes, time slots berbeda untuk setiap segment, dan customized solutions untuk kebutuhan spesifik. Dari bahan organik untuk healthy bowl cafe hingga edible flowers untuk fine dining, kami satu-satunya supplier yang bisa memenuhi semua kebutuhan Jakarta Selatan.",
+      "metaDescription": "Supplier sayur terlengkap untuk seluruh Jakarta Selatan. Satu supplier untuk semua kebutuhan F&B: fine dining, hotel, cafe, restoran, catering. Solusi komprehensif.",
+      "clientFocus": "Semua Bisnis F&B Jakarta Selatan: Fine Dining, Hotel, Cafe, Restoran, Catering, Rumah Makan, Depot",
+      "deliveryRoute": "Multiple Routes: Cipanas-Puncak-Jagorawi untuk semua area Jakarta Selatan",
+      "logistics": {
+        "time": "24/7 Operations dengan multiple shifts untuk berbagai kebutuhan",
+        "title": "Comprehensive Jakarta Selatan Coverage",
+        "desc": "Integrated multi-route system, segment-specific time slots, all-in-one F&B solutions, complete product range untuk seluruh Jakarta Selatan"
+      }
+    }
+  ]
+}

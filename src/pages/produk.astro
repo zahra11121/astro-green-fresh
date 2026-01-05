@@ -1,0 +1,55 @@
+---
+// --- SERVER SIDE (Hanya jalan saat Build) ---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import ProductCatalogClient from '@/components/ProductCatalogClient'; // Komponen React Anda
+import vegetableRawData from '../data/products.json';
+
+// Logika Unique Map dipindah ke sini (Server-side)
+const uniqueMap = new Map();
+if (vegetableRawData) {
+  vegetableRawData.forEach(item => {
+    if (!uniqueMap.has(item.name)) {
+      uniqueMap.set(item.name, item);
+    }
+  });
+}
+const vegetableData = Array.from(uniqueMap.values());
+
+// Meta Data
+const title = "Katalog Komoditas Sayur Segar Cipanas | Greenfresh B2B Supply";
+const description = "Jelajahi lebih dari 70 jenis sayuran grade A langsung dari petani Cipanas. Stok stabil, kualitas premium, dan pengiriman terjadwal.";
+
+// Ambil image pertama untuk Preload LCP
+const lcpImage = vegetableData.length > 0 ? vegetableData[0].image : null;
+---
+
+<MainLayout title={title} description={description}>
+  {/* PRELOAD LCP IMAGE - Menggunakan Astro Image Optimization jika perlu */}
+  {lcpImage && (
+    <link
+      rel="preload"
+      as="image"
+      href={lcpImage}
+      slot="head" 
+    />
+  )}
+
+  <div class="bg-[#fcfdfc] min-h-screen font-sans overflow-x-hidden">
+    <Header client:load />
+    
+    <main>
+      {/* Gunakan client:load karena katalog biasanya butuh interaksi filter/search.
+        Astro akan merender tampilan awal secara statis (SEO Friendly) 
+        lalu menghidrasinya agar interaktif.
+      */}
+      <ProductCatalogClient 
+        initialData={vegetableData} 
+        client:load 
+      />
+    </main>
+
+    <Footer />
+  </div>
+</MainLayout>

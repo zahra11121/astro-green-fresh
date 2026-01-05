@@ -1,11 +1,91 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Path relatif yang disesuaikan untuk struktur folder Astro standar
+import { Header } from '../components/Header.jsx';
+import { Footer } from '../components/Footer.jsx';
+import { Hero } from '../components/Hero.jsx';
+import { WhoWeAre } from '../components/WhoWeAre.jsx';
+import { EconomicImpact } from '../components/EconomicImpact.jsx';
+import { PriceTable } from '../components/PriceTable.jsx';
+import { VisualGallery } from '../components/VisualGallery.jsx';
+import { CashFlow } from '../components/CashFlow.jsx';
+import { PartnershipForm } from '../components/PartnershipForm.jsx';
+
+// Data menggunakan Alias @/ sesuai tsconfig/jsconfig jika dikonfigurasi
+import { vegetableData } from '@/data/data.js'; 
+import { Star } from 'lucide-react';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="CV Green Fresh Cipanas | Supplier Sayur Segar Berkualitas">
+  <Header client:load /> 
+  
+  <main>
+    {/* Section: Hero - Elemen pertama yang dimuat */}
+    <Hero id="home" client:load />
+
+    {/* Section: Profil Perusahaan */}
+    <div class="-mt-8 lg:-mt-12 relative z-10 bg-white border-b-2 border-green-100">
+      <WhoWeAre id="tentang-kami" client:visible />
+    </div>
+
+    {/* Section: Galeri Visual Operasional */}
+    <section class="py-2 border-b-2 border-green-100 bg-white">
+      <VisualGallery id="lahan" client:visible />
+    </section>
+
+    {/* Section: Katalog Harga & Komoditas */}
+    <section id="katalog" class="bg-[#f7faf7] py-10 lg:py-16 border-b-2 border-green-200 relative overflow-hidden">
+      <div class="max-w-[1500px] mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-6 items-end mb-8 text-left">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <Star size={14} className="text-[#15803d] fill-[#15803d]" />
+              <span class="text-[10px] font-black uppercase tracking-[0.4em] text-[#15803d]">Premium Selection</span>
+            </div>
+            <h2 class="text-4xl lg:text-6xl font-serif italic text-[#052c17] leading-[0.9] tracking-tighter uppercase">
+              Komoditas <br/> <span class="text-[#15803d] not-italic font-sans font-bold">Unggulan.</span>
+            </h2>
+          </div>
+          <div>
+            <p class="text-slate-700 text-sm lg:text-lg font-bold leading-relaxed max-w-xl border-l-4 border-[#15803d] pl-4">
+              Rantai pasok terintegrasi dari 9 klaster petani untuk menjamin 
+              <span class="text-[#052c17] font-black"> stabilitas stok harian</span> grade-A.
+            </p>
+          </div>
+        </div>
+        <PriceTable data={vegetableData} client:visible />
+      </div>
+    </section>
+
+    {/* Section: Analisis Ekonomi & Alur Kas */}
+    <section class="py-10 lg:py-16 bg-white px-6 border-b-2 border-green-100">
+      <div class="max-w-[1700px] mx-auto">
+        <EconomicImpact id="ekonomi" client:visible />
+        <div class="mt-10 pt-10 border-t-2 border-green-100 text-left">
+          <CashFlow id="pembayaran" client:visible />
+        </div>
+      </div>
+    </section>
+
+    {/* Section: Formulir Kerjasama B2B */}
+    <section id="kemitraan" class="py-10 lg:py-16 bg-white border-t-2 border-green-200 relative">
+      <div class="max-w-[1800px] mx-auto px-6 relative z-10 text-center">
+        <div class="mb-10">
+          <span class="text-[#15803d] text-[10px] font-black uppercase tracking-[0.5em] mb-2 block">
+            B2B Enterprise Portal
+          </span>
+          <h2 class="text-4xl lg:text-7xl font-serif italic text-[#052c17] leading-[0.9] tracking-tighter mb-4 uppercase">
+            Ajukan <span class="text-[#15803d] not-italic font-sans font-bold">Kontrak</span> Suplai
+          </h2>
+          <p class="text-slate-700 max-w-2xl mx-auto text-sm lg:text-lg font-bold">
+            Akses katalog harga grosir dan termin pembayaran (TOP) khusus entitas bisnis resmi.
+          </p>
+        </div>
+        <PartnershipForm client:visible />
+      </div>
+    </section>
+  </main>
+
+  <Footer client:visible />
+</MainLayout>

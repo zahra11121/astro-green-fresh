@@ -1,0 +1,70 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { PartnershipForm } from '@/components/PartnershipForm'; 
+import { MapsSection } from '@/components/MapsSection';
+import ProfileClientContent from '@/components/ProfileClientContent';
+
+// --- DATA SEO ---
+const title = 'Tentang Kami - CV. Green Fresh Cipanas';
+const description = 'Mengenal CV. Green Fresh Cipanas, mitra strategis pengadaan sayuran segar dengan kapasitas 10 ton/hari dan standar kepatuhan korporasi (PKP).';
+const canonicalURL = 'https://greenfresh.co.id/tentang-kami/';
+
+// --- SCHEMA MARKUP ---
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WholesaleStore",
+  "name": "CV. Green Fresh Cipanas",
+  "image": "https://greenfresh.co.id/logo.svg",
+  "@id": "https://greenfresh.co.id/",
+  "url": "https://greenfresh.co.id/",
+  "telephone": "+6287780937884", 
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Raya Cipanas",
+    "addressLocality": "Cianjur",
+    "addressRegion": "Jawa Barat",
+    "postalCode": "43253",
+    "addressCountry": "ID"
+  },
+  "description": "Mitra strategis pengadaan sayuran segar dengan kapasitas 10 ton per hari.",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  }
+};
+---
+
+<MainLayout title={title} description={description}>
+  <link rel="canonical" href={canonicalURL} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
+
+  <div class="bg-white min-h-screen font-sans selection:bg-[#16a34a] selection:text-white overflow-x-hidden">
+    <Header client:load />
+
+    <main class="pt-32 lg:pt-48 text-slate-900">
+      <ProfileClientContent client:visible />
+
+      <div class="py-24">
+        <div class="max-w-[1200px] mx-auto px-6 mb-12 flex flex-col items-center text-center">
+          <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#16a34a] mb-2">Operational Hub</span>
+          <h2 class="text-3xl lg:text-4xl font-serif italic font-bold">Sentralisasi Distribusi</h2>
+        </div>
+        <MapsSection client:visible />
+      </div>
+
+      <section class="pb-32">
+        <div class="max-w-[1200px] mx-auto px-6 text-center mb-16">
+          <h3 class="text-[10px] font-black uppercase tracking-[0.5em] text-[#16a34a] mb-4">Ready to Optimize?</h3>
+          <h2 class="text-4xl lg:text-5xl font-serif italic font-bold text-[#052c17]">Mulai Kemitraan Strategis.</h2>
+        </div>
+        <PartnershipForm client:visible />
+      </section>
+    </main>
+
+    <Footer client:visible />
+  </div>
+</MainLayout>

@@ -1,0 +1,145 @@
+---
+// --- SERVER SIDE (Build Time) ---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { ChevronRight, Star, MapPin, Truck, Search } from 'lucide-react';
+import { jabodetabekCities } from '@/data/cities';
+
+// Meta Data
+const title = 'Network Distribusi Jabodetabek - Green Fresh Supplier';
+const description = 'Jaringan distribusi sayur segar harian Green Fresh di 27 wilayah strategis Jabodetabek dengan sistem pengiriman terintegrasi.';
+const canonicalURL = "https://greenfresh.co.id/city";
+---
+
+<MainLayout title={title} description={description}>
+  <link rel="canonical" href={canonicalURL} slot="head" />
+
+  <div class="bg-[#fcfdfc] text-[#052c17] font-sans antialiased w-full">
+    <Header client:load />
+    
+    <main class="pt-20">
+      <section class="py-16 md:py-28 bg-white border-b border-slate-100">
+        <div class="max-w-[1400px] mx-auto px-4 text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-green-50 rounded-full mb-6 border border-green-100">
+             <Truck size={14} class="text-green-700" />
+             <span class="text-[11px] font-black text-green-700 uppercase tracking-widest">Integrated Logistics Network</span>
+          </div>
+          <h1 class="text-4xl md:text-7xl font-[1000] text-[#052c17] tracking-tight leading-[0.9] mb-8">
+            Jaringan Suplai <br/> <span class="text-green-600">Terluas.</span>
+          </h1>
+          <p class="text-slate-500 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed mb-12">
+            Kami melayani pengiriman sayuran Grade-A ke {jabodetabekCities.length} titik distribusi utama di seluruh Jabodetabek setiap harinya.
+          </p>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {[
+              { label: "Active Nodes", value: jabodetabekCities.length },
+              { label: "Daily Capacity", value: "12.5 T" },
+              { label: "Fleet Units", value: "48+" },
+              { label: "SLA Success", value: "99.9%" }
+            ].map((stat) => (
+              <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm">
+                <p class="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest mb-1">{stat.label}</p>
+                <p class="text-xl md:text-3xl font-black text-[#052c17]">{stat.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div class="max-w-[1400px] mx-auto px-4 -mt-8 relative z-20">
+        <div class="bg-white p-4 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col md:flex-row gap-4 items-center">
+          <div class="flex-1 w-full relative">
+            <Search class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+            <input 
+              type="text" 
+              placeholder="Cari wilayah layanan (Contoh: Bintaro, Jakarta Selatan...)" 
+              class="w-full pl-12 pr-4 py-3 bg-slate-50 rounded-2xl border-none text-sm focus:ring-2 focus:ring-green-500 transition-all"
+            />
+          </div>
+          <button class="w-full md:w-auto px-8 py-3 bg-[#052c17] text-white font-black text-sm rounded-2xl hover:bg-green-800 transition-colors">
+            FILTER AREA
+          </button>
+        </div>
+      </div>
+
+      <section class="py-16 md:py-24">
+        <div class="max-w-[1400px] mx-auto px-4">
+          <div class="flex items-center justify-between mb-12">
+            <div>
+              <h2 class="text-2xl font-black tracking-tight text-[#052c17]">Semua Wilayah</h2>
+              <p class="text-sm text-slate-400 font-medium">Klik pada wilayah untuk melihat detail suplai dan jadwal pengiriman.</p>
+            </div>
+            <div class="hidden md:flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full bg-green-500" />
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Sistem Online</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {jabodetabekCities.map((city, index) => {
+              const isJakarta = city.name.toLowerCase().includes('jakarta');
+              const zoneColor = isJakarta ? 'bg-green-600' : 'bg-emerald-500';
+              
+              return (
+                <a 
+                  href={`/city/${city.slug}`}
+                  class="group bg-white rounded-3xl border border-slate-200 p-5 md:p-7 hover:border-green-500 hover:shadow-xl hover:shadow-green-900/5 transition-all duration-300 flex flex-col justify-between min-h-[220px] relative overflow-hidden"
+                >
+                  <div class="absolute -top-10 -right-10 w-32 h-32 bg-slate-50 rounded-full group-hover:bg-green-50 transition-colors duration-500" />
+                  
+                  <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-6">
+                      <div class={`${zoneColor} p-2.5 rounded-2xl text-white shadow-lg shadow-green-900/20`}>
+                        <MapPin size={20} />
+                      </div>
+                      <div class="flex items-center gap-1.5 px-3 py-1 bg-slate-100 rounded-full text-[9px] font-black text-slate-500 tracking-tighter uppercase">
+                         Hub ID: {index + 700}
+                      </div>
+                    </div>
+                    
+                    <h3 class="text-xl md:text-2xl font-black text-[#052c17] leading-tight mb-2 group-hover:text-green-700 transition-colors">
+                      {city.name}
+                    </h3>
+                    
+                    <div class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                      <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">
+                        Distribution Active
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="relative z-10 mt-6 pt-5 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-[10px] font-black text-green-700 uppercase tracking-widest flex items-center gap-1">
+                      Buka Katalog <ChevronRight size={14} class="group-hover:translate-x-1 transition-transform" />
+                    </span>
+                    <div class="flex -space-x-2">
+                      {[1, 2, 3].map((i) => (
+                        <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center">
+                           <Star size={8} class="text-slate-400" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section class="py-12 bg-white border-y border-slate-100 mb-20">
+         <div class="max-w-[1400px] mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-40 grayscale">
+            <h4 class="font-black text-xl italic tracking-tighter">HORECA READY</h4>
+            <h4 class="font-black text-xl italic tracking-tighter">FARM DIRECT</h4>
+            <h4 class="font-black text-xl italic tracking-tighter">DAILY LOGISTICS</h4>
+            <h4 class="font-black text-xl italic tracking-tighter">GRADE-A QUALITY</h4>
+         </div>
+      </section>
+    </main>
+
+    <Footer client:visible />
+  </div>
+</MainLayout>

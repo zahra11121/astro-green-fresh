@@ -1,0 +1,42 @@
+---
+// Import CSS Global
+import "../styles/global.css";
+
+// Ambil Props untuk SEO dinamis
+const { 
+  title = "Greenfresh.co.id", 
+  description = "Supplier Sayur Segar B2B" 
+} = Astro.props;
+---
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    
+    <slot name="head" />
+  </head>
+  <body class="antialiased font-sans">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* Variabel Font manual jika Anda tidak menggunakan class Tailwind font-sans */
+  :root {
+    --font-geist-sans: 'Geist', sans-serif;
+    --font-geist-mono: 'Geist Mono', monospace;
+  }
+  body {
+    font-family: var(--font-geist-sans);
+  }
+</style>

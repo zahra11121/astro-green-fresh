@@ -1,0 +1,20 @@
+<svg width="800" height="300" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(20, 25)">
+    
+    <g transform="scale(1.2)">
+      <path d="M60 40 C 60 15, 15 15, 15 40 C 15 65, 60 65, 60 50" 
+            stroke="#2D5A27" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <path d="M60 40 C 75 25, 75 10, 50 10 C 50 10, 50 25, 60 40" 
+            fill="#4CAF50" />
+      <circle cx="45" cy="40" r="5" fill="#8BC34A" />
+    </g>
+
+    <text x="110" y="55" font-family="Verdana, Geneva, sans-serif" font-weight="900" font-size="42" fill="#2D5A27">
+      Green<tspan fill="#4CAF50">Fresh</tspan>
+    </text>
+    
+    <text x="112" y="85" font-family="Verdana, Geneva, sans-serif" font-weight="600" font-size="16" letter-spacing="4" fill="#666">
+      CO.ID
+    </text>
+  </g>
+</svg>

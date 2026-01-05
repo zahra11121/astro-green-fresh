@@ -1,0 +1,79 @@
+---
+// --- SERVER SIDE (Build Time) ---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Header } from '@/components/Header';
+import { Gallery } from '@/components/Gallery'; // Komponen React untuk Masonry/Lightbox
+import { Footer } from '@/components/Footer';
+import { Camera, Play, CheckCircle2 } from 'lucide-react';
+
+// Metadata
+const title = 'Galeri Visual & Dokumentasi Kualitas | Green Fresh Cipanas';
+const description = 'Lihat potret nyata standardisasi sayur kualitas super kami. Dokumentasi video dan foto pengiriman harian dari kebun Cipanas ke Jabodetabek.';
+---
+
+<MainLayout title={title} description={description}>
+  <main class="min-h-screen bg-[#fcfcfc]">
+    <Header client:load />
+
+    <section class="pt-32 lg:pt-44 pb-12 lg:pb-20 bg-white border-b border-slate-50">
+      <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center lg:text-left">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 rounded-full text-[#16a34a] text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+              <Camera size={14} /> Official Media Center
+            </div>
+            <h1 class="text-4xl lg:text-7xl font-serif italic text-[#052c17] leading-[1.1] tracking-tighter mb-6">
+              Bukti Nyata <span class="text-[#16a34a]">Standardisasi Super.</span>
+            </h1>
+            <p class="text-base lg:text-xl text-slate-500 font-light leading-relaxed max-w-2xl">
+              Kami percaya pada transparansi. Halaman ini mendokumentasikan proses sortasi, pengemasan, dan kualitas produk yang kami kirimkan ke mitra hotel dan retail setiap harinya.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 w-full lg:w-auto">
+            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+              <p class="text-3xl font-serif italic text-[#052c17]">25+</p>
+              <p class="text-[9px] font-black uppercase tracking-widest text-[#16a34a]">Komoditas</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+              <p class="text-3xl font-serif italic text-[#052c17]">100%</p>
+              <p class="text-[9px] font-black uppercase tracking-widest text-[#16a34a]">Grade-A</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Gallery client:visible />
+
+    <section class="py-20 bg-white border-t border-slate-50">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-12 text-center">
+          <div class="space-y-4">
+            <div class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-[#16a34a] mx-auto">
+              <Play size={24} />
+            </div>
+            <h3 class="font-serif italic text-xl text-[#052c17]">Video QC Harian</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Video diambil secara live saat proses sortasi di Hub Sukatani untuk menjamin akurasi produk.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-[#16a34a] mx-auto">
+              <CheckCircle2 size={24} />
+            </div>
+            <h3 class="font-serif italic text-xl text-[#052c17]">Tanpa Filter</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Seluruh foto menggunakan pencahayaan alami untuk menampilkan warna asli kesegaran sayuran.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-[#16a34a] mx-auto">
+              <Camera size={24} />
+            </div>
+            <h3 class="font-serif italic text-xl text-[#052c17]">Update Berkala</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Galeri diperbarui setiap minggu untuk mencerminkan ketersediaan stok panen terbaru.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer client:visible />
+  </main>
+</MainLayout>
