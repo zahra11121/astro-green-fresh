@@ -1,5 +1,8 @@
-# Redirect dari supplier-sayur ke city (Wildcard)
-/supplier-sayur/* /city/:splat  301
+# 1. Redirect dari subdomain Pages ke Domain Utama (Opsional tapi disarankan)
+https://astro-green-fresh.pages.dev/* https://greenfresh.co.id/:splat 301!
 
-# Redirect root supplier-sayur
-/supplier-sayur    /city         301
+# 2. Redirect dari supplier-sayur ke city (Wildcard)
+/supplier-sayur/* /city/:splat 301
+
+# 3. Redirect root supplier-sayur
+/supplier-sayur /city 301
