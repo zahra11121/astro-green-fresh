@@ -8,31 +8,21 @@ import { fileURLToPath } from 'node:url';
 export default defineConfig({
   site: 'https://greenfresh.co.id',
   
-  // 1. MEMAKSA URL TANPA SLASH (Contoh: /area/ -> /area)
-  // Ini mencegah 404 dan otomatis redirect ke versi tanpa slash
+  // Memaksa URL tanpa slash (Contoh: /area/ -> /area)
   trailingSlash: 'never',
   
   build: {
     format: 'file' 
   },
 
-  // 2. SISTEM REDIRECT (Menangani pemindahan path)
-  redirects: {
-    // Redirect dari supplier-sayur ke city (tetap tanpa slash)
-    '/supplier-sayur': '/city',
-    '/supplier-sayur/[...slug]': '/city/[...slug]',
-    
-    // Jika ada request manual yang memaksa pakai slash di supplier-sayur
-    '/supplier-sayur/': '/city',
-  },
-
+  // CATATAN: Redirect dipindah ke file public/_redirects agar tidak error getStaticPaths
+  
   integrations: [
     react(),
     tailwind(), 
     sitemap({
       i18n: undefined,
       serialize(item) {
-        // Memastikan URL di sitemap benar-benar bersih tanpa trailing slash
         if (item.url.endsWith('/') && item.url !== 'https://greenfresh.co.id/') {
           item.url = item.url.slice(0, -1);
         }

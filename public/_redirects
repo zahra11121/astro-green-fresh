@@ -1,0 +1,5 @@
+# Redirect dari supplier-sayur ke city (Wildcard)
+/supplier-sayur/* /city/:splat  301
+
+# Redirect root supplier-sayur
+/supplier-sayur    /city         301
