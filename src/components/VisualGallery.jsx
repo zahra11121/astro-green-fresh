@@ -2,24 +2,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Truck, PackageCheck, ShieldCheck, ChevronRight } from 'lucide-react';
-import { galleryData } from '@/data/galleryData';
+// Ambil data dari products.json
+import productsData from '@/data/products.json';
 
 /**
- * FUNGSI OPTIMASI CLOUDINARY
- * @param {string} url 
- * @param {number} width 
- * @param {number} [height] 
+ * FUNGSI OPTIMASI GAMBAR
+ * Mendukung Cloudinary maupun path lokal
  */
-const getCloudinaryUrl = (url = '', width, height) => {
+const getOptimizedUrl = (url = '', width, height) => {
   if (!url || typeof url !== 'string') return '';
-  const params = `f_auto,q_auto:eco,c_fill,g_auto,w_${width}${height ? `,h_${height}` : ''}`;
-  return url.replace('/upload/', `/upload/${params}/`);
+  if (url.includes('cloudinary.com')) {
+    const params = `f_auto,q_auto:eco,c_fill,g_auto,w_${width}${height ? `,h_${height}` : ''}`;
+    return url.replace('/upload/', `/upload/${params}/`);
+  }
+  return url;
 };
 
-// Akses data gallery dengan aman menggunakan bracket notation untuk menghindari linter error
-const images = galleryData?.images || [];
-const IMG_LAHAN = typeof images[2] === 'object' ? images[2]['url'] : images[2]; 
-const IMG_PACKING = typeof images[5] === 'object' ? images[5]['url'] : images[5]; 
+// Mengambil gambar dari index tertentu di products.json sebagai placeholder konten visual
+// Misalnya: index 0 untuk Lahan (Hulu), index 5 untuk Packing
+const IMG_LAHAN = productsData[0]?.image || ''; 
+const IMG_PACKING = productsData[5]?.image || ''; 
 
 export const VisualGallery = () => {
   const fadeInUp = {
@@ -58,18 +60,24 @@ export const VisualGallery = () => {
           <motion.div {...fadeInUp} className="lg:col-span-7 space-y-6">
             <div className="relative aspect-[16/10] rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden border-2 border-green-100 shadow-2xl group bg-slate-50">
               <img 
-                src={getCloudinaryUrl(IMG_LAHAN, 1200, 750)} 
+                src={getOptimizedUrl(IMG_LAHAN, 1200, 750)} 
                 className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
-                alt="Proses budidaya sayur premium di kebun Cipanas"
+                alt={`Budidaya ${productsData[0]?.name || 'Sayur Premium'}`}
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-green-900/40 via-transparent to-transparent opacity-60" aria-hidden="true" />
+              
+              {/* Floating Badge */}
+              <div className="absolute bottom-8 left-8 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
+                <p className="text-white text-[10px] font-black uppercase tracking-widest">Featured Origin</p>
+                <p className="text-white font-serif italic text-lg">{productsData[0]?.name || 'Cipanas Highland'}</p>
+              </div>
             </div>
             <div className="px-6">
               <p className="text-[#15803d] text-[10px] font-black uppercase tracking-[0.4em] mb-2">Hulu Produksi</p>
               <h4 className="text-2xl font-serif italic font-black text-[#052c17] mb-2">Highland cultivation.</h4>
               <p className="text-slate-700 text-sm lg:text-base font-semibold max-w-xl">
-                Lahan subur Cipanas yang dikelola dengan standar GAP (Good Agricultural Practices) untuk hasil panen premium.
+                Lahan subur Cipanas yang dikelola dengan standar GAP (Good Agricultural Practices) untuk menghasilkan komoditas seperti {productsData[0]?.name} dan lainnya.
               </p>
             </div>
           </motion.div>
@@ -81,9 +89,9 @@ export const VisualGallery = () => {
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-1/2 aspect-square rounded-[2rem] overflow-hidden border-2 border-green-100 shadow-xl relative group bg-slate-50">
                 <img 
-                  src={getCloudinaryUrl(IMG_PACKING, 600, 600)} 
+                  src={getOptimizedUrl(IMG_PACKING, 600, 600)} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                  alt="Proses pengemasan higienis sayuran Grade-A"
+                  alt={`Proses QC ${productsData[5]?.name || 'Sayuran'}`}
                   loading="lazy"
                 />
                 <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-xl text-[#15803d] shadow-lg">
@@ -93,7 +101,7 @@ export const VisualGallery = () => {
               <div className="w-full md:w-1/2 space-y-3">
                 <h5 className="text-xl font-serif italic font-black text-[#052c17]">Standardized Packaging.</h5>
                 <p className="text-xs lg:text-sm text-slate-600 leading-relaxed font-bold">
-                  Proses pembersihan dan pengemasan higienis yang disesuaikan untuk kebutuhan Modern Retail & Fine Dining.
+                  Proses pembersihan dan pengemasan higienis untuk menjaga kesegaran {productsData[5]?.name} hingga tiba di lokasi Anda.
                 </p>
               </div>
             </motion.div>

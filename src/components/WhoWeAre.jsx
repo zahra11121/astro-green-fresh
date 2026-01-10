@@ -1,28 +1,17 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { Users, Factory, ShieldCheck, ArrowRight } from 'lucide-react';
-import { galleryData } from '@/data/galleryData';
 
-/**
- * FUNGSI OPTIMASI CLOUDINARY
- */
-const optimizeAboutImg = (url = '', width = 1000) => {
-  if (!url || typeof url !== 'string') return '';
-  return url.replace('/upload/', `/upload/f_auto,q_auto:eco,w_${width}/`);
-};
-
-// Pakai cara ini supaya linter tidak teriak "type never"
-const getSafeImageData = () => {
-  const images = galleryData?.images || [];
-  const target = images[4];
-  if (!target) return '';
-  // Jika target adalah objek, ambil .url, jika bukan (string), ambil langsung
-  return typeof target === 'object' ? target['url'] : target;
-};
-
-const ABOUT_IMAGE_SOURCE = getSafeImageData();
+// IMPORT DATA DARI PRODUCTS.JSON
+import productsData from '@/data/products.json'; 
 
 export const WhoWeAre = ({ id = "who-we-are" }) => {
+  /**
+   * PERBAIKAN: Mencari produk "Wortel" sebagai visual utama.
+   * Menggunakan fallback ke produk pertama jika nama tidak ditemukan.
+   */
+  const ABOUT_IMAGE_SOURCE = productsData.find(p => p.name === "Wortel")?.image || productsData[0]?.image;
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -36,7 +25,7 @@ export const WhoWeAre = ({ id = "who-we-are" }) => {
         
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-center">
           
-          {/* SISI KIRI */}
+          {/* SISI KIRI: IMAGE BLOCK */}
           <div className="lg:col-span-5 relative">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
@@ -46,9 +35,9 @@ export const WhoWeAre = ({ id = "who-we-are" }) => {
               className="relative rounded-[3rem] lg:rounded-[4rem] overflow-hidden border-2 border-green-100 shadow-2xl aspect-[4/5] bg-slate-100 group"
             >
               <img 
-                src={optimizeAboutImg(ABOUT_IMAGE_SOURCE, 1000)} 
-                alt="Operasional agribisnis Green Fresh Cipanas" 
-                className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                src={ABOUT_IMAGE_SOURCE} 
+                alt="Produk Unggulan Green Fresh Cipanas" 
+                className="w-full h-full object-cover grayscale-[0.1] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-60" aria-hidden="true" />
@@ -73,7 +62,7 @@ export const WhoWeAre = ({ id = "who-we-are" }) => {
             </motion.div>
           </div>
 
-          {/* SISI KANAN */}
+          {/* SISI KANAN: CONTENT BLOCK */}
           <div className="lg:col-span-7 space-y-10">
             <div className="space-y-6">
               <motion.div 
@@ -118,7 +107,7 @@ export const WhoWeAre = ({ id = "who-we-are" }) => {
                   <span className="text-[10px] font-black uppercase tracking-widest">Quality Assurance</span>
                 </div>
                 <p className="text-slate-700 text-sm leading-relaxed font-semibold">
-                  Protokol QC ketat untuk menjaga standar kualitas retail modern dan spesifikasi industri Horeka.
+                  Proses seleksi ketat (Sorting & Grading) untuk memastikan standar Grade-A sesuai kebutuhan industri Horeka.
                 </p>
               </div>
             </div>
@@ -129,7 +118,7 @@ export const WhoWeAre = ({ id = "who-we-are" }) => {
               className="flex flex-col sm:flex-row items-center gap-8 pt-4"
             >
               <a href="/about" className="w-full sm:w-auto">
-                <button className="group w-full flex items-center justify-center gap-4 bg-[#052c17] text-[#bef264] px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-[#15803d] hover:text-white transition-all shadow-2xl active:scale-95">
+                <button className="group w-full flex items-center justify-center gap-4 bg-[#052c17] text-[#bef264] px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-[#15803d] hover:text-white transition-all shadow-2xl active:scale-95 cursor-pointer">
                   Corporate Profile
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </button>

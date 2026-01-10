@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from "framer-motion";
-// PERBAIKAN: Nama module yang benar adalah 'lucide-react'
 import { Star, ShieldCheck, Truck, Users } from 'lucide-react';
 
-// PENGGUNAAN ALIAS PATH (@/) UNTUK KONSISTENSI IMPORT
+// PENGGUNAAN ALIAS PATH (@/)
 import { PartnershipForm } from '@/components/PartnershipForm.jsx';
 import { PriceTable } from '@/components/PriceTable.jsx';
+
+// PERBAIKAN: Impor data katalog dari file data.js
 import { vegetableData } from '@/data/data.js'; 
 
 // IMPORT KOMPONEN INTERNAL
@@ -16,20 +17,7 @@ import { SectorTarget } from '@/components/city/SectorTarget.jsx';
 import { QualityGuarantee } from '@/components/city/QualityGuarantee.jsx';
 import { LiveStats } from '@/components/city/LiveStats.jsx';
 
-/**
- * Mengoptimalkan URL gambar Cloudinary dengan transformasi f_auto dan q_auto
- */
-const optimizeImg = (url, width = 850) => {
-  if (!url) return '';
-  if (url.includes('cloudinary.com')) {
-    return url.replace('/upload/', `/upload/f_auto,q_auto:eco,c_scale,w_${width}/`);
-  }
-  return url;
-};
-
-export default function CityClientPage({ city, CITY_OPERATIONAL_IMAGE }) {
-  // Fallback gambar jika data tidak tersedia
-  const displayImage = CITY_OPERATIONAL_IMAGE?.url || CITY_OPERATIONAL_IMAGE || "/img/placeholder-logistics.jpg";
+export default function CityClientPage({ city }) {
 
   return (
     <div className="bg-white font-sans selection:bg-green-100 selection:text-green-900">
@@ -47,7 +35,7 @@ export default function CityClientPage({ city, CITY_OPERATIONAL_IMAGE }) {
             </div>
             <p className="text-[11px] lg:text-xs font-black uppercase tracking-widest text-[#052c17]">
               4.9/5 <span className="text-slate-300 font-medium px-2">|</span> 
-              <span className="text-[#15803d]">Terpercaya di {city.name}</span>
+              <span className="text-[#15803d]">Pilihan Utama di {city.name}</span>
             </p>
           </div>
           <div className="hidden md:flex items-center gap-8">
@@ -71,40 +59,29 @@ export default function CityClientPage({ city, CITY_OPERATIONAL_IMAGE }) {
         transition={{ duration: 0.5 }}
         className="py-12 lg:py-24 px-6 border-b-2 border-green-100 bg-white"
       >
-        <div className="max-w-[1800px] mx-auto grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5 space-y-8 text-left">
-            <div className="space-y-4">
-              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif italic font-black leading-tight uppercase text-[#052c17] tracking-tighter">
-                Kekuatan <span className="not-italic font-sans text-slate-900">Suplai</span> <br/>
-                <span className="inline-block text-[#15803d]">{city.name}</span>
-              </h2>
-            </div>
-
-            <div className="grid gap-6">
-              <div className="p-6 bg-[#f7faf7] rounded-3xl border border-green-100 shadow-sm hover:shadow-md transition-all">
-                <Truck size={20} className="text-[#15803d] mb-4" />
-                <p className="font-black text-[10px] uppercase mb-1 tracking-[0.2em] text-[#15803d]">Logistics Route</p>
-                <p className="text-lg text-[#052c17] leading-relaxed font-bold">{city.deliveryRoute}</p>
-              </div>
-              <div className="p-6 bg-[#f7faf7] rounded-3xl border border-green-100 shadow-sm hover:shadow-md transition-all">
-                <ShieldCheck size={20} className="text-[#15803d] mb-4" />
-                <p className="font-black text-[10px] uppercase mb-1 tracking-[0.2em] text-[#15803d]">Quality Benchmark</p>
-                <p className="text-lg text-[#052c17] leading-relaxed font-bold">{city.usp}</p>
-              </div>
-            </div>
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif italic font-black leading-tight uppercase text-[#052c17] tracking-tighter">
+              Kekuatan <span className="not-italic font-sans text-slate-900">Suplai</span> <br/>
+              <span className="inline-block text-[#15803d]">{city.name}</span>
+            </h2>
           </div>
 
-          <div className="lg:col-span-7">
-            <div className="relative aspect-[4/3] lg:aspect-video rounded-[2.5rem] overflow-hidden border-2 border-green-100 shadow-2xl group">
-              <img
-                src={optimizeImg(displayImage, 1000)}
-                alt={`Operasional armada distribusi Green Fresh di ${city.name}`}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-                width="1000"
-                height="562"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#052c17]/60 via-transparent to-transparent opacity-60" />
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-10">
+            <div className="p-8 lg:p-12 bg-[#f7faf7] rounded-[2.5rem] border border-green-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
+              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#15803d] mb-6 shadow-sm group-hover:bg-[#15803d] group-hover:text-white transition-colors">
+                <Truck size={24} />
+              </div>
+              <p className="font-black text-[10px] lg:text-xs uppercase mb-3 tracking-[0.3em] text-[#15803d]">Logistics Route</p>
+              <p className="text-xl lg:text-3xl text-[#052c17] leading-tight font-black font-serif italic">{city.deliveryRoute}</p>
+            </div>
+
+            <div className="p-8 lg:p-12 bg-[#f7faf7] rounded-[2.5rem] border border-green-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
+              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#15803d] mb-6 shadow-sm group-hover:bg-[#15803d] group-hover:text-white transition-colors">
+                <ShieldCheck size={24} />
+              </div>
+              <p className="font-black text-[10px] lg:text-xs uppercase mb-3 tracking-[0.3em] text-[#15803d]">Quality Benchmark</p>
+              <p className="text-xl lg:text-3xl text-[#052c17] leading-tight font-black font-serif italic">{city.usp}</p>
             </div>
           </div>
         </div>
@@ -127,8 +104,11 @@ export default function CityClientPage({ city, CITY_OPERATIONAL_IMAGE }) {
              <h2 className="text-2xl lg:text-4xl font-serif italic font-black text-[#052c17] uppercase tracking-tighter">
                Katalog <span className="text-[#15803d] not-italic font-sans">Terupdate.</span>
              </h2>
-             <p className="text-slate-600 text-xs font-bold mt-2 tracking-widest uppercase">Harga Khusus Wilayah {city.name}</p>
+             <p className="text-slate-600 text-xs font-bold mt-2 tracking-widest uppercase">
+               Tersedia {vegetableData.length}+ Komoditas Grade A Wilayah {city.name}
+             </p>
           </div>
+          {/* PERUBAHAN: Sekarang mengirimkan vegetableData ke PriceTable */}
           <PriceTable data={vegetableData} showHeader={false} />
         </div>
       </section>

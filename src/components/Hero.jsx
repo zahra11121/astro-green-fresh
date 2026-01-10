@@ -2,31 +2,24 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Truck, PackageCheck, ShieldCheck } from 'lucide-react';
 
-// Menggunakan path relatif agar 100% terbaca oleh Vite/Astro
-import { galleryData } from '../data/galleryData';
+// Mengambil data dari products.json
+import productsData from '../data/products.json';
 
 /**
- * OPTIMASI CLOUDINARY
- * @param {string} url - URL gambar dari cloudinary
- * @param {number|string} width - Lebar gambar yang diinginkan
+ * OPTIMASI GAMBAR
  */
 const optimizeHeroImg = (url = '', width = 1000) => {
   if (!url || typeof url !== 'string') return '';
-  return url.replace('/upload/', `/upload/f_auto,q_70,w_${width}/`);
+  if (url.includes('cloudinary.com')) {
+    return url.replace('/upload/', `/upload/f_auto,q_70,w_${width}/`);
+  }
+  return url;
 };
 
-/**
- * PERBAIKAN: Menggunakan akses bracket notation ['url'] 
- * untuk menghindari error "Property does not exist on type never"
- */
-const getHeroImage = () => {
-  const raw = galleryData?.images?.[0];
-  if (!raw) return '';
-  // Jika raw adalah object, ambil properti ['url'], jika string ambil langsung
-  return typeof raw === 'object' ? raw['url'] : raw;
-};
-
-const HERO_IMAGE_SOURCE = getHeroImage();
+// --- LOGIKA PILIH PRODUK SPESIFIK ---
+const selectedProduct = productsData.find(p => p.name === "Kacang Panjang") || productsData[0];
+const HERO_IMAGE_SOURCE = selectedProduct?.image || '';
+const HERO_PRODUCT_NAME = selectedProduct?.name || 'Sayur';
 
 export const Hero = () => (
   <section className="relative bg-white pt-24 lg:pt-32 pb-12 lg:pb-20 overflow-hidden z-0 font-sans border-b-2 border-green-100 text-left">
@@ -71,15 +64,15 @@ export const Hero = () => (
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <a href="#kemitraan" className="block w-full sm:w-auto">
-                <button className="w-full bg-[#052c17] text-[#bef264] px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-2xl hover:bg-[#15803d] hover:text-white transition-all flex items-center justify-center gap-3 group">
+                <button className="w-full bg-[#052c17] text-[#bef264] px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-2xl hover:bg-[#15803d] hover:text-white transition-all flex items-center justify-center gap-3 group cursor-pointer">
                   AJUKAN INQUIRY
                   <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform" />
                 </button>
               </a>
 
               <a href="#katalog" className="block w-full sm:w-auto">
-                <button className="w-full bg-white text-[#052c17] border-2 border-green-100 px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:border-[#15803d] hover:text-[#15803d] transition-all">
-                  Cek Harga Katalog
+                <button className="w-full bg-white text-[#052c17] border-2 border-green-100 px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:border-[#15803d] hover:text-[#15803d] transition-all cursor-pointer">
+                  Cek {productsData.length}+ Komoditas
                 </button>
               </a>
             </div>
@@ -109,10 +102,15 @@ export const Hero = () => (
               <img 
                 src={optimizeHeroImg(HERO_IMAGE_SOURCE, 1000)} 
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
-                alt="Green Fresh Supplier Sayur Cipanas operasional harian"
+                alt={`Green Fresh Supplier - ${HERO_PRODUCT_NAME}`}
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-green-900/40 via-transparent to-transparent" aria-hidden="true" />
+              
+              {/* Badge Dinamis sesuai produk yang dipilih */}
+              <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30">
+                <p className="text-white text-[9px] font-black uppercase tracking-widest">Featured: {HERO_PRODUCT_NAME}</p>
+              </div>
             </div>
 
             <motion.div 

@@ -1,17 +1,17 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { HeartHandshake, TrendingUp, ShieldCheck, Zap } from 'lucide-react';
-// PERBAIKAN: Menggunakan path relatif agar aman di lingkungan Astro/Vite
-import { galleryData } from '../data/galleryData';
 
-const optimizeImpactImg = (url, width = 1000) => {
-  if (!url) return '';
-  return url.replace('/upload/', `/upload/f_auto,q_60,w_${width}/`);
-};
-
-const IMPACT_IMAGE_SOURCE = galleryData.images[10];
+// IMPORT DATA DARI PRODUCTS.JSON
+import productsData from '@/data/products.json';
 
 export const EconomicImpact = ({ id }) => {
+  /**
+   * PENGAMBILAN GAMBAR DARI JSON
+   * Mencari produk "Pakcoy" sebagai visual dampak ekonomi/pertanian
+   */
+  const IMPACT_IMAGE_SOURCE = productsData.find(p => p.name === "Pakcoy")?.image || productsData[0]?.image;
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -33,12 +33,12 @@ export const EconomicImpact = ({ id }) => {
               viewport={{ once: true }}
               className="relative"
             >
-              {/* IMAGE */}
+              {/* IMAGE - Tanpa Cloudinary, langsung dari path JSON */}
               <div className="relative rounded-none md:rounded-[3rem] lg:rounded-[4rem] overflow-hidden md:border-2 md:border-green-100 shadow-none md:shadow-2xl aspect-[4/5] lg:aspect-square bg-slate-100 group">
                 <img 
-                  src={optimizeImpactImg(IMPACT_IMAGE_SOURCE, 1200)} 
+                  src={IMPACT_IMAGE_SOURCE} 
                   className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
-                  alt="Pertanian Berkelanjutan Cipanas" 
+                  alt="Pertanian Berkelanjutan Cipanas - Pakcoy" 
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/40 via-transparent to-transparent opacity-60" aria-hidden="true" />
@@ -49,7 +49,7 @@ export const EconomicImpact = ({ id }) => {
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="absolute -bottom-6 left-4 right-4 md:left-[-3rem] md:right-auto bg-white p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border-2 border-green-100 md:max-w-[320px] z-20"
+                className="absolute -bottom-6 left-4 right-4 md:left-[-3rem] md:right-auto bg-white p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border-2 border-green-100 md:max-w-[320px] z-20 text-left"
               >
                 <div className="flex items-center gap-3 mb-3 text-[#15803d]">
                   <HeartHandshake size={18} />
@@ -104,7 +104,7 @@ export const EconomicImpact = ({ id }) => {
                 { 
                   icon: <ShieldCheck size={20} />, 
                   title: "Jaminan Stok", 
-                  desc: "Kemitraan terintegrasi dengan 9 klaster petani menjamin kontinuitas pasokan." 
+                  desc: "Kemitraan terintegrasi dengan klaster petani menjamin kontinuitas pasokan harian." 
                 }
               ].map((item, i) => (
                 <motion.div 
