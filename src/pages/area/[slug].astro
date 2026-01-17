@@ -21,7 +21,7 @@ import { LiveStats } from '@/components/city/LiveStats';
 // Data - Menggunakan Alias Path @/
 import districtsData from '@/data/districts.json';
 
-// 1. Fungsi getStaticPaths (Wajib di Astro untuk rute dinamis)
+// 1. Fungsi getStaticPaths
 export async function getStaticPaths() {
   return districtsData.districts.map((district) => ({
     params: { slug: district.slug },
@@ -62,14 +62,26 @@ const schemaData = {
   ]
 };
 
-// Logic for Nearby Areas
-const otherAreas = districtsData.districts
-  .filter(d => d.slug !== slug)
-  .slice(0, 6);
+/**
+ * LOGIC RELATED AREAS (DISTRIBUSI MERATA)
+ * Menggunakan teknik "Next Neighbors" agar setiap halaman memberikan link 
+ * ke halaman setelahnya secara bergiliran.
+ */
+const allDistricts = districtsData.districts;
+const currentIndex = allDistricts.findIndex(d => d.slug === slug);
+const otherAreas = [];
+const totalToDisplay = 6;
+
+for (let i = 1; i <= totalToDisplay; i++) {
+  const nextIndex = (currentIndex + i) % allDistricts.length;
+  otherAreas.push(allDistricts[nextIndex]);
+}
+
 const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
 ---
 
 <MainLayout title={title} description={description}>
+  <link rel="canonical" href={currentUrl} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
   <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900">

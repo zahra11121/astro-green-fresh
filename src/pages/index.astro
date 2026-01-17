@@ -15,9 +15,14 @@ import { PartnershipForm } from '../components/PartnershipForm.jsx';
 // Data menggunakan Alias @/ sesuai tsconfig/jsconfig jika dikonfigurasi
 import { vegetableData } from '@/data/data.js'; 
 import { Star } from 'lucide-react';
+
+// Logic Canonical URL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://greenfresh.co.id');
 ---
 
 <MainLayout title="CV Green Fresh Cipanas | Supplier Sayur Segar Berkualitas">
+  <link rel="canonical" href={canonicalURL} slot="head" />
+
   <Header client:load /> 
   
   <main>

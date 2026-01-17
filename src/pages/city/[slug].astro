@@ -14,7 +14,6 @@ import { ChevronRight, Home, MapPin } from 'lucide-react';
 // 1. Fungsi getStaticPaths (Wajib untuk rute dinamis)
 export async function getStaticPaths() {
   return jabodetabekCities.map((city) => {
-    // galleryData dihapus, tidak perlu lagi menentukan imageIndex
     return {
       params: { slug: city.slug },
       props: { 
@@ -30,15 +29,27 @@ const { city } = Astro.props;
 // Meta & Schema Logic
 const title = `Supplier Sayur ${city.name} - CV Green Fresh Cipanas`;
 const description = `Layanan supply sayuran grade A harian khusus Hotel, Restoran, dan Cafe di wilayah ${city.name}.`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
 
-// Nearby Cities Logic
-const otherCities = jabodetabekCities
-  .filter(c => c.slug !== slug)
-  .slice(0, 6);
+/**
+ * LOGIC INTERNAL LINK MERATA (Circular Selection)
+ * Mengambil 6 kota berikutnya dari index saat ini agar distribusi link adil
+ */
+const currentIndex = jabodetabekCities.findIndex(c => c.slug === slug);
+const otherCities = [];
+const totalDisplay = 6;
+
+for (let i = 1; i <= totalDisplay; i++) {
+  const nextIndex = (currentIndex + i) % jabodetabekCities.length;
+  otherCities.push(jabodetabekCities[nextIndex]);
+}
+
 const labelVariations = ["Distribusi", "Supply Sayur", "Pengiriman", "Area Layanan", "Logistik", "Mitra"];
 ---
 
 <MainLayout title={title} description={description}>
+  <link rel="canonical" href={canonicalURL} slot="head" />
+  
   <div class="bg-white text-[#052c17] font-sans antialiased selection:bg-green-100 overflow-x-hidden text-left">
     <Header client:load />
     
