@@ -3,10 +3,10 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import ProductCatalogClient from '@/components/ProductCatalogClient'; // Komponen React Anda
+import ProductCatalogClient from '@/components/ProductCatalogClient'; 
 import vegetableRawData from '../data/products.json';
 
-// Logika Unique Map dipindah ke sini (Server-side)
+// Logika Unique Map (Server-side)
 const uniqueMap = new Map();
 if (vegetableRawData) {
   vegetableRawData.forEach(item => {
@@ -21,12 +21,22 @@ const vegetableData = Array.from(uniqueMap.values());
 const title = "Katalog Komoditas Sayur Segar Cipanas | Greenfresh B2B Supply";
 const description = "Jelajahi lebih dari 70 jenis sayuran grade A langsung dari petani Cipanas. Stok stabil, kualitas premium, dan pengiriman terjadwal.";
 
+/** * PERBAIKAN CANONICAL: 
+ * Memastikan URL bersih dari .html atau index.html untuk SEO
+ */
+const origin = Astro.site || Astro.url.origin;
+const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
+const canonicalURL = new URL(cleanPathname, origin);
+
 // Ambil image pertama untuk Preload LCP
 const lcpImage = vegetableData.length > 0 ? vegetableData[0].image : null;
 ---
 
 <MainLayout title={title} description={description}>
-  {/* PRELOAD LCP IMAGE - Menggunakan Astro Image Optimization jika perlu */}
+  {/* Tag Canonical Bersih */}
+  <link rel="canonical" href={canonicalURL.href} slot="head" />
+
+  {/* PRELOAD LCP IMAGE */}
   {lcpImage && (
     <link
       rel="preload"
@@ -36,14 +46,11 @@ const lcpImage = vegetableData.length > 0 ? vegetableData[0].image : null;
     />
   )}
 
-  <div class="bg-[#fcfdfc] min-h-screen font-sans overflow-x-hidden">
+  <div class="bg-[#fcfdfc] min-h-screen font-sans overflow-x-hidden text-left">
     <Header client:load />
     
     <main>
-      {/* Gunakan client:load karena katalog biasanya butuh interaksi filter/search.
-        Astro akan merender tampilan awal secara statis (SEO Friendly) 
-        lalu menghidrasinya agar interaktif.
-      */}
+      {/* Interaksi filter/search di sisi klien */}
       <ProductCatalogClient 
         initialData={vegetableData} 
         client:load 
