@@ -1792,22 +1792,7 @@
         "desc": "Academic calendar responsiveness, student budget optimization, university community understanding"
       }
     },
-    {
-      "slug": "bogor-baru",
-      "name": "Bogor Baru",
-      "origin": "CV Green Fresh Cipanas",
-      "title": "Supplier Sayur Bogor Baru - Untuk Restoran Perumahan, Cafe, Depot dan Catering Komunitas",
-      "angle": "Penyuplai sayuran untuk kawasan perumahan baru dengan komunitas berkembang",
-      "seoContent": "Bogor Baru sebagai kawasan perumahan baru memiliki komunitas yang sedang membentuk identitasnya. Restoran di perumahan baru membutuhkan bahan untuk menu yang menarik residents dan membangun kebiasaan. Cafe dengan atmosphere new community menginginkan produk yang mendukung social interactions. Depot yang melayani kebutuhan awal memerlukan sistem yang membantu membangun rutinitas. Catering untuk acara pembentukan komunitas membutuhkan understanding akan dinamika baru. Kami menjadi partner pembentukan komunitas dengan layanan yang membantu membangun kebiasaan baik.",
-      "metaDescription": "Supplier sayur Bogor Baru untuk perumahan baru. Partner pembentukan komunitas, membantu bangun rutinitas, understanding dinamika baru.",
-      "clientFocus": "Restoran Perumahan Baru, Cafe Komunitas Baru, Depot, Catering Residence, Bisnis New Community",
-      "deliveryRoute": "Cipanas-Puncak-Jagorawi-Bogor Baru",
-      "logistics": {
-        "time": "03.00-05.00 (panen), 06.00-08.00 (perumahan), 13.00-15.00 (komunitas)",
-        "title": "New Community Development",
-        "desc": "Community formation support, new routine establishment, developing neighborhood understanding"
-      }
-    },
+    
     {
       "slug": "baranangsiang",
       "name": "Baranangsiang",
@@ -1999,22 +1984,7 @@
         "title": "Golf Estate Premium Service",
         "desc": "Aesthetic quality standards, luxurious product curation, exclusive golf estate protocols"
       }
-    },
-    {
-      "slug": "jakarta-selatan-comprehensive",
-      "name": "Jakarta Selatan Comprehensive",
-      "origin": "CV Green Fresh Cipanas",
-      "title": "Supplier Sayur Jakarta Selatan - Solusi Lengkap untuk Seluruh Bisnis F&B di Jakarta Selatan",
-      "angle": "Pemasok terintegrasi untuk semua jenis bisnis makanan di Jakarta Selatan",
-      "seoContent": "Sebagai supplier sayur terlengkap untuk Jakarta Selatan, kami melayani seluruh spektrum bisnis F&B dari Senopati hingga Cilandak, dari SCBD hingga Kebayoran Baru. Fine dining restaurant dapat microgreens premium, hotel bintang 5 dapat pasokan breakfast ultra-early, cafe kekinian dapat Instagramable vegetables, restoran keluarga dapat bahan terjangkau, catering perusahaan dapat volume besar. Sistem kami terintegrasi dengan multiple delivery routes, time slots berbeda untuk setiap segment, dan customized solutions untuk kebutuhan spesifik. Dari bahan organik untuk healthy bowl cafe hingga edible flowers untuk fine dining, kami satu-satunya supplier yang bisa memenuhi semua kebutuhan Jakarta Selatan.",
-      "metaDescription": "Supplier sayur terlengkap untuk seluruh Jakarta Selatan. Satu supplier untuk semua kebutuhan F&B: fine dining, hotel, cafe, restoran, catering. Solusi komprehensif.",
-      "clientFocus": "Semua Bisnis F&B Jakarta Selatan: Fine Dining, Hotel, Cafe, Restoran, Catering, Rumah Makan, Depot",
-      "deliveryRoute": "Multiple Routes: Cipanas-Puncak-Jagorawi untuk semua area Jakarta Selatan",
-      "logistics": {
-        "time": "24/7 Operations dengan multiple shifts untuk berbagai kebutuhan",
-        "title": "Comprehensive Jakarta Selatan Coverage",
-        "desc": "Integrated multi-route system, segment-specific time slots, all-in-one F&B solutions, complete product range untuk seluruh Jakarta Selatan"
-      }
     }
+    
   ]
 }
