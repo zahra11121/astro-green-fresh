@@ -105,7 +105,7 @@ export const Header = () => {
           <div className="hidden lg:flex items-center gap-1">
             {[
               { label: 'Katalog', href: '/produk', icon: <ShoppingBag size={14} /> },
-              { label: 'Kota', href: '/city', icon: <MapPin size={14} /> },
+              { label: 'Kota', href: '/kota', icon: <MapPin size={14} /> },
               { label: 'Area', href: '/area', icon: <Globe size={14} /> },
               { label: 'Gallery', href: '/gallery', icon: null },
               { label: 'About', href: '/about', icon: null },
@@ -168,7 +168,7 @@ export const Header = () => {
               {[
                 { label: 'Home', href: '/', icon: <Leaf size={18}/> },
                 { label: 'Katalog Produk', href: '/produk', icon: <ShoppingBag size={18}/> },
-                { label: 'Indeks Kota', href: '/city', icon: <MapPin size={18}/> },
+                { label: 'Indeks Kota', href: '/kota', icon: <MapPin size={18}/> },
                 { label: 'Cakupan Area', href: '/area', icon: <Globe size={18}/> },
                 { label: 'Quality Gallery', href: '/gallery', icon: <ShieldCheck size={18}/> },
                 { label: 'Tentang Kami', href: '/about', icon: <Building2 size={18}/> },

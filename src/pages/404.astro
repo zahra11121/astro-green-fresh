@@ -1,0 +1,48 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Home } from 'lucide-react';
+
+const title = "404 - Halaman Tidak Ditemukan";
+const description = "Halaman yang Anda cari tidak tersedia.";
+---
+
+<MainLayout title={title} description={description}>
+  <div class="bg-white text-[#052c17] font-sans antialiased text-left">
+    <Header client:load />
+
+    <main class="min-h-[70vh] flex items-center pt-20">
+      <div class="max-w-[1800px] mx-auto px-6 w-full">
+        <div class="max-w-3xl space-y-6">
+          
+          <div class="text-[#15803d] text-[10px] font-black uppercase tracking-[0.4em]">
+            Error 404
+          </div>
+
+          <h1 class="text-6xl md:text-8xl font-black text-[#052c17] leading-none tracking-tighter uppercase">
+            Halaman <br />
+            <span class="text-slate-200 italic">Kosong.</span>
+          </h1>
+
+          <p class="text-lg text-slate-500 font-medium max-w-md">
+            Tautan salah atau halaman sudah tidak aktif. Silakan kembali ke beranda untuk melanjutkan.
+          </p>
+
+          <div class="pt-6">
+            <a 
+              href="/" 
+              class="inline-flex items-center justify-center gap-3 bg-[#052c17] text-[#bef264] px-12 py-5 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-[#15803d] transition-all shadow-xl shadow-green-900/10"
+            >
+              <Home size={18} />
+              Kembali ke Beranda
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <Footer client:visible />
+  </div>
+</MainLayout>

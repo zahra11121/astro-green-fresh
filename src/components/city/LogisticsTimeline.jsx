@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Truck, CheckCircle2, Navigation, MapPin } from 'lucide-react';
-// PERBAIKAN: Menggunakan path relatif agar aman di lingkungan Vite/Astro
 import { jabodetabekCities, getDefaultLogistics } from '@/data/cities';
 
 export const LogisticsTimeline = ({ slug, cityName }) => {
@@ -103,7 +101,7 @@ export const LogisticsTimeline = ({ slug, cityName }) => {
             <div className="p-2 bg-green-50 rounded-lg border border-green-100">
               <Navigation size={14} className="text-[#15803d]" />
             </div>
-            <span className="text-[10px] font-black text-[#052c17] uppercase tracking-[0.3em]">Fresh Logistics Protocol</span>
+            <span className="text-[9px] font-black text-[#052c17] uppercase tracking-[0.3em]">Fresh Logistics Protocol</span>
           </div>
           <div className="flex items-center gap-2">
             <Clock size={12} className="text-slate-500" />

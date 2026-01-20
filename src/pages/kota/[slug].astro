@@ -1,0 +1,165 @@
+---
+// src/pages/kota/[slug].astro
+
+// --- SERVER SIDE (Build Time) ---
+import MainLayout from '@/layouts/MainLayout.astro';
+
+// Menggunakan Alias @ agar jalur selalu tepat
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import CityClientPage from '@/components/CityClientPage.jsx';
+
+// Data & Icons
+import { jabodetabekCities } from '@/data/cities';
+import { ChevronRight, Home, MapPin, Truck, ShieldCheck } from 'lucide-react';
+
+// 1. Fungsi getStaticPaths (Wajib untuk rute dinamis)
+export async function getStaticPaths() {
+  return jabodetabekCities.map((city) => {
+    return {
+      params: { slug: city.slug },
+      props: { city },
+    };
+  });
+}
+
+const { slug } = Astro.params;
+const { city } = Astro.props;
+
+// --- LOGIC PENGAMANAN 404 ---
+// Jika slug tidak terdaftar di data/cities.js, alihkan ke halaman 404
+if (!city) {
+  return Astro.redirect('/404');
+}
+
+// Meta & Schema Logic
+const title = `Supplier Sayur ${city.name} - CV Green Fresh Cipanas`;
+const description = `Layanan supply sayuran grade A harian khusus Hotel, Restoran, dan Cafe di wilayah ${city.name}.`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
+
+/**
+ * LOGIC INTERNAL LINK MERATA (Circular Selection)
+ */
+const currentIndex = jabodetabekCities.findIndex(c => c.slug === slug);
+const otherCities = [];
+const totalDisplay = 6;
+
+for (let i = 1; i <= totalDisplay; i++) {
+  const nextIndex = (currentIndex + i) % jabodetabekCities.length;
+  otherCities.push(jabodetabekCities[nextIndex]);
+}
+
+const labelVariations = ["Distribusi", "Supply Sayur", "Pengiriman", "Area Layanan", "Logistik", "Mitra"];
+
+// URL Gambar Unsplash yang stabil
+const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=2000";
+---
+
+<MainLayout title={title} description={description}>
+  <link rel="canonical" href={canonicalURL} slot="head" />
+  
+  <div class="bg-white text-[#052c17] font-sans antialiased selection:bg-green-100 overflow-x-hidden text-left">
+    <Header client:load />
+    
+    <main>
+      <div class="bg-white pt-24 lg:pt-32 border-b border-green-50">
+        <nav aria-label="Breadcrumb" class="max-w-[1800px] mx-auto px-6 py-4 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em]">
+          <a href="/" class="flex items-center gap-1 text-slate-700 hover:text-[#166534] transition-colors">
+            <Home size={10} /> Beranda
+          </a>
+          <ChevronRight size={10} class="text-slate-400" />
+          <a href="/kota" class="text-slate-700 hover:text-[#166534] transition-colors">
+            City
+          </a>
+          <ChevronRight size={10} class="text-slate-400" />
+          <span class="text-[#166534] font-bold tracking-widest">{city.name}</span>
+        </nav>
+      </div>
+
+      <section class="relative h-[50vh] min-h-[450px] flex items-center overflow-hidden bg-[#052c17]">
+        <div class="absolute inset-0 z-0">
+          <img 
+            src={heroImageUrl} 
+            alt={`Supplier Sayur Segar ${city.name}`} 
+            class="w-full h-full object-cover opacity-60 brightness-[0.7]"
+            loading="eager"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#052c17] via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-[1800px] mx-auto px-6 w-full text-white text-left">
+          <div class="max-w-4xl">
+            <div class="flex items-center gap-3 mb-4 text-left">
+              <span class="px-3 py-1 bg-green-600 text-[10px] font-black tracking-[0.2em] uppercase rounded">
+                B2B Premium Supply
+              </span>
+            </div>
+            <h1 class="text-4xl md:text-7xl font-black uppercase leading-[0.95] mb-6 tracking-tighter text-left">
+              Fresh Produce <br/> <span class="text-green-400">Supplier {city.name}</span>
+            </h1>
+            <div class="flex flex-wrap gap-8 justify-start">
+              <div class="flex items-center gap-3">
+                <div class="p-2 bg-green-600/20 rounded-lg border border-green-500/30">
+                  <Truck class="text-green-400" size={24} />
+                </div>
+                <div class="text-left">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Logistik</p>
+                  <p class="text-sm font-bold uppercase tracking-wide">Daily Delivery</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="p-2 bg-green-600/20 rounded-lg border border-green-500/30">
+                  <ShieldCheck class="text-green-400" size={24} />
+                </div>
+                <div class="text-left">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Kualitas</p>
+                  <p class="text-sm font-bold uppercase tracking-wide">Horeca Grade A</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CityClientPage
+        city={city}
+        client:load
+      />
+
+      <section class="py-20 bg-white border-t border-green-50">
+        <div class="max-w-[1800px] mx-auto px-6">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 text-left">
+            <div class="text-left">
+              <h3 class="text-xs font-black text-[#166534] mb-2 uppercase tracking-[0.4em] flex items-center gap-3">
+                <MapPin size={14} />
+                Jangkauan Kami
+              </h3>
+              <h2 class="text-3xl font-black uppercase tracking-tighter text-[#052c17]">
+                Distribusi Wilayah Lainnya
+              </h2>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {otherCities.map((otherCity, index) => (
+              <a
+                href={`/kota/${otherCity.slug}`}
+                class="group p-6 rounded-2xl border border-green-100 hover:border-[#166534] hover:bg-green-50 transition-all duration-500 flex flex-col items-center justify-center gap-2 text-center"
+              >
+                <span class="text-[9px] font-bold text-slate-400 group-hover:text-green-600 uppercase tracking-[0.2em] transition-colors">
+                  {labelVariations[index % labelVariations.length]}
+                </span>
+                <span class="text-xs font-[1000] text-slate-900 group-hover:text-[#166534] uppercase tracking-wider block transition-colors">
+                  {otherCity.name}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer client:visible />
+  </div>
+</MainLayout>

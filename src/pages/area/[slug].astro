@@ -1,4 +1,6 @@
 ---
+// src/pages/area/[slug].astro
+
 // --- SERVER SIDE (Build Time) ---
 import MainLayout from '@/layouts/MainLayout.astro';
 import { 
@@ -21,7 +23,7 @@ import { LiveStats } from '@/components/city/LiveStats';
 // Data - Menggunakan Alias Path @/
 import districtsData from '@/data/districts.json';
 
-// 1. Fungsi getStaticPaths
+// 1. Fungsi getStaticPaths (Hanya memproses slug yang ada di JSON)
 export async function getStaticPaths() {
   return districtsData.districts.map((district) => ({
     params: { slug: district.slug },
@@ -31,6 +33,12 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const { district } = Astro.props;
+
+// --- PROTEKSI KETAT 404 ---
+// Jika slug diakses secara ilegal atau tidak ada di props, alihkan ke 404
+if (!district) {
+  return Astro.redirect('/404');
+}
 
 // Meta & Schema Logic
 const baseUrl = 'https://greenfresh.co.id';
@@ -63,9 +71,7 @@ const schemaData = {
 };
 
 /**
- * LOGIC RELATED AREAS (DISTRIBUSI MERATA)
- * Menggunakan teknik "Next Neighbors" agar setiap halaman memberikan link 
- * ke halaman setelahnya secara bergiliran.
+ * LOGIC RELATED AREAS (Circular Selection)
  */
 const allDistricts = districtsData.districts;
 const currentIndex = allDistricts.findIndex(d => d.slug === slug);
@@ -84,7 +90,7 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
   <link rel="canonical" href={currentUrl} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
-  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900">
+  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left">
     <Header client:load />
 
     <main>
@@ -122,7 +128,7 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
         </div>
       </div>
 
-      <section class="py-16 md:py-24 bg-white">
+      <section class="py-16 md:py-24 bg-white text-left">
         <div class="max-w-[1800px] mx-auto px-6">
           <div class="grid lg:grid-cols-12 gap-12 items-start">
             <div class="lg:col-span-6">
@@ -135,9 +141,9 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
         </div>
       </section>
 
-      <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200">
+      <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="mb-12 text-center md:text-left">
+          <div class="mb-12 text-left">
             <h2 class="text-3xl md:text-4xl font-[1000] text-[#052c17] uppercase tracking-tighter">
               Katalog <span class="text-[#15803d]">Komoditas.</span>
             </h2>
@@ -151,7 +157,7 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
       <LiveStats client:visible />
       <DistrictRoute district={district} client:visible />
       
-      <section class="py-16 bg-white border-t border-slate-100">
+      <section class="py-16 bg-white border-t border-slate-100 text-left">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8">
           <h3 class="text-xl font-black text-[#052c17] mb-8 uppercase tracking-widest flex items-center gap-2">
             <MapPin size={20} class="text-[#15803d]" /> Area Layanan Terkait
@@ -160,12 +166,12 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
             {otherAreas.map((area, index) => (
               <a
                 href={`/area/${area.slug}`}
-                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm hover:shadow-md"
+                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm hover:shadow-md text-center"
               >
                 <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">
                   {labels[index % labels.length]}
                 </span>
-                <span class="text-xs font-black text-slate-800 group-hover:text-[#15803d] uppercase tracking-wider block text-center transition-colors">
+                <span class="text-xs font-black text-slate-800 group-hover:text-[#15803d] uppercase tracking-wider block transition-colors">
                   {area.name}
                 </span>
               </a>
@@ -174,13 +180,13 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
         </div>
       </section>
 
-      <section id="partnership" class="py-20 md:py-32 bg-[#fcfdfc] border-t border-slate-200">
+      <section id="partnership" class="py-20 md:py-32 bg-[#fcfdfc] border-t border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="text-center mb-16">
+          <div class="text-left mb-16">
             <h2 class="text-3xl md:text-5xl font-[1000] text-[#052c17] uppercase tracking-tighter leading-none">
               Hubungi <span class="text-[#15803d]">Sales.</span>
             </h2>
-            <p class="text-slate-700 font-black uppercase text-xs tracking-[0.3em] mt-4">
+            <p class="text-slate-700 font-black uppercase text-xs tracking-[0.3em] mt-4 text-left">
               Konsultasi Pengadaan Wilayah {district.name}
             </p>
           </div>

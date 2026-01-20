@@ -27,7 +27,7 @@ export default defineConfig({
           item.url = item.url.slice(0, -1);
         }
 
-        const staticRoutes = ['/produk', '/gallery', '/about', '/city', '/area'];
+        const staticRoutes = ['/produk', '/gallery', '/about', '/kota', '/area'];
         const isStatic = staticRoutes.some(route => item.url.endsWith(route)) || item.url === 'https://greenfresh.co.id';
         
         if (isStatic) {
@@ -36,7 +36,7 @@ export default defineConfig({
           item.changefreq = 'daily';
         }
 
-        if (item.url.includes('/city/') || item.url.includes('/area/')) {
+        if (item.url.includes('/kota/') || item.url.includes('/area/')) {
           item.priority = 0.8;
           // @ts-ignore
           item.changefreq = 'weekly';

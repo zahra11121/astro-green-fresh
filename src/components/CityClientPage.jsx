@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from "framer-motion";
 import { Star, ShieldCheck, Truck, Users } from 'lucide-react';
 
@@ -18,7 +17,6 @@ import { QualityGuarantee } from '@/components/city/QualityGuarantee.jsx';
 import { LiveStats } from '@/components/city/LiveStats.jsx';
 
 export default function CityClientPage({ city }) {
-
   return (
     <div className="bg-white font-sans selection:bg-green-100 selection:text-green-900">
       {/* HERO SECTION */}
@@ -51,42 +49,6 @@ export default function CityClientPage({ city }) {
         </div>
       </div>
 
-      {/* LOGISTICS ADVANTAGE */}
-      <motion.section 
-        initial={{ opacity: 0.9, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="py-12 lg:py-24 px-6 border-b-2 border-green-100 bg-white"
-      >
-        <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif italic font-black leading-tight uppercase text-[#052c17] tracking-tighter">
-              Kekuatan <span className="not-italic font-sans text-slate-900">Suplai</span> <br/>
-              <span className="inline-block text-[#15803d]">{city.name}</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-10">
-            <div className="p-8 lg:p-12 bg-[#f7faf7] rounded-[2.5rem] border border-green-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#15803d] mb-6 shadow-sm group-hover:bg-[#15803d] group-hover:text-white transition-colors">
-                <Truck size={24} />
-              </div>
-              <p className="font-black text-[10px] lg:text-xs uppercase mb-3 tracking-[0.3em] text-[#15803d]">Logistics Route</p>
-              <p className="text-xl lg:text-3xl text-[#052c17] leading-tight font-black font-serif italic">{city.deliveryRoute}</p>
-            </div>
-
-            <div className="p-8 lg:p-12 bg-[#f7faf7] rounded-[2.5rem] border border-green-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#15803d] mb-6 shadow-sm group-hover:bg-[#15803d] group-hover:text-white transition-colors">
-                <ShieldCheck size={24} />
-              </div>
-              <p className="font-black text-[10px] lg:text-xs uppercase mb-3 tracking-[0.3em] text-[#15803d]">Quality Benchmark</p>
-              <p className="text-xl lg:text-3xl text-[#052c17] leading-tight font-black font-serif italic">{city.usp}</p>
-            </div>
-          </div>
-        </div>
-      </motion.section>
-
       {/* SEKSI TARGET SEKTOR */}
       <section className="py-12 lg:py-24 bg-white border-b-2 border-green-100 text-center px-6">
         <div className="max-w-[1800px] mx-auto">
@@ -108,7 +70,6 @@ export default function CityClientPage({ city }) {
                Tersedia {vegetableData.length}+ Komoditas Grade A Wilayah {city.name}
              </p>
           </div>
-          {/* PERUBAHAN: Sekarang mengirimkan vegetableData ke PriceTable */}
           <PriceTable data={vegetableData} showHeader={false} />
         </div>
       </section>
