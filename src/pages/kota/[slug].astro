@@ -3,8 +3,6 @@
 
 // --- SERVER SIDE (Build Time) ---
 import MainLayout from '@/layouts/MainLayout.astro';
-
-// Menggunakan Alias @ agar jalur selalu tepat
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import CityClientPage from '@/components/CityClientPage.jsx';
@@ -13,7 +11,7 @@ import CityClientPage from '@/components/CityClientPage.jsx';
 import { jabodetabekCities } from '@/data/cities';
 import { ChevronRight, Home, MapPin, Truck, ShieldCheck } from 'lucide-react';
 
-// 1. Fungsi getStaticPaths (Wajib untuk rute dinamis)
+// 1. Fungsi getStaticPaths
 export async function getStaticPaths() {
   return jabodetabekCities.map((city) => {
     return {
@@ -27,7 +25,6 @@ const { slug } = Astro.params;
 const { city } = Astro.props;
 
 // --- LOGIC PENGAMANAN 404 ---
-// Jika slug tidak terdaftar di data/cities.js, alihkan ke halaman 404
 if (!city) {
   return Astro.redirect('/404');
 }
@@ -35,10 +32,16 @@ if (!city) {
 // Meta & Schema Logic
 const title = `Supplier Sayur ${city.name} - CV Green Fresh Cipanas`;
 const description = `Layanan supply sayuran grade A harian khusus Hotel, Restoran, dan Cafe di wilayah ${city.name}.`;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin);
+
+/** * PERBAIKAN CANONICAL: 
+ * Menghapus .html atau /index.html agar URL tetap cantik (Clean URL)
+ */
+const origin = Astro.site || Astro.url.origin;
+const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
+const canonicalURL = new URL(cleanPathname, origin);
 
 /**
- * LOGIC INTERNAL LINK MERATA (Circular Selection)
+ * LOGIC INTERNAL LINK MERATA
  */
 const currentIndex = jabodetabekCities.findIndex(c => c.slug === slug);
 const otherCities = [];
@@ -50,13 +53,12 @@ for (let i = 1; i <= totalDisplay; i++) {
 }
 
 const labelVariations = ["Distribusi", "Supply Sayur", "Pengiriman", "Area Layanan", "Logistik", "Mitra"];
-
-// URL Gambar Unsplash yang stabil
 const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=2000";
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={canonicalURL} slot="head" />
+  {/* Tag Canonical yang sudah dipastikan tanpa .html */}
+  <link rel="canonical" href={canonicalURL.href} slot="head" />
   
   <div class="bg-white text-[#052c17] font-sans antialiased selection:bg-green-100 overflow-x-hidden text-left">
     <Header client:load />
