@@ -1,7 +1,5 @@
 ---
-// src/pages/kota/[slug].astro
-
-// --- SERVER SIDE (Build Time) ---
+export const prerender = false;
 import MainLayout from '@/layouts/MainLayout.astro';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -11,20 +9,13 @@ import CityClientPage from '@/components/CityClientPage.jsx';
 import { jabodetabekCities } from '@/data/cities';
 import { ChevronRight, Home, MapPin, Truck, ShieldCheck } from 'lucide-react';
 
-// 1. Fungsi getStaticPaths
-export async function getStaticPaths() {
-  return jabodetabekCities.map((city) => {
-    return {
-      params: { slug: city.slug },
-      props: { city },
-    };
-  });
-}
-
+// 1. Ambil slug dari params URL
 const { slug } = Astro.params;
-const { city } = Astro.props;
 
-// --- LOGIC PENGAMANAN 404 ---
+// 2. Cari data kota berdasarkan slug secara dinamis
+const city = jabodetabekCities.find((c) => c.slug === slug);
+
+// 3. Logic Pengamanan 404 (Render 404 jika kota tidak ditemukan)
 if (!city) {
   return Astro.redirect('/404');
 }

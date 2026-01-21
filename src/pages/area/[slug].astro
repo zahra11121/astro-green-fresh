@@ -1,13 +1,12 @@
 ---
-// src/pages/area/[slug].astro
+export const prerender = false;
 
-// --- SERVER SIDE (Build Time) ---
 import MainLayout from '@/layouts/MainLayout.astro';
 import { 
   Star, ChevronRight, MapPin 
 } from 'lucide-react';
 
-// Components - Menggunakan Alias Path @/
+// Components
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { PartnershipForm } from '@/components/PartnershipForm';
@@ -20,22 +19,16 @@ import { DistrictRoute } from '@/components/district/DistrictRoute';
 import { QualityGuarantee } from '@/components/city/QualityGuarantee';
 import { LiveStats } from '@/components/city/LiveStats';
 
-// Data - Menggunakan Alias Path @/
+// Data
 import districtsData from '@/data/districts.json';
 
-// 1. Fungsi getStaticPaths (Hanya memproses slug yang ada di JSON)
-export async function getStaticPaths() {
-  return districtsData.districts.map((district) => ({
-    params: { slug: district.slug },
-    props: { district },
-  }));
-}
-
+// 1. Ambil slug secara dinamis dari params Astro
 const { slug } = Astro.params;
-const { district } = Astro.props;
 
-// --- PROTEKSI KETAT 404 ---
-// Jika slug diakses secara ilegal atau tidak ada di props, alihkan ke 404
+// 2. Cari data district berdasarkan slug
+const district = districtsData.districts.find(d => d.slug === slug);
+
+// 3. PROTEKSI KETAT 404 (Server-side Redirect)
 if (!district) {
   return Astro.redirect('/404');
 }
@@ -71,7 +64,7 @@ const schemaData = {
 };
 
 /**
- * LOGIC RELATED AREAS (Circular Selection)
+ * LOGIC RELATED AREAS (Dihitung dinamis setiap kali request)
  */
 const allDistricts = districtsData.districts;
 const currentIndex = allDistricts.findIndex(d => d.slug === slug);
