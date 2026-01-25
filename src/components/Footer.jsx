@@ -1,12 +1,16 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Globe, Leaf, Zap, ChevronRight, ShoppingBag, ShieldCheck, Map } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Leaf, Zap, ChevronRight, ShoppingBag, ShieldCheck, Map, Send } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  // WhatsApp Config
   const waNumber = "6287780937884";
   const waText = "Halo Green Fresh, saya tertarik untuk menjalin kemitraan supply sayuran. Mohon informasi katalog harga terbaru dan sistem pembayarannya. Terima kasih.";
   const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
+
+  // Telegram Config
+  const tgBotLink = "https://t.me/suppliersayur_bot";
 
   return (
     <footer className="bg-[#052c17] text-white pt-20 overflow-hidden font-sans">
@@ -96,18 +100,38 @@ export const Footer = () => {
                     sales@greenfresh.co.id
                   </span>
                 </a>
-                <a 
-                  href={waLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="group block space-y-1 outline-none focus:ring-1 focus:ring-[#bef264]"
-                  aria-label="Hubungi kami melalui WhatsApp (Membuka jendela baru)"
-                >
-                  <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest block">WhatsApp</span>
-                  <span className="text-sm font-black text-white group-hover:text-[#bef264]">
-                    0877 8093 7884
-                  </span>
-                </a>
+                <div className="grid grid-cols-1 gap-4">
+                  <a 
+                    href={waLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="group block space-y-1 outline-none focus:ring-1 focus:ring-[#bef264]"
+                    aria-label="WhatsApp Business"
+                  >
+                    <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest block flex items-center gap-2">
+                      <Phone size={10} /> WhatsApp
+                    </span>
+                    <span className="text-sm font-black text-white group-hover:text-[#bef264]">
+                      0877 8093 7884
+                    </span>
+                  </a>
+                  
+                  {/* TELEGRAM BOT LINK */}
+                  <a 
+                    href={tgBotLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="group block space-y-1 outline-none focus:ring-1 focus:ring-[#bef264]"
+                    aria-label="Telegram Price Bot"
+                  >
+                    <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest block flex items-center gap-2">
+                      <Send size={10} /> Telegram Bot
+                    </span>
+                    <span className="text-sm font-black text-white group-hover:text-[#bef264]">
+                      @suppliersayur_bot
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -121,7 +145,7 @@ export const Footer = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 relative z-10">
             {[
-              { icon: ShoppingBag, title: "B2B Catalog", desc: "Akses lebih dari 70 jenis komoditas sayuran grade A harian melalui portal produk kami." },
+              { icon: ShoppingBag, title: "B2B Catalog", desc: "Dapatkan info harga harian 70+ jenis komoditas sayuran grade A melalui Telegram Bot kami." },
               { icon: MapPin, title: "Network Coverage", desc: "Distribusi menjangkau seluruh area strategis, distrik komersial, dan pusat bisnis Jabodetabek." },
               { icon: ShieldCheck, title: "Standard Quality", desc: "Sistem kontrol kualitas ketat untuk memastikan zero rejection rate pada setiap pengiriman." },
               { icon: Globe, title: "Operational Base", desc: "Pusat logistik utama berlokasi di Sukatani, Cipanas, menjamin kesegaran tangan pertama." }
