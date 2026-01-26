@@ -1,5 +1,5 @@
 ---
-// 1. Aktifkan Prerender agar menjadi halaman statis (SSG)
+// 1. Aktifkan Prerender agar menjadi halaman statis (SSG) - Solusi Utama Indexing
 export const prerender = true;
 
 import MainLayout from '@/layouts/MainLayout.astro';
@@ -28,7 +28,7 @@ const origin = Astro.site || Astro.url.origin;
 const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
 const canonicalURL = new URL(cleanPathname, origin);
 
-// Logic Data Terstruktur (Schema.org) - Dibuat sebagai objek JS dulu
+// Logic Data Terstruktur (Schema.org) - PERBAIKAN ERROR ADDRESS
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -41,7 +41,17 @@ const jsonLd = {
   "provider": {
     "@type": "LocalBusiness",
     "name": "CV Green Fresh Cipanas",
-    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=2000"
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=2000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kp. Kayumanis, RT.04/RW.04, Desa Sukatani, Kec. Cipanas",
+      "addressLocality": "Cianjur",
+      "addressRegion": "Jawa Barat",
+      "postalCode": "43253",
+      "addressCountry": "ID"
+    },
+    "telephone": "+628123456789", // Ganti dengan nomor asli jika ada
+    "priceRange": "$$"
   }
 };
 
