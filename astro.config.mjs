@@ -3,23 +3,30 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import { fileURLToPath } from 'node:url';
-import vercel from '@astrojs/vercel';
+// Hapus atau komentari adapter Vercel Server jika tidak ingin SSR
+// import vercel from '@astrojs/vercel'; 
 
 export default defineConfig({
   site: 'https://greenfresh.co.id',
 
-  // Memaksa URL tanpa slash (Contoh: /area/ -> /area)
+  // 1. UBAH KE STATIC
+  // Ini akan menghasilkan file .html murni untuk setiap halaman
+  output: 'static',
+
+  // 2. Trailing Slash
+  // Untuk statis, 'never' akan menghasilkan folder/index.html 
+  // atau file.html tergantung build format
   trailingSlash: 'never',
 
-  // Mode SSR aktif
-  output: 'server',
-
   build: {
-    format: 'file' 
+    // 'directory' menghasilkan struktur yang lebih rapi untuk SEO
+    // contoh: greenfresh.co.id/produk/ (isinya produk/index.html)
+    format: 'directory', 
+    assets: '_assets'
   },
 
-  // Integrasi hanya React dan Tailwind
   integrations: [
+    // Tambahkan 'experimentalReactChildren' jika butuh performa lebih
     react(),
     tailwind(),
   ],
@@ -32,9 +39,9 @@ export default defineConfig({
     },
     build: {
       cssCodeSplit: true,
+      // Mengurangi ukuran chunk untuk kecepatan loading mobile
+      chunkSizeWarningLimit: 500,
     }
   },
 
-  // Menggunakan adapter Vercel untuk SSR
-  adapter: vercel(),
 });
