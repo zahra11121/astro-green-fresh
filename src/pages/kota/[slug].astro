@@ -1,5 +1,5 @@
 ---
-// 1. Aktifkan Prerender agar menjadi halaman statis (SSG) - Solusi Utama Indexing
+// 1. Full SSG agar setiap kota memiliki file HTML fisik yang kaya konten
 export const prerender = true;
 
 import MainLayout from '@/layouts/MainLayout.astro';
@@ -10,7 +10,7 @@ import CityClientPage from '@/components/CityClientPage.jsx';
 import { jabodetabekCities } from '@/data/cities';
 import { ChevronRight, Home, MapPin, Truck, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
-// 2. Wajib ada untuk export const prerender = true
+// 2. Definisi Path Statis untuk Build Time
 export async function getStaticPaths() {
   return jabodetabekCities.map((city) => ({
     params: { slug: city.slug },
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 
 const { city } = Astro.props;
 
-// Meta & Schema Logic
+// Meta SEO
 const title = `Supplier Sayur ${city.name} - CV Green Fresh Cipanas`;
 const description = `Layanan supply sayuran grade A harian khusus Hotel, Restoran, dan Cafe di wilayah ${city.name}. Distribusi segar langsung dari petani.`;
 
@@ -28,34 +28,44 @@ const origin = Astro.site || Astro.url.origin;
 const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
 const canonicalURL = new URL(cleanPathname, origin);
 
-// Logic Data Terstruktur (Schema.org) - PERBAIKAN ERROR ADDRESS
+/** * SCHEMA PERBAIKAN: SERVICE AREA LOGIC
+ * Menggunakan @graph untuk menghubungkan Bisnis (Provider) dan Layanan (AreaServed)
+ * Menghilangkan error "address" & "telephone"
+ */
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": `Supplier Sayur Segar ${city.name}`,
-  "description": description,
-  "areaServed": {
-    "@type": "City",
-    "name": city.name
-  },
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "CV Green Fresh Cipanas",
-    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=2000",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Kp. Kayumanis, RT.04/RW.04, Desa Sukatani, Kec. Cipanas",
-      "addressLocality": "Cianjur",
-      "addressRegion": "Jawa Barat",
-      "postalCode": "43253",
-      "addressCountry": "ID"
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": `${origin}/#organization`,
+      "name": "CV Green Fresh Cipanas",
+      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=2000",
+      "telephone": "+6287780937884",
+      "priceRange": "Rp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kp. Kayumanis, RT.04/RW.04, Desa Sukatani, Kec. Cipanas",
+        "addressLocality": "Cianjur",
+        "addressRegion": "Jawa Barat",
+        "postalCode": "43253",
+        "addressCountry": "ID"
+      }
     },
-    "telephone": "+628123456789", // Ganti dengan nomor asli jika ada
-    "priceRange": "$$"
-  }
+    {
+      "@type": "Service",
+      "name": `Layanan Supplier Sayur ${city.name}`,
+      "serviceType": "Vegetable Supply & Distribution",
+      "provider": { "@id": `${origin}/#organization` },
+      "areaServed": {
+        "@type": "City",
+        "name": city.name
+      },
+      "description": description
+    }
+  ]
 };
 
-// Logic Internal Link
+// Internal Link Merata
 const currentIndex = jabodetabekCities.findIndex(c => c.slug === city.slug);
 const otherCities = [];
 const totalDisplay = 6;
@@ -104,11 +114,11 @@ const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f49
       <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-6">
           <article class="prose prose-green max-w-none">
-            <h2 class="text-3xl font-black uppercase tracking-tighter mb-6">
+            <h2 class="text-3xl font-black uppercase tracking-tighter mb-6 text-[#052c17]">
               Mitra Distribusi Sayuran Terpercaya di {city.name}
             </h2>
             <p class="text-lg leading-relaxed text-slate-700 mb-6">
-              CV Green Fresh Cipanas kini hadir sebagai <strong>supplier sayur {city.name}</strong> utama untuk kebutuhan bisnis Horeca (Hotel, Restaurant, Cafe). Kami memahami bahwa stabilitas pasokan dan kualitas bahan baku adalah kunci keberhasilan dapur profesional Anda di wilayah {city.name}.
+              CV Green Fresh Cipanas kini hadir sebagai <strong>supplier sayur {city.name}</strong> utama untuk kebutuhan bisnis Horeca (Hotel, Restaurant, Cafe). Kami memahami bahwa stabilitas pasokan harian di wilayah <strong>{city.name}</strong> adalah prioritas utama dapur profesional Anda.
             </p>
             
             <div class="grid md:grid-cols-2 gap-8 my-10">
@@ -116,13 +126,13 @@ const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f49
                 <h3 class="font-bold text-green-800 mb-3 flex items-center gap-2">
                   <CheckCircle2 size={18}/> Kualitas Grade A
                 </h3>
-                <p class="text-sm text-slate-600">Penyortiran ketat standar hotel bintang 5 untuk memastikan setiap item yang sampai di {city.name} dalam kondisi prima.</p>
+                <p class="text-sm text-slate-600">Proses sortasi ketat di farm kami sebelum dikirim ke {city.name} untuk menjamin standar kualitas tinggi.</p>
               </div>
               <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                 <h3 class="font-bold text-green-800 mb-3 flex items-center gap-2">
-                  <CheckCircle2 size={18}/> Pengiriman Tepat Waktu
+                  <CheckCircle2 size={18}/> Pengiriman Harian
                 </h3>
-                <p class="text-sm text-slate-600">Armada logistik kami menjangkau seluruh area {city.name} setiap pagi untuk menjamin kesegaran sayur harian.</p>
+                <p class="text-sm text-slate-600">Armada logistik kami beroperasi harian menjangkau area {city.name} untuk memastikan stok Anda selalu segar.</p>
               </div>
             </div>
           </article>
@@ -141,7 +151,7 @@ const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f49
               <MapPin size={14} /> Jangkauan Kami
             </h3>
             <h2 class="text-3xl font-black uppercase tracking-tighter text-[#052c17]">
-              Area Layanan Lain di Sekitar {city.name}
+              Layanan Distribusi Wilayah Sekitar {city.name}
             </h2>
           </div>
 
@@ -154,7 +164,7 @@ const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f49
                 <span class="text-[9px] font-bold text-slate-400 group-hover:text-green-600 uppercase tracking-[0.2em]">
                   {labelVariations[index % labelVariations.length]}
                 </span>
-                <span class="text-xs font-[1000] text-slate-900 group-hover:text-[#166534] uppercase tracking-wider block">
+                <span class="text-xs font-black text-slate-900 group-hover:text-[#166534] uppercase tracking-wider block">
                   {otherCity.name}
                 </span>
               </a>
