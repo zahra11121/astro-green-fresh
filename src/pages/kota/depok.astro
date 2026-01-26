@@ -1,5 +1,5 @@
 ---
-// 1. Full SSG untuk performa SEO maksimal
+// GENERATED FILE - STATIC PROCESSED WITH UNIQUE CONTENT
 export const prerender = true;
 
 import MainLayout from '@/layouts/MainLayout.astro';
@@ -7,31 +7,20 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import CityClientPage from '@/components/CityClientPage.jsx';
 
-// IMPORT DATA DI SINI (Level Server)
-import { jabodetabekCities } from '@/data/cities';
 import { vegetableData } from '@/data/data.js'; 
 import { MapPin } from 'lucide-react';
 
-export async function getStaticPaths() {
-  return jabodetabekCities.map((city) => ({
-    params: { slug: city.slug },
-    props: { city },
-  }));
-}
+const city = {"name": "Depok", "slug": "depok"};
+const otherCities = [{"name": "Tangerang", "slug": "tangerang"}, {"name": "Bekasi", "slug": "bekasi"}, {"name": "Jakarta Selatan", "slug": "jakarta-selatan"}, {"name": "Jakarta Pusat", "slug": "jakarta-pusat"}, {"name": "Jakarta Barat", "slug": "jakarta-barat"}, {"name": "Jakarta Timur", "slug": "jakarta-timur"}];
+const labelVariations = ["Distribusi", "Supply Sayur", "Pengiriman", "Area Layanan", "Logistik", "Mitra"];
 
-const { city } = Astro.props;
+// Meta SEO
+const title = `Supplier Sayur ${city['name']} - CV Green Fresh Cipanas | Harga B2B`;
+const description = `Layanan supply sayuran grade A harian khusus Hotel, Restoran, dan Cafe di wilayah ${city['name']}. Distribusi segar langsung dari petani Cipanas.`;
 
-// Meta SEO spesifik per kota
-const title = `Supplier Sayur ${city.name} - CV Green Fresh Cipanas | Harga B2B`;
-const description = `Layanan supply sayuran grade A harian khusus Hotel, Restoran, dan Cafe di wilayah ${city.name}. Distribusi segar langsung dari petani Cipanas.`;
+const origin = Astro.site || 'https://greenfresh.co.id';
+const currentUrl = `${origin}/kota/${city['slug']}`;
 
-const origin = Astro.site || Astro.url.origin;
-const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
-const canonicalURL = new URL(cleanPathname, origin);
-
-/** * SCHEMA PERBAIKAN: SERVICE AREA LOGIC
- * Menghubungkan bisnis dengan area layanan spesifik (City)
- */
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -51,27 +40,17 @@ const jsonLd = {
     },
     {
       "@type": "Service",
-      "name": `Supplier Sayur Segar ${city.name}`,
+      "name": `Supplier Sayur Segar ${city['name']}`,
       "provider": { "@id": `${origin}/#organization` },
-      "areaServed": { "@type": "City", "name": city.name },
+      "areaServed": { "@type": "City", "name": city['name'] },
       "description": description
     }
   ]
 };
-
-// Logika Internal Link Merata
-const currentIndex = jabodetabekCities.findIndex(c => c.slug === city.slug);
-const otherCities = [];
-for (let i = 1; i <= 6; i++) {
-  const nextIndex = (currentIndex + i) % jabodetabekCities.length;
-  otherCities.push(jabodetabekCities[nextIndex]);
-}
-
-const labelVariations = ["Distribusi", "Supply Sayur", "Pengiriman", "Area Layanan", "Logistik", "Mitra"];
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={canonicalURL.href} slot="head" />
+  <link rel="canonical" href={currentUrl} slot="head" />
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
 
   <div class="bg-white text-[#052c17] font-sans antialiased text-left selection:bg-green-100 overflow-x-hidden">
@@ -82,7 +61,7 @@ const labelVariations = ["Distribusi", "Supply Sayur", "Pengiriman", "Area Layan
         <div class="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=2000" 
-            alt={`Supplier Sayur ${city.name}`} 
+            alt={`Supplier Sayur ${city['name']}` }
             class="w-full h-full object-cover opacity-60 brightness-[0.7]"
             loading="eager"
             decoding="async"
@@ -95,7 +74,7 @@ const labelVariations = ["Distribusi", "Supply Sayur", "Pengiriman", "Area Layan
               B2B Premium Supply
             </span>
             <h1 class="text-4xl md:text-7xl font-black uppercase leading-[0.95] mb-6 tracking-tighter">
-              Fresh Produce <br/> <span class="text-green-400">Supplier {city.name}</span>
+              Fresh Produce <br/> <span class="text-green-400">Supplier Depok</span>
             </h1>
           </div>
         </div>
@@ -105,17 +84,15 @@ const labelVariations = ["Distribusi", "Supply Sayur", "Pengiriman", "Area Layan
         <div class="max-w-4xl mx-auto px-6">
           <article class="prose prose-green max-w-none">
             <h2 class="text-3xl font-black uppercase tracking-tighter mb-6 text-[#052c17]">
-              Mitra Distribusi Sayuran Terpercaya di {city.name}
+              Mitra Distribusi Sayuran Terpercaya di Depok
             </h2>
             <p class="text-lg leading-relaxed text-slate-700 mb-6">
-              CV Green Fresh Cipanas hadir sebagai <strong>supplier sayur {city.name}</strong> utama untuk kebutuhan bisnis Horeca. 
-              Stabilitas pasokan harian di wilayah <strong>{city.name}</strong> adalah prioritas utama dapur profesional Anda.
+              CV Green Fresh Cipanas hadir sebagai <strong>supplier sayur Depok</strong> utama untuk kebutuhan bisnis Horeca. Percayakan logistik sayuran Anda di <strong>Depok</strong> kepada tim berpengalaman dari CV Green Fresh Cipanas.
             </p>
           </article>
         </div>
       </section>
 
-      {/* OPER DATA VEGETABLE KE CLIENT COMPONENT UNTUK SEO */}
       <CityClientPage
         city={city}
         vegetableData={vegetableData}
@@ -129,13 +106,16 @@ const labelVariations = ["Distribusi", "Supply Sayur", "Pengiriman", "Area Layan
               <MapPin size={14} /> Jangkauan Kami
             </h3>
             <h2 class="text-3xl font-black uppercase tracking-tighter text-[#052c17]">
-              Layanan Distribusi Wilayah Sekitar {city.name}
+              Layanan Distribusi Wilayah Sekitar Depok
             </h2>
           </div>
 
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {otherCities.map((otherCity, index) => (
-              <a href={`/kota/${otherCity.slug}`} class="group p-6 rounded-2xl border border-green-100 bg-white hover:border-[#166534] hover:bg-green-50 transition-all text-center">
+              <a 
+                href={`/kota/${otherCity.slug}` } 
+                class="group p-6 rounded-2xl border border-green-100 bg-white hover:border-[#166534] hover:bg-green-50 transition-all text-center"
+              >
                 <span class="text-[9px] font-bold text-slate-400 group-hover:text-green-600 uppercase tracking-[0.2em]">
                   {labelVariations[index % labelVariations.length]}
                 </span>

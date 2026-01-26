@@ -1,0 +1,271 @@
+---
+// GENERATED MANUALLY VIA PYTHON - STATIC FILE
+import MainLayout from '@/layouts/MainLayout.astro';
+import { Star, ChevronRight, MapPin } from 'lucide-react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { PartnershipForm } from '@/components/PartnershipForm';
+import { PriceTable } from '@/components/PriceTable';
+import { vegetableData } from '@/data/data.js'; 
+import { DistrictHero } from '@/components/district/DistrictHero';
+import { DistrictLogistics } from '@/components/district/DistrictLogistics';
+import { DistrictOverview } from '@/components/district/DistrictOverview';
+import { DistrictRoute } from '@/components/district/DistrictRoute';
+import { QualityGuarantee } from '@/components/city/QualityGuarantee';
+import { LiveStats } from '@/components/city/LiveStats';
+
+const district = {
+  "slug": "cikini",
+  "name": "Cikini",
+  "origin": "CV Green Fresh Cipanas",
+  "title": "Supplier Sayur Cikini - Untuk Restoran Artistic, Cafe Boheme, Bistro dan Catering Creative",
+  "angle": "Penyedia sayuran untuk kawasan artistic dengan bisnis kuliner kreatif",
+  "seoContent": "Cikini sebagai kawasan artistic memiliki konsentrasi bisnis kuliner yang sangat kreatif. Restoran dengan konsep artistic membutuhkan bahan sebagai medium kreativitas chef. Cafe dengan vibe boheme menginginkan produk yang unconventional dan inspiring. Bistro dengan menu experimental memerlukan sayuran dengan karakter unik. Catering untuk event creative membutuhkan presentasi yang out of the box. Kami mendukung kreativitas dengan menyediakan produk yang tidak biasa dan layanan yang flexible untuk eksperimen kuliner.",
+  "metaDescription": "Supplier sayur Cikini untuk bisnis kuliner kreatif. Produk unconventional, dukungan untuk eksperimen, layanan flexible untuk kreativitas.",
+  "clientFocus": "Restoran Artistic, Cafe Boheme, Bistro Experimental, Catering Creative, Bisnis Kreatif",
+  "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cikini",
+  "logistics": {
+    "time": "03.30-05.30 (panen), 06.30-08.00 (creative), 10.00-11.30 (experimental)",
+    "title": "Creative Industry Support",
+    "desc": "Unconventional product sourcing, flexible order untuk eksperimen, creative presentation support"
+  }
+};
+const otherAreas = [
+  {
+    "slug": "kebon-sirih",
+    "name": "Kebon Sirih",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Kebon Sirih - Untuk Restoran Kantor Pemerintah, Cafe, Depot dan Catering Instansi",
+    "angle": "Pemasok sayuran untuk kawasan instansi pemerintah dengan protokol khusus",
+    "seoContent": "Kebon Sirih dengan konsentrasi instansi pemerintah membutuhkan supplier yang memahami protokol khusus. Restoran yang melayani pegawai pemerintah membutuhkan sistem yang compliant dengan aturan instansi. Cafe di sekitar kantor pemerintah menginginkan layanan yang discreet dan professional. Depot untuk kebutuhan harian instansi memerlukan dokumentasi yang lengkap. Catering untuk acara pemerintah membutuhkan prosedur yang sesuai dengan ketentuan. Kami familiar dengan berbagai protokol pemerintahan dan memastikan setiap pengiriman memenuhi semua requirement.",
+    "metaDescription": "Supplier sayur Kebon Sirih untuk instansi pemerintah. Compliant dengan protokol pemerintah, dokumentasi lengkap, layanan professional.",
+    "clientFocus": "Restoran Instansi, Cafe Pemerintah, Depot, Catering Pemerintah, Bisnis Sekitar Kantor Negara",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Kebon Sirih",
+    "logistics": {
+      "time": "03.00-05.00 (panen), 06.00-07.30 (instansi), 09.00-10.30 (acara)",
+      "title": "Government Protocol Compliance",
+      "desc": "Government clearance procedures, official documentation, protocol-specific delivery methods"
+    }
+  },
+  {
+    "slug": "sabang",
+    "name": "Sabang",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Sabang - Untuk Restoran Legendary, Cafe Iconic, Warung Tua dan Catering Traditional",
+    "angle": "Penyuplai sayuran untuk kawasan kuliner legendaris Jakarta",
+    "seoContent": "Sabang sebagai kawasan kuliner legendaris memiliki bisnis yang telah menjadi ikon Jakarta. Restoran legendary yang telah puluhan tahun beroperasi membutuhkan konsistensi mutu yang terjaga. Cafe iconic dengan pelanggan lintas generasi menginginkan rasa yang tidak berubah. Warung tua yang menjadi heritage kuliner memerlukan bahan dengan karakter asli. Catering untuk acara tradisional Jakarta membutuhkan authentic ingredients. Kami menjaga warisan kuliner Jakarta dengan menyediakan produk yang mempertahankan karakter asli yang telah dicintai puluhan tahun.",
+    "metaDescription": "Supplier sayur Sabang untuk kawasan kuliner legendaris. Menjaga warisan kuliner, konsistensi puluhan tahun, authentic ingredients.",
+    "clientFocus": "Restoran Legendary, Cafe Iconic, Warung Tua, Catering Traditional Jakarta, Bisnis Heritage",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Sabang",
+    "logistics": {
+      "time": "03.00-05.00 (panen), 06.00-07.30 (legendaris), 11.00-13.00 (tradisional)",
+      "title": "Culinary Heritage Preservation",
+      "desc": "Consistency maintenance systems, heritage recipe understanding, traditional preparation methods"
+    }
+  },
+  {
+    "slug": "gambir",
+    "name": "Gambir",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Gambir - Untuk Restoran Stasiun, Cafe Transport, Depot dan Catering Travel",
+    "angle": "Pemasok sayuran untuk kawasan transportasi dengan kebutuhan 24/7",
+    "seoContent": "Gambir sebagai pusat transportasi membutuhkan supplier dengan operational hours yang extended. Restoran di sekitar stasiun kereta membutuhkan pasokan untuk pelanggan yang datang terus menerus. Cafe yang melayani traveler menginginkan bahan yang tahan untuk long hours. Depot dengan jam operasional panjang memerlukan sistem yang reliable. Catering untuk kebutuhan travel dan transport membutuhkan flexibility waktu. Kami memiliki sistem shift yang memungkinkan pengiriman di berbagai jam untuk mendukung operasional 24/7 kawasan transportasi.",
+    "metaDescription": "Supplier sayur Gambir untuk kawasan transportasi. Operational hours extended, sistem shift, dukungan untuk bisnis 24/7.",
+    "clientFocus": "Restoran Stasiun, Cafe Transport, Depot 24 Jam, Catering Travel, Bisnis Transportasi",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Gambir",
+    "logistics": {
+      "time": "02.00-04.00 (panen), 04.30-06.30 (shift 1), 14.00-16.00 (shift 2), 22.00-24.00 (shift 3)",
+      "title": "24/7 Transportation Hub Support",
+      "desc": "Multiple shift operations, extended hours delivery, travel industry understanding"
+    }
+  },
+  {
+    "slug": "bendungan-hilir",
+    "name": "Bendungan Hilir",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Bendungan Hilir - Untuk Restoran Mix-Use, Cafe Plaza, Food Hall dan Catering Kompleks",
+    "angle": "Penyedia sayuran untuk kawasan mixed-use development terpadu",
+    "seoContent": "Bendungan Hilir dengan development mixed-use yang terintegrasi membutuhkan supplier dengan kemampuan multi-segment. Restoran di kompleks terpadu membutuhkan koordinasi dengan building management yang ketat. Cafe di dalam plaza memerlukan sistem yang harmonis dengan retail operations. Food hall dengan berbagai konsep menginginkan variasi produk yang luas. Catering untuk seluruh kompleks membutuhkan capacity yang besar. Kami memiliki experience dalam melayani mixed-use development dengan sistem yang terintegrasi namun flexible untuk berbagai kebutuhan berbeda.",
+    "metaDescription": "Supplier sayur Bendungan Hilir untuk mixed-use development. Sistem terintegrasi untuk kompleks terpadu, koordinasi multi-tenant.",
+    "clientFocus": "Restoran Kompleks, Cafe Plaza, Food Hall, Catering Development, Bisnis Mixed-Use",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Bendungan Hilir",
+    "logistics": {
+      "time": "03.00-05.00 (panen), 06.00-07.30 (plaza), 09.00-11.00 (kompleks)",
+      "title": "Integrated Complex Management",
+      "desc": "Mixed-use complex coordination, multi-tenant integration, centralized delivery management"
+    }
+  },
+  {
+    "slug": "kemayoran",
+    "name": "Kemayoran",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Kemayoran - Untuk Restoran Convention, Cafe Exhibition, Catering Event dan Bisnis Pameran",
+    "angle": "Pemasok sayuran untuk kawasan convention dan exhibition center",
+    "seoContent": "Kemayoran sebagai pusat convention dan exhibition memiliki kebutuhan yang sangat event-driven. Restoran di sekitar convention center membutuhkan predictive ordering berdasarkan event calendar. Cafe di exhibition hall menginginkan bahan yang bisa menyesuaikan dengan foot traffic fluktuatif. Catering untuk event besar memerlukan kemampuan logistics skala massive. Bisnis di area pameran membutuhkan responsiveness terhadap last-minute changes. Kami memiliki sistem event intelligence yang memprediksi kebutuhan berdasarkan jenis dan skala event.",
+    "metaDescription": "Supplier sayur Kemayoran untuk convention dan exhibition. Event intelligence system, predictive ordering, massive scale capability.",
+    "clientFocus": "Restoran Convention, Cafe Exhibition, Catering Event Besar, Bisnis Pameran, Venue Catering",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Kemayoran",
+    "logistics": {
+      "time": "01.30-03.30 (panen), 04.00-06.00 (pre-event), 07.30-10.00 (event day)",
+      "title": "Event-Driven Supply Chain",
+      "desc": "Event calendar integration, demand prediction algorithms, massive event scale operations"
+    }
+  },
+  {
+    "slug": "cempaka-putih",
+    "name": "Cempaka Putih",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Cempaka Putih - Untuk Restoran Ruko, Cafe, Depot dan Catering Kawasan",
+    "angle": "Penyuplai sayuran untuk kawasan dengan konsentrasi ruko dan bisnis lokal",
+    "seoContent": "Cempaka Putih dengan karakter kawasan ruko yang padat membutuhkan supplier yang memahami dinamika bisnis skala menengah. Restoran di ruko membutuhkan solusi space-efficient untuk storage terbatas. Cafe di lingkungan ruko menginginkan bahan dengan margin yang ketat. Depot dengan pelanggan tetap memerlukan reliability untuk menjaga bisnis harian. Catering untuk komunitas ruko membutuhkan harga kompetitif. Kami memberikan solusi customized untuk bisnis ruko dengan constraint space dan budget yang spesifik.",
+    "metaDescription": "Supplier sayur Cempaka Putih untuk bisnis ruko. Solusi space-efficient, margin management, customized untuk constraint ruko.",
+    "clientFocus": "Restoran Ruko, Cafe, Depot, Catering Kawasan, Bisnis Ruko",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cempaka Putih",
+    "logistics": {
+      "time": "03.30-05.30 (panen), 06.30-08.30 (ruko), 13.00-15.00 (tambahan)",
+      "title": "Ruko Business Solutions",
+      "desc": "Space-efficient packaging, ruko storage solutions, margin optimization systems"
+    }
+  }
+];
+const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
+
+const baseUrl = 'https://greenfresh.co.id';
+const currentUrl = `${baseUrl}/area/${district.slug}`;
+const title = `Supplier Sayur ${district.name} - Stok Stabil Harian | CV Green Fresh Cipanas`;
+const description = `Supplier sayur segar tangan pertama wilayah ${district.name}. Melayani pengadaan komoditas grade A harian khusus Hotel, Restoran, dan Cafe wilayah ${district.name}.`;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WholesaleStore",
+      "@id": `${baseUrl}/#organization`,
+      "name": "CV Green Fresh Cipanas",
+      "url": baseUrl,
+      "logo": { "@type": "ImageObject", "url": `${baseUrl}/logo.svg` }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Beranda", "item": baseUrl },
+        { "@type": "ListItem", "position": 2, "name": "Area", "item": `${baseUrl}/area` },
+        { "@type": "ListItem", "position": 3, "name": district.name, "item": currentUrl }
+      ]
+    }
+  ]
+};
+---
+
+<MainLayout title={title} description={description}>
+  <link rel="canonical" href={currentUrl} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
+
+  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left">
+    <Header client:load />
+
+    <main>
+      <div class="pt-24 lg:pt-32 bg-white border-b border-slate-50">
+        <nav aria-label="Breadcrumb" class="max-w-[1800px] mx-auto px-6 py-4 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em]">
+          <a href="/" class="text-slate-700 hover:text-[#166534] transition-colors">Beranda</a>
+          <ChevronRight size={10} class="text-slate-400" />
+          <a href="/area" class="text-slate-700 hover:text-[#166534] transition-colors">Area</a>
+          <ChevronRight size={10} class="text-slate-400" />
+          <span class="text-[#166534] font-bold tracking-widest uppercase">{district.name}</span>
+        </nav>
+      </div>
+
+      <DistrictHero district={district} client:load />
+      
+      <div class="w-full bg-gradient-to-r from-white to-[#f7faf7] py-6 border-y border-green-50/50">
+        <div class="max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+              <div class="flex -space-x-1">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <Star key={s} size={18} class="text-amber-500 fill-amber-500" />
+                ))}
+              </div>
+              <div class="pl-2 border-l border-slate-300">
+                <p class="text-2xl font-black text-[#052c17]">4.9</p>
+                <p class="text-[10px] font-bold uppercase text-slate-700">Rating Area</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
+              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Layanan Terverifikasi di {district.name}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="py-16 md:py-24 bg-white text-left">
+        <div class="max-w-[1800px] mx-auto px-6">
+          <div class="grid lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-6">
+              <DistrictOverview district={district} client:visible />
+            </div>
+            <div class="lg:col-span-6">
+              <DistrictLogistics district={district} client:visible />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
+        <div class="max-w-[1800px] mx-auto px-6">
+          <div class="mb-12 text-left">
+            <h2 class="text-3xl md:text-4xl font-[1000] text-[#052c17] uppercase tracking-tighter">
+              Katalog <span class="text-[#15803d]">Komoditas.</span>
+            </h2>
+            <p class="text-slate-700 text-sm font-black mt-2 uppercase tracking-widest">Update Harga Khusus Area {district.name}</p>
+          </div>
+          <PriceTable data={vegetableData.slice(0, 20)} client:visible />
+        </div>
+      </section>
+
+      <QualityGuarantee client:visible />
+      <LiveStats client:visible />
+      <DistrictRoute district={district} client:visible />
+      
+      <section class="py-16 bg-white border-t border-slate-100 text-left">
+        <div class="max-w-[1800px] mx-auto px-4 md:px-8">
+          <h3 class="text-xl font-black text-[#052c17] mb-8 uppercase tracking-widest flex items-center gap-2">
+            <MapPin size={20} class="text-[#15803d]" /> Area Layanan Terkait
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {otherAreas.map((area, index) => (
+              <a
+                href={`/area/${area.slug}`}
+                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm hover:shadow-md text-center"
+              >
+                <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">
+                  {labels[index % labels.length]}
+                </span>
+                <span class="text-xs font-black text-slate-800 group-hover:text-[#15803d] uppercase tracking-wider block transition-colors">
+                  {area.name}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="partnership" class="py-20 md:py-32 bg-[#fcfdfc] border-t border-slate-200 text-left">
+        <div class="max-w-[1800px] mx-auto px-6">
+          <div class="text-left mb-16">
+            <h2 class="text-3xl md:text-5xl font-[1000] text-[#052c17] uppercase tracking-tighter leading-none">
+              Hubungi <span class="text-[#15803d]">Sales.</span>
+            </h2>
+            <p class="text-slate-700 font-black uppercase text-xs tracking-[0.3em] mt-4 text-left">
+              Konsultasi Pengadaan Wilayah {district.name}
+            </p>
+          </div>
+          <PartnershipForm client:visible />
+        </div>
+      </section>
+    </main>
+
+    <Footer client:visible />
+  </div>
+</MainLayout>

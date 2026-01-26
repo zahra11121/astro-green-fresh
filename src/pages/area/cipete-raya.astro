@@ -1,0 +1,271 @@
+---
+// GENERATED MANUALLY VIA PYTHON - STATIC FILE
+import MainLayout from '@/layouts/MainLayout.astro';
+import { Star, ChevronRight, MapPin } from 'lucide-react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { PartnershipForm } from '@/components/PartnershipForm';
+import { PriceTable } from '@/components/PriceTable';
+import { vegetableData } from '@/data/data.js'; 
+import { DistrictHero } from '@/components/district/DistrictHero';
+import { DistrictLogistics } from '@/components/district/DistrictLogistics';
+import { DistrictOverview } from '@/components/district/DistrictOverview';
+import { DistrictRoute } from '@/components/district/DistrictRoute';
+import { QualityGuarantee } from '@/components/city/QualityGuarantee';
+import { LiveStats } from '@/components/city/LiveStats';
+
+const district = {
+  "slug": "cipete-raya",
+  "name": "Cipete Raya",
+  "origin": "CV Green Fresh Cipanas",
+  "title": "Supplier Sayur Cipete Raya - Untuk Cafe Instagramable, Coffee Shop, Bakery dan Salad Bar",
+  "angle": "Penyedia sayuran photogenic untuk bisnis makanan kekinian",
+  "seoContent": "Visual appeal menjadi kunci sukses bisnis kuliner di Cipete Raya. Sayuran dari Cipanas memiliki warna cerah alami dan bentuk sempurna yang Instagramable. Cafe kekinian mendapatkan produk yang meningkatkan aesthetic plating. Coffee shop mendapat bahan fresh untuk sandwich dan wrap yang menarik. Bakery membutuhkan greens untuk healthy pastry yang eye-catching. Salad bar mengandalkan kesegaran kami untuk topping yang crispy. Same-day delivery untuk kebutuhan content shooting tersedia.",
+  "metaDescription": "Supplier sayur Cipete Raya untuk bisnis makanan kekinian. Sayuran Instagramable, warna cerah alami, perfect untuk plating aesthetic.",
+  "clientFocus": "Cafe Instagramable, Coffee Shop, Bakery, Salad Bar, Healthy Food Joint",
+  "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tol Dalam Kota-Cipete Raya",
+  "logistics": {
+    "time": "03.00-05.30 (panen), 06.00-08.00 (utama), 12.00 cutoff (emergency)",
+    "title": "Visual Quality Focus",
+    "desc": "Color-graded produce selection, same-day delivery untuk content creation, packaging aesthetic-friendly"
+  }
+};
+const otherAreas = [
+  {
+    "slug": "kemang-pratama",
+    "name": "Kemang Pratama",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Kemang Pratama - Untuk Restoran, Perumahan Premium, Office Pantry dan Home Catering",
+    "angle": "Solusi hybrid untuk lingkungan residential-komersial terpadu",
+    "seoContent": "Kemang Pratama membutuhkan sistem pasokan yang melayani B2B dan B2C secara efisien. Restoran mendapat morning delivery untuk operasional harian. Perumahan premium mendapat afternoon delivery untuk kebutuhan residential. Office pantry mendapatkan supply teratur untuk employee wellness. Home catering business mendapat support untuk home-based operation. Sistem payment terpisah: cash untuk perorangan, invoice untuk bisnis. Packaging berbeda untuk komersial vs konsumen.",
+    "metaDescription": "Supplier sayur Kemang Pratama untuk lingkungan hybrid. Layanan B2B & B2C terpadu, jadwal pengiriman fleksibel, sistem pembayaran berbeda.",
+    "clientFocus": "Restoran, Perumahan Premium, Office Pantry, Home Catering, Private Chef",
+    "deliveryRoute": "Cipanas-Cianjur-Puncak-JORR-Kemang Pratama",
+    "logistics": {
+      "time": "03.30-05.30 (panen), 06.30-09.00 (komersial), 14.00-16.00 (residential)",
+      "title": "Hybrid Distribution Model",
+      "desc": "Commercial route pagi hari, residential route sore hari, packaging berbeda B2B vs B2C, payment system terpisah"
+    }
+  },
+  {
+    "slug": "bangka",
+    "name": "Bangka",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Bangka - Untuk Rumah Makan Padang, Restoran Tradisional, Depot Masakan Indonesia dan Catering Rapat",
+    "angle": "Spesialis sayuran lokal untuk masakan Indonesia otentik",
+    "seoContent": "Kami memahami kebutuhan spesifik masakan Indonesia di kawasan Bangka. Rumah makan Padang membutuhkan daun singkong dan nangka muda dalam volume besar setiap hari. Restoran tradisional mengandalkan kami untuk sayur asam, lodeh, dan gulai. Depot masakan Indonesia mendapat pasokan harian yang konsisten. Catering rapat mempercayai kami untuk nasi kotak dalam jumlah banyak. Harga grosir untuk volume besar, dengan kualitas yang tetap terjaga. Pengiriman ultra-pagi untuk restoran yang buka 24 jam.",
+    "metaDescription": "Supplier sayur Bangka spesialis masakan Indonesia. Sayuran lokal lengkap, harga grosir volume besar, pengiriman pagi untuk restoran 24 jam.",
+    "clientFocus": "Rumah Makan Padang, Restoran Tradisional, Depot Masakan Indonesia, Catering Rapat, Warung Nasi",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tebet-Mampang-Bangka",
+    "logistics": {
+      "time": "02.30-04.30 (panen), 05.30-07.30 (volume besar), 13.00 cutoff (order besok)",
+      "title": "Bulk Supply System",
+      "desc": "Gunny sack packaging untuk sayuran daun, harga khusus volume besar, daily delivery untuk restoran 24 jam"
+    }
+  },
+  {
+    "slug": "pondok-indah",
+    "name": "Pondok Indah",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Pondok Indah - Untuk Mall Restaurants, Food Court, Cinema Cafe dan Food Hall Tenant",
+    "angle": "Supplier compliant dengan regulasi mall untuk tenant makanan",
+    "seoContent": "Pengiriman ke kompleks mall membutuhkan kepatuhan terhadap protokol ketat. Kami terlatih dalam loading dock delivery dengan time slot yang ditentukan. Mall restaurants mendapat supply teratur dengan dokumentasi lengkap. Food court tenant mendapatkan pasokan ultra-pagi untuk persiapan buka. Cinema cafe mendapat snack vegetables untuk operational hours panjang. Food hall tenant mengandalkan kami untuk produk premium dengan traceability. Semua pengiriman dilengkapi hygiene certificate dan delivery permit.",
+    "metaDescription": "Supplier sayur Pondok Indah untuk kompleks mall. Compliant dengan mall regulation, delivery sesuai time slot, dokumentasi lengkap.",
+    "clientFocus": "Mall Restaurants, Food Court, Cinema Cafe, Food Hall Tenant, Kios Makanan",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tol Lingkar Luar-Pondok Indah",
+    "logistics": {
+      "time": "02.00-04.00 (panen), 05.00-06.30 (early batch), 08.30-10.30 (main batch)",
+      "title": "Mall-Compliant Logistics",
+      "desc": "Loading dock delivery dengan time slot, hygiene certificate setiap kiriman, koordinasi dengan mall management"
+    }
+  },
+  {
+    "slug": "cilandak",
+    "name": "Cilandak",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Cilandak - Untuk Restoran Komersial, Office Catering, Kafe dan Usaha Makanan Rumahan",
+    "angle": "Pemasok sayuran untuk mixed-use area dengan berbagai jenis bisnis F&B",
+    "seoContent": "Area komersial Cilandak memiliki beragam jenis bisnis makanan dengan kebutuhan berbeda. Restoran komersial membutuhkan menu lengkap dengan cost control yang ketat. Office catering memerlukan sayuran sehat untuk corporate lunch program. Kafe modern menginginkan bahan premium untuk Western menu. Usaha makanan rumahan membutuhkan bahan fresh untuk home-based business. Kami menyediakan tiered system: Basic untuk usaha mikro, Business untuk UMKM, Corporate untuk perusahaan besar. Semua dapat kualitas sama dari Cipanas.",
+    "metaDescription": "Supplier sayur Cilandak untuk semua jenis bisnis makanan. Tiered system untuk berbagai skala usaha, kualitas konsisten dari Cipanas.",
+    "clientFocus": "Restoran Komersial, Office Catering, Kafe, Usaha Makanan Rumahan, UMKM Kuliner",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cilandak Town Square",
+    "logistics": {
+      "time": "03.00-05.00 (panen), 06.00-08.00 (restoran), 09.00-11.00 (kantor & catering)",
+      "title": "Sistem Bertingkat",
+      "desc": "Basic: minimal service, Business: scheduled delivery, Corporate: account manager + monthly report"
+    }
+  },
+  {
+    "slug": "lebak-bulus",
+    "name": "Lebak Bulus",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Lebak Bulus - Untuk Restoran, Cafe, Warung Sehat dan Catering Sekolah",
+    "angle": "Penyuplai sayuran untuk bisnis makanan di area residential komersial",
+    "seoContent": "Lebak Bulus sebagai area residential komersial membutuhkan supplier yang memahami kebutuhan community-based business. Restoran lokal memerlukan sayuran segar untuk daily specials yang berubah setiap hari. Cafe neighborhood mengandalkan kami untuk brunch menu yang fresh. Warung sehat membutuhkan organic vegetables untuk health-conscious residents. Catering sekolah memerlukan sayuran murah namun berkualitas untuk student meals. Kami menawarkan community pricing untuk bisnis lokal dengan komitmen jangka panjang.",
+    "metaDescription": "Supplier sayur Lebak Bulus untuk bisnis makanan komunitas. Community pricing khusus, pengiriman lokal, dukungan untuk usaha sekitar.",
+    "clientFocus": "Restoran Lokal, Cafe Neighborhood, Warung Sehat, Catering Sekolah, Bisnis Komunitas",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Cilandak-Lebak Bulus",
+    "logistics": {
+      "time": "03.30-05.30 (panen), 06.30-08.30 (utama), 14.00-16.00 (sekolah)",
+      "title": "Community-Based Service",
+      "desc": "Local community pricing, group delivery untuk area yang sama, support untuk usaha lokal berkembang"
+    }
+  },
+  {
+    "slug": "permata-hijau",
+    "name": "Permata Hijau",
+    "origin": "CV Green Fresh Cipanas",
+    "title": "Supplier Sayur Permata Hijau - Untuk Restoran Eksklusif, Hotel Boutique, Private Dining dan Catering Premium",
+    "angle": "Penyedia sayuran untuk lingkungan residential eksklusif dengan bisnis kuliner terpilih",
+    "seoContent": "Permata Hijau sebagai kawasan eksklusif membutuhkan standar yang tinggi untuk bisnis kuliner. Restoran eksklusif di area ini memerlukan sayuran dengan aesthetic perfection untuk fine dining experience. Hotel boutique menginginkan produk yang unique untuk differentiate dari chain hotel. Private dining service membutuhkan bahan premium untuk intimate dining experience. Catering premium untuk residence memerlukan sayuran dengan presentation terbaik. Kami menyediakan exclusive varieties yang tidak tersedia di pasaran umum.",
+    "metaDescription": "Supplier sayur Permata Hijau untuk lingkungan eksklusif. Produk premium exclusive, presentation perfect, layanan personalized.",
+    "clientFocus": "Restoran Eksklusif, Hotel Boutique, Private Dining, Catering Premium, Residence Service",
+    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tol Lingkar Luar-Permata Hijau",
+    "logistics": {
+      "time": "02.00-04.00 (panen), 05.30-07.00 (batch 1), 09.30-11.00 (batch 2)",
+      "title": "Exclusive Service Protocol",
+      "desc": "Unlisted varieties only, personalized packaging, discrete delivery untuk privacy client"
+    }
+  }
+];
+const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
+
+const baseUrl = 'https://greenfresh.co.id';
+const currentUrl = `${baseUrl}/area/${district.slug}`;
+const title = `Supplier Sayur ${district.name} - Stok Stabil Harian | CV Green Fresh Cipanas`;
+const description = `Supplier sayur segar tangan pertama wilayah ${district.name}. Melayani pengadaan komoditas grade A harian khusus Hotel, Restoran, dan Cafe wilayah ${district.name}.`;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WholesaleStore",
+      "@id": `${baseUrl}/#organization`,
+      "name": "CV Green Fresh Cipanas",
+      "url": baseUrl,
+      "logo": { "@type": "ImageObject", "url": `${baseUrl}/logo.svg` }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Beranda", "item": baseUrl },
+        { "@type": "ListItem", "position": 2, "name": "Area", "item": `${baseUrl}/area` },
+        { "@type": "ListItem", "position": 3, "name": district.name, "item": currentUrl }
+      ]
+    }
+  ]
+};
+---
+
+<MainLayout title={title} description={description}>
+  <link rel="canonical" href={currentUrl} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
+
+  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left">
+    <Header client:load />
+
+    <main>
+      <div class="pt-24 lg:pt-32 bg-white border-b border-slate-50">
+        <nav aria-label="Breadcrumb" class="max-w-[1800px] mx-auto px-6 py-4 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em]">
+          <a href="/" class="text-slate-700 hover:text-[#166534] transition-colors">Beranda</a>
+          <ChevronRight size={10} class="text-slate-400" />
+          <a href="/area" class="text-slate-700 hover:text-[#166534] transition-colors">Area</a>
+          <ChevronRight size={10} class="text-slate-400" />
+          <span class="text-[#166534] font-bold tracking-widest uppercase">{district.name}</span>
+        </nav>
+      </div>
+
+      <DistrictHero district={district} client:load />
+      
+      <div class="w-full bg-gradient-to-r from-white to-[#f7faf7] py-6 border-y border-green-50/50">
+        <div class="max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+              <div class="flex -space-x-1">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <Star key={s} size={18} class="text-amber-500 fill-amber-500" />
+                ))}
+              </div>
+              <div class="pl-2 border-l border-slate-300">
+                <p class="text-2xl font-black text-[#052c17]">4.9</p>
+                <p class="text-[10px] font-bold uppercase text-slate-700">Rating Area</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
+              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Layanan Terverifikasi di {district.name}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="py-16 md:py-24 bg-white text-left">
+        <div class="max-w-[1800px] mx-auto px-6">
+          <div class="grid lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-6">
+              <DistrictOverview district={district} client:visible />
+            </div>
+            <div class="lg:col-span-6">
+              <DistrictLogistics district={district} client:visible />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
+        <div class="max-w-[1800px] mx-auto px-6">
+          <div class="mb-12 text-left">
+            <h2 class="text-3xl md:text-4xl font-[1000] text-[#052c17] uppercase tracking-tighter">
+              Katalog <span class="text-[#15803d]">Komoditas.</span>
+            </h2>
+            <p class="text-slate-700 text-sm font-black mt-2 uppercase tracking-widest">Update Harga Khusus Area {district.name}</p>
+          </div>
+          <PriceTable data={vegetableData.slice(0, 20)} client:visible />
+        </div>
+      </section>
+
+      <QualityGuarantee client:visible />
+      <LiveStats client:visible />
+      <DistrictRoute district={district} client:visible />
+      
+      <section class="py-16 bg-white border-t border-slate-100 text-left">
+        <div class="max-w-[1800px] mx-auto px-4 md:px-8">
+          <h3 class="text-xl font-black text-[#052c17] mb-8 uppercase tracking-widest flex items-center gap-2">
+            <MapPin size={20} class="text-[#15803d]" /> Area Layanan Terkait
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {otherAreas.map((area, index) => (
+              <a
+                href={`/area/${area.slug}`}
+                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm hover:shadow-md text-center"
+              >
+                <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">
+                  {labels[index % labels.length]}
+                </span>
+                <span class="text-xs font-black text-slate-800 group-hover:text-[#15803d] uppercase tracking-wider block transition-colors">
+                  {area.name}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="partnership" class="py-20 md:py-32 bg-[#fcfdfc] border-t border-slate-200 text-left">
+        <div class="max-w-[1800px] mx-auto px-6">
+          <div class="text-left mb-16">
+            <h2 class="text-3xl md:text-5xl font-[1000] text-[#052c17] uppercase tracking-tighter leading-none">
+              Hubungi <span class="text-[#15803d]">Sales.</span>
+            </h2>
+            <p class="text-slate-700 font-black uppercase text-xs tracking-[0.3em] mt-4 text-left">
+              Konsultasi Pengadaan Wilayah {district.name}
+            </p>
+          </div>
+          <PartnershipForm client:visible />
+        </div>
+      </section>
+    </main>
+
+    <Footer client:visible />
+  </div>
+</MainLayout>
