@@ -5,7 +5,6 @@ export const prerender = true;
 import MainLayout from '@/layouts/MainLayout.astro';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-// Hindari menggunakan CityClientPage untuk konten teks utama jika memungkinkan
 import CityClientPage from '@/components/CityClientPage.jsx';
 
 import { jabodetabekCities } from '@/data/cities';
@@ -29,6 +28,23 @@ const origin = Astro.site || Astro.url.origin;
 const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
 const canonicalURL = new URL(cleanPathname, origin);
 
+// Logic Data Terstruktur (Schema.org) - Dibuat sebagai objek JS dulu
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Supplier Sayur Segar ${city.name}`,
+  "description": description,
+  "areaServed": {
+    "@type": "City",
+    "name": city.name
+  },
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "CV Green Fresh Cipanas",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=2000"
+  }
+};
+
 // Logic Internal Link
 const currentIndex = jabodetabekCities.findIndex(c => c.slug === city.slug);
 const otherCities = [];
@@ -45,22 +61,7 @@ const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f49
 <MainLayout title={title} description={description}>
   <link rel="canonical" href={canonicalURL.href} slot="head" />
   
-  <script type="application/ld+json" slot="head">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": `Supplier Sayur Segar ${city.name}`,
-      "areaServed": {
-        "@type": "City",
-        "name": city.name
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "CV Green Fresh Cipanas"
-      },
-      "description": description
-    }
-  </script>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
 
   <div class="bg-white text-[#052c17] font-sans antialiased selection:bg-green-100 overflow-x-hidden text-left">
     <Header client:load />
@@ -73,6 +74,7 @@ const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f49
             alt={`Supplier Sayur Segar ${city.name}`} 
             class="w-full h-full object-cover opacity-60 brightness-[0.7]"
             loading="eager"
+            decoding="async"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-[#052c17] via-transparent to-transparent"></div>
         </div>
@@ -91,7 +93,7 @@ const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f49
 
       <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-6">
-          <div class="prose prose-green max-w-none">
+          <article class="prose prose-green max-w-none">
             <h2 class="text-3xl font-black uppercase tracking-tighter mb-6">
               Mitra Distribusi Sayuran Terpercaya di {city.name}
             </h2>
@@ -113,7 +115,7 @@ const heroImageUrl = "https://images.unsplash.com/photo-1540420773420-3366772f49
                 <p class="text-sm text-slate-600">Armada logistik kami menjangkau seluruh area {city.name} setiap pagi untuk menjamin kesegaran sayur harian.</p>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
