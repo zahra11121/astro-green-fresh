@@ -1,71 +1,66 @@
 ---
 /**
- * PRICE TABLE - ASTRO VERSION (SEO Optimized)
- * Strategi: Full HTML Discovery untuk Indeksasi Google yang Stabil.
+ * PRICE TABLE - ASTRO VERSION (Soft Light & Compact Mobile)
+ * Strategi: Full-width mobile dengan Load More & tipografi proporsional.
  */
-import { CheckCircle2, ChevronDown, Search, X, ShoppingBag } from 'lucide-react';
+import { Search, ShoppingBag, Plus } from 'lucide-react';
 
 const { data = [] } = Astro.props;
-
-// Kita render semua data di server agar terbaca Bot, 
-// lalu kita kontrol tampilannya di client pakai JS ringan.
 ---
 
-<div class="w-full bg-white font-sans text-left reveal-container">
-  <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 px-4 md:px-0">
-    <div class="relative w-full max-w-md group">
-      <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-        <Search size={16} class="text-slate-500 group-focus-within:text-[#15803d] transition-colors" />
+<div class="w-full bg-[#f8fafc] font-sans text-left reveal-container py-8 lg:py-16">
+  
+  <div class="max-w-[1400px] mx-auto px-0 md:px-10 mb-6 lg:mb-10">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 px-4 md:px-0">
+      <div class="relative w-full max-w-md group">
+        <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+          <Search size={16} class="text-slate-400 group-focus-within:text-[#15803d]" />
+        </div>
+        <input 
+          id="price-search"
+          type="text"
+          placeholder="Cari komoditas..."
+          class="w-full bg-white border border-slate-200 py-3 md:py-4 pl-12 pr-10 rounded-xl md:rounded-2xl outline-none focus:border-[#15803d] focus:ring-4 focus:ring-green-500/5 transition-all text-sm font-medium text-[#052c17] placeholder-slate-400 shadow-sm"
+        />
       </div>
-      <input 
-        id="price-search"
-        type="text"
-        placeholder="Cari item (misal: Brokoli, Wortel...)"
-        class="w-full bg-[#fcfdfc] border-2 border-green-100 py-3 pl-12 pr-10 rounded-2xl outline-none focus:border-[#15803d] transition-all text-sm font-medium text-[#052c17] placeholder-slate-500"
-      />
-    </div>
 
-    <div class="flex items-center gap-2">
-      <div class="w-2 h-2 rounded-full bg-[#16a34a] animate-pulse"></div>
-      <span class="text-[10px] font-black uppercase tracking-[0.2em] text-green-800">Daily Updates • 2026</span>
+      <div class="flex items-center gap-2 justify-end opacity-70">
+        <div class="w-1.5 h-1.5 rounded-full bg-[#15803d] animate-pulse"></div>
+        <span class="text-[9px] font-black uppercase tracking-widest text-slate-500">Live Updates 2026</span>
+      </div>
     </div>
   </div>
 
-  <div class="hidden md:block overflow-hidden rounded-3xl border-2 border-green-100 shadow-sm mx-4 md:mx-0">
-    <table class="w-full text-left border-collapse" id="desktop-table">
+  <div class="hidden md:block max-w-[1400px] mx-auto overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl shadow-slate-200/50">
+    <table class="w-full text-left border-collapse">
       <thead>
-        <tr class="bg-[#f7faf7] border-b-2 border-green-100">
-          <th class="px-8 py-4 text-[10px] font-black uppercase tracking-widest text-green-800">Komoditas</th>
-          <th class="px-8 py-4 text-[10px] font-black uppercase tracking-widest text-green-800">Kategori</th>
-          <th class="px-8 py-4 text-[10px] font-black uppercase tracking-widest text-green-800">Rentang Harga (Kg)</th>
-          <th class="px-8 py-4 text-[10px] font-black uppercase tracking-widest text-green-800 text-right">Status</th>
+        <tr class="bg-slate-50 border-b border-slate-100">
+          <th class="px-8 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500">Komoditas</th>
+          <th class="px-8 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500">Kategori</th>
+          <th class="px-8 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500">Estimasi /Kg</th>
+          <th class="px-8 py-4 text-[10px] font-black uppercase tracking-widest text-slate-500 text-right">Status</th>
         </tr>
       </thead>
       <tbody id="table-body">
         {data.map((item, idx) => (
           <tr 
-            class="group border-b border-green-50 hover:bg-[#f7faf7] transition-all price-row"
+            class={`price-item group border-b border-slate-50 hover:bg-green-50/30 transition-all ${idx >= 10 ? 'hidden' : ''}`}
             data-name={item.name.toLowerCase()}
-            data-category={item.category.toLowerCase()}
           >
             <td class="px-8 py-4">
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center text-[#15803d] group-hover:bg-[#15803d] group-hover:text-white transition-colors">
+              <div class="flex items-center gap-4">
+                <div class="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center text-[#15803d] border border-slate-100 group-hover:bg-[#15803d] group-hover:text-white transition-colors">
                   <ShoppingBag size={14} />
                 </div>
                 <span class="font-bold text-[#052c17] text-sm tracking-tight">{item.name}</span>
               </div>
             </td>
-            <td class="px-8 py-4">
-              <span class="text-[10px] font-bold text-slate-600 uppercase tracking-wider">{item.category}</span>
-            </td>
-            <td class="px-8 py-4">
-              <span class="font-mono font-bold text-green-800 text-sm">{item.range}</span>
-            </td>
+            <td class="px-8 py-4 text-slate-500 text-[11px] font-bold uppercase">{item.category}</td>
+            <td class="px-8 py-4 font-mono font-black text-[#15803d] text-sm">{item.range}</td>
             <td class="px-8 py-4 text-right">
-              <div class="inline-flex items-center gap-1.5 text-[9px] font-black uppercase text-green-700 bg-green-50 px-3 py-1 rounded-full border border-green-200">
-                <CheckCircle2 size={10} /> {item.status}
-              </div>
+              <span class="text-[9px] font-black uppercase text-[#15803d] bg-green-50 px-3 py-1 rounded-full border border-green-100">
+                {item.status}
+              </span>
             </td>
           </tr>
         ))}
@@ -73,63 +68,78 @@ const { data = [] } = Astro.props;
     </table>
   </div>
 
-  <div class="md:hidden space-y-3 px-4" id="mobile-list">
-    {data.map((item) => (
+  <div class="md:hidden border-y border-slate-200 divide-y divide-slate-100 bg-white" id="mobile-list">
+    {data.map((item, idx) => (
       <div 
-        class="p-4 bg-white border-2 border-green-100 rounded-2xl flex flex-col gap-3 shadow-sm price-card"
+        class={`price-item p-4 flex items-center justify-between gap-4 ${idx >= 10 ? 'hidden' : ''}`}
         data-name={item.name.toLowerCase()}
-        data-category={item.category.toLowerCase()}
       >
-        <div class="flex justify-between items-start">
-          <div>
-            <h4 class="font-bold text-[#052c17] text-sm">{item.name}</h4>
-            <p class="text-[9px] font-bold text-slate-600 uppercase tracking-widest mt-0.5">{item.category}</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center text-[#15803d] border border-slate-100 shrink-0">
+            <ShoppingBag size={16} />
           </div>
-          <div class="text-[8px] font-black uppercase text-green-700 bg-green-50 px-2 py-1 rounded-full border border-green-200">
-            {item.status}
+          <div class="flex flex-col">
+            <h4 class="font-bold text-[#052c17] text-[13px] leading-tight mb-0.5">{item.name}</h4>
+            <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">{item.category}</span>
           </div>
         </div>
-        <div class="flex justify-between items-center pt-2 border-t border-green-50">
-          <span class="text-[10px] text-slate-600 font-bold uppercase tracking-tight">Estimasi Harga</span>
-          <span class="font-mono font-bold text-green-800 text-sm">{item.range}</span>
+        <div class="flex flex-col items-end">
+          <span class="font-mono font-black text-[#15803d] text-sm leading-none mb-1">{item.range}</span>
+          <span class="text-[8px] font-black uppercase text-green-600 bg-green-50 px-2 py-0.5 rounded border border-green-100">
+            {item.status}
+          </span>
         </div>
       </div>
     ))}
   </div>
 
-  <div class="mt-8 flex justify-center px-4">
-    <p class="text-[10px] text-slate-600 font-medium italic text-center max-w-md leading-relaxed">
-      * Harga bersifat fluktuatif mengikuti hasil panen harian. Kontak sales kami untuk mendapatkan <span class="text-green-700 font-bold">Quotation Resmi (PKP)</span> wilayah Jabodetabek.
-    </p>
-  </div>
+  {data.length > 10 && (
+    <div class="mt-8 flex justify-center px-4">
+      <button 
+        id="load-more-btn"
+        class="w-full md:w-auto bg-[#052c17] text-[#bef264] px-10 py-4 rounded-xl font-black uppercase text-[10px] tracking-[0.2em] hover:bg-[#15803d] transition-all shadow-lg flex items-center justify-center gap-3 cursor-pointer"
+      >
+        Lihat Lebih Banyak <Plus size={16} />
+      </button>
+    </div>
+  )}
 </div>
 
 <script>
-  /**
-   * SEARCH LOGIC (Vanilla JS)
-   * Mengontrol tampilan tanpa menghapus elemen dari DOM agar tetap terbaca Bot.
-   */
+  let visibleCount = 10;
+  const items = document.querySelectorAll('.price-item');
+  const loadMoreBtn = document.getElementById('load-more-btn');
   const searchInput = document.getElementById('price-search') as HTMLInputElement;
-  const priceRows = document.querySelectorAll('.price-row');
-  const priceCards = document.querySelectorAll('.price-card');
+
+  loadMoreBtn?.addEventListener('click', () => {
+    visibleCount += 10;
+    updateVisibility();
+  });
 
   searchInput?.addEventListener('input', (e) => {
     const term = (e.target as HTMLInputElement).value.toLowerCase();
-
-    // Filter Desktop
-    priceRows.forEach(row => {
-      const name = row.getAttribute('data-name');
-      const category = row.getAttribute('data-category');
-      const match = name?.includes(term) || category?.includes(term);
-      (row as HTMLElement).style.display = match ? 'table-row' : 'none';
-    });
-
-    // Filter Mobile
-    priceCards.forEach(card => {
-      const name = card.getAttribute('data-name');
-      const category = card.getAttribute('data-category');
-      const match = name?.includes(term) || category?.includes(term);
-      (card as HTMLElement).style.display = match ? 'flex' : 'none';
+    
+    items.forEach((item) => {
+      const name = item.getAttribute('data-name');
+      const isMatch = name?.includes(term);
+      
+      if (term.length > 0) {
+        (item as HTMLElement).classList.toggle('hidden', !isMatch);
+        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+      } else {
+        updateVisibility();
+        if (loadMoreBtn) loadMoreBtn.style.display = 'flex';
+      }
     });
   });
+
+  function updateVisibility() {
+    items.forEach((item, idx) => {
+      (item as HTMLElement).classList.toggle('hidden', idx >= visibleCount);
+    });
+    
+    if (visibleCount >= items.length && loadMoreBtn) {
+      loadMoreBtn.style.display = 'none';
+    }
+  }
 </script>

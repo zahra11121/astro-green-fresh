@@ -1,7 +1,6 @@
 ---
 /**
- * SECTOR TARGET - ASTRO VERSION (SEO Optimized)
- * Strategi: Zero Hydration untuk Kejelasan Segmen Pasar bagi Googlebot.
+ * SECTOR TARGET - ASTRO VERSION (Premium Dark Mode)
  */
 import { ArrowUpRight, Leaf } from 'lucide-react';
 
@@ -29,52 +28,54 @@ const sectors = [
 ];
 ---
 
-<section class="bg-white overflow-hidden font-sans py-4 lg:py-8 reveal-container">
-  <div class="max-w-[1800px] mx-auto px-3 md:px-10">
+<section class="bg-[#041a0d] overflow-hidden font-sans reveal-container">
+  <div class="w-full max-w-[1920px] mx-auto px-0 md:px-6 lg:px-10">
     
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-0 lg:border lg:border-slate-100 lg:rounded-[2.5rem] lg:overflow-hidden">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 lg:bg-transparent">
       {sectors.map((sector, index) => (
         <div
-          class="relative p-5 lg:p-8 overflow-hidden flex flex-col justify-between h-[240px] md:h-[300px] lg:h-[420px] rounded-2xl lg:rounded-none group reveal-up"
+          class="relative p-5 lg:p-10 flex flex-col justify-between h-[280px] md:h-[350px] lg:h-[500px] group reveal-up bg-[#041a0d] overflow-hidden"
           style={`transition-delay: ${index * 0.1}s;`}
         >
-          <div class="absolute inset-0 z-0 bg-[#052c17]">
+          <div class="absolute inset-0 z-0">
             <img 
               src={sector.img} 
               alt={`Supplier Sayur untuk ${sector.title}`}
-              class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700"
+              class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-110 transition-all duration-1000"
               loading="lazy"
-              decoding="async"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#041a0d] via-[#041a0d]/40 to-transparent"></div>
           </div>
 
           <div class="relative z-10">
             <div class="flex justify-between items-start mb-4">
-              <span class="text-xl lg:text-3xl font-black text-white/20">
+              <span class="text-2xl lg:text-4xl font-black text-white/10 group-hover:text-[#bef264]/20 transition-colors">
                 0{index + 1}
               </span>
-              <div class="p-2 rounded-xl bg-[#bef264] text-[#052c17] shadow-lg">
-                <Leaf size={14} fill="currentColor" />
+              <div class="p-2 lg:p-3 rounded-full bg-[#bef264]/10 text-[#bef264] border border-[#bef264]/20 backdrop-blur-sm">
+                <Leaf size={16} fill="currentColor" class="lg:w-5 lg:h-5" />
               </div>
             </div>
 
-            <div class="space-y-2">
-              <h2 class="text-sm lg:text-2xl font-black leading-tight tracking-tighter text-white uppercase drop-shadow-md">
+            <div class="mt-4 lg:mt-8">
+              <h2 class="text-base lg:text-3xl font-black leading-none tracking-tighter text-white uppercase mb-2">
                 {sector.title}
               </h2>
-              <p class="text-[10px] lg:text-sm font-bold leading-snug text-slate-200 line-clamp-2">
-                {sector.desc}
-              </p>
+              <div class="w-8 h-1 bg-[#bef264] mb-3 group-hover:w-16 transition-all duration-500"></div>
             </div>
           </div>
 
-          <div class="relative z-10 flex items-center justify-end">
-            <ArrowUpRight size={18} class="text-[#bef264] drop-shadow-md" />
+          <div class="relative z-10 space-y-4">
+            <p class="text-[11px] lg:text-base font-medium leading-relaxed text-slate-300 line-clamp-3 group-hover:text-white transition-colors">
+              {sector.desc}
+            </p>
+            <div class="flex items-center gap-2 text-[#bef264] text-[10px] lg:text-xs font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
+              Explore Details <ArrowUpRight size={14} />
+            </div>
           </div>
 
           {index !== sectors.length - 1 && (
-            <div class="hidden lg:block absolute top-10 right-0 w-px h-[calc(100%-5rem)] bg-white/10 z-20" />
+            <div class="hidden lg:block absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent" />
           )}
         </div>
       ))}
@@ -83,10 +84,9 @@ const sectors = [
 </section>
 
 <style>
-  /* Animasi CSS Native (SEO Friendly) */
   .reveal-container .reveal-up {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
@@ -97,17 +97,18 @@ const sectors = [
 </style>
 
 <script>
-  /**
-   * Intersection Observer ringan untuk animasi visual.
-   * Teks industri tetap terbaca bot karena HTML statis ada di DOM.
-   */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, { threshold: 0.1 });
+  const setupObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1 });
 
-  document.querySelectorAll('.reveal-container .reveal-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal-container .reveal-up').forEach(el => observer.observe(el));
+  };
+
+  setupObserver();
+  document.addEventListener('astro:after-swap', setupObserver);
 </script>
