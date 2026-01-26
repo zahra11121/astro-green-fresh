@@ -1,0 +1,158 @@
+---
+/**
+ * CITY HERO - ASTRO VERSION (SEO Optimized)
+ * Perbaikan: Menghilangkan risiko "blank putih" dengan CSS Fallback Logic.
+ */
+import { MapPin, ArrowRight, ShieldCheck, Truck } from 'lucide-react';
+
+const { city } = Astro.props;
+const cityName = city?.name || 'Seluruh Wilayah';
+const seoContent = city?.seoContent || null;
+
+const heroImageUrl = "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1000";
+---
+
+<section class="relative bg-white pt-20 pb-12 lg:pt-28 lg:pb-20 overflow-hidden font-sans border-b-2 border-green-100 reveal-container">
+  
+  <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-green-50/30 rounded-full blur-[100px] pointer-events-none opacity-40" aria-hidden="true"></div>
+
+  <div class="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <div class="lg:col-span-7 space-y-8 text-left">
+        <div class="space-y-6">
+          <div class="flex items-center gap-3 reveal-left">
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-green-50 border border-green-200 rounded-xl">
+              <MapPin size={14} class="text-[#15803d]" />
+              <span class="text-[11px] font-black text-[#14532d] uppercase tracking-wider">{cityName} Hub</span>
+            </div>
+            <div class="h-px w-12 bg-green-200 hidden md:block" aria-hidden="true"></div>
+            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Official B2B Supply</span>
+          </div>
+
+          <h2 class="text-5xl md:text-6xl lg:text-8xl font-serif italic text-[#052c17] leading-[0.95] tracking-tighter uppercase reveal-up">
+            Supplier Sayur <br />
+            <span class="text-[#15803d] not-italic font-sans font-black">{cityName}.</span>
+          </h2>
+        </div>
+
+        <div class="relative reveal-up" style="transition-delay: 0.1s;">
+          <p class="text-xl lg:text-2xl text-slate-600 font-medium leading-relaxed max-w-2xl border-l-4 border-green-500/30 pl-8">
+            Distribusi hasil panen Cipanas untuk standar operasional dapur komersial di wilayah <span class="text-[#052c17] font-bold">{cityName}</span>.
+          </p>
+        </div>
+
+        {seoContent && (
+          <div class="max-w-2xl bg-slate-50/80 p-6 rounded-3xl border border-slate-100 backdrop-blur-sm reveal-up" style="transition-delay: 0.2s;">
+            <p class="text-sm md:text-base text-slate-700 leading-relaxed italic font-medium">
+              &quot;{seoContent}&quot;
+            </p>
+          </div>
+        )}
+
+        <div class="flex flex-col sm:flex-row gap-5 pt-4 reveal-up" style="transition-delay: 0.3s;">
+          <a href="#katalog" class="group inline-flex items-center justify-center gap-3 bg-[#052c17] text-[#bef264] px-12 py-6 rounded-2xl text-xs font-black uppercase tracking-widest shadow-2xl shadow-green-900/20 hover:bg-[#15803d] hover:text-white transition-all duration-300">
+            Katalog Harga
+            <ArrowRight size={18} class="group-hover:translate-x-1 transition-transform" />
+          </a>
+          <a href="#kemitraan" class="inline-flex items-center justify-center bg-white text-[#052c17] border-2 border-slate-100 px-12 py-6 rounded-2xl text-xs font-black uppercase tracking-widest hover:border-[#15803d] hover:text-[#15803d] transition-all duration-300 shadow-sm">
+            Ajukan Penawaran
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border border-green-50 aspect-square lg:aspect-auto lg:h-[500px] reveal-scale">
+          <img 
+            src={heroImageUrl} 
+            alt={`Supplier Sayur Segar Green Fresh Cipanas di ${cityName}`}
+            class="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#052c17]/60 via-transparent to-transparent"></div>
+          
+          <div class="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-[2rem] border border-white/20 shadow-xl">
+            <div class="flex items-center gap-4 mb-4 pb-4 border-b border-green-100">
+              <div class="p-3 bg-green-600 rounded-2xl text-white">
+                <ShieldCheck size={24} />
+              </div>
+              <div>
+                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Standard Quality</p>
+                <p class="text-base font-bold text-[#052c17]">Sortir Grade A (Horeka)</p>
+              </div>
+            </div>
+            
+            <ul class="grid grid-cols-1 gap-3">
+              {['Stok Stabil 10 Ton/Hari', 'Pengiriman Sebelum 07:00'].map((feat) => (
+                <li class="flex items-center gap-3">
+                  <Truck size={14} class="text-[#15803d]" />
+                  <span class="text-[11px] font-black text-[#052c17] uppercase tracking-wider">{feat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 1. STATE AWAL: Tampil secara default (Penting untuk SEO & Anti-Blank) */
+  .reveal-up, .reveal-left, .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* 2. STATE ANIMASI: Hanya sembunyikan jika JavaScript Aktif */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up { opacity: 0; transform: translateY(30px); }
+    :global(.js-enabled) .reveal-left { opacity: 0; transform: translateX(-30px); }
+    :global(.js-enabled) .reveal-scale { opacity: 0; transform: scale(0.98); }
+  }
+
+  /* 3. STATE AKTIF: Saat elemen masuk viewport */
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left,
+  :global(.is-visible).reveal-up,
+  :global(.is-visible).reveal-left {
+    opacity: 1 !important;
+    transform: translate(0) !important;
+  }
+  :global(.is-visible) .reveal-scale,
+  :global(.is-visible).reveal-scale {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+</style>
+
+<script>
+  // Memberitahu CSS bahwa JavaScript aktif
+  document.documentElement.classList.add('js-enabled');
+
+  const setupHeroObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { 
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px' 
+    });
+
+    // Targetkan semua elemen yang memiliki class reveal
+    const animatedElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-scale');
+    animatedElements.forEach(el => observer.observe(el));
+  };
+
+  // Inisialisasi
+  setupHeroObserver();
+
+  // Dukungan untuk Astro View Transitions (jika digunakan)
+  document.addEventListener('astro:after-swap', setupHeroObserver);
+</script>

@@ -1,0 +1,165 @@
+---
+/**
+ * DISTRICT LOGISTICS - ASTRO VERSION (SEO Optimized)
+ * Strategi: Zero Hydration untuk Kepercayaan Operasional & Indeksasi Cepat.
+ */
+import { Clock, Truck, CheckCircle2, Navigation, MapPin, Box } from 'lucide-react';
+
+const { district } = Astro.props;
+const logistics = district?.logistics || {};
+const timeParts = logistics?.time?.split(',') || [];
+---
+
+<div class="relative bg-white rounded-[2.5rem] border border-slate-200 shadow-xl shadow-slate-200/40 overflow-hidden text-left font-sans reveal-container">
+  {/* Decorative Gradient Top */}
+  <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#15803d] via-[#bef264] to-[#15803d]" aria-hidden="true"></div>
+
+  <div class="p-8 lg:p-12">
+    
+    {/* HEADER */}
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-16 text-left">
+      <div class="space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-green-50 rounded-full border border-green-200 reveal-left">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#15803d] animate-pulse"></div>
+          <span class="text-[10px] font-black uppercase tracking-widest text-[#15803d]">Logistics Schedule</span>
+        </div>
+        <h3 class="text-3xl lg:text-5xl font-[1000] text-[#052c17] tracking-tighter leading-none uppercase reveal-up">
+          JADWAL <span class="text-[#15803d]">OPERASIONAL.</span>
+        </h3>
+        <div class="flex items-center gap-3 text-slate-600 reveal-up" style="transition-delay: 0.1s;">
+          <MapPin size={14} class="text-[#15803d]" />
+          <span class="text-xs font-bold uppercase tracking-widest leading-none">Rute: {district?.deliveryRoute || 'Jalur Distribusi Utama'}</span>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-200 reveal-right">
+        <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm text-[#15803d]">
+          <Truck size={20} />
+        </div>
+        <div class="text-left">
+          <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Service Type</p>
+          <p class="text-xs font-black text-[#052c17] uppercase">{logistics?.title || 'Regular Delivery'}</p>
+        </div>
+      </div>
+    </div>
+
+    {/* CONTENT: Timeline (Pure HTML structure for Bot) */}
+    <div class="relative space-y-12 before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-slate-200">
+      
+      {/* Step 1: Panen */}
+      <div class="relative pl-14 group text-left reveal-up" style="transition-delay: 0.2s;">
+        <div class="absolute left-0 top-0 w-10 h-10 rounded-full flex items-center justify-center border-4 border-white bg-white group-hover:border-green-200 border-slate-100 shadow-lg transition-all duration-500 z-10">
+          <div class="w-2.5 h-2.5 rounded-full bg-[#15803d]"></div>
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center gap-4">
+            <span class="text-[11px] font-black font-mono text-[#15803d] bg-green-50 px-3 py-1 rounded-lg border border-green-200 shadow-sm">
+              {timeParts[0] || '04:00 - 06:00'}
+            </span>
+            <h4 class="font-black text-sm lg:text-lg text-[#052c17] tracking-tight transition-colors uppercase">
+              Pemetikan & Sortasi
+            </h4>
+          </div>
+          <p class="text-[11px] lg:text-sm text-slate-600 font-semibold leading-relaxed max-w-2xl">
+            Hasil tani dipetik segar dan disortir manual grade-A di Cipanas untuk menjaga kualitas fisik barang.
+          </p>
+        </div>
+      </div>
+
+      {/* Step 2: Pengiriman Batch */}
+      <div class="relative pl-14 group text-left reveal-up" style="transition-delay: 0.3s;">
+        <div class="absolute left-0 top-0 w-10 h-10 rounded-full flex items-center justify-center border-4 border-white bg-white group-hover:border-green-200 border-slate-100 shadow-lg transition-all duration-500 z-10">
+          <div class="w-2.5 h-2.5 rounded-full bg-slate-300 group-hover:bg-[#15803d] transition-colors"></div>
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center gap-4">
+            <span class="text-[11px] font-black font-mono text-[#15803d] bg-green-50 px-3 py-1 rounded-lg border border-green-200 shadow-sm">
+              {timeParts[1]?.trim() || 'Loading'}
+            </span>
+            <h4 class="font-black text-sm lg:text-lg text-[#052c17] tracking-tight transition-colors uppercase text-left">
+              Loading & Dispatch
+            </h4>
+          </div>
+          <p class="text-[11px] lg:text-sm text-slate-600 font-semibold leading-relaxed max-w-2xl">
+            Barang dikemas aman menggunakan transit-box dan armada berangkat menuju {district?.name || 'lokasi'} melalui rute tercepat.
+          </p>
+        </div>
+      </div>
+
+      {/* Step 3: Sampai Tujuan */}
+      <div class="relative pl-14 group text-left reveal-up" style="transition-delay: 0.4s;">
+        <div class="absolute left-0 top-0 w-10 h-10 rounded-full flex items-center justify-center border-4 border-white bg-[#15803d] scale-110 shadow-green-200 shadow-lg z-10">
+          <CheckCircle2 size={18} class="text-white" />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center gap-4">
+            <span class="text-[11px] font-black font-mono text-[#15803d] bg-green-50 px-3 py-1 rounded-lg border border-green-200 shadow-sm">
+              {timeParts[2]?.trim() || 'Tiba di Lokasi'}
+            </span>
+            <h4 class="font-black text-sm lg:text-lg text-[#052c17] tracking-tight transition-colors uppercase">
+              Serah Terima Barang
+            </h4>
+          </div>
+          <p class="text-[11px] lg:text-sm text-slate-600 font-semibold leading-relaxed max-w-2xl">
+            {logistics?.desc || `Barang tiba di area ${district?.name || 'tujuan'} sesuai jadwal untuk menjaga kesegaran maksimal saat diterima.`}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* FOOTER */}
+    <div class="mt-20 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="p-2 bg-green-50 rounded-lg border border-green-100">
+          <Navigation size={14} class="text-[#15803d]" />
+        </div>
+        <span class="text-[10px] font-black text-[#052c17] uppercase tracking-[0.3em]">Fresh Express Delivery</span>
+      </div>
+      <div class="flex items-center gap-4">
+         <div class="flex items-center gap-2">
+            <Box size={12} class="text-slate-400" />
+            <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest leading-none">Safe Packaging</span>
+         </div>
+         <div class="flex items-center gap-2">
+            <Clock size={12} class="text-slate-400" />
+            <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest leading-none">On-Time Guarantee</span>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .reveal-container .reveal-up,
+  .reveal-container .reveal-left,
+  .reveal-container .reveal-right {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal-up { transform: translateY(30px); }
+  .reveal-left { transform: translateX(-20px); }
+  .reveal-right { transform: translateX(20px); }
+
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left,
+  :global(.is-visible) .reveal-right {
+    opacity: 1;
+    transform: translate(0);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-container, .reveal-up').forEach(el => observer.observe(el));
+</script>

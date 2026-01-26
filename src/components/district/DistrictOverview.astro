@@ -1,0 +1,246 @@
+---
+/**
+ * DISTRICT OVERVIEW - ASTRO VERSION (SEO Optimized)
+ * Strategi: Zero Hydration untuk Kejelasan Data Operasional bagi Googlebot.
+ */
+import { 
+  MapPin, Package, Clock, Users, 
+  Target, TrendingUp, Shield,
+  Truck, CheckCircle2
+} from 'lucide-react';
+
+const { district } = Astro.props;
+
+// Pengamanan data di sisi server (Build Time)
+const logisticsTime = district?.logistics?.time?.split(',')[0] || '--:--';
+const clientFocusPrimary = district?.clientFocus?.split(', ')[0] || 'General B2B';
+
+const overviewItems = [
+  {
+    icon: MapPin,
+    title: "ZONA DISTRIBUSI",
+    value: district?.name || "Wilayah Kerja",
+    desc: "Area cakupan pengiriman prioritas harian",
+    metric: "Priority Zone",
+    color: "from-blue-500 to-cyan-400",
+    bgColor: "bg-gradient-to-br from-blue-50 to-cyan-50",
+    borderColor: "border-blue-100"
+  },
+  {
+    icon: Package,
+    title: "SUMBER UTAMA",
+    value: district?.origin || "Cipanas, Jabar",
+    desc: "Pasokan langsung dari sentra produksi",
+    metric: "Direct Supply",
+    color: "from-emerald-500 to-green-400",
+    bgColor: "bg-gradient-to-br from-emerald-50 to-green-50",
+    borderColor: "border-emerald-100"
+  },
+  {
+    icon: Clock,
+    title: "JADWAL LOGISTIK",
+    value: logisticsTime,
+    desc: "Keberangkatan batch reguler terjadwal",
+    metric: "On-Time Run",
+    color: "from-violet-500 to-purple-400",
+    bgColor: "bg-gradient-to-br from-violet-50 to-purple-50",
+    borderColor: "border-violet-100"
+  },
+  {
+    icon: Users,
+    title: "FOKUS KLIEN",
+    value: clientFocusPrimary,
+    desc: "Standar pemenuhan komoditas bisnis",
+    metric: "B2B Standard",
+    color: "from-amber-500 to-orange-400",
+    bgColor: "bg-gradient-to-br from-amber-50 to-orange-50",
+    borderColor: "border-amber-100"
+  }
+];
+
+const performanceMetrics = [
+  {
+    icon: Target,
+    label: "SLA Compliance",
+    value: "99.2%",
+    trend: "+1.5%"
+  },
+  {
+    icon: Truck,
+    label: "Fleet Status",
+    value: "Dedicated",
+    trend: "Optimal"
+  },
+  {
+    icon: TrendingUp,
+    label: "Avg. Lead Time",
+    value: district?.leadTime || "<18h",
+    trend: "Fast"
+  },
+  {
+    icon: Shield,
+    label: "Handling Score",
+    value: "Tier A",
+    trend: "Verified"
+  }
+];
+---
+
+<div class="space-y-8 text-left font-sans reveal-container">
+  <div class="space-y-4">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-[#052c17]/5 to-[#15803d]/5 rounded-full border border-[#15803d]/10 reveal-left">
+      <div class="w-1.5 h-1.5 bg-gradient-to-r from-[#15803d] to-[#16a34a] rounded-full animate-pulse"></div>
+      <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#15803d]">
+        DISTRICT OVERVIEW
+      </span>
+    </div>
+    
+    <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6 text-left">
+      <div class="text-left">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#052c17] leading-tight reveal-up">
+          Operational <br />
+          <span class="text-[#15803d] font-[1000] tracking-tighter">Strategic Hub.</span>
+        </h2>
+        <p class="text-sm text-slate-600 font-medium mt-3 max-w-lg leading-relaxed text-left reveal-up" style="transition-delay: 0.1s;">
+          Manajemen rantai pasok terintegrasi untuk wilayah {district?.name || 'terkait'} dengan jaminan keamanan muatan dan ketepatan waktu pengiriman harian.
+        </p>
+      </div>
+      
+      <div class="flex-shrink-0 reveal-scale" style="transition-delay: 0.2s;">
+        <div class="px-5 py-3 bg-[#052c17] rounded-2xl text-white shadow-lg shadow-[#052c17]/20 border border-[#15803d]/30">
+          <div class="text-[9px] font-bold uppercase tracking-[0.2em] opacity-70 mb-1 text-center">Operational Grade</div>
+          <div class="flex items-center gap-2 justify-center">
+            <CheckCircle2 size={16} class="text-green-400" />
+            <span class="text-xl font-black italic tracking-tighter">ENTERPRISE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+    {performanceMetrics.map((metric, index) => (
+      <div 
+        class="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group reveal-up"
+        style={`transition-delay: ${0.3 + (index * 0.05)}s;`}
+      >
+        <div class="flex items-center gap-2 mb-2">
+          <div class="p-1.5 bg-slate-50 rounded-lg group-hover:bg-green-50 transition-colors">
+            <div class="text-[#15803d]"><metric.icon size={12} /></div>
+          </div>
+          <span class="text-[9px] font-black uppercase tracking-wider text-slate-500">
+            {metric.label}
+          </span>
+        </div>
+        <div class="flex items-baseline justify-between">
+          <div class="text-xl font-black text-[#052c17]">
+            {metric.value}
+          </div>
+          <div class={`text-[9px] font-bold px-2 py-0.5 rounded-full ${
+            metric.trend.includes('+') || metric.trend === 'Optimal' 
+              ? 'bg-green-50 text-green-700' 
+              : 'bg-blue-50 text-blue-700'
+          }`}>
+            {metric.trend}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4">
+    {overviewItems.map((item, index) => (
+      <div 
+        class={`p-6 rounded-3xl border ${item.borderColor} ${item.bgColor} relative overflow-hidden group hover:shadow-xl transition-all duration-500 reveal-up`}
+        style={`transition-delay: ${0.4 + (index * 0.1)}s;`}
+      >
+        <div class={`absolute top-0 right-0 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-br ${item.color} blur-2xl`}></div>
+        
+        <div class="relative z-10 text-left">
+          <div class="flex items-start justify-between mb-8">
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <div class={`p-2 rounded-xl bg-white shadow-sm border ${item.borderColor} text-[#15803d]`}>
+                  <item.icon class="w-4 h-4" />
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+                  {item.title}
+                </span>
+              </div>
+              <h4 class="text-2xl font-[1000] text-[#052c17] tracking-tight leading-none text-left">
+                {item.value}
+              </h4>
+            </div>
+            
+            <div class={`text-[9px] font-black px-3 py-1.5 rounded-full bg-white/80 border ${item.borderColor} text-[#15803d] uppercase tracking-widest`}>
+              {item.metric}
+            </div>
+          </div>
+          
+          <p class="text-xs lg:text-sm text-slate-600 font-bold leading-relaxed pr-8 text-left">
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden reveal-up" style="transition-delay: 0.6s;">
+    <div class="p-6 md:p-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="space-y-3 flex-1 text-left">
+          <div class="flex items-center gap-2">
+            <Shield size={14} class="text-[#15803d]" />
+            <h4 class="text-[10px] font-black text-[#052c17] uppercase tracking-[0.3em]">
+              Supply Chain Commitment
+            </h4>
+          </div>
+          <p class="text-base font-bold text-[#052c17] leading-snug text-left">
+            Komitmen pengiriman tepat waktu dengan protokol sortasi ketat untuk memastikan standar kualitas terbaik sampai di lokasi Anda.
+          </p>
+        </div>
+        
+        <div class="flex-shrink-0">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-50 rounded-xl border border-green-100">
+            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span class="text-xs font-black text-[#052c17] uppercase tracking-tighter leading-none">Status: Active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .reveal-container .reveal-up,
+  .reveal-container .reveal-left,
+  .reveal-container .reveal-scale {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-up { transform: translateY(20px); }
+  .reveal-left { transform: translateX(-20px); }
+  .reveal-scale { transform: scale(0.98); }
+
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left {
+    opacity: 1;
+    transform: translate(0);
+  }
+  :global(.is-visible) .reveal-scale {
+    opacity: 1;
+    transform: scale(1);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-container, .reveal-up, .reveal-scale').forEach(el => observer.observe(el));
+</script>

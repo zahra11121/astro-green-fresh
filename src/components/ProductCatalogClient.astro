@@ -1,0 +1,206 @@
+---
+/**
+ * PRODUCT CATALOG - ASTRO VERSION (SEO Optimized)
+ * Strategi: Full HTML Discovery & Anti-Blank Protection.
+ */
+import { Search as SearchIcon, CheckCircle2 as CheckIcon, Leaf } from 'lucide-react';
+
+const { initialData = [] } = Astro.props;
+const categories = ["Semua", "Daun", "Umbi", "Bumbu", "Jamur", "Lainnya"];
+
+const getCategory = (name = "") => {
+  const n = name.toLowerCase();
+  if (n.match(/sawi|bayam|selada|kangkung|daun|kale|pakcoy/)) return "Daun";
+  if (n.match(/kentang|wortel|ubi|singkong|lobak|bit|bengkuang|talas/)) return "Umbi";
+  if (n.match(/bawang|cabai|jahe|kunyit|lengkuas|serai|kecombrang/)) return "Bumbu";
+  if (n.includes('jamur')) return "Jamur";
+  return "Lainnya";
+};
+---
+
+<section class="pt-32 pb-16 bg-white border-b border-green-50 relative reveal-main">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 relative z-10">
+    <div class="text-center max-w-3xl mx-auto">
+      <span class="text-[#15803d] text-[10px] font-black uppercase tracking-[0.4em] mb-4 block reveal-up">
+        B2B Fresh Supply Partner
+      </span>
+      <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif italic text-[#052c17] leading-tight md:leading-[0.9] tracking-tighter mb-8 reveal-up">
+        Katalog <span class="not-italic font-sans font-bold text-[#15803d]">Komoditas.</span>
+      </h1>
+      
+      <div class="flex flex-col md:flex-row gap-4 mt-8 md:mt-12 bg-white p-2 rounded-3xl md:rounded-[2rem] shadow-xl shadow-green-900/5 border border-green-50 reveal-up">
+        <div class="relative flex-1">
+          <SearchIcon class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
+          <input 
+            id="catalog-search"
+            type="text"
+            placeholder="Cari sayuran segar..."
+            class="w-full pl-14 pr-6 py-3 md:py-4 rounded-full bg-transparent focus:outline-none text-base md:text-lg text-[#052c17]"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-2 mt-8 reveal-up">
+        {categories.map((cat) => (
+          <button
+            data-category-btn={cat}
+            class={`category-btn px-4 md:px-6 py-2 rounded-full text-[10px] md:text-xs font-bold transition-all duration-300 ${
+              cat === "Semua" 
+              ? "bg-[#052c17] text-white shadow-lg shadow-green-900/20 active" 
+              : "bg-green-50 text-[#15803d] hover:bg-green-100"
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-12 lg:py-24">
+  <div class="max-w-[1450px] mx-auto px-4 md:px-6">
+    <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-4 md:gap-x-10">
+      {initialData.map((product, index) => {
+        const category = getCategory(product.name);
+        return (
+          <div 
+            class="product-item group flex flex-col h-full reveal-up"
+            data-name={product.name.toLowerCase()}
+            data-category={category}
+          >
+            <div class="relative aspect-[3/4] rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-slate-100 mb-6 shadow-sm group-hover:shadow-2xl group-hover:shadow-green-900/10 transition-all duration-500">
+              <img
+                src={product.image}
+                alt={`Supplier ${product.name} Cipanas`}
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                loading={index < 8 ? "eager" : "lazy"}
+                decoding="async"
+              />
+              <div class="absolute top-3 left-3 md:top-5 md:left-5">
+                <div class="bg-white/90 backdrop-blur-md px-2 md:px-3 py-1 rounded-full flex items-center gap-1 md:gap-1.5 shadow-sm border border-green-50">
+                  <CheckIcon size={10} class="text-green-600" />
+                  <span class="text-[7px] md:text-[9px] font-black uppercase text-[#052c17]">Grade-A Cipanas</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-1 md:px-2 flex flex-col flex-grow border-t border-green-100/50 pt-4">
+              <h3 class="text-base md:text-xl font-bold text-[#052c17] mb-2 group-hover:text-[#15803d] transition-colors leading-tight min-h-[2.5rem] md:min-h-[3rem] flex items-center">
+                {product.name}
+              </h3>
+              <div class="flex items-center gap-1.5 opacity-40 group-hover:opacity-100 transition-opacity">
+                <div class="h-1 w-1 rounded-full bg-green-600"></div>
+                <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.2em] text-[#052c17]">Stok Harian Ready</span>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <div id="no-results" class="hidden text-center py-24 md:py-32">
+      <div class="inline-block p-4 md:p-6 rounded-full bg-green-50 mb-6">
+        <Leaf class="text-green-200" size={40} />
+      </div>
+      <h3 class="text-xl md:text-2xl font-serif italic text-[#052c17]">Sayuran tidak ditemukan</h3>
+      <p class="text-sm text-slate-400 mt-2">Coba kata kunci lain atau hubungi kami langsung.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 1. STATE DEFAULT: Terlihat (Agar Bot SEO dan User tanpa JS tidak melihat blank) */
+  .reveal-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* 2. STATE ANIMASI: Hanya sembunyikan jika JS aktif (class ditambahkan via script fajar) */
+  :global(.js-enabled) .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* 3. STATE REVEAL: Munculkan kembali saat masuk layar */
+  :global(.is-visible).reveal-up,
+  :global(.is-visible) .reveal-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+</style>
+
+<script>
+  // Memberi tahu CSS bahwa JavaScript aktif
+  document.documentElement.classList.add('js-enabled');
+
+  const setupCatalog = () => {
+    const searchInput = document.getElementById('catalog-search') as HTMLInputElement;
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const products = document.querySelectorAll('.product-item');
+    const noResults = document.getElementById('no-results');
+
+    // Observer yang lebih agresif memantau semua elemen reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { 
+      threshold: 0.05,
+      rootMargin: '0px 0px -50px 0px' 
+    });
+
+    // Pantau elemen reveal secara spesifik
+    document.querySelectorAll('.reveal-up, .product-item, .reveal-main').forEach(el => observer.observe(el));
+
+    // Filter Logic
+    let currentCategory = "Semua";
+    let currentSearch = "";
+
+    const filterProducts = () => {
+      let visibleCount = 0;
+      products.forEach(p => {
+        const name = p.getAttribute('data-name') || "";
+        const cat = p.getAttribute('data-category') || "";
+        const matchSearch = name.includes(currentSearch.toLowerCase());
+        const matchCategory = currentCategory === "Semua" || cat === currentCategory;
+
+        if (matchSearch && matchCategory) {
+          (p as HTMLElement).style.display = 'flex';
+          visibleCount++;
+          // Paksa muncul jika sedang difilter
+          p.classList.add('is-visible');
+        } else {
+          (p as HTMLElement).style.display = 'none';
+        }
+      });
+      noResults?.classList.toggle('hidden', visibleCount > 0);
+    };
+
+    searchInput?.addEventListener('input', (e) => {
+      currentSearch = (e.target as HTMLInputElement).value;
+      filterProducts();
+    });
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryBtns.forEach(b => {
+          b.classList.remove('bg-[#052c17]', 'text-white', 'shadow-lg');
+          b.classList.add('bg-green-50', 'text-[#15803d]');
+        });
+        btn.classList.remove('bg-green-50', 'text-[#15803d]');
+        btn.classList.add('bg-[#052c17]', 'text-white', 'shadow-lg');
+        currentCategory = btn.getAttribute('data-category-btn') || "Semua";
+        filterProducts();
+      });
+    });
+  };
+
+  // Jalankan init
+  setupCatalog();
+  // Support Astro View Transitions
+  document.addEventListener('astro:after-swap', setupCatalog);
+</script>

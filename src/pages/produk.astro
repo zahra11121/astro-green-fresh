@@ -1,12 +1,11 @@
 ---
-// --- SERVER SIDE (Hanya jalan saat Build) ---
 import MainLayout from '../layouts/MainLayout.astro';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import ProductCatalogClient from '@/components/ProductCatalogClient'; 
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import ProductCatalog from '@/components/ProductCatalogClient.astro'; 
 import vegetableRawData from '../data/products.json';
 
-// Logika Unique Map (Server-side)
+// Logika Unique Map (Server-side Build)
 const uniqueMap = new Map();
 if (vegetableRawData) {
   vegetableRawData.forEach(item => {
@@ -17,26 +16,20 @@ if (vegetableRawData) {
 }
 const vegetableData = Array.from(uniqueMap.values());
 
-// Meta Data
-const title = "Katalog Komoditas Sayur Segar Cipanas | Greenfresh B2B Supply";
-const description = "Jelajahi lebih dari 70 jenis sayuran grade A langsung dari petani Cipanas. Stok stabil, kualitas premium, dan pengiriman terjadwal.";
+// Meta Data Strategis
+const title = "Katalog Komoditas Sayur Segar Cipanas | Green Fresh B2B Supply";
+const description = "Jelajahi lebih dari 70 jenis sayuran grade A langsung dari petani Cipanas. Stok harian stabil, sortir premium, dan pengiriman terjadwal Jabodetabek.";
 
-/** * PERBAIKAN CANONICAL: 
- * Memastikan URL bersih dari .html atau index.html untuk SEO
- */
 const origin = Astro.site || Astro.url.origin;
 const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
 const canonicalURL = new URL(cleanPathname, origin);
 
-// Ambil image pertama untuk Preload LCP
 const lcpImage = vegetableData.length > 0 ? vegetableData[0].image : null;
 ---
 
 <MainLayout title={title} description={description}>
-  {/* Tag Canonical Bersih */}
   <link rel="canonical" href={canonicalURL.href} slot="head" />
 
-  {/* PRELOAD LCP IMAGE */}
   {lcpImage && (
     <link
       rel="preload"
@@ -46,17 +39,32 @@ const lcpImage = vegetableData.length > 0 ? vegetableData[0].image : null;
     />
   )}
 
+  <script is:inline slot="head">
+    document.documentElement.classList.add('js-enabled');
+  </script>
+
   <div class="bg-[#fcfdfc] min-h-screen font-sans overflow-x-hidden text-left">
-    <Header client:load />
+    <Header />
     
     <main>
-      {/* Interaksi filter/search di sisi klien */}
-      <ProductCatalogClient 
-        initialData={vegetableData} 
-        client:load 
-      />
+      <ProductCatalog initialData={vegetableData} />
     </main>
 
     <Footer />
   </div>
 </MainLayout>
+
+<style is:global>
+  /** * PERBAIKAN: Memastikan scroll-behavior berada di dalam selector html.
+   * Gunakan sintaks standar tanpa karakter aneh hasil copy-paste.
+   */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Tambahan reset sederhana untuk konsistensi */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>

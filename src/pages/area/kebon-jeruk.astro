@@ -1,18 +1,27 @@
 ---
-// GENERATED MANUALLY VIA PYTHON - STATIC FILE
+/**
+ * GENERATED FILE - DO NOT EDIT DIRECTLY
+ * Area: Kebon Jeruk (Intercon)
+ * Lokasi File: src/pages/area/kebon-jeruk.astro
+ */
 import MainLayout from '@/layouts/MainLayout.astro';
 import { Star, ChevronRight, MapPin } from 'lucide-react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { PartnershipForm } from '@/components/PartnershipForm';
-import { PriceTable } from '@/components/PriceTable';
+
+// Import Komponen Astro Murni (Fix: Explicit .astro extension)
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import PartnershipForm from '@/components/PartnershipForm.astro';
+import PriceTable from '@/components/PriceTable.astro';
+import DistrictHero from '@/components/district/DistrictHero.astro';
+import DistrictLogistics from '@/components/district/DistrictLogistics.astro';
+import DistrictOverview from '@/components/district/DistrictOverview.astro';
+import DistrictRoute from '@/components/district/DistrictRoute.astro';
+import QualityGuarantee from '@/components/city/QualityGuarantee.astro';
+import LiveStats from '@/components/city/LiveStats.astro';
+
+// Data
 import { vegetableData } from '@/data/data.js'; 
-import { DistrictHero } from '@/components/district/DistrictHero';
-import { DistrictLogistics } from '@/components/district/DistrictLogistics';
-import { DistrictOverview } from '@/components/district/DistrictOverview';
-import { DistrictRoute } from '@/components/district/DistrictRoute';
-import { QualityGuarantee } from '@/components/city/QualityGuarantee';
-import { LiveStats } from '@/components/city/LiveStats';
+import districtsData from '@/data/districts.json';
 
 const district = {
   "slug": "kebon-jeruk",
@@ -30,106 +39,8 @@ const district = {
     "desc": "Multi-directional access advantage, high visibility location strategy, wide area coverage efficiency"
   }
 };
-const otherAreas = [
-  {
-    "slug": "tanjung-duren",
-    "name": "Tanjung Duren",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Tanjung Duren - Untuk Restoran Established, Cafe, Warung dan Catering Komunitas",
-    "angle": "Penyedia sayuran untuk kawasan established dengan sejarah panjang",
-    "seoContent": "Tanjung Duren sebagai kawasan established memiliki bisnis kuliner dengan sejarah dan tradisi panjang. Restoran yang telah bertahun-tahun beroperasi membutuhkan konsistensi dalam kualitas bahan. Cafe dengan pelanggan generasi kedua menginginkan produk yang mempertahankan karakter asli. Warung yang menjadi bagian dari kehidupan warga memerlukan reliability untuk menjaga kepercayaan. Catering untuk acara komunitas established membutuhkan pemahaman akan tradisi lokal. Kami menghormati sejarah kawasan dan menjaga konsistensi yang telah dibangun bertahun-tahun.",
-    "metaDescription": "Supplier sayur Tanjung Duren untuk kawasan established. Menjaga konsistensi sejarah, tradisi panjang, reliability untuk kepercayaan.",
-    "clientFocus": "Restoran Established, Cafe Tradisional, Warung Komunitas, Catering Sejarah, Bisnis Berpengalaman",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Tanjung Duren",
-    "logistics": {
-      "time": "03.00-05.00 (panen), 06.00-08.00 (established), 12.00-14.00 (komunitas)",
-      "title": "Historical Area Stewardship",
-      "desc": "Consistency preservation systems, historical business understanding, traditional practice respect"
-    }
-  },
-  {
-    "slug": "grogol",
-    "name": "Grogol",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Grogol - Untuk Restoran Pendidikan, Cafe Kampus, Depot dan Catering Akademik",
-    "angle": "Pemasok sayuran untuk kawasan dengan konsentrasi institusi pendidikan",
-    "seoContent": "Grogol dengan berbagai institusi pendidikan membutuhkan supplier yang memahami siklus akademik. Restoran yang melayani mahasiswa dan dosen membutuhkan adaptasi terhadap kalender akademik. Cafe di lingkungan kampus menginginkan bahan dengan harga student-friendly namun berkualitas. Depot dengan pelanggan komunitas pendidikan memerlukan flexibility selama masa liburan. Catering untuk event akademik membutuhkan penyesuaian dengan jadwal perkuliahan. Kami memiliki pengalaman melayani lingkungan pendidikan dengan sistem yang responsive terhadap kebutuhan akademik.",
-    "metaDescription": "Supplier sayur Grogol untuk kawasan pendidikan. Adaptasi kalender akademik, harga student-friendly, understanding kebutuhan kampus.",
-    "clientFocus": "Restoran Kampus, Cafe Mahasiswa, Depot, Catering Akademik, Bisnis Pendidikan",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Grogol",
-    "logistics": {
-      "time": "03.30-05.30 (panen), 06.30-08.30 (kampus), 10.00-12.00 (akademik)",
-      "title": "Academic Environment Specialization",
-      "desc": "Academic calendar integration, student budget optimization, educational institution protocols"
-    }
-  },
-  {
-    "slug": "slipi",
-    "name": "Slipi",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Slipi - Untuk Restoran Koridor, Cafe, Food Court dan Catering Perkantoran",
-    "angle": "Penyuplai sayuran untuk koridor bisnis utama dengan traffic padat",
-    "seoContent": "Slipi sebagai koridor bisnis utama menghadapi tantangan logistik yang kompleks. Restoran di koridor sibuk membutuhkan pengiriman di time window yang tepat untuk menghindari macet. Cafe dengan akses mudah dari berbagai arah menginginkan sistem yang resilient terhadap kondisi jalan. Food court di gedung perkantoran memerlukan koordinasi yang tepat dengan building management. Catering untuk kantor di sepanjang koridor membutuhkan rute yang teroptimasi. Kami menguasai logistik koridor utama dengan sistem time slot management yang ketat.",
-    "metaDescription": "Supplier sayur Slipi untuk koridor bisnis utama. Time slot management ketat, resilient terhadap macet, koridor logistics expertise.",
-    "clientFocus": "Restoran Koridor, Cafe Akses Mudah, Food Court, Catering Perkantoran, Bisnis Jalan Utama",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Slipi",
-    "logistics": {
-      "time": "02.00-04.00 (panen), 04.30-06.30 (avoid peak), 08.00-10.00 (koridor)",
-      "title": "Major Corridor Time Management",
-      "desc": "Peak traffic avoidance strategies, strict time window compliance, corridor route optimization"
-    }
-  },
-  {
-    "slug": "green-lake-city",
-    "name": "Green Lake City",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Green Lake City - Untuk Restoran Township, Cafe Taman, Food Hall dan Catering Komunitas",
-    "angle": "Pemasok sayuran untuk township terintegrasi dengan konsep green living",
-    "seoContent": "Green Lake City sebagai township dengan konsep green living membutuhkan supplier yang sejalan dengan filosofi tersebut. Restoran di township eco-friendly membutuhkan bahan organik dan sustainable. Cafe dengan konsep green menginginkan produk yang mendukung eco-conscious lifestyle. Food hall di lingkungan hijau memerlukan sayuran dengan natural appeal. Catering untuk komunitas yang peduli lingkungan membutuhkan bahan dengan traceability jelas. Kami mendukung green lifestyle dengan produk organik dan praktik bisnis yang sustainable.",
-    "metaDescription": "Supplier sayur Green Lake City untuk township hijau. Support green lifestyle, produk organik, sustainable practices.",
-    "clientFocus": "Restoran Eco-Friendly, Cafe Green Concept, Food Hall, Catering Komunitas Hijau, Bisnis Sustainable",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Cengkareng-Green Lake City",
-    "logistics": {
-      "time": "03.30-05.30 (panen), 06.30-08.30 (township), 10.00-12.00 (komunitas)",
-      "title": "Green Township Partnership",
-      "desc": "Sustainable supply chain practices, organic product focus, eco-community understanding"
-    }
-  },
-  {
-    "slug": "citra-garden",
-    "name": "Citra Garden",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Citra Garden - Untuk Restoran Perumahan, Cafe, Depot dan Catering Keluarga",
-    "angle": "Penyedia sayuran untuk kawasan perumahan keluarga dengan kebutuhan harian",
-    "seoContent": "Citra Garden sebagai kawasan perumahan keluarga memiliki kebutuhan kuliner yang praktis dan terjangkau. Restoran keluarga membutuhkan bahan untuk menu yang disukai semua usia. Cafe dengan atmosphere family-friendly menginginkan produk yang aman dan sehat untuk anak-anak. Depot dengan pelanggan ibu rumah tangga memerlukan harga kompetitif dengan kualitas terjaga. Catering untuk acara keluarga membutuhkan porsi besar dengan budget reasonable. Kami memahami kebutuhan keluarga dengan menawarkan produk yang praktis, sehat, dan terjangkau.",
-    "metaDescription": "Supplier sayur Citra Garden untuk perumahan keluarga. Produk praktis keluarga, harga terjangkau, sehat untuk anak-anak.",
-    "clientFocus": "Restoran Keluarga, Cafe Family-Friendly, Depot, Catering Keluarga, Bisnis Rumah Tangga",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Citra Garden",
-    "logistics": {
-      "time": "03.00-05.00 (panen), 06.00-08.00 (keluarga), 13.00-15.00 (rumah tangga)",
-      "title": "Family-Centric Service",
-      "desc": "Family budget optimization, child-safe product selection, practical family solutions"
-    }
-  },
-  {
-    "slug": "daan-mogot",
-    "name": "Daan Mogot",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Daan Mogot - Untuk Restoran Industrial, Cafe, Depot dan Catering Kawasan",
-    "angle": "Pemasok sayuran untuk kawasan industrial dengan kebutuhan praktis",
-    "seoContent": "Daan Mogot sebagai kawasan industrial memiliki karakter bisnis yang praktis dan efisien. Restoran yang melayani pekerja industri membutuhkan bahan untuk menu mengenyangkan dengan harga terjangkau. Cafe dengan atmosphere industrial menginginkan produk yang robust dan tahan lama. Depot dengan pelanggan buruh dan karyawan memerlukan sistem yang reliable untuk shift kerja. Catering untuk perusahaan industri membutuhkan volume besar dengan efisiensi tinggi. Kami memberikan solusi praktis untuk lingkungan industrial dengan emphasis pada reliability dan efisiensi.",
-    "metaDescription": "Supplier sayur Daan Mogot untuk kawasan industrial. Solusi praktis industri, reliable untuk shift kerja, efisiensi tinggi.",
-    "clientFocus": "Restoran Industrial, Cafe, Depot Buruh, Catering Perusahaan, Bisnis Industri",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Daan Mogot",
-    "logistics": {
-      "time": "02.30-04.30 (panen), 05.30-07.30 (shift pagi), 14.00-16.00 (shift sore)",
-      "title": "Industrial Zone Efficiency",
-      "desc": "Shift work accommodation, industrial zone logistics, practical efficiency focus"
-    }
-  }
-];
-const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
 
+// Meta & SEO Logic
 const baseUrl = 'https://greenfresh.co.id';
 const currentUrl = `${baseUrl}/area/${district.slug}`;
 const title = `Supplier Sayur ${district.name} - Stok Stabil Harian | CV Green Fresh Cipanas`;
@@ -155,14 +66,24 @@ const schemaData = {
     }
   ]
 };
+
+// Related Areas Logic
+const allDistricts = districtsData.districts;
+const currentIndex = allDistricts.findIndex(d => d.slug === "kebon-jeruk");
+const otherAreas = [];
+for (let i = 1; i <= 6; i++) {
+  const nextIndex = (currentIndex + i) % allDistricts.length;
+  otherAreas.push(allDistricts[nextIndex]);
+}
+const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
 ---
 
 <MainLayout title={title} description={description}>
   <link rel="canonical" href={currentUrl} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
-  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left">
-    <Header client:load />
+  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left reveal-container">
+    <Header />
 
     <main>
       <div class="pt-24 lg:pt-32 bg-white border-b border-slate-50">
@@ -175,7 +96,7 @@ const schemaData = {
         </nav>
       </div>
 
-      <DistrictHero district={district} client:load />
+      <DistrictHero district={district} />
       
       <div class="w-full bg-gradient-to-r from-white to-[#f7faf7] py-6 border-y border-green-50/50">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -192,8 +113,8 @@ const schemaData = {
               </div>
             </div>
             <div class="flex items-center gap-3">
-              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
-              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Layanan Terverifikasi di {district.name}</p>
+              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
+              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Terverifikasi di {district.name}</p>
             </div>
           </div>
         </div>
@@ -203,10 +124,10 @@ const schemaData = {
         <div class="max-w-[1800px] mx-auto px-6">
           <div class="grid lg:grid-cols-12 gap-12 items-start">
             <div class="lg:col-span-6">
-              <DistrictOverview district={district} client:visible />
+              <DistrictOverview district={district} />
             </div>
             <div class="lg:col-span-6">
-              <DistrictLogistics district={district} client:visible />
+              <DistrictLogistics district={district} />
             </div>
           </div>
         </div>
@@ -214,19 +135,19 @@ const schemaData = {
 
       <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="mb-12 text-left">
+          <div class="mb-12 text-left reveal-up">
             <h2 class="text-3xl md:text-4xl font-[1000] text-[#052c17] uppercase tracking-tighter">
               Katalog <span class="text-[#15803d]">Komoditas.</span>
             </h2>
             <p class="text-slate-700 text-sm font-black mt-2 uppercase tracking-widest">Update Harga Khusus Area {district.name}</p>
           </div>
-          <PriceTable data={vegetableData.slice(0, 20)} client:visible />
+          <PriceTable data={vegetableData.slice(0, 20)} />
         </div>
       </section>
 
-      <QualityGuarantee client:visible />
-      <LiveStats client:visible />
-      <DistrictRoute district={district} client:visible />
+      <QualityGuarantee />
+      <LiveStats />
+      <DistrictRoute district={district} />
       
       <section class="py-16 bg-white border-t border-slate-100 text-left">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8">
@@ -236,8 +157,8 @@ const schemaData = {
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {otherAreas.map((area, index) => (
               <a
-                href={`/area/${area.slug}`}
-                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm hover:shadow-md text-center"
+                href={`/area/${area.slug}` }
+                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm text-center"
               >
                 <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">
                   {labels[index % labels.length]}
@@ -253,7 +174,7 @@ const schemaData = {
 
       <section id="partnership" class="py-20 md:py-32 bg-[#fcfdfc] border-t border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="text-left mb-16">
+          <div class="text-left mb-16 reveal-up">
             <h2 class="text-3xl md:text-5xl font-[1000] text-[#052c17] uppercase tracking-tighter leading-none">
               Hubungi <span class="text-[#15803d]">Sales.</span>
             </h2>
@@ -261,11 +182,43 @@ const schemaData = {
               Konsultasi Pengadaan Wilayah {district.name}
             </p>
           </div>
-          <PartnershipForm client:visible />
+          <PartnershipForm />
         </div>
       </section>
     </main>
 
-    <Footer client:visible />
+    <Footer />
   </div>
 </MainLayout>
+
+<style>
+  .reveal-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+  :global(.is-visible) .reveal-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+</style>
+
+<script>
+  document.documentElement.classList.add('js-enabled');
+  const setupObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+  };
+  setupObserver();
+  document.addEventListener('astro:after-swap', setupObserver);
+</script>

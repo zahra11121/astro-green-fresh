@@ -1,46 +1,44 @@
 ---
-// --- SERVER SIDE (Build Time) ---
+/**
+ * GALLERY PAGE - PURE ASTRO VERSION (SEO Optimized)
+ * Perbaikan: Solusi "Blank Putih" dengan CSS Fallback & Robust Observer.
+ */
 import MainLayout from '../layouts/MainLayout.astro';
-import { Header } from '@/components/Header';
-import { Gallery } from '@/components/Gallery'; 
-import { Footer } from '@/components/Footer';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import Gallery from '@/components/Gallery.astro'; 
 import { Camera, Play, CheckCircle2 } from 'lucide-react';
 
-// Metadata
 const title = 'Galeri Visual & Dokumentasi Kualitas | Green Fresh Cipanas';
-const description = 'Lihat potret nyata standardisasi sayur kualitas super kami. Dokumentasi video dan foto pengiriman harian dari kebun Cipanas ke Jabodetabek.';
+const description = 'Lihat potret nyata standardisasi sayur kualitas super kami. Dokumentasi video dan foto pengiriman harian dari kebun Cipanas ke seluruh Jabodetabek.';
 
-/** * PERBAIKAN CANONICAL: 
- * Memastikan URL bersih dari .html atau index.html untuk SEO
- */
 const origin = Astro.site || Astro.url.origin;
 const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
 const canonicalURL = new URL(cleanPathname, origin);
 ---
 
 <MainLayout title={title} description={description}>
-  {/* Tag Canonical Bersih */}
   <link rel="canonical" href={canonicalURL.href} slot="head" />
 
-  <main class="min-h-screen bg-[#fcfcfc] text-left">
-    <Header client:load />
+  <main class="min-h-screen bg-[#fcfcfc] text-left reveal-container">
+    <Header />
 
     <section class="pt-32 lg:pt-44 pb-12 lg:pb-20 bg-white border-b border-slate-50">
       <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-left">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
           <div class="max-w-3xl text-left">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 rounded-full text-[#16a34a] text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 rounded-full text-[#16a34a] text-[10px] font-black uppercase tracking-[0.2em] mb-6 reveal-left">
               <Camera size={14} /> Official Media Center
             </div>
-            <h1 class="text-4xl lg:text-7xl font-serif italic text-[#052c17] leading-[1.1] tracking-tighter mb-6">
+            <h1 class="text-4xl lg:text-7xl font-serif italic text-[#052c17] leading-[1.1] tracking-tighter mb-6 reveal-up">
               Bukti Nyata <span class="text-[#16a34a]">Standardisasi Super.</span>
             </h1>
-            <p class="text-base lg:text-xl text-slate-500 font-light leading-relaxed max-w-2xl">
+            <p class="text-base lg:text-xl text-slate-500 font-light leading-relaxed max-w-2xl reveal-up" style="transition-delay: 0.1s;">
               Kami percaya pada transparansi. Halaman ini mendokumentasikan proses sortasi, pengemasan, dan kualitas produk yang kami kirimkan ke mitra hotel dan retail setiap harinya.
             </p>
           </div>
 
-          <div class="grid grid-cols-2 gap-4 w-full lg:w-auto">
+          <div class="grid grid-cols-2 gap-4 w-full lg:w-auto reveal-right">
             <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 text-left">
               <p class="text-3xl font-serif italic text-[#052c17]">25+</p>
               <p class="text-[9px] font-black uppercase tracking-widest text-[#16a34a]">Komoditas</p>
@@ -54,36 +52,101 @@ const canonicalURL = new URL(cleanPathname, origin);
       </div>
     </section>
 
-    <Gallery client:visible />
+    <Gallery />
 
     <section class="py-20 bg-white border-t border-slate-50">
       <div class="max-w-[1200px] mx-auto px-6">
         <div class="grid md:grid-cols-3 gap-12 text-left">
-          <div class="space-y-4">
+          <div class="space-y-4 reveal-up">
             <div class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-[#16a34a]">
               <Play size={24} />
             </div>
             <h3 class="font-serif italic text-xl text-[#052c17]">Video QC Harian</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">Video diambil secara live saat proses sortasi di Hub Sukatani untuk menjamin akurasi produk.</p>
+            <p class="text-sm text-slate-400 leading-relaxed font-medium">Video diambil secara live saat proses sortasi di Hub Sukatani untuk menjamin akurasi produk.</p>
           </div>
-          <div class="space-y-4">
+          <div class="space-y-4 reveal-up" style="transition-delay: 0.1s;">
             <div class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-[#16a34a]">
               <CheckCircle2 size={24} />
             </div>
             <h3 class="font-serif italic text-xl text-[#052c17]">Tanpa Filter</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">Seluruh foto menggunakan pencahayaan alami untuk menampilkan warna asli kesegaran sayuran.</p>
+            <p class="text-sm text-slate-400 leading-relaxed font-medium">Seluruh foto menggunakan pencahayaan alami untuk menampilkan warna asli kesegaran sayuran Cipanas.</p>
           </div>
-          <div class="space-y-4">
+          <div class="space-y-4 reveal-up" style="transition-delay: 0.2s;">
             <div class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-[#16a34a]">
               <Camera size={24} />
             </div>
             <h3 class="font-serif italic text-xl text-[#052c17]">Update Berkala</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">Galeri diperbarui setiap minggu untuk mencerminkan ketersediaan stok panen terbaru.</p>
+            <p class="text-sm text-slate-400 leading-relaxed font-medium">Galeri diperbarui secara rutin untuk mencerminkan ketersediaan stok panen harian yang stabil.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <Footer client:visible />
+    <Footer />
   </main>
 </MainLayout>
+
+<style>
+  /* 1. STATE DEFAULT: Tampil normal (Pencegahan Blank Putih) */
+  .reveal-up, .reveal-left, .reveal-right {
+    opacity: 1;
+    transform: translate(0);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* 2. STATE ANIMASI: Hanya aktif jika JavaScript diaktifkan (via class .js-enabled) */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    :global(.js-enabled) .reveal-left {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    :global(.js-enabled) .reveal-right {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  }
+
+  /* 3. STATE REVEAL: Dipicu oleh Observer */
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left,
+  :global(.is-visible) .reveal-right,
+  :global(.is-visible).reveal-up,
+  :global(.is-visible).reveal-left,
+  :global(.is-visible).reveal-right {
+    opacity: 1 !important;
+    transform: translate(0) !important;
+  }
+</style>
+
+<script>
+  // Segera tandai bahwa browser mendukung JS
+  document.documentElement.classList.add('js-enabled');
+
+  const initObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { 
+      threshold: 0.05, 
+      rootMargin: '0px 0px -50px 0px' 
+    });
+
+    // Cari semua elemen animasi secara individual
+    document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => {
+      observer.observe(el);
+    });
+  };
+
+  // Jalankan saat load
+  initObserver();
+
+  // Support Astro View Transitions
+  document.addEventListener('astro:after-swap', initObserver);
+</script>

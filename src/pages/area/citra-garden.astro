@@ -1,18 +1,27 @@
 ---
-// GENERATED MANUALLY VIA PYTHON - STATIC FILE
+/**
+ * GENERATED FILE - DO NOT EDIT DIRECTLY
+ * Area: Citra Garden
+ * Lokasi File: src/pages/area/citra-garden.astro
+ */
 import MainLayout from '@/layouts/MainLayout.astro';
 import { Star, ChevronRight, MapPin } from 'lucide-react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { PartnershipForm } from '@/components/PartnershipForm';
-import { PriceTable } from '@/components/PriceTable';
+
+// Import Komponen Astro Murni (Fix: Explicit .astro extension)
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import PartnershipForm from '@/components/PartnershipForm.astro';
+import PriceTable from '@/components/PriceTable.astro';
+import DistrictHero from '@/components/district/DistrictHero.astro';
+import DistrictLogistics from '@/components/district/DistrictLogistics.astro';
+import DistrictOverview from '@/components/district/DistrictOverview.astro';
+import DistrictRoute from '@/components/district/DistrictRoute.astro';
+import QualityGuarantee from '@/components/city/QualityGuarantee.astro';
+import LiveStats from '@/components/city/LiveStats.astro';
+
+// Data
 import { vegetableData } from '@/data/data.js'; 
-import { DistrictHero } from '@/components/district/DistrictHero';
-import { DistrictLogistics } from '@/components/district/DistrictLogistics';
-import { DistrictOverview } from '@/components/district/DistrictOverview';
-import { DistrictRoute } from '@/components/district/DistrictRoute';
-import { QualityGuarantee } from '@/components/city/QualityGuarantee';
-import { LiveStats } from '@/components/city/LiveStats';
+import districtsData from '@/data/districts.json';
 
 const district = {
   "slug": "citra-garden",
@@ -30,106 +39,8 @@ const district = {
     "desc": "Family budget optimization, child-safe product selection, practical family solutions"
   }
 };
-const otherAreas = [
-  {
-    "slug": "daan-mogot",
-    "name": "Daan Mogot",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Daan Mogot - Untuk Restoran Industrial, Cafe, Depot dan Catering Kawasan",
-    "angle": "Pemasok sayuran untuk kawasan industrial dengan kebutuhan praktis",
-    "seoContent": "Daan Mogot sebagai kawasan industrial memiliki karakter bisnis yang praktis dan efisien. Restoran yang melayani pekerja industri membutuhkan bahan untuk menu mengenyangkan dengan harga terjangkau. Cafe dengan atmosphere industrial menginginkan produk yang robust dan tahan lama. Depot dengan pelanggan buruh dan karyawan memerlukan sistem yang reliable untuk shift kerja. Catering untuk perusahaan industri membutuhkan volume besar dengan efisiensi tinggi. Kami memberikan solusi praktis untuk lingkungan industrial dengan emphasis pada reliability dan efisiensi.",
-    "metaDescription": "Supplier sayur Daan Mogot untuk kawasan industrial. Solusi praktis industri, reliable untuk shift kerja, efisiensi tinggi.",
-    "clientFocus": "Restoran Industrial, Cafe, Depot Buruh, Catering Perusahaan, Bisnis Industri",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Daan Mogot",
-    "logistics": {
-      "time": "02.30-04.30 (panen), 05.30-07.30 (shift pagi), 14.00-16.00 (shift sore)",
-      "title": "Industrial Zone Efficiency",
-      "desc": "Shift work accommodation, industrial zone logistics, practical efficiency focus"
-    }
-  },
-  {
-    "slug": "tomang",
-    "name": "Tomang",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Tomang - Untuk Restoran Komersial, Cafe, Warung dan Catering Kawasan",
-    "angle": "Penyuplai sayuran untuk kawasan komersial padat dengan diversitas bisnis",
-    "seoContent": "Tomang sebagai kawasan komersial padat memiliki diversitas bisnis kuliner yang sangat tinggi. Restoran dengan berbagai konsep membutuhkan bahan yang sesuai dengan target market masing-masing. Cafe dengan pelanggan beragam menginginkan produk yang bisa memenuhi berbagai selera. Warung yang melayani kebutuhan harian memerlukan konsistensi dalam ketersediaan. Catering untuk berbagai jenis bisnis membutuhkan flexibility dalam pelayanan. Kami memiliki kemampuan melayani diversitas kebutuhan dengan product range yang luas dan layanan yang customizable.",
-    "metaDescription": "Supplier sayur Tomang untuk kawasan komersial beragam. Product range luas, customizable service, kemampuan layani diversitas.",
-    "clientFocus": "Restoran Beragam, Cafe Multisegmen, Warung, Catering Berbagai Bisnis, Kawasan Komersial",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Tomang",
-    "logistics": {
-      "time": "03.00-05.00 (panen), 06.00-08.00 (komersial), 10.00-12.00 (beragam)",
-      "title": "Diverse Commercial Support",
-      "desc": "Wide product range management, customizable service protocols, diverse business understanding"
-    }
-  },
-  {
-    "slug": "bsd-city-breeze",
-    "name": "BSD City The Breeze",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur BSD The Breeze - Untuk Restoran Lifestyle Mall, Cafe Premium, Food Hall dan Catering",
-    "angle": "Pemasok sayuran untuk lifestyle mall dengan konsep modern",
-    "seoContent": "The Breeze BSD sebagai lifestyle mall membutuhkan supplier yang memahami retail food service modern. Restoran di lifestyle mall membutuhkan bahan dengan visual appeal tinggi untuk Instagrammable dishes. Cafe premium dengan atmosphere modern menginginkan produk yang trendy dan up-to-date. Food hall dengan berbagai konsep kekinian memerlukan ingredients yang sesuai dengan food trends. Catering untuk event di mall membutuhkan presentasi yang contemporary. Kami mengikuti food trends terkini dan menyediakan produk yang sesuai dengan selera modern.",
-    "metaDescription": "Supplier sayur BSD The Breeze untuk lifestyle mall modern. Instagrammable products, trendy ingredients, contemporary presentation.",
-    "clientFocus": "Restoran Lifestyle Mall, Cafe Premium, Food Hall, Catering Event, Bisnis Modern",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-BSD",
-    "logistics": {
-      "time": "02.30-04.30 (panen), 05.30-07.30 (mall), 09.00-11.00 (lifestyle)",
-      "title": "Modern Mall Logistics",
-      "desc": "Trend-responsive product sourcing, social media worthy selection, contemporary retail support"
-    }
-  },
-  {
-    "slug": "bsd-city-foresta",
-    "name": "BSD City Foresta",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur BSD Foresta - Untuk Restoran Alam, Cafe Konsep, Bistro dan Catering Lingkungan",
-    "angle": "Penyedia sayuran untuk kawasan dengan konsep forest living",
-    "seoContent": "Foresta BSD dengan konsep forest living menciptakan atmosphere yang unik untuk bisnis kuliner. Restoran dengan konsep alam membutuhkan bahan yang natural dan organic. Cafe dengan atmosphere hutan menginginkan produk yang selaras dengan lingkungan hijau. Bistro dengan nuansa alam memerlukan sayuran dengan rustic appearance. Catering untuk acara di lingkungan hutan membutuhkan presentasi yang natural. Kami mendukung forest living concept dengan produk yang enhance natural atmosphere dan sustainable practices.",
-    "metaDescription": "Supplier sayur BSD Foresta untuk konsep forest living. Natural products focus, rustic appearance, sustainable forest concept.",
-    "clientFocus": "Restoran Alam, Cafe Hutan, Bistro Natural, Catering Lingkungan, Bisnis Konsep Hijau",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-BSD Forester",
-    "logistics": {
-      "time": "03.30-05.30 (panen), 06.30-08.30 (alam), 10.00-12.00 (natural)",
-      "title": "Forest Living Support",
-      "desc": "Natural product curation, rustic appearance selection, forest environment compatibility"
-    }
-  },
-  {
-    "slug": "bsd-city-greenwich",
-    "name": "BSD City Greenwich",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur BSD Greenwich - Untuk Restoran Tema, Cafe Konsep, Food Court dan Catering Keluarga",
-    "angle": "Pemasok sayuran untuk family entertainment center dengan berbagai tema",
-    "seoContent": "Greenwich BSD sebagai family entertainment center memiliki berbagai bisnis kuliner dengan tema khusus. Restoran dengan tema tertentu membutuhkan bahan yang mendukung storytelling konsep. Cafe dengan konsep keluarga menginginkan produk yang aman dan menyenangkan untuk anak-anak. Food court dengan berbagai wahana memerlukan ingredients yang praktis untuk keluarga. Catering untuk event keluarga membutuhkan porsi besar dengan variasi. Kami memahami kebutuhan family entertainment dengan produk yang fun, safe, dan sesuai berbagai tema.",
-    "metaDescription": "Supplier sayur BSD Greenwich untuk family entertainment. Produk family-friendly, tema support, safe untuk anak-anak.",
-    "clientFocus": "Restoran Bertema, Cafe Keluarga, Food Court, Catering Wahana, Bisnis Family Entertainment",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Tol Serpong-BSD Greenwich",
-    "logistics": {
-      "time": "03.00-05.00 (panen), 06.00-08.00 (keluarga), 10.00-12.00 (entertainment)",
-      "title": "Family Entertainment Specialization",
-      "desc": "Theme-appropriate product selection, child safety focus, family-sized packaging"
-    }
-  },
-  {
-    "slug": "bintaro-sektor-7",
-    "name": "Bintaro Sektor 7",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Bintaro Sektor 7 - Untuk Restoran Komersial, Cafe, Depot dan Catering Perumahan",
-    "angle": "Penyuplai sayuran untuk sektor perumahan dengan aktivitas komersial padat",
-    "seoContent": "Bintaro Sektor 7 memiliki mix residential dan komersial yang seimbang dengan kebutuhan spesifik. Restoran komersial di area perumahan membutuhkan bahan untuk menu yang appealing bagi residents dan visitors. Cafe dengan atmosphere neighborhood menginginkan produk yang sesuai dengan lifestyle warga. Depot yang melayani kebutuhan harian memerlukan reliability untuk pelanggan tetap. Catering untuk acara di perumahan membutuhkan layanan yang mengenal komunitas. Kami memahami dinamika mixed-use sector dengan layanan yang menghubungkan kebutuhan residential dan komersial.",
-    "metaDescription": "Supplier sayur Bintaro Sektor 7 untuk area mixed-use. Hubungkan residential dan komersial, pahami dinamika sector, layanan komunitas.",
-    "clientFocus": "Restoran Mixed-Use, Cafe Neighborhood, Depot, Catering Perumahan, Bisnis Sector",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Bintaro Sektor 7",
-    "logistics": {
-      "time": "03.30-05.30 (panen), 06.30-08.30 (sektor), 12.00-14.00 (perumahan)",
-      "title": "Sector-Based Service",
-      "desc": "Mixed-use area understanding, sector-specific solutions, community integration approach"
-    }
-  }
-];
-const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
 
+// Meta & SEO Logic
 const baseUrl = 'https://greenfresh.co.id';
 const currentUrl = `${baseUrl}/area/${district.slug}`;
 const title = `Supplier Sayur ${district.name} - Stok Stabil Harian | CV Green Fresh Cipanas`;
@@ -155,14 +66,24 @@ const schemaData = {
     }
   ]
 };
+
+// Related Areas Logic
+const allDistricts = districtsData.districts;
+const currentIndex = allDistricts.findIndex(d => d.slug === "citra-garden");
+const otherAreas = [];
+for (let i = 1; i <= 6; i++) {
+  const nextIndex = (currentIndex + i) % allDistricts.length;
+  otherAreas.push(allDistricts[nextIndex]);
+}
+const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
 ---
 
 <MainLayout title={title} description={description}>
   <link rel="canonical" href={currentUrl} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
-  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left">
-    <Header client:load />
+  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left reveal-container">
+    <Header />
 
     <main>
       <div class="pt-24 lg:pt-32 bg-white border-b border-slate-50">
@@ -175,7 +96,7 @@ const schemaData = {
         </nav>
       </div>
 
-      <DistrictHero district={district} client:load />
+      <DistrictHero district={district} />
       
       <div class="w-full bg-gradient-to-r from-white to-[#f7faf7] py-6 border-y border-green-50/50">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -192,8 +113,8 @@ const schemaData = {
               </div>
             </div>
             <div class="flex items-center gap-3">
-              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
-              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Layanan Terverifikasi di {district.name}</p>
+              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
+              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Terverifikasi di {district.name}</p>
             </div>
           </div>
         </div>
@@ -203,10 +124,10 @@ const schemaData = {
         <div class="max-w-[1800px] mx-auto px-6">
           <div class="grid lg:grid-cols-12 gap-12 items-start">
             <div class="lg:col-span-6">
-              <DistrictOverview district={district} client:visible />
+              <DistrictOverview district={district} />
             </div>
             <div class="lg:col-span-6">
-              <DistrictLogistics district={district} client:visible />
+              <DistrictLogistics district={district} />
             </div>
           </div>
         </div>
@@ -214,19 +135,19 @@ const schemaData = {
 
       <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="mb-12 text-left">
+          <div class="mb-12 text-left reveal-up">
             <h2 class="text-3xl md:text-4xl font-[1000] text-[#052c17] uppercase tracking-tighter">
               Katalog <span class="text-[#15803d]">Komoditas.</span>
             </h2>
             <p class="text-slate-700 text-sm font-black mt-2 uppercase tracking-widest">Update Harga Khusus Area {district.name}</p>
           </div>
-          <PriceTable data={vegetableData.slice(0, 20)} client:visible />
+          <PriceTable data={vegetableData.slice(0, 20)} />
         </div>
       </section>
 
-      <QualityGuarantee client:visible />
-      <LiveStats client:visible />
-      <DistrictRoute district={district} client:visible />
+      <QualityGuarantee />
+      <LiveStats />
+      <DistrictRoute district={district} />
       
       <section class="py-16 bg-white border-t border-slate-100 text-left">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8">
@@ -236,8 +157,8 @@ const schemaData = {
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {otherAreas.map((area, index) => (
               <a
-                href={`/area/${area.slug}`}
-                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm hover:shadow-md text-center"
+                href={`/area/${area.slug}` }
+                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm text-center"
               >
                 <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">
                   {labels[index % labels.length]}
@@ -253,7 +174,7 @@ const schemaData = {
 
       <section id="partnership" class="py-20 md:py-32 bg-[#fcfdfc] border-t border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="text-left mb-16">
+          <div class="text-left mb-16 reveal-up">
             <h2 class="text-3xl md:text-5xl font-[1000] text-[#052c17] uppercase tracking-tighter leading-none">
               Hubungi <span class="text-[#15803d]">Sales.</span>
             </h2>
@@ -261,11 +182,43 @@ const schemaData = {
               Konsultasi Pengadaan Wilayah {district.name}
             </p>
           </div>
-          <PartnershipForm client:visible />
+          <PartnershipForm />
         </div>
       </section>
     </main>
 
-    <Footer client:visible />
+    <Footer />
   </div>
 </MainLayout>
+
+<style>
+  .reveal-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+  :global(.is-visible) .reveal-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+</style>
+
+<script>
+  document.documentElement.classList.add('js-enabled');
+  const setupObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+  };
+  setupObserver();
+  document.addEventListener('astro:after-swap', setupObserver);
+</script>

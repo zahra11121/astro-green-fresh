@@ -1,0 +1,177 @@
+---
+/**
+ * CASHFLOW COMPONENT - ASTRO VERSION
+ * Menghilangkan hidrasi JSX untuk stabilitas Indexing Google.
+ */
+import { 
+  Wallet, 
+  CreditCard, 
+  Landmark, 
+  CheckCircle2, 
+  ArrowRight,
+  ShieldCheck,
+  BadgeCheck
+} from 'lucide-react';
+
+const { id } = Astro.props;
+const FINANCE_IMAGE_URL = "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=60&w=1200";
+
+const checklistItems = [
+  { title: 'Faktur Pajak', sub: 'PKP Ready' },
+  { title: 'Invoicing', sub: 'Sistematis' },
+  { title: 'Rekonsiliasi', sub: 'Transparan' }
+];
+
+const paymentTerms = [
+  { label: "Tunai / COD", desc: "Harian", icon: Wallet },
+  { label: "Tempo 14 Hari", desc: "Reguler", icon: CreditCard },
+  { label: "Tempo 30 Hari", desc: "Korporat", icon: Landmark }
+];
+---
+
+<section id={id || "payment"} class="py-0 md:py-20 bg-white font-sans overflow-hidden border-b-2 border-green-100 reveal-section">
+  <div class="max-w-[1800px] mx-auto px-0 md:px-12 lg:px-20 relative z-10">
+    
+    {/* HEADER */}
+    <div class="max-w-4xl mb-8 md:mb-16 space-y-4 px-5 md:px-0 mt-10 md:mt-0">
+      <div class="flex items-center gap-3 reveal-left">
+        <div class="w-8 h-px bg-[#15803d]"></div>
+        <span class="text-[10px] font-black tracking-[0.3em] uppercase text-[#15803d]">Financial Flexibility</span>
+      </div>
+      
+      <h2 class="text-3xl md:text-6xl lg:text-7xl font-serif italic text-[#052c17] leading-[1.1] tracking-tighter reveal-up">
+        Sirkuasi Kas <span class="text-[#15803d] not-italic font-sans font-black">Lebih Ringan.</span>
+      </h2>
+
+      <p class="text-base md:text-xl text-slate-600 font-medium leading-relaxed max-w-2xl border-l-4 border-green-500/20 pl-4 md:pl-6 reveal-up" style="animation-delay: 0.2s;">
+        Sistem pembayaran yang dapat disesuaikan dengan kebutuhan arus kas perusahaan Anda.
+      </p>
+    </div>
+
+    {/* CONTENT GRID */}
+    <div class="grid lg:grid-cols-12 gap-0 md:gap-16 items-stretch">
+      
+      {/* SISI KIRI: Image & Badges */}
+      <div class="lg:col-span-7 flex flex-col justify-between">
+        <div class="relative aspect-video md:rounded-[2rem] overflow-hidden md:border-2 md:border-green-100 shadow-none md:shadow-xl group reveal-scale">
+          <img 
+            src={FINANCE_IMAGE_URL} 
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" 
+            alt="B2B Financial Support"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-60"></div>
+          
+          <div class="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-white/95 backdrop-blur-md p-3 md:p-5 rounded-xl border-2 border-green-100 flex items-center gap-3">
+            <div class="w-8 h-8 md:w-10 md:h-10 bg-green-50 rounded-lg flex items-center justify-center text-[#15803d]">
+              <BadgeCheck size={18} />
+            </div>
+            <div>
+              <p class="text-[8px] md:text-[9px] font-black text-[#14532d] uppercase tracking-widest leading-none mb-1">Audit Ready</p>
+              <p class="text-xs md:text-sm font-bold text-[#052c17]">Standard Korporasi</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Checklist */}
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 px-5 md:px-0 py-8 md:py-0 md:mt-8 reveal-up">
+          {checklistItems.map((item) => (
+            <div class="flex gap-2 items-center">
+              <div class="flex-shrink-0 w-7 h-7 bg-green-50 rounded-lg flex items-center justify-center text-[#15803d]">
+                <CheckCircle2 size={12}/>
+              </div>
+              <div class="min-w-0">
+                <h4 class="text-[#052c17] font-bold text-[10px] md:text-[11px] uppercase truncate">{item.title}</h4>
+                <p class="text-slate-600 font-bold text-[9px] md:text-[10px]">{item.sub}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* SISI KANAN: Opsi Termin */}
+      <div class="lg:col-span-5">
+        <div class="h-full bg-[#f7faf7] border-y-2 border-green-100 md:border-2 md:rounded-[2.5rem] p-5 md:p-10 space-y-8 md:space-y-10 shadow-none reveal-right">
+          <div class="flex justify-between items-start">
+            <div class="space-y-1">
+              <p class="text-[#15803d] text-[10px] font-black uppercase tracking-[0.3em]">Billing Terms</p>
+              <h3 class="text-2xl md:text-3xl font-serif italic font-black text-[#052c17]">Opsi Termin.</h3>
+            </div>
+            <ShieldCheck class="text-green-300" size={32} />
+          </div>
+
+          <div class="space-y-3">
+            {paymentTerms.map((item) => (
+              <div class="group flex items-center justify-between p-4 bg-white border-2 border-green-100 rounded-xl transition-all shadow-sm hover:border-[#15803d]">
+                <div class="flex items-center gap-4">
+                  <div class="flex-shrink-0 p-2.5 bg-green-50 rounded-lg text-[#15803d]">
+                    <item.icon size={18} />
+                  </div>
+                  <div>
+                    <p class="text-[#052c17] font-bold text-sm tracking-tight">{item.label}</p>
+                    <p class="text-slate-600 font-black text-[9px] uppercase tracking-widest">{item.desc}</p>
+                  </div>
+                </div>
+                <ArrowRight size={14} class="text-slate-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+            ))}
+          </div>
+
+          <div class="pt-6 pb-6 md:pb-0">
+            <p class="text-[9px] md:text-[10px] text-slate-600 font-black uppercase tracking-[0.2em] text-center italic">
+              *Khusus entitas bisnis resmi (B2B)
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Base Animations (Static-Friendly) */
+  .reveal-section .reveal-left,
+  .reveal-section .reveal-right,
+  .reveal-section .reveal-up,
+  .reveal-section .reveal-scale {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal-left { transform: translateX(-30px); }
+  .reveal-right { transform: translateX(30px); }
+  .reveal-up { transform: translateY(30px); }
+  .reveal-scale { transform: scale(0.95); }
+
+  :global(.is-visible) .reveal-left,
+  :global(.is-visible) .reveal-right,
+  :global(.is-visible) .reveal-up {
+    opacity: 1;
+    transform: translate(0);
+  }
+  :global(.is-visible) .reveal-scale {
+    opacity: 1;
+    transform: scale(1);
+  }
+</style>
+
+<script>
+  /**
+   * Intersection Observer untuk memicu animasi CSS.
+   * Tetap terbaca bot karena HTML sudah ada di DOM.
+   */
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-section').forEach(section => {
+    observer.observe(section);
+  });
+</script>

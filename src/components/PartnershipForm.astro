@@ -1,0 +1,200 @@
+---
+/**
+ * PARTNERSHIP FORM - ASTRO VERSION
+ * Strategi: Menggunakan Vanilla JS untuk Form Logic guna menghilangkan React Hydration Overhead.
+ */
+import { 
+  ShieldCheck, 
+  CheckCircle2, 
+  Send, 
+  Lock, 
+  Briefcase, 
+  ChevronDown 
+} from 'lucide-react';
+
+const { id = "kemitraan" } = Astro.props;
+const contactVisualUrl = "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200";
+
+const features = [
+  { title: "Dukungan Arus Kas (TOP)", icon: Briefcase },
+  { title: "Kepastian Harga Kontrak", icon: ShieldCheck }
+];
+---
+
+<section id={id} class="py-10 md:py-24 bg-white font-sans overflow-hidden text-left reveal-container">
+  <div class="max-w-[1800px] mx-auto bg-white md:border-2 md:border-green-100 md:rounded-[4rem] overflow-hidden shadow-2xl shadow-green-900/5">
+    
+    <div class="grid lg:grid-cols-12 items-stretch">
+      
+      <div class="lg:col-span-5 relative min-h-[450px] lg:min-h-full bg-[#052c17] flex flex-col justify-end p-8 md:p-16">
+        <div class="absolute inset-0 z-0">
+          <img 
+            src={contactVisualUrl} 
+            class="w-full h-full object-cover opacity-60" 
+            alt="Produk CV Green Fresh Cipanas"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#052c17] via-[#052c17]/30 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 space-y-8">
+          <div class="space-y-6">
+            <div class="flex items-center gap-3 reveal-left">
+              <div class="p-2 bg-white/10 backdrop-blur-md rounded-lg text-[#bef264] border border-white/20">
+                <Lock size={16} />
+              </div>
+              <span class="text-[10px] font-black uppercase tracking-[0.3em] text-green-400">B2B Partnership Portal</span>
+            </div>
+            
+            <h2 class="text-4xl md:text-5xl lg:text-7xl font-serif italic font-black text-white leading-[0.95] tracking-tighter uppercase reveal-up">
+              Sistem Suplai <br /> 
+              <span class="text-[#bef264] not-italic font-sans">Terintegrasi.</span>
+            </h2>
+            
+            <p class="text-lg text-slate-200 font-medium leading-relaxed max-w-md border-l-4 border-[#bef264]/50 pl-6 reveal-up">
+              Fasilitasi pengadaan sayur Grade A untuk korporasi dengan dukungan legalitas lengkap dan fleksibilitas finansial.
+            </p>
+          </div>
+
+          <div class="grid gap-4 max-w-sm">
+            {features.map((item) => (
+              <div class="flex items-center gap-4 p-5 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 reveal-up">
+                <div class="text-[#bef264]"><item.icon size={18} /></div>
+                <h3 class="text-[11px] font-black uppercase tracking-widest text-white">{item.title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 bg-[#fcfdfc] p-8 md:p-16 lg:p-24 relative">
+        <div class="absolute top-0 right-0 w-80 h-80 bg-green-100 rounded-full blur-[120px] opacity-40 -mr-20 -mt-20 pointer-events-none"></div>
+        
+        <div class="relative z-10 text-left">
+          <div class="mb-12">
+            <h3 class="text-2xl md:text-3xl font-serif italic font-black text-[#052c17] uppercase tracking-tighter leading-none">Inquiry Form</h3>
+            <p class="text-xs text-slate-500 font-bold mt-2 tracking-wide uppercase">Dapatkan Quotation resmi dalam 1x24 Jam</p>
+          </div>
+
+          <form id="partnership-form" class="grid gap-6 md:gap-8">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-3">
+                <label for="company" class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Nama Perusahaan</label>
+                <input 
+                  id="company" name="company"
+                  type="text" required
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-5 py-5 text-sm font-bold text-[#052c17] focus:border-[#15803d] outline-none transition-all shadow-sm" 
+                  placeholder="Contoh: Hotel Grand / Resto ABC"
+                />
+              </div>
+              <div class="space-y-3">
+                <label for="volume" class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Volume per Hari</label>
+                <input 
+                  id="volume" name="volume"
+                  type="text" required
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-5 py-5 text-sm font-bold text-[#052c17] focus:border-[#15803d] outline-none transition-all shadow-sm" 
+                  placeholder="Contoh: 50 - 100 kg"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <label for="termin" class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Termin Pembayaran (TOP)</label>
+              <div class="relative">
+                <select 
+                  id="termin" name="termin"
+                  required
+                  class="w-full bg-white border-2 border-slate-100 rounded-2xl px-5 py-5 text-sm font-bold text-[#052c17] focus:border-[#15803d] outline-none transition-all appearance-none cursor-pointer shadow-sm"
+                >
+                  <option value="">Pilih Skema Termin</option>
+                  <option value="Cash on Delivery">Cash on Delivery (COD)</option>
+                  <option value="TOP 14 Hari">Termin 14 Hari (TOP)</option>
+                  <option value="TOP 30 Hari">Termin 30 Hari (TOP)</option>
+                </select>
+                <ChevronDown class="absolute right-6 top-1/2 -translate-y-1/2 text-[#15803d] pointer-events-none" size={20} />
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <label for="email" class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Procurement / Purchasing</label>
+              <input 
+                id="email" name="email"
+                type="email" required
+                class="w-full bg-white border-2 border-slate-100 rounded-2xl px-5 py-5 text-sm font-bold text-[#052c17] focus:border-[#15803d] outline-none transition-all shadow-sm" 
+                placeholder="purchasing@perusahaan.com"
+              />
+            </div>
+
+            <button 
+              type="submit"
+              class="w-full bg-[#052c17] text-[#bef264] py-6 rounded-2xl font-black uppercase text-[11px] tracking-[0.3em] hover:bg-[#15803d] hover:text-white transition-all shadow-2xl flex items-center justify-center gap-4 group mt-4 cursor-pointer"
+            >
+              KIRIM INQUIRY PENAWARAN
+              <Send size={18} class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </button>
+
+            <div class="flex items-center justify-center gap-3 opacity-60 mt-8">
+              <CheckCircle2 size={14} class="text-[#15803d]" />
+              <p class="text-[9px] font-[1000] uppercase tracking-widest text-slate-500">Data Terenkripsi & Privasi Terjamin</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animasi CSS (Tanpa Framer Motion) */
+  .reveal-container .reveal-up,
+  .reveal-container .reveal-left {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-up { transform: translateY(30px); }
+  .reveal-left { transform: translateX(-30px); }
+
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left {
+    opacity: 1;
+    transform: translate(0);
+  }
+</style>
+
+<script>
+  /**
+   * FORM LOGIC (Vanilla JS)
+   * Menghilangkan dependensi React State agar 100% SEO Friendly.
+   */
+  const form = document.getElementById('partnership-form');
+  
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    
+    const company = formData.get('company');
+    const volume = formData.get('volume');
+    const termin = formData.get('termin');
+    const email = formData.get('email');
+
+    const phoneNumber = "6287780937884";
+    const message = `Halo Sales Green Fresh, saya ingin mengajukan Inquiry Penawaran B2B:
+    
+• Perusahaan: ${company}
+• Estimasi: ${volume}
+• Skema TOP: ${termin || 'Belum dipilih'}
+• Kontak: ${email}
+
+Mohon dapat dikirimkan harga katalog terbaru. Terima kasih.`;
+
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+  });
+
+  // Intersection Observer untuk Animasi
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('is-visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-container').forEach(el => observer.observe(el));
+</script>

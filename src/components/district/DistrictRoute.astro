@@ -1,0 +1,155 @@
+---
+/**
+ * DISTRICT ROUTE - ASTRO VERSION (SEO Optimized)
+ * Strategi: Zero Hydration untuk Kejelasan Logistik di mata Googlebot.
+ */
+import { Navigation, MapPin, ArrowRight, Truck, Clock, PackageCheck, ShieldCheck, Box } from 'lucide-react';
+
+const { district } = Astro.props;
+
+// Penanganan data rute di sisi server (Build Time)
+const routeString = district?.deliveryRoute || "Cipanas - Hub Utama";
+const routes = routeString.split('-');
+
+const getETA = () => {
+  const timeValue = district?.logistics?.time || "";
+  const timeMatch = timeValue.match(/(\d+\.\d+)/);
+  return timeMatch ? `${parseInt(timeMatch[1]) + 1} Jam` : "2-3 Jam";
+};
+---
+
+<section class="py-12 bg-[#f8fafc] font-sans reveal-container">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-100 text-blue-800 rounded-full mb-4 border border-blue-200 reveal-up">
+        <PackageCheck size={14} />
+        <span class="text-xs font-black uppercase tracking-wider">Logistics Tracking</span>
+      </div>
+      <h2 class="text-3xl md:text-5xl font-[1000] text-slate-950 tracking-tight uppercase reveal-up">
+        Alur <span class="text-blue-700">Distribusi.</span>
+      </h2>
+      <p class="mt-2 text-slate-700 font-bold italic reveal-up" style="transition-delay: 0.1s;">
+        Pengiriman terjadwal dari Cipanas ke {district?.name || 'Titik Tujuan'}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <div class="lg:col-span-2 bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm text-left reveal-left">
+        <h4 class="font-black text-slate-900 mb-8 flex items-center gap-2 text-lg uppercase tracking-tighter">
+          <Navigation size={20} class="text-blue-700" /> 
+          Rute Perjalanan
+        </h4>
+        
+        <div class="relative space-y-6">
+          {routes.map((route, index) => (
+            <div class="flex items-start gap-4">
+              <div class="flex flex-col items-center mt-1">
+                <div class={`w-4 h-4 rounded-full border-4 border-white shadow-sm transition-colors duration-500 ${
+                  index === 0 ? 'bg-blue-700' : 
+                  index === routes.length - 1 ? 'bg-green-600' : 
+                  'bg-slate-400'
+                }`}></div>
+                {index !== routes.length - 1 && <div class="w-0.5 h-12 bg-slate-200"></div>}
+              </div>
+              <div class="flex-1 p-4 rounded-2xl bg-slate-50 border border-slate-200 group hover:bg-white hover:shadow-md transition-all">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-[10px] font-black text-slate-600 uppercase tracking-widest">
+                    {index === 0 ? 'Titik Muat' : index === routes.length - 1 ? 'Titik Bongkar' : `Transit ${index}`}
+                  </span>
+                </div>
+                <span class="text-slate-950 font-black text-lg leading-none tracking-tight">
+                  {route.trim()}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="space-y-6 text-left">
+        
+        <div class="p-8 rounded-3xl border bg-slate-950 border-slate-800 shadow-2xl text-white relative overflow-hidden reveal-right">
+          <div class="absolute -right-4 -bottom-4 opacity-10">
+            <Truck size={120} />
+          </div>
+
+          <div class="relative z-10">
+            <div class="flex justify-between items-center mb-10">
+              <div class="px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-tighter bg-blue-600 text-white">
+                GPS Monitoring
+              </div>
+              <div class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></div>
+            </div>
+            
+            <p class="text-slate-400 text-sm font-bold uppercase tracking-widest">Estimasi Tiba</p>
+            <h3 class="text-5xl font-black my-2 tracking-tighter text-white">
+              {getETA()}
+            </h3>
+            
+            <div class="flex items-center gap-2 mt-6 p-3 bg-white/10 rounded-xl border border-white/20">
+              <ShieldCheck size={16} class="text-blue-400" />
+              <span class="text-[10px] font-bold text-slate-100 uppercase">Kondisi muatan: Terjaga Aman</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm group hover:border-blue-400 transition-all reveal-up" style="transition-delay: 0.2s;">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-700 group-hover:bg-blue-700 group-hover:text-white transition-all shadow-sm">
+              <Box size={24} />
+            </div>
+            <div>
+              <h5 class="font-black text-slate-900 text-sm uppercase leading-none mb-1">Kapasitas Muat</h5>
+              <p class="text-xs text-slate-600 font-bold">Pemuatan Optimal (Max 2 Ton)</p>
+            </div>
+          </div>
+          <hr class="my-4 border-slate-100" />
+          <button class="w-full py-4 bg-slate-100 text-slate-800 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-blue-700 hover:text-white transition-all border border-slate-200">
+            Cek Jadwal Rutin
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animasi Native CSS (SEO Friendly) */
+  .reveal-container .reveal-up,
+  .reveal-container .reveal-left,
+  .reveal-container .reveal-right {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal-up { transform: translateY(30px); }
+  .reveal-left { transform: translateX(-20px); }
+  .reveal-right { transform: translateX(20px); }
+
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left,
+  :global(.is-visible) .reveal-right {
+    opacity: 1;
+    transform: translate(0);
+  }
+</style>
+
+<script>
+  /**
+   * Intersection Observer ringan.
+   * Teks rute tetap terbaca bot sejak awal karena HTML statis ada di DOM.
+   */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-container, .reveal-up').forEach(el => observer.observe(el));
+</script>

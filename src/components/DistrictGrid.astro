@@ -1,0 +1,126 @@
+---
+/**
+ * DISTRICT GRID - ASTRO VERSION (SEO Optimized)
+ * Mengganti Client-side State dengan Server-side Pagination.
+ */
+import { MapPin, ChevronRight, Navigation, ArrowLeft, ArrowRight } from 'lucide-react';
+
+const { districts } = Astro.props;
+
+// LOGIC PAGINATION (Server-side)
+const itemsPerPage = 12;
+const url = new URL(Astro.request.url);
+const currentPage = parseInt(url.searchParams.get('page') || '1');
+
+const totalPages = Math.ceil(districts.length / itemsPerPage);
+const startIndex = (currentPage - 1) * itemsPerPage;
+const currentItems = districts.slice(startIndex, startIndex + itemsPerPage);
+
+// Fungsi helper untuk URL pagination
+const getPageLink = (page) => {
+  const newUrl = new URL(Astro.request.url);
+  newUrl.searchParams.set('page', page.toString());
+  return newUrl.pathname + newUrl.search;
+};
+---
+
+<section class="py-10 md:py-20 bg-[#f8fafc] reveal-grid">
+  <div class="max-w-[1800px] mx-auto px-3 md:px-8">
+    
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
+      {currentItems.map((district) => (
+        <a
+          href={`/area/${district.slug}`}
+          class="group relative bg-white rounded-xl md:rounded-[2.5rem] p-4 md:p-6 lg:p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col justify-between"
+        >
+          <Navigation class="absolute -right-2 -bottom-2 text-slate-50 w-16 h-16 md:w-24 lg:w-32 rotate-12 group-hover:text-green-50 transition-colors" />
+
+          <div class="relative z-10 space-y-3 md:space-y-5">
+            <div class="flex justify-between items-start">
+              <div class="p-2 md:p-3 bg-green-50 rounded-lg text-[#15803d] group-hover:bg-[#15803d] group-hover:text-white transition-colors">
+                <MapPin size={16} class="md:w-5 md:h-5 lg:w-6 lg:h-6" />
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-base md:text-xl lg:text-2xl font-black text-[#052c17] truncate group-hover:text-[#15803d] transition-colors leading-tight">
+                {district.name}
+              </h3>
+              <p class="text-slate-400 text-[8px] md:text-[10px] font-bold uppercase tracking-wider mt-1 truncate">
+                Cipanas Route Hub
+              </p>
+            </div>
+
+            <div class="flex items-center gap-1 pt-2 text-[#15803d] font-black text-[9px] md:text-[10px] lg:text-xs uppercase tracking-wider">
+              <span>Detail</span>
+              <ChevronRight size={10} class="group-hover:translate-x-1 transition-transform" />
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 flex flex-col items-center gap-4">
+      <div class="flex items-center gap-2">
+        <a 
+          href={currentPage > 1 ? getPageLink(currentPage - 1) : '#'}
+          class={`p-3 rounded-xl bg-white border border-slate-200 transition-colors ${currentPage === 1 ? 'opacity-30 pointer-events-none' : 'hover:bg-green-50'}`}
+          aria-label="Halaman Sebelumnya"
+        >
+          <ArrowLeft size={16} />
+        </a>
+
+        <div class="flex items-center gap-1">
+          {Array.from({ length: totalPages }).map((_, i) => {
+            const pageNum = i + 1;
+            return (
+              <a
+                href={getPageLink(pageNum)}
+                class={`flex items-center justify-center w-10 h-10 rounded-xl font-black text-xs transition-all ${
+                  currentPage === pageNum 
+                  ? 'bg-[#15803d] text-white shadow-lg' 
+                  : 'bg-white text-[#052c17] border border-slate-200 hover:border-[#15803d]'
+                }`}
+              >
+                {pageNum}
+              </a>
+            )
+          })}
+        </div>
+
+        <a 
+          href={currentPage < totalPages ? getPageLink(currentPage + 1) : '#'}
+          class={`p-3 rounded-xl bg-white border border-slate-200 transition-colors ${currentPage === totalPages ? 'opacity-30 pointer-events-none' : 'hover:bg-green-50'}`}
+          aria-label="Halaman Berikutnya"
+        >
+          <ArrowRight size={16} />
+        </a>
+      </div>
+      
+      <p class="text-[9px] font-black uppercase tracking-widest text-slate-400">
+        Menampilkan {startIndex + 1}-{Math.min(startIndex + itemsPerPage, districts.length)} dari {districts.length} Area
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animasi ringan tanpa Framer Motion */
+  .reveal-grid a {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Delay bertahap untuk efek visual */
+  .reveal-grid a:nth-child(1) { animation-delay: 0.1s; }
+  .reveal-grid a:nth-child(2) { animation-delay: 0.2s; }
+  .reveal-grid a:nth-child(3) { animation-delay: 0.3s; }
+</style>

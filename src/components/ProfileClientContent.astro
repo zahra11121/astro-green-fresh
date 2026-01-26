@@ -1,0 +1,141 @@
+---
+/**
+ * PROFILE CONTENT - ASTRO VERSION
+ * Strategi: Zero Hydration untuk Otoritas Konten & SEO Stabil.
+ */
+import { 
+  Users, MapPin, Building2, CheckCircle2, TrendingUp, Zap 
+} from 'lucide-react';
+
+const stats = [
+  { label: "Mitra Petani", value: "200+", icon: Users },
+  { label: "Kapasitas Harian", value: "10 Ton", icon: TrendingUp },
+  { label: "Jangkauan", value: "Jabodetabek", icon: MapPin },
+  { label: "Ketepatan Waktu", value: "100%", icon: Zap },
+];
+
+const philosophies = [
+  { t: "Lahan Produktif", d: "Akses ke 200 hektar area tanam lokal pilihan di Cipanas." },
+  { t: "Standar Industri", d: "Sistem sortasi Grade-A untuk menjaga standar kualitas klien." },
+  { t: "Logistik Terukur", d: "Distribusi efisien untuk menjaga kesegaran hingga ke pintu gudang." }
+];
+---
+
+<div class="reveal-container">
+  <section class="px-6 lg:px-20 mb-24 text-left pt-12 md:pt-20">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex items-center gap-2 text-[#15803d] reveal-left">
+             <div class="h-[1px] w-8 bg-[#15803d]"></div>
+             <span class="text-[10px] font-black uppercase tracking-[0.3em]">Profil Perusahaan</span>
+          </div>
+          
+          <h1 class="text-4xl lg:text-5xl font-serif italic text-[#052c17] leading-[1.2] tracking-tight uppercase reveal-up">
+            Dedikasi untuk Kesegaran <br /> 
+            <span class="font-medium text-slate-600 block mt-1 italic text-3xl lg:text-4xl">Dari Bumi Cipanas.</span>
+          </h1>
+
+          <p class="text-lg text-slate-700 font-normal max-w-xl leading-relaxed reveal-up" style="transition-delay: 0.1s;">
+            CV. Green Fresh Cipanas hadir sebagai mitra strategis pengadaan hasil bumi yang mengedepankan integritas dan transparansi untuk sektor industri modern.
+          </p>
+
+          <div class="flex flex-wrap gap-3 pt-2 reveal-up" style="transition-delay: 0.2s;">
+             <div class="flex items-center gap-2 px-4 py-2 bg-slate-100 border border-slate-200 rounded-full text-[10px] font-black text-slate-700 uppercase tracking-wider">
+                <Building2 size={12} /> Entitas PKP Resmi
+             </div>
+             <div class="flex items-center gap-2 px-4 py-2 bg-green-100 border border-green-200 rounded-full text-[10px] font-black text-[#15803d] uppercase tracking-wider">
+                <CheckCircle2 size={12} /> Compliance Terjamin
+             </div>
+          </div>
+        </div>
+        
+        <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+          {stats.map((stat, i) => (
+            <div class="p-6 bg-white border border-slate-200 rounded-3xl shadow-sm group hover:border-[#15803d]/40 transition-colors reveal-up" style={`transition-delay: ${0.3 + (i * 0.1)}s;`}>
+              <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-[#15803d] group-hover:text-white transition-all mb-4">
+                <stat.icon size={18} />
+              </div>
+              <div class="text-2xl font-serif italic font-bold text-[#052c17]">{stat.value}</div>
+              <div class="text-[9px] font-black uppercase tracking-widest text-slate-600 mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#052c17] rounded-[2.5rem] lg:rounded-[4rem] mx-4 lg:mx-8 overflow-hidden mb-24 text-left reveal-container">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+          <h2 class="text-3xl lg:text-4xl font-serif italic text-white leading-tight uppercase reveal-left">
+            Kualitas yang <br /> <span class="text-[#bef264]">Dapat Diandalkan.</span>
+          </h2>
+          <div class="space-y-6">
+            {philosophies.map((item, i) => (
+              <div class="flex gap-4 border-l border-white/20 pl-6 py-2 reveal-up" style={`transition-delay: ${0.2 + (i * 0.1)}s;`}>
+                <div>
+                  <h4 class="text-[#bef264] font-black text-xs uppercase tracking-widest mb-1">{item.t}</h4>
+                  <p class="text-white/80 text-sm font-normal leading-relaxed">{item.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-10 rounded-[3rem] reveal-scale">
+          <div class="text-[#bef264] mb-6 inline-block">
+            <CheckCircle2 size={32} stroke-width={2} />
+          </div>
+          <p class="text-xl font-serif italic text-white leading-relaxed">
+            "Visi kami adalah menjadi jembatan terpercaya antara kekayaan alam Cipanas dengan kebutuhan pangan modern yang higienis."
+          </p>
+          <div class="mt-8 pt-6 border-t border-white/20 text-[9px] text-white/70 font-black uppercase tracking-[0.3em]">
+            Green Fresh Cipanas • Est. 2019
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  /* Animasi CSS Murni (SEO Friendly & High Performance) */
+  .reveal-container .reveal-up,
+  .reveal-container .reveal-left,
+  .reveal-container .reveal-scale {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal-up { transform: translateY(30px); }
+  .reveal-left { transform: translateX(-30px); }
+  .reveal-scale { transform: scale(0.98); }
+
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left {
+    opacity: 1;
+    transform: translate(0);
+  }
+  :global(.is-visible) .reveal-scale {
+    opacity: 1;
+    transform: scale(1);
+  }
+</style>
+
+<script>
+  /**
+   * Intersection Observer untuk memicu animasi CSS.
+   * Konten tetap terbaca bot karena HTML statis sudah ada di DOM.
+   */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-container, .reveal-up').forEach(el => observer.observe(el));
+</script>

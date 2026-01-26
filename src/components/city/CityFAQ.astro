@@ -1,0 +1,98 @@
+---
+/**
+ * CITY FAQ - ASTRO VERSION (SEO Optimized)
+ * Strategi: Full HTML Discovery untuk Memperoleh FAQ Rich Snippets di Google.
+ */
+import { HelpCircle, ChevronRight } from 'lucide-react';
+
+const { cityName } = Astro.props;
+
+const faqs = [
+  { 
+    q: `Berapa Minimum Order untuk area ${cityName}?`, 
+    a: 'Kami sangat fleksibel, melayani kebutuhan cafe harian hingga suplai industri dengan kapasitas tonase besar tanpa kendala stok.' 
+  },
+  { 
+    q: 'Apakah harga sudah termasuk ongkir?', 
+    a: `Ya, khusus rute pengiriman rutin wilayah ${cityName}, harga yang tertera di katalog kami sudah termasuk biaya logistik (Free Ongkir).` 
+  },
+  { 
+    q: 'Bagaimana sistem retur barang?', 
+    a: 'Kami menjamin kualitas Grade-A. Jika ditemukan produk yang tidak sesuai standar saat serah terima, Anda dapat melakukan retur instan di tempat.' 
+  },
+];
+---
+
+<div class="space-y-10 font-sans text-left reveal-container">
+  {/* Header dengan Aksen Hijau Berani */}
+  <div class="space-y-4">
+    <div class="flex items-center gap-2 reveal-up">
+      <HelpCircle class="text-[#15803d]" size={16} />
+      <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#15803d]">Common Inquiries</span>
+    </div>
+    <h3 class="text-3xl lg:text-4xl font-serif italic font-black uppercase text-[#052c17] tracking-tight leading-tight reveal-up" style="transition-delay: 0.1s;">
+      Informasi <br/> <span class="text-[#15803d] not-italic font-sans font-bold">Kemitraan.</span>
+    </h3>
+  </div>
+
+  {/* FAQ List dengan Border Hijau Teratur (Sangat disukai Googlebot) */}
+  <div class="border-t-2 border-green-100 divide-y-2 divide-green-50">
+    {faqs.map((faq, index) => (
+      <div class="py-6 group transition-all reveal-up" style={`transition-delay: ${0.2 + (index * 0.1)}s;`}>
+        <div class="flex gap-4 items-start text-left">
+          <div class="mt-1.5 flex-shrink-0">
+            <div class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center group-hover:bg-[#15803d] transition-colors duration-300">
+              <ChevronRight size={12} class="text-[#15803d] group-hover:text-white" />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-sm lg:text-base font-bold text-[#052c17] leading-tight tracking-tight group-hover:text-[#15803d] transition-colors">
+              {faq.q}
+            </h4>
+            <p class="text-xs lg:text-sm text-slate-700 leading-relaxed font-semibold">
+              {faq.a}
+            </p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {/* Penutup yang Padat */}
+  <div class="p-6 bg-[#f7faf7] rounded-2xl border-2 border-green-100 reveal-up" style="transition-delay: 0.5s;">
+    <p class="text-[10px] text-[#14532d] font-black uppercase tracking-widest leading-relaxed">
+      Butuh penyesuaian khusus untuk bisnis Anda? <br/>
+      <span class="text-[#052c17] font-bold">Tim sales kami siap mendiskusikan skema suplai yang paling efisien.</span>
+    </p>
+  </div>
+</div>
+
+<style>
+  /* Animasi CSS Native (SEO Friendly) */
+  .reveal-container .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  :global(.is-visible) .reveal-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  /**
+   * Intersection Observer ringan untuk memicu animasi visual.
+   * Teks FAQ tetap terbaca oleh bot sejak awal perayapan.
+   */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-container, .reveal-up').forEach(el => observer.observe(el));
+</script>

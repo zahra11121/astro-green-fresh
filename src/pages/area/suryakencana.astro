@@ -1,18 +1,27 @@
 ---
-// GENERATED MANUALLY VIA PYTHON - STATIC FILE
+/**
+ * GENERATED FILE - DO NOT EDIT DIRECTLY
+ * Area: Suryakencana
+ * Lokasi File: src/pages/area/suryakencana.astro
+ */
 import MainLayout from '@/layouts/MainLayout.astro';
 import { Star, ChevronRight, MapPin } from 'lucide-react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { PartnershipForm } from '@/components/PartnershipForm';
-import { PriceTable } from '@/components/PriceTable';
+
+// Import Komponen Astro Murni (Fix: Explicit .astro extension)
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import PartnershipForm from '@/components/PartnershipForm.astro';
+import PriceTable from '@/components/PriceTable.astro';
+import DistrictHero from '@/components/district/DistrictHero.astro';
+import DistrictLogistics from '@/components/district/DistrictLogistics.astro';
+import DistrictOverview from '@/components/district/DistrictOverview.astro';
+import DistrictRoute from '@/components/district/DistrictRoute.astro';
+import QualityGuarantee from '@/components/city/QualityGuarantee.astro';
+import LiveStats from '@/components/city/LiveStats.astro';
+
+// Data
 import { vegetableData } from '@/data/data.js'; 
-import { DistrictHero } from '@/components/district/DistrictHero';
-import { DistrictLogistics } from '@/components/district/DistrictLogistics';
-import { DistrictOverview } from '@/components/district/DistrictOverview';
-import { DistrictRoute } from '@/components/district/DistrictRoute';
-import { QualityGuarantee } from '@/components/city/QualityGuarantee';
-import { LiveStats } from '@/components/city/LiveStats';
+import districtsData from '@/data/districts.json';
 
 const district = {
   "slug": "suryakencana",
@@ -30,106 +39,8 @@ const district = {
     "desc": "Chinese cuisine specific products, cultural understanding, community preference knowledge"
   }
 };
-const otherAreas = [
-  {
-    "slug": "rancamaya",
-    "name": "Rancamaya",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Rancamaya - Untuk Restoran Resort, Cafe Golf, Bistro dan Catering Eksklusif",
-    "angle": "Pemasok sayuran untuk kawasan resort dan golf estate premium",
-    "seoContent": "Rancamaya sebagai kawasan resort dan golf estate menawarkan lifestyle sangat eksklusif dengan standar tertinggi. Restoran di resort premium membutuhkan bahan dengan aesthetic perfection dan kualitas konsisten. Cafe dengan view golf course menginginkan produk yang luxurious dan refined. Bistro dengan atmosphere country club memerlukan sayuran dengan presentation impeccable. Catering untuk acara eksklusif membutuhkan service yang flawless dan sophisticated. Kami memenuhi standar sangat tinggi resort living dengan produk terpilih dan service excellence.",
-    "metaDescription": "Supplier sayur Rancamaya untuk resort dan golf estate. Aesthetic perfection, luxurious products, flawless service untuk lifestyle eksklusif.",
-    "clientFocus": "Restoran Resort Premium, Cafe Golf, Bistro Country Club, Catering Eksklusif, Bisnis Very Exclusive",
-    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Rancamaya",
-    "logistics": {
-      "time": "03.00-05.00 (panen), 06.00-08.00 (resort), 10.00-12.00 (golf)",
-      "title": "Premium Resort Service",
-      "desc": "Aesthetic quality standards, luxurious product selection, exclusive resort protocols"
-    }
-  },
-  {
-    "slug": "tanah-sareal",
-    "name": "Tanah Sareal",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Tanah Sareal - Untuk Restoran Lokal, Cafe, Warung dan Catering Komunitas",
-    "angle": "Penyuplai sayuran untuk kawasan dengan karakter urban menengah",
-    "seoContent": "Tanah Sareal memiliki karakter urban menengah dengan komunitas yang stabil dan established. Restoran lokal dengan pelanggan warga sekitar membutuhkan bahan yang terjangkau dengan kualitas konsisten. Cafe dengan atmosphere neighborhood menginginkan produk yang familiar dan dipercaya. Warung yang menjadi bagian kehidupan sehari-hari memerlukan reliability untuk operasional harian. Catering untuk acara komunitas established membutuhkan pemahaman akan dinamika sosial. Kami membangun hubungan jangka panjang berdasarkan kepercayaan dan konsistensi dengan bisnis lokal.",
-    "metaDescription": "Supplier sayur Tanah Sareal untuk komunitas urban menengah. Hubungan jangka panjang, konsistensi untuk bisnis lokal, kepercayaan komunitas.",
-    "clientFocus": "Restoran Lokal, Cafe Neighborhood, Warung, Catering Komunitas, Bisnis Urban Menengah",
-    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tanah Sareal",
-    "logistics": {
-      "time": "03.30-05.30 (panen), 06.30-08.30 (lokal), 13.00-15.00 (komunitas)",
-      "title": "Established Urban Community",
-      "desc": "Long-term local relationships, community trust maintenance, established neighborhood service"
-    }
-  },
-  {
-    "slug": "gadog-ciawi",
-    "name": "Gadog Ciawi",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Gadog Ciawi - Untuk Restoran Wisata, Cafe Puncak, Bistro dan Catering Resort",
-    "angle": "Pemasok sayuran untuk kawasan wisata Puncak dengan karakter khusus",
-    "seoContent": "Gadog Ciawi sebagai bagian dari kawasan wisata Puncak memiliki karakter tourism-driven dengan pola musiman. Restoran wisata dengan pengunjung weekend membutuhkan predictive ordering berdasarkan pola kunjungan. Cafe dengan view Puncak menginginkan bahan yang fresh dan Instagramable. Bistro dengan atmosphere mountain resort memerlukan sayuran yang sesuai dengan cool climate dining. Catering untuk acara di villa dan resort membutuhkan flexibility dengan last-minute changes. Kami memahami tourism patterns Puncak dengan sistem yang responsive terhadap pola musiman.",
-    "metaDescription": "Supplier sayur Gadog Ciawi untuk kawasan wisata Puncak. Understanding tourism patterns, responsive terhadap pola musiman, produk untuk cool climate dining.",
-    "clientFocus": "Restoran Wisata Puncak, Cafe View, Bistro Mountain Resort, Catering Villa, Bisnis Tourism",
-    "deliveryRoute": "Cipanas-Cianjur-Puncak-Gadog Ciawi",
-    "logistics": {
-      "time": "02.30-04.30 (panen), 05.30-07.30 (wisata), 10.00-12.00 (resort)",
-      "title": "Tourism Area Specialization",
-      "desc": "Tourism pattern prediction, seasonal demand management, cool climate product selection"
-    }
-  },
-  {
-    "slug": "babakan-madang",
-    "name": "Babakan Madang",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Babakan Madang - Untuk Restoran Perumahan, Cafe, Depot dan Catering Komunitas",
-    "angle": "Penyedia sayuran untuk kawasan perumahan dengan atmosphere suburban",
-    "seoContent": "Babakan Madang sebagai kawasan perumahan suburban menawarkan atmosphere yang lebih relaxed daripada pusat kota. Restoran di perumahan suburban membutuhkan bahan untuk menu keluarga dengan emphasis pada kenyamanan. Cafe dengan atmosphere suburban menginginkan produk yang sesuai dengan relaxed lifestyle. Depot yang melayani kebutuhan harian memerlukan sistem yang reliable untuk rutinitas keluarga. Catering untuk acara komunitas suburban membutuhkan understanding akan dinamika neighborhood. Kami memahami suburban lifestyle dengan layanan yang menunjang kenyamanan dan rutinitas keluarga.",
-    "metaDescription": "Supplier sayur Babakan Madang untuk suburban lifestyle. Support kenyamanan keluarga, understanding suburban dynamics, reliable untuk rutinitas.",
-    "clientFocus": "Restoran Suburban, Cafe Neighborhood, Depot, Catering Keluarga, Bisnis Suburban Living",
-    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Babakan Madang",
-    "logistics": {
-      "time": "03.00-05.00 (panen), 06.00-08.00 (suburban), 13.00-15.00 (keluarga)",
-      "title": "Suburban Lifestyle Support",
-      "desc": "Family comfort optimization, suburban dynamics understanding, neighborhood routine support"
-    }
-  },
-  {
-    "slug": "cinere-elit",
-    "name": "Cinere Elit",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Cinere Elit - Untuk Restoran Premium, Cafe Eksklusif, Bistro dan Catering Residence",
-    "angle": "Pemasok sayuran untuk kawasan residential sangat eksklusif di Cinere",
-    "seoContent": "Cinere Elit sebagai kawasan residential sangat eksklusif memiliki residents dengan expectations tertinggi. Restoran premium untuk elite community membutuhkan bahan dengan provenance terjamin dan quality guarantee. Cafe eksklusif dengan clientele high-profile menginginkan produk yang rare dan sophisticated. Bistro dengan atmosphere luxurious memerlukan sayuran dengan aesthetic perfection. Catering untuk acara very exclusive membutuhkan service yang impeccable dan highly personalized. Kami melayani kebutuhan sangat eksklusif dengan produk limited edition dan protokol layanan yang sangat ketat.",
-    "metaDescription": "Supplier sayur Cinere Elit untuk residential sangat eksklusif. Limited edition products, impeccable service, protokol sangat ketat untuk elite clientele.",
-    "clientFocus": "Restoran Premium Elite, Cafe Very Exclusive, Bistro Luxurious, Catering High-Profile, Bisnis Ultra-Exclusive",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Cinere Elit",
-    "logistics": {
-      "time": "03.00-05.00 (panen), 06.00-08.00 (ultra-exclusive), 10.00-12.00 (high-profile)",
-      "title": "Ultra-Exclusive Residential Service",
-      "desc": "Limited product sourcing, maximum discretion protocols, elite residential standards"
-    }
-  },
-  {
-    "slug": "margonda-raya",
-    "name": "Margonda Raya",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Margonda Raya - Untuk Restoran Pendidikan, Cafe Mahasiswa, Food Court dan Catering Kampus",
-    "angle": "Penyuplai sayuran untuk koridor pendidikan dengan konsentrasi kampus tinggi",
-    "seoContent": "Margonda Raya sebagai koridor pendidikan memiliki konsentrasi kampus dan mahasiswa yang sangat tinggi. Restoran yang melayani mahasiswa membutuhkan bahan untuk menu yang terjangkau namun tetap bergizi. Cafe dengan atmosphere student life menginginkan produk yang sesuai dengan budget dan selera muda. Food court di lingkungan kampus memerlukan variasi untuk diverse student body. Catering untuk event kampus membutuhkan penyesuaian dengan academic calendar. Kami memahami student lifestyle dengan produk dan layanan yang optimized untuk kebutuhan mahasiswa.",
-    "metaDescription": "Supplier sayur Margonda Raya untuk koridor pendidikan. Optimized untuk student lifestyle, understanding academic calendar, products untuk budget mahasiswa.",
-    "clientFocus": "Restoran Mahasiswa, Cafe Student Life, Food Court, Catering Kampus, Bisnis Pendidikan",
-    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Margonda Raya",
-    "logistics": {
-      "time": "03.30-05.30 (panen), 06.30-08.30 (kampus), 10.00-12.00 (mahasiswa)",
-      "title": "Student Corridor Specialization",
-      "desc": "Student budget optimization, academic schedule adaptation, youth lifestyle understanding"
-    }
-  }
-];
-const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
 
+// Meta & SEO Logic
 const baseUrl = 'https://greenfresh.co.id';
 const currentUrl = `${baseUrl}/area/${district.slug}`;
 const title = `Supplier Sayur ${district.name} - Stok Stabil Harian | CV Green Fresh Cipanas`;
@@ -155,14 +66,24 @@ const schemaData = {
     }
   ]
 };
+
+// Related Areas Logic
+const allDistricts = districtsData.districts;
+const currentIndex = allDistricts.findIndex(d => d.slug === "suryakencana");
+const otherAreas = [];
+for (let i = 1; i <= 6; i++) {
+  const nextIndex = (currentIndex + i) % allDistricts.length;
+  otherAreas.push(allDistricts[nextIndex]);
+}
+const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
 ---
 
 <MainLayout title={title} description={description}>
   <link rel="canonical" href={currentUrl} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
-  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left">
-    <Header client:load />
+  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left reveal-container">
+    <Header />
 
     <main>
       <div class="pt-24 lg:pt-32 bg-white border-b border-slate-50">
@@ -175,7 +96,7 @@ const schemaData = {
         </nav>
       </div>
 
-      <DistrictHero district={district} client:load />
+      <DistrictHero district={district} />
       
       <div class="w-full bg-gradient-to-r from-white to-[#f7faf7] py-6 border-y border-green-50/50">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -192,8 +113,8 @@ const schemaData = {
               </div>
             </div>
             <div class="flex items-center gap-3">
-              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
-              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Layanan Terverifikasi di {district.name}</p>
+              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
+              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Terverifikasi di {district.name}</p>
             </div>
           </div>
         </div>
@@ -203,10 +124,10 @@ const schemaData = {
         <div class="max-w-[1800px] mx-auto px-6">
           <div class="grid lg:grid-cols-12 gap-12 items-start">
             <div class="lg:col-span-6">
-              <DistrictOverview district={district} client:visible />
+              <DistrictOverview district={district} />
             </div>
             <div class="lg:col-span-6">
-              <DistrictLogistics district={district} client:visible />
+              <DistrictLogistics district={district} />
             </div>
           </div>
         </div>
@@ -214,19 +135,19 @@ const schemaData = {
 
       <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="mb-12 text-left">
+          <div class="mb-12 text-left reveal-up">
             <h2 class="text-3xl md:text-4xl font-[1000] text-[#052c17] uppercase tracking-tighter">
               Katalog <span class="text-[#15803d]">Komoditas.</span>
             </h2>
             <p class="text-slate-700 text-sm font-black mt-2 uppercase tracking-widest">Update Harga Khusus Area {district.name}</p>
           </div>
-          <PriceTable data={vegetableData.slice(0, 20)} client:visible />
+          <PriceTable data={vegetableData.slice(0, 20)} />
         </div>
       </section>
 
-      <QualityGuarantee client:visible />
-      <LiveStats client:visible />
-      <DistrictRoute district={district} client:visible />
+      <QualityGuarantee />
+      <LiveStats />
+      <DistrictRoute district={district} />
       
       <section class="py-16 bg-white border-t border-slate-100 text-left">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8">
@@ -236,8 +157,8 @@ const schemaData = {
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {otherAreas.map((area, index) => (
               <a
-                href={`/area/${area.slug}`}
-                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm hover:shadow-md text-center"
+                href={`/area/${area.slug}` }
+                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm text-center"
               >
                 <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">
                   {labels[index % labels.length]}
@@ -253,7 +174,7 @@ const schemaData = {
 
       <section id="partnership" class="py-20 md:py-32 bg-[#fcfdfc] border-t border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="text-left mb-16">
+          <div class="text-left mb-16 reveal-up">
             <h2 class="text-3xl md:text-5xl font-[1000] text-[#052c17] uppercase tracking-tighter leading-none">
               Hubungi <span class="text-[#15803d]">Sales.</span>
             </h2>
@@ -261,11 +182,43 @@ const schemaData = {
               Konsultasi Pengadaan Wilayah {district.name}
             </p>
           </div>
-          <PartnershipForm client:visible />
+          <PartnershipForm />
         </div>
       </section>
     </main>
 
-    <Footer client:visible />
+    <Footer />
   </div>
 </MainLayout>
+
+<style>
+  .reveal-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+  :global(.is-visible) .reveal-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+</style>
+
+<script>
+  document.documentElement.classList.add('js-enabled');
+  const setupObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+  };
+  setupObserver();
+  document.addEventListener('astro:after-swap', setupObserver);
+</script>

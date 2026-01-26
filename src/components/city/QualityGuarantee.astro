@@ -1,0 +1,148 @@
+---
+/**
+ * QUALITY GUARANTEE - ASTRO VERSION (SEO Optimized)
+ * Strategi: Menggunakan CSS Marquee murni untuk menghilangkan JS Hydration.
+ */
+import { RotateCcw, CheckSquare, BadgeCheck, Zap, ShieldCheck } from 'lucide-react';
+
+const items = [
+  { 
+    id: 'return',
+    icon: RotateCcw, 
+    title: "INSTANT RETURN", 
+    desc: "Kebijakan tolak & tukar barang langsung di lokasi jika kualitas tidak sesuai standar." 
+  },
+  { 
+    id: 'qc',
+    icon: CheckSquare, 
+    title: "DAILY QC", 
+    desc: "Sortasi manual setiap subuh menjamin grade-A sebelum proses loading." 
+  },
+  { 
+    id: 'price',
+    icon: BadgeCheck, 
+    title: "PRICE GUARD", 
+    desc: "Stabilitas harga kontrak hingga 30 hari untuk efisiensi budget operasional." 
+  },
+  { 
+    id: 'logistics',
+    icon: Zap, 
+    title: "EXPRESS LOGISTICS", 
+    desc: "Armada berpendingin yang menjamin rantai dingin tidak terputus hingga dapur Anda." 
+  }
+];
+
+// Duplikasi item untuk slider yang seamless secara statis
+const duplicatedItems = [...items, ...items, ...items];
+---
+
+<section class="py-20 bg-[#f8fafc] overflow-hidden font-sans reveal-container">
+  <div class="max-w-7xl mx-auto px-5 mb-12 text-center lg:text-left">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+      <div class="space-y-3 text-left">
+        <div class="flex items-center gap-2 justify-start reveal-left">
+          <span class="w-8 h-[2px] bg-[#15803d]"></span>
+          <span class="text-[10px] font-black uppercase tracking-[0.4em] text-[#15803d]">Our Commitment</span>
+        </div>
+        <h2 class="text-4xl lg:text-6xl font-[1000] text-[#052c17] tracking-tighter leading-none uppercase reveal-up">
+          JAMINAN <span class="text-[#64748b]">KUALITAS.</span>
+        </h2>
+      </div>
+      <p class="text-[#334155] text-sm max-w-sm font-bold leading-relaxed italic text-left border-l-4 border-green-500/20 pl-4 reveal-right">
+        "Nol risiko operasional bagi mitra B2B kami melalui standarisasi ketat setiap hari."
+      </p>
+    </div>
+  </div>
+
+  <div class="relative flex overflow-hidden py-10">
+    <div class="flex gap-6 animate-marquee hover:pause-marquee">
+      {duplicatedItems.map((item) => (
+        <div class="card-guarantee w-[280px] lg:w-[400px] flex-shrink-0 p-8 rounded-[2rem] bg-white border border-slate-200 shadow-xl shadow-slate-200/40 transition-all duration-500 text-left hover:border-[#15803d] hover:shadow-green-900/10 hover:scale-[1.02] group">
+          <div class="flex items-start gap-5 lg:gap-6">
+            <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-2xl flex items-center justify-center bg-green-50 text-[#15803d] transition-all duration-500 shadow-inner group-hover:bg-[#15803d] group-hover:text-white group-hover:rotate-6">
+              <item.icon size={22} />
+            </div>
+
+            <div class="flex-1 space-y-3">
+              <p class="font-black text-[13px] lg:text-sm tracking-widest uppercase text-[#052c17] group-hover:text-[#15803d] transition-colors">
+                {item.title}
+              </p>
+              
+              <div class="h-1 w-8 bg-green-100 rounded-full group-hover:w-full group-hover:bg-[#15803d] transition-all duration-500"></div>
+              
+              <p class="text-[12px] leading-relaxed font-semibold text-slate-600 group-hover:text-slate-800 transition-colors">
+                {item.desc}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="absolute inset-y-0 left-0 w-16 lg:w-32 bg-gradient-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute inset-y-0 right-0 w-16 lg:w-32 bg-gradient-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-5 mt-6 lg:mt-12 flex flex-col md:flex-row justify-between items-center gap-6 reveal-up">
+    <div class="flex items-center gap-4 bg-white px-6 py-3 rounded-full border border-slate-200 shadow-sm">
+      <ShieldCheck size={18} class="text-[#15803d]" />
+      <p class="text-[10px] font-black text-[#052c17] uppercase tracking-widest">
+        Certified B2B Supplier Standard
+      </p>
+    </div>
+    
+    <div class="text-[9px] font-black text-[#64748b] uppercase tracking-[0.4em]">
+      Automated QC System • v.2.5
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Marquee Animation Murni CSS */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333%); }
+  }
+
+  .animate-marquee {
+    display: flex;
+    animation: marquee 40s linear infinite;
+    width: fit-content;
+  }
+
+  .hover\:pause-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* Reveal Animations */
+  .reveal-container .reveal-up,
+  .reveal-container .reveal-left,
+  .reveal-container .reveal-right {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal-up { transform: translateY(20px); }
+  .reveal-left { transform: translateX(-20px); }
+  .reveal-right { transform: translateX(20px); }
+
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left,
+  :global(.is-visible) .reveal-right {
+    opacity: 1;
+    transform: translate(0);
+  }
+</style>
+
+<script>
+  // Observer ringan untuk trigger animasi visual
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-container').forEach(el => observer.observe(el));
+</script>

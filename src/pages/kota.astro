@@ -1,45 +1,51 @@
 ---
-// --- SERVER SIDE (Build Time) ---
+/**
+ * CITY INDEX PAGE - PURE ASTRO VERSION (SEO Optimized)
+ * Perbaikan: Menghilangkan risiko "blank putih" dengan CSS Fallback & Robust Observer.
+ */
 import MainLayout from '../layouts/MainLayout.astro';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
 import { ChevronRight, Star, MapPin, Truck, Search } from 'lucide-react';
 import { jabodetabekCities } from '@/data/cities';
 
-// Meta Data
-const title = 'Network Distribusi Jabodetabek - Green Fresh Supplier';
-const description = 'Jaringan distribusi sayur segar harian Green Fresh di 27 wilayah strategis Jabodetabek dengan sistem pengiriman terintegrasi.';
-const canonicalURL = "https://greenfresh.co.id/kota";
+const title = 'Network Distribusi Sayur Jabodetabek - Green Fresh Supplier';
+const description = 'Jaringan distribusi sayur segar harian Green Fresh di seluruh wilayah Jabodetabek. Sistem pengiriman terjadwal untuk Hotel, Restoran, dan Catering.';
+
+const origin = Astro.site || Astro.url.origin;
+const canonicalURL = new URL('/kota', origin);
+
+const stats = [
+  { label: "Active Nodes", value: jabodetabekCities.length },
+  { label: "Daily Capacity", value: "12.5 T" },
+  { label: "Fleet Units", value: "48+" },
+  { label: "SLA Success", value: "99.9%" }
+];
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={canonicalURL} slot="head" />
+  <link rel="canonical" href={canonicalURL.href} slot="head" />
 
-  <div class="bg-[#fcfdfc] text-[#052c17] font-sans antialiased w-full">
-    <Header client:load />
+  <div class="bg-[#fcfdfc] text-[#052c17] font-sans antialiased w-full reveal-container">
+    <Header />
     
     <main class="pt-20">
       <section class="py-16 md:py-28 bg-white border-b border-slate-100">
         <div class="max-w-[1400px] mx-auto px-4 text-center">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-green-50 rounded-full mb-6 border border-green-100">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-green-50 rounded-full mb-6 border border-green-100 reveal-up">
              <Truck size={14} class="text-green-700" />
              <span class="text-[11px] font-black text-green-700 uppercase tracking-widest">Integrated Logistics Network</span>
           </div>
-          <h1 class="text-4xl md:text-7xl font-[1000] text-[#052c17] tracking-tight leading-[0.9] mb-8">
+          <h1 class="text-4xl md:text-7xl font-[1000] text-[#052c17] tracking-tight leading-[0.9] mb-8 reveal-up">
             Jaringan Suplai <br/> <span class="text-green-600">Terluas.</span>
           </h1>
-          <p class="text-slate-500 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed mb-12">
-            Kami melayani pengiriman sayuran Grade-A ke {jabodetabekCities.length} titik distribusi utama di seluruh Jabodetabek setiap harinya.
+          <p class="text-slate-500 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed mb-12 reveal-up">
+            Kami melayani pengiriman sayuran Grade-A ke {jabodetabekCities.length} titik distribusi utama di seluruh Jabodetabek setiap harinya langsung dari Cipanas.
           </p>
           
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {[
-              { label: "Active Nodes", value: jabodetabekCities.length },
-              { label: "Daily Capacity", value: "12.5 T" },
-              { label: "Fleet Units", value: "48+" },
-              { label: "SLA Success", value: "99.9%" }
-            ].map((stat) => (
-              <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm">
+            {stats.map((stat, i) => (
+              <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm reveal-up" style={`transition-delay: ${i * 0.1}s;`}>
                 <p class="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest mb-1">{stat.label}</p>
                 <p class="text-xl md:text-3xl font-black text-[#052c17]">{stat.value}</p>
               </div>
@@ -53,6 +59,7 @@ const canonicalURL = "https://greenfresh.co.id/kota";
           <div class="flex-1 w-full relative">
             <Search class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
             <input 
+              id="city-search"
               type="text" 
               placeholder="Cari wilayah layanan (Contoh: Bintaro, Jakarta Selatan...)" 
               class="w-full pl-12 pr-4 py-3 bg-slate-50 rounded-2xl border-none text-sm focus:ring-2 focus:ring-green-500 transition-all"
@@ -67,17 +74,17 @@ const canonicalURL = "https://greenfresh.co.id/kota";
       <section class="py-16 md:py-24">
         <div class="max-w-[1400px] mx-auto px-4">
           <div class="flex items-center justify-between mb-12">
-            <div>
+            <div class="reveal-left">
               <h2 class="text-2xl font-black tracking-tight text-[#052c17]">Semua Wilayah</h2>
-              <p class="text-sm text-slate-400 font-medium">Klik pada wilayah untuk melihat detail suplai dan jadwal pengiriman.</p>
+              <p class="text-sm text-slate-400 font-medium">Pilih wilayah untuk detail rute dan jadwal pengiriman.</p>
             </div>
-            <div class="hidden md:flex items-center gap-2">
-              <div class="w-3 h-3 rounded-full bg-green-500" />
-              <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Sistem Online</span>
+            <div class="hidden md:flex items-center gap-2 reveal-right">
+              <div class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Sistem Distribusi Aktif</span>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div id="city-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {jabodetabekCities.map((city, index) => {
               const isJakarta = city.name.toLowerCase().includes('jakarta');
               const zoneColor = isJakarta ? 'bg-green-600' : 'bg-emerald-500';
@@ -85,7 +92,8 @@ const canonicalURL = "https://greenfresh.co.id/kota";
               return (
                 <a 
                   href={`/kota/${city.slug}`}
-                  class="group bg-white rounded-3xl border border-slate-200 p-5 md:p-7 hover:border-green-500 hover:shadow-xl hover:shadow-green-900/5 transition-all duration-300 flex flex-col justify-between min-h-[220px] relative overflow-hidden"
+                  class="city-card group bg-white rounded-3xl border border-slate-200 p-5 md:p-7 hover:border-green-500 hover:shadow-xl hover:shadow-green-900/5 transition-all duration-300 flex flex-col justify-between min-h-[220px] relative overflow-hidden reveal-up"
+                  data-name={city.name.toLowerCase()}
                 >
                   <div class="absolute -top-10 -right-10 w-32 h-32 bg-slate-50 rounded-full group-hover:bg-green-50 transition-colors duration-500" />
                   
@@ -104,19 +112,19 @@ const canonicalURL = "https://greenfresh.co.id/kota";
                     </h3>
                     
                     <div class="flex items-center gap-2">
-                      <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                      <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
                       <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">
-                        Distribution Active
+                        Ready to Supply
                       </p>
                     </div>
                   </div>
 
                   <div class="relative z-10 mt-6 pt-5 border-t border-slate-100 flex items-center justify-between">
                     <span class="text-[10px] font-black text-green-700 uppercase tracking-widest flex items-center gap-1">
-                      Buka Katalog <ChevronRight size={14} class="group-hover:translate-x-1 transition-transform" />
+                      Buka Detail <ChevronRight size={14} class="group-hover:translate-x-1 transition-transform" />
                     </span>
                     <div class="flex -space-x-2">
-                      {[1, 2, 3].map((i) => (
+                      {[1, 2, 3].map(() => (
                         <div class="w-6 h-6 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center">
                            <Star size={8} class="text-slate-400" />
                         </div>
@@ -130,7 +138,7 @@ const canonicalURL = "https://greenfresh.co.id/kota";
         </div>
       </section>
 
-      <section class="py-12 bg-white border-y border-slate-100 mb-20">
+      <section class="py-12 bg-white border-y border-slate-100 mb-20 reveal-up">
          <div class="max-w-[1400px] mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-40 grayscale">
             <h4 class="font-black text-xl italic tracking-tighter">HORECA READY</h4>
             <h4 class="font-black text-xl italic tracking-tighter">FARM DIRECT</h4>
@@ -140,6 +148,78 @@ const canonicalURL = "https://greenfresh.co.id/kota";
       </section>
     </main>
 
-    <Footer client:visible />
+    <Footer />
   </div>
 </MainLayout>
+
+<style>
+  /* 1. Kondisi awal: Sembunyikan hanya jika JS aktif */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up,
+    :global(.js-enabled) .reveal-left,
+    :global(.js-enabled) .reveal-right {
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    :global(.js-enabled) .reveal-up { transform: translateY(30px); }
+    :global(.js-enabled) .reveal-left { transform: translateX(-30px); }
+    :global(.js-enabled) .reveal-right { transform: translateX(30px); }
+  }
+
+  /* 2. Kondisi aktif (is-visible ditambahkan via JS) */
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left,
+  :global(.is-visible) .reveal-right,
+  :global(.is-visible).reveal-up,
+  :global(.is-visible).reveal-left,
+  :global(.is-visible).reveal-right {
+    opacity: 1 !important;
+    transform: translate(0) !important;
+  }
+</style>
+
+<script>
+  // Aktifkan mode JS segera setelah script dimuat
+  document.documentElement.classList.add('js-enabled');
+
+  const initAnimations = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { 
+      threshold: 0.05,
+      rootMargin: '0px 0px -50px 0px' 
+    });
+
+    document.querySelectorAll('.reveal-container, .reveal-up, .reveal-left, .reveal-right').forEach(el => {
+      observer.observe(el);
+    });
+  };
+
+  // Logika Pencarian
+  const initSearch = () => {
+    const searchInput = document.getElementById('city-search') as HTMLInputElement;
+    const cityCards = document.querySelectorAll('.city-card');
+
+    searchInput?.addEventListener('input', (e) => {
+      const term = (e.target as HTMLInputElement).value.toLowerCase();
+      cityCards.forEach(card => {
+        const name = card.getAttribute('data-name');
+        (card as HTMLElement).style.display = name?.includes(term) ? 'flex' : 'none';
+      });
+    });
+  };
+
+  // Eksekusi
+  initAnimations();
+  initSearch();
+
+  // Support untuk Astro View Transitions
+  document.addEventListener('astro:after-swap', () => {
+    initAnimations();
+    initSearch();
+  });
+</script>

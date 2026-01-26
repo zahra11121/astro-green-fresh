@@ -1,38 +1,42 @@
 ---
+/**
+ * 404 ERROR PAGE - PURE ASTRO VERSION
+ * Strategi: Zero Hydration untuk Kecepatan Response & SEO Resilience.
+ */
 import MainLayout from '@/layouts/MainLayout.astro';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
 import { Home } from 'lucide-react';
 
-const title = "404 - Halaman Tidak Ditemukan";
-const description = "Halaman yang Anda cari tidak tersedia.";
+const title = "404 - Halaman Tidak Ditemukan | Green Fresh Cipanas";
+const description = "Maaf, halaman yang Anda cari tidak tersedia di jaringan distribusi Green Fresh Cipanas.";
 ---
 
 <MainLayout title={title} description={description}>
-  <div class="bg-white text-[#052c17] font-sans antialiased text-left">
-    <Header client:load />
+  <div class="bg-white text-[#052c17] font-sans antialiased text-left reveal-container">
+    <Header />
 
     <main class="min-h-[70vh] flex items-center pt-20">
       <div class="max-w-[1800px] mx-auto px-6 w-full">
         <div class="max-w-3xl space-y-6">
           
-          <div class="text-[#15803d] text-[10px] font-black uppercase tracking-[0.4em]">
+          <div class="text-[#15803d] text-[10px] font-black uppercase tracking-[0.4em] reveal-up">
             Error 404
           </div>
 
-          <h1 class="text-6xl md:text-8xl font-black text-[#052c17] leading-none tracking-tighter uppercase">
+          <h1 class="text-6xl md:text-8xl font-black text-[#052c17] leading-none tracking-tighter uppercase reveal-up" style="transition-delay: 0.1s;">
             Halaman <br />
             <span class="text-slate-200 italic">Kosong.</span>
           </h1>
 
-          <p class="text-lg text-slate-500 font-medium max-w-md">
-            Tautan salah atau halaman sudah tidak aktif. Silakan kembali ke beranda untuk melanjutkan.
+          <p class="text-lg text-slate-500 font-medium max-w-md reveal-up" style="transition-delay: 0.2s;">
+            Tautan mungkin salah atau halaman sudah tidak aktif di sistem kami. Silakan kembali ke beranda untuk melanjutkan penelusuran katalog.
           </p>
 
-          <div class="pt-6">
+          <div class="pt-6 reveal-up" style="transition-delay: 0.3s;">
             <a 
               href="/" 
-              class="inline-flex items-center justify-center gap-3 bg-[#052c17] text-[#bef264] px-12 py-5 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-[#15803d] transition-all shadow-xl shadow-green-900/10"
+              class="inline-flex items-center justify-center gap-3 bg-[#052c17] text-[#bef264] px-12 py-5 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-[#15803d] hover:text-white transition-all shadow-xl shadow-green-900/10 active:scale-95"
             >
               <Home size={18} />
               Kembali ke Beranda
@@ -43,6 +47,36 @@ const description = "Halaman yang Anda cari tidak tersedia.";
       </div>
     </main>
 
-    <Footer client:visible />
+    <Footer />
   </div>
 </MainLayout>
+
+<style>
+  /* Animasi SEO-Friendly tanpa JavaScript Runtime */
+  .reveal-container .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  :global(.is-visible) .reveal-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  /**
+   * Intersection Observer ringan untuk memicu animasi visual.
+   * Konten statis tetap tersedia di DOM sejak awal.
+   */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal-container, .reveal-up').forEach(el => observer.observe(el));
+</script>

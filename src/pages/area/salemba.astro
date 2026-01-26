@@ -1,18 +1,27 @@
 ---
-// GENERATED MANUALLY VIA PYTHON - STATIC FILE
+/**
+ * GENERATED FILE - DO NOT EDIT DIRECTLY
+ * Area: Salemba
+ * Lokasi File: src/pages/area/salemba.astro
+ */
 import MainLayout from '@/layouts/MainLayout.astro';
 import { Star, ChevronRight, MapPin } from 'lucide-react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { PartnershipForm } from '@/components/PartnershipForm';
-import { PriceTable } from '@/components/PriceTable';
+
+// Import Komponen Astro Murni (Fix: Explicit .astro extension)
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import PartnershipForm from '@/components/PartnershipForm.astro';
+import PriceTable from '@/components/PriceTable.astro';
+import DistrictHero from '@/components/district/DistrictHero.astro';
+import DistrictLogistics from '@/components/district/DistrictLogistics.astro';
+import DistrictOverview from '@/components/district/DistrictOverview.astro';
+import DistrictRoute from '@/components/district/DistrictRoute.astro';
+import QualityGuarantee from '@/components/city/QualityGuarantee.astro';
+import LiveStats from '@/components/city/LiveStats.astro';
+
+// Data
 import { vegetableData } from '@/data/data.js'; 
-import { DistrictHero } from '@/components/district/DistrictHero';
-import { DistrictLogistics } from '@/components/district/DistrictLogistics';
-import { DistrictOverview } from '@/components/district/DistrictOverview';
-import { DistrictRoute } from '@/components/district/DistrictRoute';
-import { QualityGuarantee } from '@/components/city/QualityGuarantee';
-import { LiveStats } from '@/components/city/LiveStats';
+import districtsData from '@/data/districts.json';
 
 const district = {
   "slug": "salemba",
@@ -30,106 +39,8 @@ const district = {
     "desc": "Academic calendar integration, student budget optimization, semester-based planning"
   }
 };
-const otherAreas = [
-  {
-    "slug": "tanah-abang-hotel",
-    "name": "Tanah Abang (Area Hotel)",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Tanah Abang Hotel - Untuk Hotel Bintang, Restoran Hotel, Cafe Lobby dan Room Service",
-    "angle": "Penyuplai sayuran untuk konsentrasi hotel di sekitar Tanah Abang",
-    "seoContent": "Area hotel di Tanah Abang memiliki kebutuhan hospitality yang sangat spesifik. Hotel bintang dengan business travelers membutuhkan breakfast service yang sangat early. Restoran hotel yang melayani tamu menginginkan bahan dengan presentation perfect. Cafe di lobby hotel memerlukan supply yang tidak mengganggu tamu. Room service membutuhkan bahan yang siap dengan cepat untuk order spontan. Kami memiliki protocol khusus untuk hotel service dengan emphasis pada discretion dan ketepatan waktu.",
-    "metaDescription": "Supplier sayur Tanah Abang untuk area hotel. Protocol khusus hospitality, early breakfast support, discreet hotel service.",
-    "clientFocus": "Hotel Bintang, Restoran Hotel, Cafe Lobby, Room Service, Bisnis Hospitality",
-    "deliveryRoute": "Cipanas-Puncak-Jagorawi-Tanah Abang Hotel Area",
-    "logistics": {
-      "time": "01.30-03.30 (panen), 04.00-05.30 (hotel breakfast), 08.00-09.30 (hotel ops)",
-      "title": "Hotel Hospitality Protocol",
-      "desc": "Discreet hotel delivery, early morning breakfast support, room service responsiveness"
-    }
-  },
-  {
-    "slug": "pik-1",
-    "name": "PIK 1 (Pantai Indah Kapuk)",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur PIK 1 - Untuk Restoran Waterfront, Cafe Eksklusif, Seafood Restaurant dan Catering Resort",
-    "angle": "Pemasok sayuran untuk kawasan waterfront premium dengan konsep dining experience",
-    "seoContent": "PIK 1 sebagai kawasan waterfront premium membutuhkan supplier yang memahami konsep dining experience. Restoran dengan view waterfront membutuhkan bahan yang mendukung atmosphere special. Cafe eksklusif di tepi pantai menginginkan produk premium untuk sophisticated customers. Seafood restaurant memerlukan sayuran segar sebagai complement untuk seafood. Catering untuk resort dan clubhouse membutuhkan bahan yang sesuai dengan luxury lifestyle. Kami menyediakan produk yang mendukung dining experience premium di lingkungan waterfront.",
-    "metaDescription": "Supplier sayur PIK 1 untuk kawasan waterfront premium. Dining experience support, luxury lifestyle products, waterfront atmosphere.",
-    "clientFocus": "Restoran Waterfront, Cafe Eksklusif, Seafood Restaurant, Catering Resort, Bisnis Premium",
-    "deliveryRoute": "Cipanas-Puncak-JORR-PIK 1",
-    "logistics": {
-      "time": "02.30-04.30 (panen), 05.30-07.30 (waterfront), 09.00-11.00 (resort)",
-      "title": "Waterfront Premium Service",
-      "desc": "Lifestyle dining support, waterfront location optimization, luxury experience enhancement"
-    }
-  },
-  {
-    "slug": "pik-2",
-    "name": "PIK 2 (Kawasan Baru)",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur PIK 2 - Untuk Restoran Development, Cafe Baru, Food Hall dan Catering Proyek",
-    "angle": "Penyedia sayuran untuk kawasan development baru yang sedang berkembang",
-    "seoContent": "PIK 2 sebagai kawasan development baru membutuhkan supplier yang bisa berkembang bersama area. Restoran di development baru membutuhkan partner yang memahami fase awal bisnis. Cafe yang baru buka menginginkan guidance dalam supply chain setup. Food hall di kawasan baru memerlukan sistem yang scalable seiring perkembangan. Catering untuk proyek development membutuhkan kemampuan beradaptasi dengan perubahan. Kami menjadi growth partner untuk bisnis di kawasan baru dengan layanan yang berkembang sesuai kebutuhan.",
-    "metaDescription": "Supplier sayur PIK 2 untuk kawasan development baru. Growth partnership, scalable systems, support untuk bisnis baru.",
-    "clientFocus": "Restoran Development, Cafe Baru, Food Hall, Catering Proyek, Bisnis Startup Kawasan",
-    "deliveryRoute": "Cipanas-Puncak-JORR-PIK 2",
-    "logistics": {
-      "time": "03.00-05.00 (panen), 06.00-08.00 (development), 10.00-12.00 (proyek)",
-      "title": "Development Area Partnership",
-      "desc": "Growth-oriented partnership, scalable infrastructure, new business setup support"
-    }
-  },
-  {
-    "slug": "kelapa-gading",
-    "name": "Kelapa Gading (Bulevar)",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Kelapa Gading - Untuk Restoran Mall, Cafe Boulevard, Food Court dan Catering Residential",
-    "angle": "Pemasok sayuran untuk kawasan lifestyle terintegrasi yang komprehensif",
-    "seoContent": "Kelapa Gading sebagai kawasan lifestyle terintegrasi memiliki kebutuhan yang sangat komprehensif. Restoran di dalam mall membutuhkan sistem yang terintegrasi dengan mall operations. Cafe di sepanjang boulevard menginginkan bahan yang sesuai dengan lifestyle image. Food court dengan berbagai konsep memerlukan variasi produk yang luas. Catering untuk residential cluster membutuhkan layanan yang personalized. Kami memiliki pengalaman melayani kawasan terintegrasi dengan sistem yang menghubungkan berbagai segment secara seamless.",
-    "metaDescription": "Supplier sayur Kelapa Gading untuk kawasan lifestyle terintegrasi. Sistem komprehensif, mall integration, lifestyle product range.",
-    "clientFocus": "Restoran Mall, Cafe Boulevard, Food Court, Catering Residential, Bisnis Lifestyle",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Kelapa Gading",
-    "logistics": {
-      "time": "02.30-04.30 (panen), 05.30-07.30 (mall), 09.00-11.00 (residential)",
-      "title": "Integrated Lifestyle Service",
-      "desc": "Mall operations integration, lifestyle product curation, comprehensive area coverage"
-    }
-  },
-  {
-    "slug": "pluit",
-    "name": "Pluit",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Pluit - Untuk Restoran Perumahan, Cafe Pantai, Seafood Restaurant dan Catering Apartemen",
-    "angle": "Penyuplai sayuran untuk kawasan coastal residential dengan karakter khusus",
-    "seoContent": "Pluit sebagai kawasan coastal residential memiliki karakter yang unik dengan pengaruh maritime. Restoran di perumahan tepi pantai membutuhkan bahan yang tahan terhadap udara laut. Cafe dengan view pantai menginginkan produk fresh untuk coastal dining experience. Seafood restaurant memerlukan sayuran sebagai complement perfect untuk hidangan laut. Catering untuk apartemen tinggi dengan view laut membutuhkan bahan dengan aesthetic value tinggi. Kami memahami dinamika coastal living dan menyediakan produk yang sesuai dengan lingkungan pantai.",
-    "metaDescription": "Supplier sayur Pluit untuk kawasan coastal residential. Coastal living understanding, seafood complement products, beach atmosphere support.",
-    "clientFocus": "Restoran Perumahan Pantai, Cafe Pantai, Seafood Restaurant, Catering Apartemen, Bisnis Coastal",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Pluit",
-    "logistics": {
-      "time": "03.00-05.00 (panen), 06.00-08.00 (coastal), 10.00-12.00 (apartemen)",
-      "title": "Coastal Area Specialization",
-      "desc": "Coastal environment adaptation, seafood pairing expertise, beach lifestyle understanding"
-    }
-  },
-  {
-    "slug": "muara-karang",
-    "name": "Muara Karang",
-    "origin": "CV Green Fresh Cipanas",
-    "title": "Supplier Sayur Muara Karang - Untuk Restoran Keluarga, Cafe, Depot dan Catering Komunitas",
-    "angle": "Pemasok sayuran untuk kawasan residential established dengan komunitas kuat",
-    "seoContent": "Muara Karang sebagai kawasan residential established memiliki komunitas yang solid dan loyal. Restoran keluarga yang telah puluhan tahun beroperasi membutuhkan konsistensi yang terjaga. Cafe dengan pelanggan warga sekitar menginginkan hubungan yang personal. Depot yang melayani kebutuhan harian warga memerlukan reliability yang tinggi. Catering untuk acara komunitas membutuhkan pemahaman akan tradisi lokal. Kami menjadi bagian dari komunitas dengan membangun hubungan jangka panjang dan memahami dinamika sosial kawasan.",
-    "metaDescription": "Supplier sayur Muara Karang untuk komunitas residential established. Hubungan jangka panjang, pemahaman komunitas, konsistensi untuk bisnis keluarga.",
-    "clientFocus": "Restoran Keluarga, Cafe Komunitas, Depot, Catering Warga, Bisnis Established",
-    "deliveryRoute": "Cipanas-Puncak-JORR-Muara Karang",
-    "logistics": {
-      "time": "03.30-05.30 (panen), 06.30-08.30 (komunitas), 13.00-15.00 (warga)",
-      "title": "Established Community Integration",
-      "desc": "Long-term community relationships, local tradition understanding, established business partnership"
-    }
-  }
-];
-const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
 
+// Meta & SEO Logic
 const baseUrl = 'https://greenfresh.co.id';
 const currentUrl = `${baseUrl}/area/${district.slug}`;
 const title = `Supplier Sayur ${district.name} - Stok Stabil Harian | CV Green Fresh Cipanas`;
@@ -155,14 +66,24 @@ const schemaData = {
     }
   ]
 };
+
+// Related Areas Logic
+const allDistricts = districtsData.districts;
+const currentIndex = allDistricts.findIndex(d => d.slug === "salemba");
+const otherAreas = [];
+for (let i = 1; i <= 6; i++) {
+  const nextIndex = (currentIndex + i) % allDistricts.length;
+  otherAreas.push(allDistricts[nextIndex]);
+}
+const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
 ---
 
 <MainLayout title={title} description={description}>
   <link rel="canonical" href={currentUrl} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
-  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left">
-    <Header client:load />
+  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left reveal-container">
+    <Header />
 
     <main>
       <div class="pt-24 lg:pt-32 bg-white border-b border-slate-50">
@@ -175,7 +96,7 @@ const schemaData = {
         </nav>
       </div>
 
-      <DistrictHero district={district} client:load />
+      <DistrictHero district={district} />
       
       <div class="w-full bg-gradient-to-r from-white to-[#f7faf7] py-6 border-y border-green-50/50">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -192,8 +113,8 @@ const schemaData = {
               </div>
             </div>
             <div class="flex items-center gap-3">
-              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
-              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Layanan Terverifikasi di {district.name}</p>
+              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
+              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Terverifikasi di {district.name}</p>
             </div>
           </div>
         </div>
@@ -203,10 +124,10 @@ const schemaData = {
         <div class="max-w-[1800px] mx-auto px-6">
           <div class="grid lg:grid-cols-12 gap-12 items-start">
             <div class="lg:col-span-6">
-              <DistrictOverview district={district} client:visible />
+              <DistrictOverview district={district} />
             </div>
             <div class="lg:col-span-6">
-              <DistrictLogistics district={district} client:visible />
+              <DistrictLogistics district={district} />
             </div>
           </div>
         </div>
@@ -214,19 +135,19 @@ const schemaData = {
 
       <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="mb-12 text-left">
+          <div class="mb-12 text-left reveal-up">
             <h2 class="text-3xl md:text-4xl font-[1000] text-[#052c17] uppercase tracking-tighter">
               Katalog <span class="text-[#15803d]">Komoditas.</span>
             </h2>
             <p class="text-slate-700 text-sm font-black mt-2 uppercase tracking-widest">Update Harga Khusus Area {district.name}</p>
           </div>
-          <PriceTable data={vegetableData.slice(0, 20)} client:visible />
+          <PriceTable data={vegetableData.slice(0, 20)} />
         </div>
       </section>
 
-      <QualityGuarantee client:visible />
-      <LiveStats client:visible />
-      <DistrictRoute district={district} client:visible />
+      <QualityGuarantee />
+      <LiveStats />
+      <DistrictRoute district={district} />
       
       <section class="py-16 bg-white border-t border-slate-100 text-left">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8">
@@ -236,8 +157,8 @@ const schemaData = {
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {otherAreas.map((area, index) => (
               <a
-                href={`/area/${area.slug}`}
-                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm hover:shadow-md text-center"
+                href={`/area/${area.slug}` }
+                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm text-center"
               >
                 <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">
                   {labels[index % labels.length]}
@@ -253,7 +174,7 @@ const schemaData = {
 
       <section id="partnership" class="py-20 md:py-32 bg-[#fcfdfc] border-t border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="text-left mb-16">
+          <div class="text-left mb-16 reveal-up">
             <h2 class="text-3xl md:text-5xl font-[1000] text-[#052c17] uppercase tracking-tighter leading-none">
               Hubungi <span class="text-[#15803d]">Sales.</span>
             </h2>
@@ -261,11 +182,43 @@ const schemaData = {
               Konsultasi Pengadaan Wilayah {district.name}
             </p>
           </div>
-          <PartnershipForm client:visible />
+          <PartnershipForm />
         </div>
       </section>
     </main>
 
-    <Footer client:visible />
+    <Footer />
   </div>
 </MainLayout>
+
+<style>
+  .reveal-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+  :global(.is-visible) .reveal-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+</style>
+
+<script>
+  document.documentElement.classList.add('js-enabled');
+  const setupObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+  };
+  setupObserver();
+  document.addEventListener('astro:after-swap', setupObserver);
+</script>

@@ -1,70 +1,204 @@
 ---
+/**
+ * PROFILE PAGE - PURE ASTRO VERSION
+ * Perbaikan: Solusi "Blank Putih" dengan CSS Fallback & Robust Observer.
+ */
 import MainLayout from '../layouts/MainLayout.astro';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { PartnershipForm } from '@/components/PartnershipForm'; 
-import { MapsSection } from '@/components/MapsSection';
-import ProfileClientContent from '@/components/ProfileClientContent';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { 
+  Users, ShieldCheck, MapPin, 
+  CheckCircle2, Building2, Truck, ChevronRight 
+} from 'lucide-react';
 
-// --- DATA SEO ---
-const title = 'Tentang Kami - CV. Green Fresh Cipanas';
-const description = 'Mengenal CV. Green Fresh Cipanas, mitra strategis pengadaan sayuran segar dengan kapasitas 10 ton/hari dan standar kepatuhan korporasi (PKP).';
-const canonicalURL = 'https://greenfresh.co.id/tentang-kami';
+const stats = [
+  { label: "Petani Mitra", value: "200+", icon: Users },
+  { label: "Kapasitas Harian", value: "10 Ton", icon: Truck },
+  { label: "Titik Distribusi", value: "Jabodetabek", icon: MapPin },
+  { label: "SLA Fulfillment", value: "100%", icon: ShieldCheck },
+];
 
-// --- SCHEMA MARKUP ---
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WholesaleStore",
-  "name": "CV. Green Fresh Cipanas",
-  "image": "https://greenfresh.co.id/logo.svg",
-  "@id": "https://greenfresh.co.id/",
-  "url": "https://greenfresh.co.id/",
-  "telephone": "+6287780937884", 
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Jl. Raya Cipanas",
-    "addressLocality": "Cianjur",
-    "addressRegion": "Jawa Barat",
-    "postalCode": "43253",
-    "addressCountry": "ID"
-  },
-  "description": "Mitra strategis pengadaan sayuran segar dengan kapasitas 10 ton per hari.",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    "opens": "08:00",
-    "closes": "17:00"
-  }
-};
+const reasons = [
+  "Kemitraan langsung dengan 200+ petani tanpa makelar.",
+  "Standar sortasi ketat (Grade A) spesifikasi Horeka.",
+  "Skema pembayaran Term of Payment (TOP) fleksibel.",
+  "Legalitas lengkap (CV, NPWP PKP, Izin Agrikultur)."
+];
 ---
 
-<MainLayout title={title} description={description}>
-  <link rel="canonical" href={canonicalURL} slot="head" />
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} slot="head" />
+<MainLayout title="Profil Perusahaan - CV Green Fresh Cipanas | Otoritas Suplai Sayur">
+  <Header />
 
-  <div class="bg-white min-h-screen font-sans selection:bg-[#16a34a] selection:text-white overflow-x-hidden">
-    <Header client:load />
-
-    <main class="pt-32 lg:pt-48 text-slate-900">
-      <ProfileClientContent client:visible />
-
-      <div class="py-24">
-        <div class="max-w-[1200px] mx-auto px-6 mb-12 flex flex-col items-center text-center">
-          <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#16a34a] mb-2">Operational Hub</span>
-          <h2 class="text-3xl lg:text-4xl font-serif italic font-bold">Sentralisasi Distribusi</h2>
+  <main class="pt-24 lg:pt-32 bg-white selection:bg-green-100 selection:text-[#052c17] reveal-container">
+    
+    <section class="px-6 lg:px-20 py-16 lg:py-24 border-b-2 border-green-100 relative">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-green-50/50 rounded-full blur-[120px] -z-10 pointer-events-none" aria-hidden="true"></div>
+      
+      <div class="max-w-[1800px] mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-3 px-4 py-2 bg-[#f7faf7] border-2 border-green-100 rounded-full text-[#15803d] text-[10px] font-black uppercase tracking-[0.3em] reveal-left">
+              <Building2 size={14} /> Corporate Profile
+            </div>
+            
+            <h1 class="text-5xl lg:text-9xl font-serif italic font-black text-[#052c17] leading-[0.9] tracking-tighter uppercase reveal-up">
+              Otoritas <br /> <span class="text-[#15803d] not-italic font-sans">Suplai.</span>
+            </h1>
+            
+            <p class="text-lg lg:text-3xl text-slate-600 font-medium leading-relaxed max-w-2xl border-l-4 border-green-500/30 pl-6 lg:pl-8 italic reveal-up" style="transition-delay: 0.1s;">
+              "Menghubungkan stabilitas retail modern dengan ekosistem agrikultur dataran tinggi melalui presisi logistik fajar."
+            </p>
+          </div>
+          
+          <div class="lg:col-span-5">
+            <div class="grid grid-cols-2 gap-4">
+              {stats.map((stat, i) => (
+                <div class="p-8 bg-[#f7faf7] rounded-[2rem] border-2 border-green-100 hover:bg-white hover:shadow-xl transition-all duration-500 group reveal-up" style={`transition-delay: ${0.2 + (i * 0.1)}s;`}>
+                  <div class="text-[#15803d] mb-4 group-hover:scale-110 transition-transform"><stat.icon size={20} /></div>
+                  <h3 class="text-3xl font-serif italic font-black text-[#052c17]">{stat.value}</h3>
+                  <p class="text-[10px] font-black uppercase tracking-widest text-slate-600 mt-2">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <MapsSection client:visible />
       </div>
+    </section>
 
-      <section class="pb-32">
-        <div class="max-w-[1200px] mx-auto px-6 text-center mb-16">
-          <h3 class="text-[10px] font-black uppercase tracking-[0.5em] text-[#16a34a] mb-4">Ready to Optimize?</h3>
-          <h2 class="text-4xl lg:text-5xl font-serif italic font-bold text-[#052c17]">Mulai Kemitraan Strategis.</h2>
+    <section class="py-16 lg:py-24 bg-white border-b-2 border-green-100 relative overflow-hidden">
+      <div class="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div class="space-y-8">
+            <h2 class="text-4xl lg:text-7xl font-serif italic font-black text-[#052c17] leading-[1] tracking-tighter uppercase reveal-left">
+              Mengapa <br /> <span class="text-[#15803d] not-italic font-sans">Memilih Kami?</span>
+            </h2>
+            <div class="space-y-4">
+              {reasons.map((list, i) => (
+                <div class="flex items-center gap-4 group reveal-up" style={`transition-delay: ${0.1 + (i * 0.05)}s;`}>
+                  <div class="w-8 h-8 rounded-full border-2 border-green-200 flex items-center justify-center bg-green-50 group-hover:bg-[#15803d] transition-colors duration-500">
+                    <CheckCircle2 size={14} class="text-[#15803d] group-hover:text-white" />
+                  </div>
+                  <span class="text-base lg:text-lg font-bold text-slate-700 tracking-tight">{list}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-[#f7faf7] border-2 border-green-100 p-10 lg:p-16 rounded-[3rem] space-y-6 shadow-sm reveal-right">
+            <h4 class="text-[#14532d] font-black uppercase tracking-[0.4em] text-[10px]">Visi Korporasi</h4>
+            <p class="text-2xl lg:text-4xl font-serif italic text-[#052c17] leading-tight">
+              "Menjadi tulang punggung ketahanan pangan retail modern dengan memuliakan martabat petani lokal."
+            </p>
+            <div class="pt-6 border-t border-green-200">
+              <p class="text-slate-600 text-[10px] uppercase font-black tracking-widest leading-relaxed">
+                CV. Green Fresh Cipanas <br /> High-Altitude Supply Authority
+              </p>
+            </div>
+          </div>
         </div>
-        <PartnershipForm client:visible />
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <Footer client:visible />
-  </div>
+    <section class="py-16 lg:py-24 px-6 md:px-12 lg:px-20 border-b-2 border-green-100 bg-[#fcfdfc]">
+      <div class="max-w-[1800px] mx-auto">
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-24">
+          <div class="w-full lg:w-1/2">
+            <div class="relative rounded-[3rem] lg:rounded-[4rem] overflow-hidden border-2 border-green-100 shadow-2xl aspect-square lg:aspect-video group reveal-scale">
+              <img 
+                src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=2000" 
+                alt="Infrastruktur Logistik Rantai Dingin Green Fresh" 
+                class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-green-900/40 via-transparent to-transparent opacity-60" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 space-y-8">
+            <h3 class="text-4xl lg:text-7xl font-serif italic font-black text-[#052c17] leading-[0.9] tracking-tighter uppercase reveal-left">
+              Logistik <br /> <span class="text-[#15803d] not-italic font-sans">Mandiri.</span>
+            </h3>
+            <p class="text-lg lg:text-xl text-slate-700 font-normal leading-relaxed reveal-up">
+              Kami mengelola armada distribusi secara mandiri untuk memastikan jadwal pengiriman fajar (sebelum jam 07:00 pagi) terpenuhi secara konsisten di wilayah Jabodetabek.
+            </p>
+            <div class="p-8 bg-white rounded-3xl border-2 border-green-100 italic font-serif text-[#14532d] text-lg lg:text-xl shadow-sm reveal-up" style="transition-delay: 0.2s;">
+              "Kontrol penuh atas rantai pasok dingin, meminimalkan penyusutan (waste) di sisi klien."
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
 </MainLayout>
+
+<style>
+  /* 1. STATE DEFAULT: Tampil normal agar tidak blank jika JS gagal */
+  .reveal-up, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 1;
+    transform: translate(0) scale(1);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* 2. STATE ANIMASI: Hanya sembunyikan jika JavaScript diaktifkan */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    :global(.js-enabled) .reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    :global(.js-enabled) .reveal-right {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    :global(.js-enabled) .reveal-scale {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+  }
+
+  /* 3. STATE REVEAL: Dipicu saat masuk viewport */
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible) .reveal-left,
+  :global(.is-visible) .reveal-right,
+  :global(.is-visible) .reveal-scale,
+  :global(.is-visible).reveal-up,
+  :global(.is-visible).reveal-left,
+  :global(.is-visible).reveal-right,
+  :global(.is-visible).reveal-scale {
+    opacity: 1 !important;
+    transform: translate(0) scale(1) !important;
+  }
+</style>
+
+<script>
+  // Segera tandai bahwa JS aktif untuk memulai mode animasi
+  document.documentElement.classList.add('js-enabled');
+
+  const setupObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { 
+      threshold: 0.05, 
+      rootMargin: '0px 0px -50px 0px' 
+    });
+
+    // Amati semua elemen yang memiliki class animasi secara individual
+    const animatedElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
+    animatedElements.forEach(el => observer.observe(el));
+  };
+
+  // Jalankan saat load pertama
+  setupObserver();
+
+  // Support untuk Astro View Transitions
+  document.addEventListener('astro:after-swap', setupObserver);
+</script>
