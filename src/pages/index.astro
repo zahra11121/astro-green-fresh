@@ -1,182 +1,76 @@
-import json
-import os
-
-# Konfigurasi Path
-DATA_PATH = 'src/data/districts.json'
-OUTPUT_DIR = 'src/pages/area'
-
-# Template Astro Murni (Zero-JS & Anti-Blank)
-# Semua kurung kurawal teknis (CSS/JS) sudah di-escape menjadi ganda {{ }}
-ASTRO_TEMPLATE = """---
+---
 /**
- * GENERATED FILE - DO NOT EDIT DIRECTLY
- * Area: {name}
- * Strategi: Full Server-side Rendering untuk dominasi keyword lokal.
+ * MAIN LANDING PAGE - CV GREEN FRESH CIPANAS
+ * Mode: Full Astro (Zero Hydration)
+ * Fokus: Branding Korporat & Skala Bisnis
  */
 import MainLayout from '@/layouts/MainLayout.astro';
-import {{ Star, ChevronRight, MapPin }} from 'lucide-react';
-
-// Import Komponen Astro Murni
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-import PartnershipForm from '@/components/PartnershipForm.astro';
-import PriceTable from '@/components/PriceTable.astro';
-import DistrictHero from '@/components/district/DistrictHero.astro';
-import DistrictLogistics from '@/components/district/DistrictLogistics.astro';
-import DistrictOverview from '@/components/district/DistrictOverview.astro';
-import DistrictRoute from '@/components/district/DistrictRoute.astro';
-import QualityGuarantee from '@/components/city/QualityGuarantee.astro';
-import LiveStats from '@/components/city/LiveStats.astro';
 
-// Data
-import {{ vegetableData }} from '@/data/data.js'; 
-import districtsData from '@/data/districts.json';
+// Import Komponen Korporat Sesuai Request
+import Hero from '@/components/Hero.astro';
+import WhoWeAre from '@/components/WhoWeAre.astro';
+import CashFlow from '@/components/CashFlow.astro';
+import EconomicImpact from '@/components/EconomicImpact.astro';
+import VisualGallery from '@/components/VisualGallery.astro';
 
-const district = {district_data};
-
-// Meta & SEO Logic
-const baseUrl = 'https://greenfresh.co.id';
-const currentUrl = `${{baseUrl}}/area/${{district.slug}}`;
-const title = `Supplier Sayur ${{district.name}} - Stok Stabil Harian | CV Green Fresh Cipanas`;
-const description = `Supplier sayur segar tangan pertama wilayah ${{district.name}}. Melayani pengadaan komoditas grade A harian khusus Hotel, Restoran, dan Cafe wilayah ${{district.name}}.`;
-
-const schemaData = {{
-  "@context": "https://schema.org",
-  "@graph": [
-    {{
-      "@type": "WholesaleStore",
-      "@id": `${{baseUrl}}/#organization`,
-      "name": "CV Green Fresh Cipanas",
-      "url": baseUrl,
-      "logo": {{ "@type": "ImageObject", "url": `${{baseUrl}}/logo.svg` }}
-    }},
-    {{
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {{ "@type": "ListItem", "position": 1, "name": "Beranda", "item": baseUrl }},
-        {{ "@type": "ListItem", "position": 2, "name": "Area", "item": `${{baseUrl}}/area` }},
-        {{ "@type": "ListItem", "position": 3, "name": district.name, "item": currentUrl }}
-      ]
-    }}
-  ]
-}};
-
-// Related Areas Logic
-const allDistricts = districtsData.districts;
-const currentIndex = allDistricts.findIndex(d => d.slug === "{slug}");
-const otherAreas = [];
-for (let i = 1; i <= 6; i++) {{
-  const nextIndex = (currentIndex + i) % allDistricts.length;
-  otherAreas.push(allDistricts[nextIndex]);
-}}
-const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layanan"];
+// Data untuk SEO & Internal Linking
+import { jabodetabekCities } from '@/data/cities';
+const title = "CV Green Fresh Cipanas | Supplier Sayur Segar Premium B2B Jabodetabek";
+const description = "Partner strategis supply sayuran Grade A untuk Hotel, Restoran, dan Catering. Distribusi langsung dari petani Cipanas dengan sistem logistik 24 jam.";
 ---
 
-<MainLayout title={{title}} description={{description}}>
-  <link rel="canonical" href={{currentUrl}} slot="head" />
-  <script type="application/ld+json" set:html={{JSON.stringify(schemaData)}} slot="head" />
-
-  <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left reveal-container">
+<MainLayout title={title} description={description}>
+  <div class="bg-white text-[#052c17] font-sans selection:bg-green-100 reveal-container">
     <Header />
 
     <main>
-      <div class="pt-24 lg:pt-32 bg-white border-b border-slate-50">
-        <nav aria-label="Breadcrumb" class="max-w-[1800px] mx-auto px-6 py-4 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em]">
-          <a href="/" class="text-slate-700 hover:text-[#166534] transition-colors">Beranda</a>
-          <ChevronRight size={{10}} class="text-slate-400" />
-          <a href="/area" class="text-slate-700 hover:text-[#166534] transition-colors">Area</a>
-          <ChevronRight size={{10}} class="text-slate-400" />
-          <span class="text-[#166534] font-bold tracking-widest uppercase">{{district.name}}</span>
-        </nav>
-      </div>
+      <Hero />
 
-      <DistrictHero district={{district}} />
-      
-      <div class="w-full bg-gradient-to-r from-white to-[#f7faf7] py-6 border-y border-green-50/50">
-        <div class="max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div class="flex items-center gap-4">
-            <div class="flex items-center gap-2">
-              <div class="flex -space-x-1">
-                {{[1, 2, 3, 4, 5].map((s) => (
-                  <Star key={{s}} size={{18}} class="text-amber-500 fill-amber-500" />
-                ))}}
-              </div>
-              <div class="pl-2 border-l border-slate-300">
-                <p class="text-2xl font-black text-[#052c17]">4.9</p>
-                <p class="text-[10px] font-bold uppercase text-slate-700">Rating Area</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
-              <p class="text-sm font-black text-[#052c17] uppercase tracking-tight">Terverifikasi di {{district.name}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <section class="reveal-up">
+        <WhoWeAre />
+      </section>
 
-      <section class="py-16 md:py-24 bg-white text-left">
+      <section class="py-12 bg-slate-50 reveal-up">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="grid lg:grid-cols-12 gap-12 items-start">
-            <div class="lg:col-span-6">
-              <DistrictOverview district={{district}} />
-            </div>
-            <div class="lg:col-span-6">
-              <DistrictLogistics district={{district}} />
-            </div>
+          <div class="mb-10">
+            <h2 class="text-3xl font-black uppercase tracking-tighter text-[#052c17]">Dokumentasi Operasional.</h2>
+            <p class="text-slate-600 font-medium">Transparansi proses dari lahan hingga pengiriman.</p>
           </div>
+          <VisualGallery />
         </div>
       </section>
 
-      <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
-        <div class="max-w-[1800px] mx-auto px-6">
-          <div class="mb-12 text-left reveal-up">
-            <h2 class="text-3xl md:text-4xl font-[1000] text-[#052c17] uppercase tracking-tighter">
-              Katalog <span class="text-[#15803d]">Komoditas.</span>
-            </h2>
-            <p class="text-slate-700 text-sm font-black mt-2 uppercase tracking-widest">Update Harga Khusus Area {{district.name}}</p>
-          </div>
-          <PriceTable data={{vegetableData.slice(0, 20)}} />
-        </div>
+      <section class="reveal-up">
+        <CashFlow />
+        <EconomicImpact />
       </section>
 
-      <QualityGuarantee />
-      <LiveStats />
-      <DistrictRoute district={{district}} />
-      
-      <section class="py-16 bg-white border-t border-slate-100 text-left">
-        <div class="max-w-[1800px] mx-auto px-4 md:px-8">
-          <h3 class="text-xl font-black text-[#052c17] mb-8 uppercase tracking-widest flex items-center gap-2">
-            <MapPin size={{20}} class="text-[#15803d]" /> Area Layanan Terkait
-          </h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {{otherAreas.map((area, index) => (
-              <a
-                href={{`/area/${{area.slug}}`}}
-                class="group p-5 rounded-2xl border border-slate-100 hover:border-[#15803d] hover:bg-green-50 transition-all flex flex-col items-center justify-center gap-1 shadow-sm text-center"
-              >
-                <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">
-                  {{labels[index % labels.length]}}
-                </span>
-                <span class="text-xs font-black text-slate-800 group-hover:text-[#15803d] uppercase tracking-wider block transition-colors">
-                  {{area.name}}
-                </span>
-              </a>
-            ))}}
-          </div>
-        </div>
-      </section>
-
-      <section id="partnership" class="py-20 md:py-32 bg-[#fcfdfc] border-t border-slate-200 text-left">
+      <section class="py-20 bg-white border-t border-green-50">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="text-left mb-16 reveal-up">
-            <h2 class="text-3xl md:text-5xl font-[1000] text-[#052c17] uppercase tracking-tighter leading-none">
-              Hubungi <span class="text-[#15803d]">Sales.</span>
-            </h2>
-            <p class="text-slate-700 font-black uppercase text-xs tracking-[0.3em] mt-4 text-left">
-              Konsultasi Pengadaan Wilayah {{district.name}}
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-up">
+            <div class="space-y-2">
+              <h3 class="text-xs font-black text-[#15803d] uppercase tracking-[0.4em]">Logistik & Jangkauan</h3>
+              <h2 class="text-3xl lg:text-5xl font-black uppercase tracking-tighter text-[#052c17]">Wilayah Pengiriman.</h2>
+            </div>
+            <p class="max-w-md text-slate-600 font-medium">
+              Sistem distribusi mandiri yang melayani berbagai kawasan bisnis strategis setiap hari.
             </p>
           </div>
-          <PartnershipForm />
+
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 reveal-up">
+            {jabodetabekCities.slice(0, 18).map((city) => (
+              <a 
+                href={`/kota/${city.slug}`} 
+                class="group p-6 rounded-2xl border border-slate-100 bg-slate-50/30 hover:bg-[#052c17] hover:border-[#052c17] transition-all duration-300 text-center"
+              >
+                <span class="text-xs font-black uppercase tracking-wider text-[#052c17] group-hover:text-white transition-colors">
+                  {city.name}
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
     </main>
@@ -186,72 +80,42 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
 </MainLayout>
 
 <style>
-  .reveal-up {{
+  /* Animasi Anti-Blank: Teks muncul default, animasi hanya jika JS aktif */
+  .reveal-up {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }}
-  @media (prefers-reduced-motion: no-preference) {{
-    :global(.js-enabled) .reveal-up {{
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up {
       opacity: 0;
       transform: translateY(30px);
-    }}
-  }}
-  :global(.is-visible) .reveal-up {{
+    }
+  }
+
+  :global(.is-visible) .reveal-up {
     opacity: 1 !important;
     transform: translateY(0) !important;
-  }}
+  }
 </style>
 
 <script>
+  // Memberitahu CSS bahwa JS siap
   document.documentElement.classList.add('js-enabled');
-  const setupObserver = () => {{
-    const observer = new IntersectionObserver((entries) => {{
-      entries.forEach(entry => {{
-        if (entry.isIntersecting) entry.target.classList.add('is-visible');
-      }});
-    }}, {{ threshold: 0.1 }});
+
+  const setupObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
     document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
-  }};
+  };
+
   setupObserver();
   document.addEventListener('astro:after-swap', setupObserver);
 </script>
-"""
-
-import json
-
-def generate_pages():
-    # Load Data
-    try:
-        with open(DATA_PATH, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-    except Exception as e:
-        print(f"Gagal memuat JSON: {e}")
-        return
-    
-    districts = data['districts']
-    
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
-
-    for item in districts:
-        slug = item['slug']
-        name = item['name']
-        
-        # Inject data ke template
-        # Menggunakan .format hanya untuk variabel yang dikurung satu { }
-        content = ASTRO_TEMPLATE.format(
-            name=name,
-            slug=slug,
-            district_data=json.dumps(item, indent=2)
-        )
-        
-        # Simpan file fisik per wilayah
-        file_path = os.path.join(OUTPUT_DIR, f"{slug}.astro")
-        with open(file_path, 'w', encoding='utf-8') as f_out:
-            f_out.write(content)
-        
-        print(f"File Berhasil Dibuat: {file_path}")
-
-if __name__ == "__main__":
-    generate_pages()

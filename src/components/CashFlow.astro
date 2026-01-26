@@ -1,7 +1,7 @@
 ---
 /**
  * CASHFLOW COMPONENT - ASTRO VERSION
- * Menghilangkan hidrasi JSX untuk stabilitas Indexing Google.
+ * Perbaikan: Menghilangkan risiko "blank putih" dengan CSS Fallback & Robust Observer.
  */
 import { 
   Wallet, 
@@ -29,7 +29,7 @@ const paymentTerms = [
 ];
 ---
 
-<section id={id || "payment"} class="py-0 md:py-20 bg-white font-sans overflow-hidden border-b-2 border-green-100 reveal-section">
+<section id={id || "payment"} class="py-0 md:py-20 bg-white font-sans overflow-hidden border-b-2 border-green-100 reveal-container">
   <div class="max-w-[1800px] mx-auto px-0 md:px-12 lg:px-20 relative z-10">
     
     {/* HEADER */}
@@ -40,10 +40,10 @@ const paymentTerms = [
       </div>
       
       <h2 class="text-3xl md:text-6xl lg:text-7xl font-serif italic text-[#052c17] leading-[1.1] tracking-tighter reveal-up">
-        Sirkuasi Kas <span class="text-[#15803d] not-italic font-sans font-black">Lebih Ringan.</span>
+        Sirkulasi Kas <span class="text-[#15803d] not-italic font-sans font-black">Lebih Ringan.</span>
       </h2>
 
-      <p class="text-base md:text-xl text-slate-600 font-medium leading-relaxed max-w-2xl border-l-4 border-green-500/20 pl-4 md:pl-6 reveal-up" style="animation-delay: 0.2s;">
+      <p class="text-base md:text-xl text-slate-600 font-medium leading-relaxed max-w-2xl border-l-4 border-green-500/20 pl-4 md:pl-6 reveal-up">
         Sistem pembayaran yang dapat disesuaikan dengan kebutuhan arus kas perusahaan Anda.
       </p>
     </div>
@@ -118,8 +118,8 @@ const paymentTerms = [
             ))}
           </div>
 
-          <div class="pt-6 pb-6 md:pb-0">
-            <p class="text-[9px] md:text-[10px] text-slate-600 font-black uppercase tracking-[0.2em] text-center italic">
+          <div class="pt-6 pb-6 md:pb-0 text-center">
+            <p class="text-[9px] md:text-[10px] text-slate-600 font-black uppercase tracking-[0.2em] italic">
               *Khusus entitas bisnis resmi (B2B)
             </p>
           </div>
@@ -131,47 +131,58 @@ const paymentTerms = [
 </section>
 
 <style>
-  /* Base Animations (Static-Friendly) */
-  .reveal-section .reveal-left,
-  .reveal-section .reveal-right,
-  .reveal-section .reveal-up,
-  .reveal-section .reveal-scale {
-    opacity: 0;
+  /* 1. STATE AWAL: Tampil default (Anti-Blank) */
+  .reveal-up, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 1;
+    transform: none;
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .reveal-left { transform: translateX(-30px); }
-  .reveal-right { transform: translateX(30px); }
-  .reveal-up { transform: translateY(30px); }
-  .reveal-scale { transform: scale(0.95); }
+  /* 2. STATE ANIMASI: Hanya sembunyikan jika JS Aktif */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up { opacity: 0; transform: translateY(30px); }
+    :global(.js-enabled) .reveal-left { opacity: 0; transform: translateX(-30px); }
+    :global(.js-enabled) .reveal-right { opacity: 0; transform: translateX(30px); }
+    :global(.js-enabled) .reveal-scale { opacity: 0; transform: scale(0.95); }
+  }
 
+  /* 3. STATE AKTIF */
+  :global(.is-visible) .reveal-up,
   :global(.is-visible) .reveal-left,
   :global(.is-visible) .reveal-right,
-  :global(.is-visible) .reveal-up {
-    opacity: 1;
-    transform: translate(0);
+  :global(.is-visible).reveal-up,
+  :global(.is-visible).reveal-left,
+  :global(.is-visible).reveal-right {
+    opacity: 1 !important;
+    transform: translate(0) !important;
   }
-  :global(.is-visible) .reveal-scale {
-    opacity: 1;
-    transform: scale(1);
+  :global(.is-visible) .reveal-scale,
+  :global(.is-visible).reveal-scale {
+    opacity: 1 !important;
+    transform: scale(1) !important;
   }
 </style>
 
 <script>
-  /**
-   * Intersection Observer untuk memicu animasi CSS.
-   * Tetap terbaca bot karena HTML sudah ada di DOM.
-   */
-  const observerOptions = { threshold: 0.1 };
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, observerOptions);
+  // Aktifkan mode JS
+  document.documentElement.classList.add('js-enabled');
 
-  document.querySelectorAll('.reveal-section').forEach(section => {
-    observer.observe(section);
-  });
+  const setupCashflowObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { 
+      threshold: 0.05, // Turunkan threshold agar lebih cepat terdeteksi
+      rootMargin: '0px 0px -50px 0px' 
+    });
+
+    // Amati elemen individu untuk keandalan pemicu
+    document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+  };
+
+  setupCashflowObserver();
+  document.addEventListener('astro:after-swap', setupCashflowObserver);
 </script>

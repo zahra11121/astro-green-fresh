@@ -1,7 +1,7 @@
 ---
 /**
  * ECONOMIC IMPACT COMPONENT - ASTRO VERSION
- * Menjamin 0% JavaScript di browser untuk SEO maksimal.
+ * Perbaikan: Menghilangkan risiko "blank putih" dengan CSS Fallback.
  */
 import { HeartHandshake, TrendingUp, ShieldCheck, Zap } from 'lucide-react';
 import productsData from '@/data/products.json';
@@ -102,38 +102,52 @@ const advantages = [
 </section>
 
 <style>
-  /* Animasi SEO-Friendly menggunakan CSS Transition */
-  .reveal-container .reveal-up,
-  .reveal-container .reveal-fade {
-    opacity: 0;
+  /* 1. STATE AWAL: Muncul secara default */
+  .reveal-up, .reveal-fade {
+    opacity: 1;
+    transform: none;
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .reveal-up { transform: translateY(30px); }
-  .reveal-fade { transform: scale(0.98); }
-
-  :global(.is-visible) .reveal-up {
-    opacity: 1;
-    transform: translateY(0);
+  /* 2. STATE ANIMASI: Sembunyikan hanya jika JS Aktif */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.js-enabled) .reveal-up { opacity: 0; transform: translateY(30px); }
+    :global(.js-enabled) .reveal-fade { opacity: 0; transform: scale(0.98); }
   }
-  :global(.is-visible) .reveal-fade {
-    opacity: 1;
-    transform: scale(1);
+
+  /* 3. STATE AKTIF */
+  :global(.is-visible) .reveal-up,
+  :global(.is-visible).reveal-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  :global(.is-visible) .reveal-fade,
+  :global(.is-visible).reveal-fade {
+    opacity: 1 !important;
+    transform: scale(1) !important;
   }
 </style>
 
 <script>
-  /**
-   * Intersection Observer ringan untuk memicu animasi CSS.
-   * Tetap terbaca bot karena HTML statis sudah ada di DOM.
-   */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, { threshold: 0.1 });
+  // Aktifkan mode JS
+  document.documentElement.classList.add('js-enabled');
 
-  document.querySelectorAll('.reveal-container').forEach(el => observer.observe(el));
+  const setupImpactObserver = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { 
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px' 
+    });
+
+    // Amati semua elemen yang memiliki class reveal
+    document.querySelectorAll('.reveal-up, .reveal-fade').forEach(el => observer.observe(el));
+  };
+
+  setupImpactObserver();
+  document.addEventListener('astro:after-swap', setupImpactObserver);
 </script>

@@ -1,7 +1,7 @@
 ---
 /**
- * HEADER COMPONENT - ASTRO VERSION
- * Strategi: Menggunakan Vanilla JS untuk interaktivitas guna menghindari Hydration Overhead.
+ * HEADER COMPONENT - ASTRO VERSION (Custom Logo: White Leaf + Light Green Base)
+ * Strategi: Zero Hydration untuk performa maksimal.
  */
 import { 
   Menu, X, MapPin, Phone, 
@@ -81,8 +81,8 @@ const mobileNavItems = [
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
       
       <a href="/" class="flex items-center gap-3 group outline-none focus:ring-2 focus:ring-green-500 rounded-lg">
-        <div class="w-10 h-10 bg-[#052c17] rounded-xl flex items-center justify-center transition-all group-hover:rotate-6 group-hover:bg-[#15803d]">
-          <Leaf class="text-[#bef264] w-5 h-5" fill="currentColor" />
+        <div class="w-10 h-10 bg-[#bef264] rounded-xl flex items-center justify-center transition-all group-hover:rotate-6 group-hover:bg-[#a3d936] shadow-sm">
+          <Leaf class="text-white w-5 h-5" fill="currentColor" />
         </div>
         <span class="text-xl font-[1000] tracking-tighter text-[#052c17] leading-none uppercase">
           Green Fresh
@@ -129,21 +129,11 @@ const mobileNavItems = [
   >
     <div class="p-6 flex items-center justify-between border-b border-slate-50">
       <span class="text-xs font-black uppercase tracking-[0.3em] text-[#15803d]">Menu Utama</span>
-      <button 
-        id="mobile-menu-close" 
-        class="p-2 bg-slate-100 rounded-full"
-        aria-label="Tutup menu navigasi"
-      >
-        <X size={20} />
-      </button>
+      <button id="mobile-menu-close" class="p-2 bg-slate-100 rounded-full"><X size={20} /></button>
     </div>
-
     <div class="flex-1 overflow-y-auto p-6 space-y-3">
       {mobileNavItems.map((item) => (
-        <a 
-          href={item.href} 
-          class="flex items-center justify-between p-5 bg-slate-50 rounded-2xl text-[11px] font-black text-[#052c17] uppercase tracking-[0.2em] active:bg-green-100 transition-all"
-        >
+        <a href={item.href} class="flex items-center justify-between p-5 bg-slate-50 rounded-2xl text-[11px] font-black text-[#052c17] uppercase tracking-[0.2em] active:bg-green-100 transition-all">
           <div class="flex items-center gap-4 text-left">
             <span class="text-[#15803d]"><item.icon size={18} /></span>
             {item.label}
@@ -152,56 +142,30 @@ const mobileNavItems = [
         </a>
       ))}
     </div>
-    
-    <div class="p-6 border-t border-slate-50 bg-slate-50/50">
-      <a 
-        href={waLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full py-5 bg-[#052c17] text-white rounded-2xl flex items-center justify-center gap-3 font-black text-xs uppercase tracking-widest shadow-2xl"
-      >
-        <ShoppingBag size={18} class="text-[#bef264]" />
-        Kirim Pesanan (WA)
-      </a>
-    </div>
   </div>
 </header>
 
 <style>
-  /* Marquee Animation Murni CSS */
-  .animate-marquee {
-    display: inline-flex;
-    animation: marquee 60s linear infinite;
-  }
-  
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
+  /* Marquee Animation */
+  .animate-marquee { display: inline-flex; animation: marquee 60s linear infinite; }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .paused { animation-play-state: paused !important; }
 
-  .paused {
-    animation-play-state: paused !important;
+  /* Navigation Scroll State */
+  .nav-scrolled { 
+    top: 0 !important; 
+    background-color: rgba(255, 255, 255, 0.95) !important; 
+    backdrop-filter: blur(20px); 
+    box-shadow: 0 25px 50px -12px rgba(5, 44, 23, 0.08); 
+    padding-top: 0.75rem !important; 
+    padding-bottom: 0.75rem !important; 
   }
-
-  /* Nav Scrolled State */
-  .nav-scrolled {
-    top: 0 !important;
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 25px 50px -12px rgba(5, 44, 23, 0.05);
-    padding-top: 0.75rem !important;
-    padding-bottom: 0.75rem !important;
-  }
-
-  .ticker-hidden {
-    transform: translateY(-100%);
-  }
+  .ticker-hidden { transform: translateY(-100%); }
 </style>
 
 <script>
   /**
-   * LOGIKA INTERAKTIF (CLIENT-SIDE)
-   * Menghindari penggunaan React Hydration untuk performa SEO maksimal.
+   * INTERACTIVE LOGIC
    */
   const nav = document.getElementById('main-nav');
   const ticker = document.getElementById('top-ticker');
@@ -211,7 +175,7 @@ const mobileNavItems = [
   const mobileMenuClose = document.getElementById('mobile-menu-close');
   const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 
-  // 1. Scroll Effect
+  // Scroll Behavior
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
       nav?.classList.add('nav-scrolled');
@@ -222,19 +186,18 @@ const mobileNavItems = [
     }
   }, { passive: true });
 
-  // 2. Ticker Control (Pause/Play)
+  // Ticker Pause/Play
   tickerToggle?.addEventListener('click', () => {
     const isPaused = tickerContent?.classList.toggle('paused');
     document.getElementById('pause-icon')?.classList.toggle('hidden', isPaused);
     document.getElementById('play-icon')?.classList.toggle('hidden', !isPaused);
   });
 
-  // 3. Mobile Menu Logic
-  const toggleMobileMenu = (show: boolean) => {
+  // Mobile Menu Logic
+  const toggleMobileMenu = (show) => {
     mobileMenuOverlay?.classList.toggle('translate-x-full', !show);
     document.body.style.overflow = show ? 'hidden' : '';
   };
-
   mobileMenuToggle?.addEventListener('click', () => toggleMobileMenu(true));
   mobileMenuClose?.addEventListener('click', () => toggleMobileMenu(false));
 </script>
