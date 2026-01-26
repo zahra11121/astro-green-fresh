@@ -1,134 +1,95 @@
 ---
 /**
- * GALLERY COMPONENT - ASTRO VERSION
- * Strategi: Zero Hydration untuk Kecepatan Indeks & SEO Stabil.
+ * GALLERY COMPONENT - GOJEK STYLE (Clean Catalog Grid)
  */
-import { Camera, Leaf, Image as ImageIcon } from 'lucide-react';
+import { Leaf, ChevronRight, Image as ImageIcon } from 'lucide-react';
 import productsData from '../data/products.json';
 
-/**
- * OPTIMASI IMAGE
- * Dilakukan di sisi server saat build time.
- */
-const optimizeImage = (url = '', width = 600) => {
+const optimizeImage = (url = '', width = 400) => {
   if (!url || typeof url !== 'string') return '';
   if (url.includes('cloudinary.com')) {
-    return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width}/`);
+    return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width},c_fill,g_auto/`);
   }
   return url;
 };
 
-// WhatsApp Config
-const phoneNumber = "6287780937884";
-const message = "Halo Green Fresh, saya ingin melihat katalog lengkap komoditas sayur super dan informasi penawaran kerja sama.";
-const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+const waLink = `https://wa.me/6287780937884?text=${encodeURIComponent("Halo Green Fresh, saya ingin cek stok komoditas hari ini.")}`;
 ---
 
-<section class="py-12 lg:py-24 bg-white overflow-hidden font-sans text-left reveal-container">
-  <div class="max-w-[1600px] mx-auto px-6 lg:px-12">
+<section class="py-10 md:py-20 bg-white font-sans reveal-container">
+  <div class="max-w-[1200px] mx-auto px-4 md:px-10">
     
-    <div class="flex flex-col md:flex-row justify-between items-end mb-12 lg:mb-16 gap-6">
-      <div class="max-w-2xl text-center md:text-left">
-        <div class="flex items-center justify-center md:justify-start gap-2 mb-4 reveal-left">
-          <div class="w-8 h-[1px] bg-[#15803d]"></div>
-          <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#15803d]">
-            Premium Selection
-          </span>
-        </div>
-        <h2 class="text-4xl md:text-6xl font-serif italic text-[#052c17] leading-[1.1] tracking-tighter uppercase reveal-up">
-          Katalog <span class="text-[#15803d] not-italic font-sans">Komoditas Utama.</span>
-        </h2>
+    <div class="flex items-center justify-between mb-8">
+      <div class="space-y-1">
+        <h2 class="text-xl md:text-3xl font-black text-[#052c17] tracking-tight uppercase">Katalog Sayur</h2>
+        <p class="text-[10px] md:text-sm font-bold text-slate-400 uppercase tracking-widest">Produk Unggulan Hari Ini</p>
       </div>
-      <p class="text-slate-600 text-sm font-semibold max-w-xs italic md:text-right leading-relaxed border-r-0 md:border-r-2 border-green-200 pr-0 md:pr-6 reveal-right">
-        "Menyediakan berbagai varian sayur Grade-A untuk kebutuhan hotel, restoran, dan katering."
-      </p>
+      <a href={waLink} class="text-[#15803d] text-[11px] md:text-sm font-black uppercase flex items-center gap-1 hover:underline">
+        Lihat Semua <ChevronRight size={14} />
+      </a>
     </div>
 
-    <div class="columns-2 md:columns-3 lg:columns-4 gap-3 lg:gap-6 space-y-3 lg:space-y-6">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
       {productsData.map((product, idx) => (
         <div 
-          class="relative break-inside-avoid rounded-2xl lg:rounded-[2rem] overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 bg-slate-50 border border-slate-100 reveal-up"
+          class="group flex flex-col bg-white rounded-2xl border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 reveal-up"
           style={`transition-delay: ${idx * 0.05}s`}
         >
-          <img 
-            src={optimizeImage(product.image)}
-            alt={`Green Fresh - ${product.name}`}
-            class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
-            loading="lazy"
-            decoding="async"
-          />
-          
-          <div class="absolute inset-0 bg-gradient-to-t from-[#052c17] via-[#052c17]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
-            <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-               <div class="flex items-center gap-2 mb-2">
-                  <Leaf size={14} class="text-[#bef264]" />
-                  <span class="text-[10px] font-black text-white uppercase tracking-widest">Grade A Quality</span>
-               </div>
-               <h3 class="text-white text-xl md:text-2xl font-serif italic font-bold">
-                 {product.name}
-               </h3>
+          <div class="relative aspect-square overflow-hidden bg-slate-50">
+            <img 
+              src={optimizeImage(product.image)}
+              alt={product.name}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute top-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg border border-slate-100 shadow-sm">
+              <span class="text-[8px] font-black text-[#15803d] uppercase tracking-tighter">Grade A</span>
             </div>
           </div>
 
-          <div class="absolute top-4 right-4 opacity-100 group-hover:opacity-0 transition-opacity">
-            <div class="bg-white/80 backdrop-blur-md p-2 rounded-full border border-white/50 shadow-sm">
-              <Camera size={14} class="text-[#15803d]" />
+          <div class="p-3 md:p-5 flex flex-col gap-1">
+            <h3 class="text-[13px] md:text-lg font-black text-[#052c17] leading-tight group-hover:text-[#15803d] transition-colors">
+              {product.name}
+            </h3>
+            <div class="flex items-center gap-1.5 opacity-60">
+              <Leaf size={10} class="text-[#15803d]" />
+              <span class="text-[9px] md:text-[11px] font-bold text-slate-500 uppercase">Cipanas Harvest</span>
             </div>
           </div>
         </div>
       ))}
     </div>
 
-    <div class="mt-12 lg:mt-20 text-center reveal-up">
+    <div class="mt-12 text-center">
       <a 
         href={waLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-[#052c17] hover:bg-[#15803d] text-white px-10 py-5 rounded-full shadow-2xl transition-all text-[11px] font-black uppercase tracking-[0.2em] inline-flex items-center gap-4 group hover:scale-105 active:scale-95"
+        class="inline-flex items-center gap-3 bg-[#052c17] text-[#bef264] px-8 py-4 rounded-xl text-[11px] font-black uppercase tracking-widest shadow-lg hover:bg-[#15803d] hover:text-white transition-all active:scale-95"
       >
-        <ImageIcon size={18} class="text-[#bef264] group-hover:text-white transition-colors" /> 
-        Pesan {productsData.length}+ Komoditas via WhatsApp
+        <ImageIcon size={16} /> Hubungi Sales Specialist
       </a>
-      <p class="mt-6 text-[10px] uppercase font-black text-slate-400 tracking-widest">
-        Freshly Picked • Daily Delivery • Farm to Table
-      </p>
     </div>
   </div>
 </section>
 
 <style>
-  /* Animasi SEO-Friendly tanpa JavaScript Runtime */
-  .reveal-container .reveal-up,
-  .reveal-container .reveal-left,
-  .reveal-container .reveal-right {
+  .reveal-container .reveal-up {
     opacity: 0;
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(15px);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .reveal-up { transform: translateY(20px); }
-  .reveal-left { transform: translateX(-20px); }
-  .reveal-right { transform: translateX(20px); }
-
-  :global(.is-visible) .reveal-up,
-  :global(.is-visible) .reveal-left,
-  :global(.is-visible) .reveal-right {
+  :global(.is-visible) .reveal-up {
     opacity: 1;
-    transform: translate(0);
+    transform: translateY(0);
   }
 </style>
 
 <script>
-  /**
-   * Intersection Observer ringan untuk memicu animasi CSS.
-   * Konten tetap terbaca oleh Googlebot karena HTML statis sudah ada di DOM.
-   */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('is-visible');
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.reveal-container').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
 </script>
