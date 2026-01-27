@@ -12,9 +12,6 @@ import { jabodetabekCities } from '@/data/cities';
 const title = 'Network Distribusi Sayur Jabodetabek - Green Fresh Supplier';
 const description = 'Jaringan distribusi sayur segar harian Green Fresh di seluruh wilayah Jabodetabek. Sistem pengiriman terjadwal untuk Hotel, Restoran, dan Catering.';
 
-const origin = Astro.site || Astro.url.origin;
-const canonicalURL = new URL('/kota', origin);
-
 const stats = [
   { label: "Active Nodes", value: jabodetabekCities.length },
   { label: "Daily Capacity", value: "12.5 T" },
@@ -24,11 +21,10 @@ const stats = [
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={canonicalURL.href} slot="head" />
 
   <div class="bg-[#fcfdfc] text-[#052c17] font-sans antialiased w-full reveal-container">
     <Header />
-    
+
     <main class="pt-20">
       <section class="py-16 md:py-28 bg-white border-b border-slate-100">
         <div class="max-w-[1400px] mx-auto px-4 text-center">
@@ -42,7 +38,7 @@ const stats = [
           <p class="text-slate-500 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed mb-12 reveal-up">
             Kami melayani pengiriman sayuran Grade-A ke {jabodetabekCities.length} titik distribusi utama di seluruh Jabodetabek setiap harinya langsung dari Cipanas.
           </p>
-          
+
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {stats.map((stat, i) => (
               <div class="bg-white p-4 md:p-6 rounded-2xl border border-slate-100 shadow-sm reveal-up" style={`transition-delay: ${i * 0.1}s;`}>
@@ -88,7 +84,7 @@ const stats = [
             {jabodetabekCities.map((city, index) => {
               const isJakarta = city.name.toLowerCase().includes('jakarta');
               const zoneColor = isJakarta ? 'bg-green-600' : 'bg-emerald-500';
-              
+
               return (
                 <a 
                   href={`/kota/${city.slug}`}
@@ -96,7 +92,7 @@ const stats = [
                   data-name={city.name.toLowerCase()}
                 >
                   <div class="absolute -top-10 -right-10 w-32 h-32 bg-slate-50 rounded-full group-hover:bg-green-50 transition-colors duration-500" />
-                  
+
                   <div class="relative z-10">
                     <div class="flex justify-between items-start mb-6">
                       <div class={`${zoneColor} p-2.5 rounded-2xl text-white shadow-lg shadow-green-900/20`}>
@@ -106,11 +102,11 @@ const stats = [
                          Hub ID: {index + 700}
                       </div>
                     </div>
-                    
+
                     <h3 class="text-xl md:text-2xl font-black text-[#052c17] leading-tight mb-2 group-hover:text-green-700 transition-colors">
                       {city.name}
                     </h3>
-                    
+
                     <div class="flex items-center gap-2">
                       <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
                       <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">

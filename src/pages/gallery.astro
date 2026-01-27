@@ -12,13 +12,9 @@ import { Camera, Play, CheckCircle2 } from 'lucide-react';
 const title = 'Galeri Visual & Dokumentasi Kualitas | Green Fresh Cipanas';
 const description = 'Lihat potret nyata standardisasi sayur kualitas super kami. Dokumentasi video dan foto pengiriman harian dari kebun Cipanas ke seluruh Jabodetabek.';
 
-const origin = Astro.site || Astro.url.origin;
-const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
-const canonicalURL = new URL(cleanPathname, origin);
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={canonicalURL.href} slot="head" />
 
   <main class="min-h-screen bg-[#fcfcfc] text-left reveal-container">
     <Header />

@@ -79,7 +79,7 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={currentUrl} slot="head" />
+
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
   <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left reveal-container">
@@ -97,7 +97,7 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
       </div>
 
       <DistrictHero district={district} />
-      
+
       <div class="w-full bg-gradient-to-r from-white to-[#f7faf7] py-6 border-y border-green-50/50">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="flex items-center gap-4">
@@ -133,6 +133,41 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
         </div>
       </section>
 
+      <section class="py-16 md:py-24 bg-white border-t border-slate-50 reveal-up">
+        <div class="max-w-4xl mx-auto px-6">
+          <article class="prose prose-slate prose-lg max-w-none">
+            <div class="flex items-center gap-3 mb-8">
+              <div class="w-10 h-[2px] bg-[#15803d]"></div>
+              <h3 class="text-[10px] font-black text-[#15803d] uppercase tracking-[0.5em]">Wilayah Layanan Khusus</h3>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-black uppercase text-[#052c17] mb-8 tracking-tighter leading-tight">
+              Supplier Sayur Bintaro Sektor 7 Terpercaya untuk Restoran, Hotel, & Supermarket
+            </h2>
+
+            <div class="space-y-6 text-slate-600 leading-relaxed font-medium">
+              <p>Kebutuhan akan pasokan bahan makanan segar berkualitas di wilayah Bintaro Sektor 7 kini menjadi prioritas utama bagi para pelaku usaha kuliner. Sebagai Supplier Sayur Bintaro Sektor 7 - Untuk Restoran Komersial, Cafe, Depot dan Catering Perumahan, CV Green Fresh Cipanas hadir dengan visi untuk menyediakan sayuran terbaik langsung dari sumbernya di Cipanas. Area Bintaro Sektor 7 memiliki karakteristik pasar yang dinamis, di mana Penyuplai sayuran untuk sektor perumahan dengan aktivitas komersial padat. Kami memahami bahwa kesegaran bukan sekadar janji, melainkan kebutuhan operasional yang menentukan reputasi bisnis Anda di mata pelanggan.</p>
+              <p>Dalam operasional distribusi kami di wilayah Bintaro Sektor 7, kami sering mendapati bahwa Bintaro Sektor 7 memiliki mix residential dan komersial yang seimbang dengan kebutuhan spesifik. Restoran komersial di area perumahan membutuhkan bahan untuk menu yang appealing bagi residents dan visitors. Cafe dengan atmosphere neighborhood menginginkan produk yang sesuai dengan lifestyle warga. Depot yang melayani kebutuhan harian memerlukan reliability untuk pelanggan tetap. Catering untuk acara di perumahan membutuhkan layanan yang mengenal komunitas. Kami memahami dinamika mixed-use sector dengan layanan yang menghubungkan kebutuhan residential dan komersial. Hal ini mendorong kami untuk terus meningkatkan standar layanan pengiriman agar setiap butir sayuran yang diterima oleh Restoran Mixed-Use, Cafe Neighborhood, Depot, Catering Perumahan, Bisnis Sector tetap dalam kondisi segar, renyah, dan terjaga nutrisinya dari ladang hingga ke dapur.</p>
+
+              <div class="grid md:grid-cols-2 gap-8 my-12 p-8 bg-green-50 rounded-3xl border border-green-100 shadow-sm text-sm lg:text-base">
+                <div>
+                  <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Standardisasi Kualitas Sayuran untuk Bintaro Sektor 7</h4>
+                  <p>Menjaga standar kualitas di wilayah Bintaro Sektor 7 melibatkan proses kurasi yang sangat teliti. Setiap sayuran hijau, buah-buahan, hingga bumbu dapur yang kami suplai untuk Restoran Mixed-Use, Cafe Neighborhood, Depot, Catering Perumahan, Bisnis Sector harus melalui tahapan seleksi manual atau Quality Control yang ketat. Kami memastikan produk yang dikirimkan memiliki tekstur yang tepat, warna yang cerah alami, dan tingkat kebersihan yang memenuhi standar sanitasi dapur hotel dan restoran kelas dunia. Bagi pengelola supermarket di Bintaro Sektor 7, ketersediaan stok yang stabil adalah kunci utama, dan kami menjamin kontinuitas pasokan bahkan saat terjadi fluktuasi cuaca ekstrem di daerah pegunungan.</p>
+                </div>
+                <div>
+                  <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Logistik Terjadwal dan Kemitraan Profesional</h4>
+                  <p>Efisiensi distribusi di Bintaro Sektor 7 didukung oleh rute logistik strategis melalui Cipanas-Puncak-JORR-Bintaro Sektor 7. Armada kami dirancang khusus untuk melakukan pengiriman tepat waktu, biasanya dilakukan pada dini hari agar sayuran siap diolah tepat saat operasional dapur dimulai. Selain keandalan pengiriman fisik, kami menawarkan kerjasama perusahaan yang fleksibel dengan sistem pembayaran tempo (Term of Payment) guna mendukung manajemen arus kas bisnis Anda di Bintaro Sektor 7. Kami juga menyediakan kelengkapan administrasi seperti faktur pajak PKP resmi dan legalitas yang transparan, menjadikannya proses audit yang sangat mudah bagi manajemen keuangan mitra kami.</p>
+                </div>
+              </div>
+
+              <p class="italic p-6 bg-slate-50 rounded-2xl border-l-4 border-green-500/30 text-slate-700">
+                Mempercayakan kebutuhan sayuran Anda kepada CV Green Fresh Cipanas berarti memilih ketenangan pikiran dalam manajemen stok bahan baku. Kami berkomitmen untuk menjadi pilar pendukung bagi kesuksesan jangka panjang restoran, hotel, dan supermarket di area Bintaro Sektor 7. Segera hubungi tim pemasaran kami untuk mendiskusikan volume pengiriman dan spesifikasi produk yang Anda butuhkan demi pertumbuhan bisnis yang lebih sehat dan efisien di Bintaro Sektor 7.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      
       <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
           <div class="mb-12 text-left reveal-up">
@@ -148,7 +183,7 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
       <QualityGuarantee />
       <LiveStats />
       <DistrictRoute district={district} />
-      
+
       <section class="py-16 bg-white border-t border-slate-100 text-left">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8">
           <h3 class="text-xl font-black text-[#052c17] mb-8 uppercase tracking-widest flex items-center gap-2">

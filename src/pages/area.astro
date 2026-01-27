@@ -14,7 +14,6 @@ const allDistricts = districtsData.districts;
 
 const title = 'Jaringan Operasional & Wilayah Distribusi - Green Fresh';
 const description = 'Jelajahi cakupan distribusi Green Fresh. Kami melayani pengiriman sayur harian ke berbagai wilayah strategis Jabodetabek langsung dari Cipanas.';
-const canonicalURL = new URL('/area', Astro.site || Astro.url.origin);
 
 const stats = [
   { label: 'Wilayah Tercover', val: allDistricts.length + '+' },
@@ -25,11 +24,10 @@ const stats = [
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={canonicalURL.href} slot="head" />
 
   <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden w-full reveal-container">
     <Header />
-    
+
     <main class="w-full overflow-hidden">
       <section class="pt-24 md:pt-32 pb-12 md:pb-16 bg-gradient-to-b from-green-50 to-white overflow-hidden">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8">

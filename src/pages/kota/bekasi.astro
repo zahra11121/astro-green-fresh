@@ -8,6 +8,8 @@
 import MainLayout from '@/layouts/MainLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+
+import CityHero from '@/components/city/CityHero.astro';
 import CityClientPage from '@/components/CityClientPage.astro';
 import { MapPin } from 'lucide-react';
 
@@ -42,11 +44,8 @@ const city = {
   ]
 };
 
-const title = `Supplier Sayur ${city.name} - CV Green Fresh Cipanas | Harga B2B`;
+const title = `Supplier Sayur ${city.name} - CV Green Fresh Cipanas | Harga Kemitraan Perusahaan`;
 const description = `Layanan supply sayuran harian harga kompetitif untuk Hotel, Restoran, Cafe di wilayah ${city.name}.`;
-
-const origin = "https://greenfresh.co.id";
-const currentUrl = `${origin}/kota/${city.slug}`;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -76,47 +75,47 @@ for (let i = 1; i <= 6; i++) {
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={currentUrl} slot="head" />
+
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
 
   <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden reveal-container">
     <Header />
+    <CityHero city={city} />
 
     <main>
-      <section class="relative h-[50vh] min-h-[450px] flex items-center bg-[#052c17] overflow-hidden">
-        <div class="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=2000" 
-            alt={city?.name ? `Supplier Sayur ${city.name}` : "Supplier Sayur"}
-            class="w-full h-full object-cover opacity-60 brightness-[0.7]" 
-            loading="eager"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#052c17] to-transparent"></div>
-        </div>
 
-        <div class="relative z-10 max-w-[1800px] mx-auto px-6 text-white">
-          <div class="max-w-4xl reveal-up">
-            <span class="px-3 py-1 bg-green-600 text-[10px] font-black tracking-[0.2em] uppercase rounded mb-4 inline-block">
-              B2B Premium Supply
-            </span>
-
-            <h1 class="text-4xl md:text-7xl font-black uppercase leading-[0.95] mb-6 tracking-tighter">
-              <span class="text-green-400">Supplier Sayuran {city.name}</span>
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-16 bg-white">
+      <section class="py-16 bg-white border-t border-slate-50">
         <div class="max-w-4xl mx-auto px-6">
           <article class="prose prose-green max-w-none reveal-up">
-            <h2 class="text-3xl font-black uppercase mb-6 text-[#052c17]">
-              Mitra Distribusi Sayuran di {city.name}
+            <h2 class="text-3xl md:text-5xl font-black uppercase mb-8 text-[#052c17] tracking-tighter">
+              Supplier Sayur Bekasi Terpercaya untuk Restoran, Hotel, & Supermarket
             </h2>
 
-            <p class="text-lg text-slate-700">
-              CV Green Fresh Cipanas melayani supplier sayur ${city.name} untuk Horeca, Rumah Sakit, Catering & bisnis kuliner.
+            <p class="text-lg text-slate-700 leading-relaxed mb-10 font-medium">
+              Dalam ekosistem bisnis kuliner yang sangat kompetitif di wilayah Bekasi, kualitas bahan baku segar merupakan fondasi utama keberhasilan operasional harian. CV Green Fresh Cipanas memahami tantangan besar yang dihadapi oleh para pengelola Bisnis Kuliner, Rumah Sakit, & Hotel dalam mendapatkan pasokan sayur mayur yang konsisten dan berkualitas tinggi. Dengan mengandalkan hasil panen langsung dari lahan pertanian subur di dataran tinggi Cipanas, kami hadir sebagai mitra strategis yang menjembatani kebutuhan sayuran segar dengan efisiensi logistik yang tak tertandingi. Area layanan distribusi kami kini mencakup seluruh titik vital di Bekasi, mulai dari kawasan Bekasi Barat, Bekasi Timur, Harapan Indah, Galaxi, Summarecon, guna memastikan setiap dapur profesional menerima produk dengan standar kesegaran terbaik langsung dari sumbernya tanpa melalui banyak perantara.
             </p>
+
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-[#15803d] uppercase mb-4 tracking-tight">
+                Standar Kurasi Produk Sayur Terbaik untuk Bisnis Kuliner, Rumah Sakit, & Hotel
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Kami menerapkan protokol Quality Control yang sangat ketat untuk memastikan setiap jenis komoditas memenuhi standar tinggi industri kuliner saat ini. Di wilayah Bekasi, kebutuhan akan agen sayur bekasi, supplier sayur katering bekasi, sayur fresh grosir menuntut ketelitian yang sangat tinggi, mulai dari tahap sortasi manual hingga pengemasan akhir yang aman. Produk sayuran hijau kami dipanen pada waktu yang paling optimal dan segera melalui proses pendinginan untuk menjaga tekstur renyah (crispy) dan kandungan nutrisi alaminya. Bagi mitra katering, hotel, hingga supermarket, kami menyediakan opsi kustomisasi potongan atau pembersihan (pre-cut) yang dirancang untuk mempercepat proses prapengolahan di dapur Anda. Dedikasi kami pada kualitas menjadikan kami sebagai pilihan utama bagi unit bisnis yang sangat mengutamakan kepuasan pelanggan dan tidak mentoleransi adanya rejection rate yang tinggi pada setiap pengiriman barang.
+              </p>
+            </div>
+
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-[#15803d] uppercase mb-4 tracking-tight">
+                Infrastruktur Logistik Modern dan Fleksibilitas Kerjasama Perusahaan
+              </h3>
+              <p class="text-slate-600 leading-relaxed">
+                Kelancaran operasional harian bisnis Anda di Bekasi sangat bergantung pada ketepatan waktu distribusi. Dengan dukungan infrastruktur Harga Grosir Tangan Pertama Tol Cikampek, armada distribusi kami bergerak setiap subuh untuk menembus jalur-jalur sibuk di Bekasi guna memastikan barang tiba sebelum puncak aktivitas dapur dimulai. Selain keunggulan pada sisi logistik, Green Fresh menawarkan skema kerjasama profesional berupa sistem pembayaran tempo atau Term of Payment (TOP) hingga 30 hari. Skema ini dirancang khusus untuk mendukung kesehatan arus kas korporasi dan memberikan fleksibilitas finansial yang lebih baik bagi para mitra. Kami juga menjamin transparansi administrasi secara menyeluruh dengan status pengusaha kena pajak (PKP) resmi serta penyediaan faktur pajak elektronik, sehingga sangat memudahkan proses audit internal dan manajemen keuangan bagi perusahaan mitra di seluruh wilayah Bekasi.
+              </p>
+            </div>
+
+            <div class="mt-12 p-8 bg-[#f7faf7] rounded-3xl border-2 border-green-100 italic text-slate-700">
+              Memilih CV Green Fresh Cipanas berarti Anda sedang berinvestasi pada stabilitas stok dan konsistensi kualitas rasa pada setiap sajian menu Anda. Kami berkomitmen penuh untuk terus menjadi pilar pendukung bagi pertumbuhan industri restoran, hotel, supermarket, dan unit katering di Bekasi dengan menyediakan pasokan sayur mayur yang stabil sepanjang tahun, bahkan di tengah tantangan cuaca ekstrem. Jangan ragu untuk segera menghubungi tim pemasaran kami guna mendiskusikan draf skema suplai yang paling efisien dan menguntungkan bagi pertumbuhan bisnis kuliner Anda hari ini.
+            </div>
           </article>
         </div>
       </section>

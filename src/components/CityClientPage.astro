@@ -1,15 +1,14 @@
 ---
 /**
  * CITY PAGE CONTENT - PURE ASTRO VERSION
- * Strategi: Zero JS Hydration untuk Dominasi Keyword Lokal per Kota.
- * Note: Layout dihilangkan karena sudah dipanggil oleh parent/server.
+ * Strategi: Otoritas Konten Maksimal & Pembersihan Istilah Teknis.
+ * Note: CityHero dihilangkan dari sini karena sudah dipanggil di parent (kota/*.astro).
  */
 import { Star, ShieldCheck, Users } from 'lucide-react';
 
 // Import Komponen .astro
 import PartnershipForm from '@/components/PartnershipForm.astro';
 import PriceTable from '@/components/PriceTable.astro';
-import CityHero from '@/components/city/CityHero.astro';
 import LogisticsTimeline from '@/components/city/LogisticsTimeline.astro';
 import CityFAQ from '@/components/city/CityFAQ.astro';
 import SectorTarget from '@/components/city/SectorTarget.astro';
@@ -22,8 +21,6 @@ const { city, vegetableData } = Astro.props;
 
 <div class="bg-white font-sans selection:bg-green-100 reveal-container">
   
-  <CityHero city={city} />
-
   <div class="w-full bg-white border-y border-green-50 py-4">
     <div class="max-w-[1800px] mx-auto px-6 flex flex-wrap items-center justify-between gap-6">
       <div class="flex items-center gap-4">
@@ -33,12 +30,12 @@ const { city, vegetableData } = Astro.props;
           ))}
         </div>
         <p class="text-[11px] lg:text-xs font-black uppercase tracking-widest text-[#052c17]">
-          4.9/5 | <span class="text-[#15803d]">Pilihan Utama di {city.name}</span>
+          4.9/5 | <span class="text-[#15803d]">Pilihan Utama Restoran & Hotel di {city.name}</span>
         </p>
       </div>
       <div class="hidden md:flex items-center gap-8 text-[10px] font-bold uppercase text-slate-600">
         <span class="flex items-center gap-2"><Users size={14} class="text-[#15803d]" /> 120+ Mitra Aktif</span>
-        <span class="flex items-center gap-2"><ShieldCheck size={14} class="text-[#15803d]" /> Grade A Quality</span>
+        <span class="flex items-center gap-2"><ShieldCheck size={14} class="text-[#15803d]" /> Kualitas Grade A</span>
       </div>
     </div>
   </div>
@@ -80,9 +77,9 @@ const { city, vegetableData } = Astro.props;
     <div class="max-w-[1200px] mx-auto px-6">
       <div class="text-center mb-16 uppercase reveal-up">
         <h2 class="text-3xl lg:text-6xl font-serif italic font-black text-[#052c17] leading-none">
-          Ajukan <span class="text-[#15803d] not-italic font-sans font-bold">Kerjasama.</span>
+          Ajukan <span class="text-[#15803d] not-italic font-sans font-bold">Kerjasama Profesional.</span>
         </h2>
-        <p class="text-slate-700 font-bold text-xs tracking-widest mt-4">Area Distribusi {city.name}</p>
+        <p class="text-slate-700 font-bold text-xs tracking-widest mt-4">Pusat Distribusi Sayur {city.name}</p>
       </div>
       <PartnershipForm />
     </div>
@@ -90,8 +87,6 @@ const { city, vegetableData } = Astro.props;
 </div>
 
 <style>
-  /* Animasi CSS Native (SEO Friendly) */
-  /* Gunakan double braces jika dimasukkan ke script Python .format() */
   .reveal-container .reveal-up {
     opacity: 0;
     transform: translateY(20px);
@@ -104,7 +99,6 @@ const { city, vegetableData } = Astro.props;
 </style>
 
 <script>
-  // Observer ringan untuk memicu animasi visual
   const setupObserver = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -116,6 +110,5 @@ const { city, vegetableData } = Astro.props;
   };
 
   setupObserver();
-  // Support untuk Astro View Transitions
   document.addEventListener('astro:after-swap', setupObserver);
 </script>

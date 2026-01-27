@@ -20,15 +20,10 @@ const vegetableData = Array.from(uniqueMap.values());
 const title = "Katalog Komoditas Sayur Segar Cipanas | Green Fresh B2B Supply";
 const description = "Jelajahi lebih dari 70 jenis sayuran grade A langsung dari petani Cipanas. Stok harian stabil, sortir premium, dan pengiriman terjadwal Jabodetabek.";
 
-const origin = Astro.site || Astro.url.origin;
-const cleanPathname = Astro.url.pathname.replace(/\/index\.html$|\.html$/, '');
-const canonicalURL = new URL(cleanPathname, origin);
-
 const lcpImage = vegetableData.length > 0 ? vegetableData[0].image : null;
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={canonicalURL.href} slot="head" />
 
   {lcpImage && (
     <link
@@ -45,7 +40,7 @@ const lcpImage = vegetableData.length > 0 ? vegetableData[0].image : null;
 
   <div class="bg-[#fcfdfc] min-h-screen font-sans overflow-x-hidden text-left">
     <Header />
-    
+
     <main>
       <ProductCatalog initialData={vegetableData} />
     </main>

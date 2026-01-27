@@ -79,7 +79,7 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
 ---
 
 <MainLayout title={title} description={description}>
-  <link rel="canonical" href={currentUrl} slot="head" />
+
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} slot="head" />
 
   <div class="bg-white text-[#052c17] font-sans antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900 text-left reveal-container">
@@ -97,7 +97,7 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
       </div>
 
       <DistrictHero district={district} />
-      
+
       <div class="w-full bg-gradient-to-r from-white to-[#f7faf7] py-6 border-y border-green-50/50">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="flex items-center gap-4">
@@ -133,6 +133,41 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
         </div>
       </section>
 
+      <section class="py-16 md:py-24 bg-white border-t border-slate-50 reveal-up">
+        <div class="max-w-4xl mx-auto px-6">
+          <article class="prose prose-slate prose-lg max-w-none">
+            <div class="flex items-center gap-3 mb-8">
+              <div class="w-10 h-[2px] bg-[#15803d]"></div>
+              <h3 class="text-[10px] font-black text-[#15803d] uppercase tracking-[0.5em]">Wilayah Layanan Khusus</h3>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-black uppercase text-[#052c17] mb-8 tracking-tighter leading-tight">
+              Supplier Sayur Pasar Minggu (Pejaten Timur) Terpercaya untuk Restoran, Hotel, & Supermarket
+            </h2>
+
+            <div class="space-y-6 text-slate-600 leading-relaxed font-medium">
+              <p>Kebutuhan akan pasokan bahan makanan segar berkualitas di wilayah Pasar Minggu (Pejaten Timur) kini menjadi prioritas utama bagi para pelaku usaha kuliner. Sebagai Supplier Sayur Pasar Minggu - Untuk Restoran, Cafe, Depot dan Catering Skala Menengah, CV Green Fresh Cipanas hadir dengan visi untuk menyediakan sayuran terbaik langsung dari sumbernya di Cipanas. Area Pasar Minggu (Pejaten Timur) memiliki karakteristik pasar yang dinamis, di mana Pemasok sayuran untuk kawasan dengan konsentrasi usaha kuliner menengah yang padat. Kami memahami bahwa kesegaran bukan sekadar janji, melainkan kebutuhan operasional yang menentukan reputasi bisnis Anda di mata pelanggan.</p>
+              <p>Dalam operasional distribusi kami di wilayah Pasar Minggu (Pejaten Timur), kami sering mendapati bahwa Pasar Minggu memiliki konsentrasi usaha kuliner menengah yang sangat padat dengan karakter yang beragam. Restoran dengan kapasitas menengah membutuhkan volume tertentu dengan kualitas konsisten. Cafe di area ini memerlukan bahan yang balance antara kualitas dan harga. Depot dengan operational efficiency tinggi menginginkan sistem yang streamlined. Catering skala menengah membutuhkan reliability untuk memenuhi order harian. Kami mengoptimalkan rute untuk efisiensi di kawasan dengan density bisnis tinggi ini. Hal ini mendorong kami untuk terus meningkatkan standar layanan pengiriman agar setiap butir sayuran yang diterima oleh Restoran Menengah, Cafe, Depot, Catering Skala Menengah, Usaha Kuliner Padat tetap dalam kondisi segar, renyah, dan terjaga nutrisinya dari ladang hingga ke dapur.</p>
+
+              <div class="grid md:grid-cols-2 gap-8 my-12 p-8 bg-green-50 rounded-3xl border border-green-100 shadow-sm text-sm lg:text-base">
+                <div>
+                  <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Standardisasi Kualitas Sayuran untuk Pasar Minggu (Pejaten Timur)</h4>
+                  <p>Menjaga standar kualitas di wilayah Pasar Minggu (Pejaten Timur) melibatkan proses kurasi yang sangat teliti. Setiap sayuran hijau, buah-buahan, hingga bumbu dapur yang kami suplai untuk Restoran Menengah, Cafe, Depot, Catering Skala Menengah, Usaha Kuliner Padat harus melalui tahapan seleksi manual atau Quality Control yang ketat. Kami memastikan produk yang dikirimkan memiliki tekstur yang tepat, warna yang cerah alami, dan tingkat kebersihan yang memenuhi standar sanitasi dapur hotel dan restoran kelas dunia. Bagi pengelola supermarket di Pasar Minggu (Pejaten Timur), ketersediaan stok yang stabil adalah kunci utama, dan kami menjamin kontinuitas pasokan bahkan saat terjadi fluktuasi cuaca ekstrem di daerah pegunungan.</p>
+                </div>
+                <div>
+                  <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Logistik Terjadwal dan Kemitraan Profesional</h4>
+                  <p>Efisiensi distribusi di Pasar Minggu (Pejaten Timur) didukung oleh rute logistik strategis melalui Cipanas-Puncak-Jagorawi-Pasar Minggu. Armada kami dirancang khusus untuk melakukan pengiriman tepat waktu, biasanya dilakukan pada dini hari agar sayuran siap diolah tepat saat operasional dapur dimulai. Selain keandalan pengiriman fisik, kami menawarkan kerjasama perusahaan yang fleksibel dengan sistem pembayaran tempo (Term of Payment) guna mendukung manajemen arus kas bisnis Anda di Pasar Minggu (Pejaten Timur). Kami juga menyediakan kelengkapan administrasi seperti faktur pajak PKP resmi dan legalitas yang transparan, menjadikannya proses audit yang sangat mudah bagi manajemen keuangan mitra kami.</p>
+                </div>
+              </div>
+
+              <p class="italic p-6 bg-slate-50 rounded-2xl border-l-4 border-green-500/30 text-slate-700">
+                Mempercayakan kebutuhan sayuran Anda kepada CV Green Fresh Cipanas berarti memilih ketenangan pikiran dalam manajemen stok bahan baku. Kami berkomitmen untuk menjadi pilar pendukung bagi kesuksesan jangka panjang restoran, hotel, dan supermarket di area Pasar Minggu (Pejaten Timur). Segera hubungi tim pemasaran kami untuk mendiskusikan volume pengiriman dan spesifikasi produk yang Anda butuhkan demi pertumbuhan bisnis yang lebih sehat dan efisien di Pasar Minggu (Pejaten Timur).
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      
       <section id="katalog" class="py-16 bg-[#f8fafc] border-y border-slate-200 text-left">
         <div class="max-w-[1800px] mx-auto px-6">
           <div class="mb-12 text-left reveal-up">
@@ -148,7 +183,7 @@ const labels = ["Logistik", "Distribusi", "Supply", "Pengiriman", "Area", "Layan
       <QualityGuarantee />
       <LiveStats />
       <DistrictRoute district={district} />
-      
+
       <section class="py-16 bg-white border-t border-slate-100 text-left">
         <div class="max-w-[1800px] mx-auto px-4 md:px-8">
           <h3 class="text-xl font-black text-[#052c17] mb-8 uppercase tracking-widest flex items-center gap-2">
