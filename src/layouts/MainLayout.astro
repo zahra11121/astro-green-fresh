@@ -2,7 +2,12 @@
 // MainLayout.astro
 import "../styles/global.css";
 
-const { title = "Greenfresh.co.id", description = "Supplier Sayur Segar B2B", canonical } = Astro.props;
+const { 
+  title = "Greenfresh.co.id", 
+  description = "Supplier Sayur Segar B2B", 
+  canonical 
+} = Astro.props;
+
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
 
 const waMessage = encodeURIComponent("Halo Green Fresh, saya ingin melakukan pemesanan sayuran. Mohon informasi stok harian dan prosedur order untuk wilayah saya. Terima kasih.");
@@ -12,7 +17,17 @@ const waMessage = encodeURIComponent("Halo Green Fresh, saya ingin melakukan pem
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    
     <slot name="head" />
   </head>
   <body class="antialiased font-sans">
@@ -25,11 +40,11 @@ const waMessage = encodeURIComponent("Halo Green Fresh, saya ingin melakukan pem
           <p>Silakan pilih admin untuk memesan:</p>
         </div>
         <div class="wa-list">
-          <a href={`https://wa.me/6287700592999?text=${waMessage}`} target="_blank" class="wa-item">
+          <a href={`https://wa.me/6287700592999?text=${waMessage}`} target="_blank" rel="noopener noreferrer" class="wa-item">
             <div class="wa-avatar">A1</div>
             <span>Admin 1</span>
           </a>
-          <a href={`https://wa.me/6287780937884?text=${waMessage}`} target="_blank" class="wa-item">
+          <a href={`https://wa.me/6287780937884?text=${waMessage}`} target="_blank" rel="noopener noreferrer" class="wa-item">
             <div class="wa-avatar">A2</div>
             <span>Admin 2</span>
           </a>
@@ -45,30 +60,37 @@ const waMessage = encodeURIComponent("Halo Green Fresh, saya ingin melakukan pem
       const btn = document.getElementById('wa-toggle');
       const menu = document.getElementById('wa-menu');
 
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('active');
-      });
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          menu.classList.toggle('active');
+        });
 
-      // Menutup menu jika klik di luar area widget
-      document.addEventListener('click', (e) => {
-        if (!btn.contains(e.target) && !menu.contains(e.target)) {
-          menu.classList.remove('active');
-        }
-      });
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target as Node) && !menu.contains(e.target as Node)) {
+            menu.classList.remove('active');
+          }
+        });
+      }
     </script>
   </body>
 </html>
 
 <style is:global>
+  :root {
+    --font-geist-sans: 'Geist', sans-serif;
+    --font-geist-mono: 'Geist Mono', monospace;
+  }
+  body {
+    font-family: var(--font-geist-sans);
+  }
+
   .wa-widget {
     position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 9999;
-    font-family: var(--font-geist-sans), sans-serif;
   }
 
-  /* Menu Card */
   .wa-menu {
     position: absolute;
     bottom: 80px;
@@ -134,7 +156,6 @@ const waMessage = encodeURIComponent("Halo Green Fresh, saya ingin melakukan pem
     color: #16a34a;
   }
 
-  /* Main Button Style */
   .wa-main-button {
     width: 60px;
     height: 60px;
