@@ -2,7 +2,7 @@
 /**
  * MAIN LANDING PAGE - CV GREEN FRESH CIPANAS
  * Mode: Full Astro (Zero Hydration Strategis)
- * Update: SEO Optimization & Schema Markup (Dengan offers)
+ * Update: SEO Optimization & Schema Markup (Lengkap)
  */
 import MainLayout from '@/layouts/MainLayout.astro';
 import Header from '@/components/Header.astro';
@@ -27,7 +27,7 @@ const keywords = "distributor sayuran, supplier sayuran, supplier sayur, distrib
 // Base URL
 const baseUrl = "https://greenfresh.co.id";
 
-// Schema Markup (Dengan offers di setiap product)
+// Schema Markup (Lengkap dengan image, brand, shippingDetails, return policy)
 const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -72,12 +72,50 @@ const schemaMarkup = {
           "@type": "Product",
           "name": "Sayuran Daun Segar",
           "description": "Supplier sayuran daun segar grade A",
+          "image": `${baseUrl}/images/sayuran-daun.jpg`,
+          "brand": {
+            "@type": "Brand",
+            "name": "Green Fresh Cipanas"
+          },
+          "sku": "GFC-SD-001",
           "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "IDR",
             "availability": "https://schema.org/InStock",
-            "url": `${baseUrl}/produk/sayuran-daun`
+            "url": `${baseUrl}/produk/sayuran-daun`,
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                }
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
           }
         }
       },
@@ -87,12 +125,50 @@ const schemaMarkup = {
           "@type": "Product",
           "name": "Sayuran Buah Segar",
           "description": "Distributor sayuran buah segar berkualitas",
+          "image": `${baseUrl}/images/sayuran-buah.jpg`,
+          "brand": {
+            "@type": "Brand",
+            "name": "Green Fresh Cipanas"
+          },
+          "sku": "GFC-SB-002",
           "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "IDR",
             "availability": "https://schema.org/InStock",
-            "url": `${baseUrl}/produk/sayuran-buah`
+            "url": `${baseUrl}/produk/sayuran-buah`,
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                }
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
           }
         }
       },
@@ -102,12 +178,50 @@ const schemaMarkup = {
           "@type": "Product",
           "name": "Paket Sayuran Restoran",
           "description": "Paket suplai sayuran untuk restoran dan hotel",
+          "image": `${baseUrl}/images/paket-restoran.jpg`,
+          "brand": {
+            "@type": "Brand",
+            "name": "Green Fresh Cipanas"
+          },
+          "sku": "GFC-PR-003",
           "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "IDR",
             "availability": "https://schema.org/InStock",
-            "url": `${baseUrl}/produk/paket-restoran`
+            "url": `${baseUrl}/produk/paket-restoran`,
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "IDR"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                }
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "ID"
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "ID",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
           }
         }
       }
