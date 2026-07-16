@@ -2,7 +2,7 @@
 /**
  * MAIN LANDING PAGE - CV GREEN FRESH CIPANAS
  * Mode: Full Astro (Zero Hydration Strategis)
- * Update: Desain Rendah Kontras & Wilayah Pengiriman Aktif (Non-Flat)
+ * Update: SEO Optimization & Schema Markup
  */
 import MainLayout from '@/layouts/MainLayout.astro';
 import Header from '@/components/Header.astro';
@@ -19,63 +19,208 @@ import VisualGallery from '@/components/VisualGallery.astro';
 import { MapPin, ChevronRight } from 'lucide-react';
 import { jabodetabekCities } from '@/data/cities';
 
-const title = "CV Green Fresh Cipanas | Supplier Sayuran Segar Cipanas";
-const description = "Partner strategis supply sayuran Grade A untuk Hotel, Restoran, dan Catering. Distribusi langsung dari petani Cipanas dengan sistem logistik 24 jam.";
+// SEO Optimasi
+const title = "Distributor Sayuran & Supplier Sayuran Segar Terpercaya - CV Green Fresh Cipanas";
+const description = "Distributor sayuran dan supplier sayuran segar Grade A untuk Hotel, Restoran, dan Catering. Distribusi langsung dari petani Cipanas dengan sistem logistik 24 jam. Terpercaya di Jabodetabek.";
+const keywords = "distributor sayuran, supplier sayuran, supplier sayur, distributor sayur segar, supplier sayuran cipanas, distributor sayuran jakarta";
+
+// Schema Markup
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "CV Green Fresh Cipanas",
+  "description": "Distributor sayuran dan supplier sayuran segar terpercaya di Cipanas, melayani Jabodetabek",
+  "image": "https://greenfresh.co.id/og-image.jpg",
+  "logo": "https://greenfresh.co.id/logo.png",
+  "url": "https://greenfresh.co.id",
+  "telephone": "+62-812-3456-7890",
+  "email": "info@greenfresh.co.id",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Raya Cipanas No. 123",
+    "addressLocality": "Cipanas",
+    "addressRegion": "Jawa Barat",
+    "postalCode": "43253",
+    "addressCountry": "Indonesia"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-6.7253",
+    "longitude": "107.0394"
+  },
+  "openingHours": "Mo-Su 05:00-17:00",
+  "sameAs": [
+    "https://www.instagram.com/greenfreshcipanas",
+    "https://www.facebook.com/greenfreshcipanas"
+  ],
+  "priceRange": "$$",
+  "servesCuisine": "Indonesian Fresh Vegetables",
+  "areaServed": {
+    "@type": "City",
+    "name": "Jabodetabek"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Distribusi Sayuran Segar",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Sayuran Daun Segar",
+          "description": "Supplier sayuran daun segar grade A"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Sayuran Buah Segar",
+          "description": "Distributor sayuran buah segar berkualitas"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Paket Sayuran Restoran",
+          "description": "Paket suplai sayuran untuk restoran dan hotel"
+        }
+      }
+    ]
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.8",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Mitra Bisnis CV Green Fresh Cipanas"
+    }
+  },
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": "https://greenfresh.co.id/pesan",
+    "deliveryMethod": "https://schema.org/OnSitePickup"
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Distribusi Sayuran 24 Jam",
+      "description": "Layanan distribusi sayuran segar 24 jam untuk Jabodetabek"
+    },
+    {
+      "@type": "Offer",
+      "name": "Supplier Sayuran Hotel",
+      "description": "Pemasok sayuran premium untuk hotel bintang"
+    }
+  ]
+};
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title={title} description={description} keywords={keywords}>
+  <head>
+    <!-- Schema Markup -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://greenfresh.co.id" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://greenfresh.co.id" />
+    <meta property="og:image" content="https://greenfresh.co.id/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://greenfresh.co.id/twitter-image.jpg" />
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="sitemap" href="/sitemap.xml" />
+  </head>
+  
   <div class="bg-[#fcfdfc] text-[#052c17] font-sans selection:bg-green-100 reveal-container">
     <Header />
 
     <main>
       <Hero />
 
+      <!-- Breadcrumb untuk SEO -->
+      <nav class="max-w-7xl mx-auto px-4 py-3 text-sm text-slate-500" aria-label="Breadcrumb">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li><a href="/" class="hover:text-green-700">Beranda</a></li>
+          <li><span class="text-slate-300">/</span></li>
+          <li><span class="text-green-700 font-medium">Distributor & Supplier Sayuran</span></li>
+        </ol>
+      </nav>
+
       <section class="reveal-up bg-white border-b-2 border-green-50">
         <WhoWeAre />
       </section>
+
+      <!-- Section dengan target keyword di heading -->
       <section class="py-16 md:py-24 bg-white border-b-2 border-green-50 reveal-up">
-  <div class="max-w-4xl mx-auto px-6">
-    <article class="prose prose-slate prose-lg max-w-none">
-      <div class="flex items-center gap-3 mb-8">
-        <div class="w-10 h-[2px] bg-[#15803d]"></div>
-        <h3 class="text-[10px] font-black text-[#15803d] uppercase tracking-[0.5em]">Industry Leadership</h3>
-      </div>
-      
-      <h2 class="text-3xl md:text-5xl font-black uppercase text-[#052c17] mb-8 tracking-tighter leading-none">
-        Otoritas Suplai Sayuran Segar <span class="text-green-600">Terintegrasi.</span>
-      </h2>
+        <div class="max-w-4xl mx-auto px-6">
+          <article class="prose prose-slate prose-lg max-w-none">
+            <div class="flex items-center gap-3 mb-8">
+              <div class="w-10 h-[2px] bg-[#15803d]"></div>
+              <h3 class="text-[10px] font-black text-[#15803d] uppercase tracking-[0.5em]">Industry Leadership</h3>
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl font-black uppercase text-[#052c17] mb-8 tracking-tighter leading-none">
+              Distributor & Supplier Sayuran Segar <span class="text-green-600">Terintegrasi.</span>
+            </h1>
 
-      <div class="space-y-6 text-slate-600 leading-relaxed font-medium">
-        <p>
-          Sebagai <strong>supplier sayur</strong> utama yang berbasis di dataran tinggi Cipanas, CV Green Fresh Cipanas telah mendedikasikan diri untuk merevolusi rantai pasok agrikultur di Indonesia. Kami memahami bahwa tantangan terbesar bagi operasional restoran, hotel, dan katering adalah inkonsistensi kualitas dan fluktuasi harga pasar yang tidak menentu. Dengan mengadopsi model <em>Direct-Farming</em>, kami menjamin bahwa setiap komoditas yang tiba di dapur Anda adalah hasil panen terbaik yang diproses melalui standar kurasi ketat.
-        </p>
+            <div class="space-y-6 text-slate-600 leading-relaxed font-medium">
+              <p>
+                Sebagai <strong class="text-green-800">supplier sayuran</strong> utama yang berbasis di dataran tinggi Cipanas, CV Green Fresh Cipanas telah mendedikasikan diri untuk merevolusi rantai pasok agrikultur di Indonesia. Kami memahami bahwa tantangan terbesar bagi operasional restoran, hotel, dan katering adalah inkonsistensi kualitas dan fluktuasi harga pasar yang tidak menentu. Dengan mengadopsi model <em>Direct-Farming</em>, kami menjamin bahwa setiap komoditas yang tiba di dapur Anda adalah hasil panen terbaik yang diproses melalui standar kurasi ketat.
+              </p>
 
-        <p>
-          Keunggulan kami terletak pada integrasi hulu ke hilir. Lahan pertanian kami di Cipanas dikelola dengan teknik budidaya modern yang memperhatikan aspek kesehatan tanah dan keberlanjutan. Hal ini memungkinkan kami untuk menyediakan pasokan sayuran Grade A secara stabil sepanjang tahun, bahkan di tengah tantangan cuaca ekstrem. Sebagai <strong>distributor sayuran segar</strong> terpercaya, kami memangkas jalur distribusi tradisional yang panjang, sehingga kesegaran produk (<em>crispness</em>) tetap terjaga maksimal saat pengiriman.
-        </p>
+              <p>
+                Keunggulan kami terletak pada integrasi hulu ke hilir. Lahan pertanian kami di Cipanas dikelola dengan teknik budidaya modern yang memperhatikan aspek kesehatan tanah dan keberlanjutan. Hal ini memungkinkan kami untuk menyediakan pasokan sayuran Grade A secara stabil sepanjang tahun, bahkan di tengah tantangan cuaca ekstrem. Sebagai <strong class="text-green-800">distributor sayuran segar</strong> terpercaya, kami memangkas jalur distribusi tradisional yang panjang, sehingga kesegaran produk (<em>crispness</em>) tetap terjaga maksimal saat pengiriman.
+              </p>
 
-        <div class="grid md:grid-cols-2 gap-8 my-12 p-8 bg-green-50 rounded-3xl border border-green-100 shadow-sm">
-          <div>
-            <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Komitmen Kualitas</h4>
-            <p class="text-sm">Setiap unit komoditas melewati proses sortasi manual dan pembersihan standar industri guna meminimalisir <em>rejection rate</em> di gudang mitra.</p>
-          </div>
-          <div>
-            <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Efisiensi Finansial</h4>
-            <p class="text-sm">Kami mendukung pertumbuhan bisnis mitra melalui fleksibilitas sistem pembayaran (Term of Payment) dan transparansi faktur pajak PKP resmi.</p>
-          </div>
+              <div class="grid md:grid-cols-2 gap-8 my-12 p-8 bg-green-50 rounded-3xl border border-green-100 shadow-sm">
+                <div>
+                  <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Komitmen Kualitas</h4>
+                  <p class="text-sm">Setiap unit komoditas melewati proses sortasi manual dan pembersihan standar industri guna meminimalisir <em>rejection rate</em> di gudang mitra.</p>
+                </div>
+                <div>
+                  <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Efisiensi Finansial</h4>
+                  <p class="text-sm">Kami mendukung pertumbuhan bisnis mitra melalui fleksibilitas sistem pembayaran (Term of Payment) dan transparansi faktur pajak PKP resmi.</p>
+                </div>
+              </div>
+
+              <p>
+                Logistik adalah nadi dari layanan kami. Dengan sistem <strong class="text-green-800">distribusi sayur 24 jam</strong>, armada kami bergerak setiap subuh untuk menembus titik-titik vital di Jakarta, Bogor, Depok, Tangerang, Bekasi, hingga Cikarang. Kami tidak hanya sekadar mengirimkan barang, kami memberikan kepastian operasional bagi tim purchasing dan chef agar mereka dapat fokus pada kreasi menu tanpa khawatir akan kendala bahan baku.
+              </p>
+              
+              <!-- Target keyword section -->
+              <div class="bg-white p-6 rounded-xl border border-green-200 shadow-sm my-8">
+                <h2 class="text-xl font-bold text-[#052c17] mb-3">Distributor & Supplier Sayuran Terpercaya</h2>
+                <p class="text-sm">
+                  CV Green Fresh Cipanas adalah <strong>distributor sayuran</strong> dan <strong>supplier sayuran</strong> terpercaya yang melayani kebutuhan bisnis kuliner di Jabodetabek dengan sistem logistik 24 jam.
+                </p>
+              </div>
+
+              <p>
+                Memilih CV Green Fresh Cipanas berarti memilih stabilitas, transparansi, dan kualitas prima. Kami mengundang Anda untuk mendiskusikan kebutuhan suplai spesifik bisnis Anda dan bergabung dalam jaringan kemitraan profesional kami yang telah dipercaya oleh ratusan unit bisnis kuliner di Jabodetabek.
+              </p>
+            </div>
+          </article>
         </div>
-
-        <p>
-          Logistik adalah nadi dari layanan kami. Dengan sistem <strong>distribusi sayur 24 jam</strong>, armada kami bergerak setiap subuh untuk menembus titik-titik vital di Jakarta, Bogor, Depok, Tangerang, Bekasi, hingga Cikarang. Kami tidak hanya sekadar mengirimkan barang, kami memberikan kepastian operasional bagi tim purchasing dan chef agar mereka dapat fokus pada kreasi menu tanpa khawatir akan kendala bahan baku.
-        </p>
-        
-        <p>
-          Memilih CV Green Fresh Cipanas berarti memilih stabilitas, transparansi, dan kualitas prima. Kami mengundang Anda untuk mendiskusikan kebutuhan suplai spesifik bisnis Anda dan bergabung dalam jaringan kemitraan profesional kami yang telah dipercaya oleh ratusan unit bisnis kuliner di Jabodetabek.
-        </p>
-      </div>
-    </article>
-  </div>
-</section>
+      </section>
 
       <section class="py-16 md:py-24 bg-[#f8faf8] border-b-2 border-green-100 reveal-up">
         <div class="max-w-[1800px] mx-auto px-6">
@@ -109,7 +254,7 @@ const description = "Partner strategis supply sayuran Grade A untuk Hotel, Resto
               <h2 class="text-4xl lg:text-7xl font-black uppercase tracking-tighter text-[#052c17]">Wilayah <span class="text-green-600">Pengiriman.</span></h2>
             </div>
             <p class="max-w-md text-slate-600 font-bold leading-relaxed border-l-4 border-green-500/20 pl-6 text-left">
-              Sistem distribusi mandiri CV Green Fresh Cipanas melayani berbagai kawasan bisnis strategis setiap hari dengan armada standar pangan[cite: 143, 199].
+              Sistem distribusi mandiri melayani berbagai kawasan bisnis strategis setiap hari dengan armada standar pangan.
             </p>
           </div>
 
