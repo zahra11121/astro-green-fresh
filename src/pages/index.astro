@@ -2,7 +2,7 @@
 /**
  * MAIN LANDING PAGE - CV GREEN FRESH CIPANAS
  * Mode: Full Astro (Zero Hydration Strategis)
- * Update: SEO Optimization & Schema Markup (Tanpa Review)
+ * Update: SEO Optimization & Schema Markup (Dengan offers)
  */
 import MainLayout from '@/layouts/MainLayout.astro';
 import Header from '@/components/Header.astro';
@@ -24,15 +24,18 @@ const title = "Distributor Sayuran & Supplier Sayuran Segar Terpercaya - CV Gree
 const description = "Distributor sayuran dan supplier sayuran segar Grade A untuk Hotel, Restoran, dan Catering. Distribusi langsung dari petani Cipanas dengan sistem logistik 24 jam. Terpercaya di Jabodetabek.";
 const keywords = "distributor sayuran, supplier sayuran, supplier sayur, distributor sayur segar, supplier sayuran cipanas, distributor sayuran jakarta";
 
-// Schema Markup (Tanpa Review & Aggregate Rating)
+// Base URL
+const baseUrl = "https://greenfresh.co.id";
+
+// Schema Markup (Dengan offers di setiap product)
 const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "CV Green Fresh Cipanas",
   "description": "Distributor sayuran dan supplier sayuran segar terpercaya di Cipanas, melayani Jabodetabek",
-  "image": "https://greenfresh.co.id/og-image.jpg",
-  "logo": "https://greenfresh.co.id/logo.png",
-  "url": "https://greenfresh.co.id",
+  "image": `${baseUrl}/og-image.jpg`,
+  "logo": `${baseUrl}/logo.png`,
+  "url": baseUrl,
   "telephone": "+62-812-3456-7890",
   "email": "info@greenfresh.co.id",
   "address": {
@@ -68,7 +71,14 @@ const schemaMarkup = {
         "itemOffered": {
           "@type": "Product",
           "name": "Sayuran Daun Segar",
-          "description": "Supplier sayuran daun segar grade A"
+          "description": "Supplier sayuran daun segar grade A",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "IDR",
+            "availability": "https://schema.org/InStock",
+            "url": `${baseUrl}/produk/sayuran-daun`
+          }
         }
       },
       {
@@ -76,7 +86,14 @@ const schemaMarkup = {
         "itemOffered": {
           "@type": "Product",
           "name": "Sayuran Buah Segar",
-          "description": "Distributor sayuran buah segar berkualitas"
+          "description": "Distributor sayuran buah segar berkualitas",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "IDR",
+            "availability": "https://schema.org/InStock",
+            "url": `${baseUrl}/produk/sayuran-buah`
+          }
         }
       },
       {
@@ -84,26 +101,37 @@ const schemaMarkup = {
         "itemOffered": {
           "@type": "Product",
           "name": "Paket Sayuran Restoran",
-          "description": "Paket suplai sayuran untuk restoran dan hotel"
+          "description": "Paket suplai sayuran untuk restoran dan hotel",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "IDR",
+            "availability": "https://schema.org/InStock",
+            "url": `${baseUrl}/produk/paket-restoran`
+          }
         }
       }
     ]
   },
   "potentialAction": {
     "@type": "OrderAction",
-    "target": "https://greenfresh.co.id/pesan",
+    "target": `${baseUrl}/pesan`,
     "deliveryMethod": "https://schema.org/OnSitePickup"
   },
   "makesOffer": [
     {
       "@type": "Offer",
       "name": "Distribusi Sayuran 24 Jam",
-      "description": "Layanan distribusi sayuran segar 24 jam untuk Jabodetabek"
+      "description": "Layanan distribusi sayuran segar 24 jam untuk Jabodetabek",
+      "price": "0",
+      "priceCurrency": "IDR"
     },
     {
       "@type": "Offer",
       "name": "Supplier Sayuran Hotel",
-      "description": "Pemasok sayuran premium untuk hotel bintang"
+      "description": "Pemasok sayuran premium untuk hotel bintang",
+      "price": "0",
+      "priceCurrency": "IDR"
     }
   ]
 };
@@ -115,14 +143,14 @@ const schemaMarkup = {
     <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://greenfresh.co.id" />
+    <link rel="canonical" href={baseUrl} />
     
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://greenfresh.co.id" />
-    <meta property="og:image" content="https://greenfresh.co.id/og-image.jpg" />
+    <meta property="og:url" content={baseUrl} />
+    <meta property="og:image" content={`${baseUrl}/og-image.jpg`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     
@@ -130,7 +158,7 @@ const schemaMarkup = {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://greenfresh.co.id/twitter-image.jpg" />
+    <meta name="twitter:image" content={`${baseUrl}/twitter-image.jpg`} />
     
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow" />
