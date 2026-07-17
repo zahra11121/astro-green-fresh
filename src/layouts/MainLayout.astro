@@ -1,159 +1,177 @@
 ---
-// src/layouts/MainLayout.astro
+// MainLayout.astro
+import "../styles/global.css";
 
-// 1. Set ke true untuk mengaktifkan mode simulasi mati / maintenance
-const isMaintenance = true; 
+const { 
+  title = "Greenfresh.co.id", 
+  description = "Supplier Sayur Segar B2B", 
+  canonical 
+} = Astro.props;
 
-if (isMaintenance) {
-  Astro.response.status = 503;
-  Astro.response.statusText = "Service Unavailable";
-  Astro.response.headers.set('Retry-After', '3600');
-  Astro.response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-}
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
 
-const { title = "Web Server" } = Astro.props;
+const waMessage = encodeURIComponent("Halo Green Fresh, saya ingin melakukan pemesanan sayuran. Mohon informasi stok harian dan prosedur order untuk wilayah saya. Terima kasih.");
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{isMaintenance ? "HTTP Error 503 - Service Unavailable" : title}</title>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    {isMaintenance && (
-        <style is:inline>
-            html, body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #f4f6f9;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-                color: #333;
-            }
-            .error-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
-                padding: 20px;
-                box-sizing: border-box;
-            }
-            .error-card {
-                background: #ffffff;
-                max-width: 550px;
-                width: 100%;
-                padding: 40px;
-                border-radius: 8px;
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-                border: 1px solid #e1e8ed;
-            }
-            .error-header {
-                text-align: center;
-                margin-bottom: 25px;
-            }
-            .icon-warning {
-                font-size: 3rem;
-                margin-bottom: 10px;
-            }
-            .error-header h1 {
-                font-size: 1.8rem;
-                color: #d9534f;
-                margin: 0;
-                font-weight: 700;
-            }
-            .subtitle {
-                color: #72777d;
-                font-size: 1rem;
-                margin-top: 5px;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-            }
-            hr {
-                border: 0;
-                border-top: 1px solid #e1e8ed;
-                margin: 20px 0;
-            }
-            .error-body p {
-                font-size: 1rem;
-                line-height: 1.6;
-                color: #4a5056;
-                margin-bottom: 15px;
-            }
-            .technical-details {
-                background-color: #f8f9fa;
-                border-left: 4px solid #d9534f;
-                padding: 15px 20px;
-                margin-top: 30px;
-                border-radius: 0 4px 4px 0;
-            }
-            .technical-details p {
-                margin: 0 0 8px 0;
-                font-size: 0.9rem;
-                color: #4a5056;
-            }
-            .technical-details ul {
-                margin: 0;
-                padding-left: 20px;
-                font-size: 0.85rem;
-                color: #6c757d;
-            }
-            .technical-details li {
-                margin-bottom: 5px;
-            }
-            code {
-                font-family: monospace;
-                background-color: #eaeaea;
-                padding: 2px 6px;
-                border-radius: 3px;
-                color: #bd4147;
-            }
-        </style>
-    )}
-</head>
-<body>
-    {isMaintenance ? (
-        <div class="error-wrapper">
-            <div class="error-card">
-                <div class="error-header">
-                    <div class="icon-warning">⚠️</div>
-                    <h1>HTTP Error 503</h1>
-                    <p class="subtitle">Service Temporarily Unavailable</p>
-                </div>
-                
-                <hr />
-                
-                <div class="error-body">
-                    <p>The server is currently unable to handle the request due to a temporary overloading or maintenance of the server.</p>
-                    <p>Your request cannot be processed at this time. Please try reloading the page in a few minutes.</p>
-                </div>
-                
-                <div class="technical-details">
-                    <p><strong>Technical Information:</strong></p>
-                    <ul>
-                        <li>Status: <code>503 Service Unavailable</code></li>
-                        <li>Cause: <code>Database Connection Pool Exhausted</code></li>
-                        <li>Activity ID: <code>ERR_CONN_TIMEOUT_{Math.floor(Math.random() * 9000) + 1000}</code></li>
-                    </ul>
-                </div>
-            </div>
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    
+    <slot name="head" />
+  </head>
+  <body class="antialiased font-sans">
+    <slot />
+
+    <div class="wa-widget">
+      <div id="wa-menu" class="wa-menu">
+        <div class="wa-header">
+          <strong>Hubungi Admin Green Fresh</strong>
+          <p>Silakan pilih admin untuk memesan:</p>
         </div>
-    ) : (
-        <>
-            <header>
-                {/* Navigasi normal Anda */}
-            </header>
-            <main>
-                <slot /> 
-            </main>
-            <footer>
-                {/* Footer normal Anda */}
-            </footer>
-        </>
-    )}
-</body>
+        <div class="wa-list">
+          <a href={`https://wa.me/6287700592999?text=${waMessage}`} target="_blank" rel="noopener noreferrer" class="wa-item">
+            <div class="wa-avatar">A1</div>
+            <span>Admin 1</span>
+          </a>
+          <a href={`https://wa.me/6287780937884?text=${waMessage}`} target="_blank" rel="noopener noreferrer" class="wa-item">
+            <div class="wa-avatar">A2</div>
+            <span>Admin 2</span>
+          </a>
+        </div>
+      </div>
+
+      <button id="wa-toggle" class="wa-main-button" aria-label="WhatsApp Contact">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+      </button>
+    </div>
+
+    <script>
+      const btn = document.getElementById('wa-toggle');
+      const menu = document.getElementById('wa-menu');
+
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          menu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target as Node) && !menu.contains(e.target as Node)) {
+            menu.classList.remove('active');
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
 
-<style>
+<style is:global>
+  :root {
+    --font-geist-sans: 'Geist', sans-serif;
+    --font-geist-mono: 'Geist Mono', monospace;
+  }
+  body {
+    font-family: var(--font-geist-sans);
+  }
+
+  .wa-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+  }
+
+  .wa-menu {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 280px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .wa-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .wa-header {
+    background: #22c55e;
+    color: white;
+    padding: 15px;
+  }
+
+  .wa-header p {
+    font-size: 12px;
+    margin: 5px 0 0;
+    opacity: 0.9;
+  }
+
+  .wa-list {
+    padding: 10px;
+  }
+
+  .wa-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+    gap: 12px;
+    border-radius: 10px;
+    transition: background 0.2s;
+  }
+
+  .wa-item:hover {
+    background: #f0fdf4;
+  }
+
+  .wa-avatar {
+    width: 35px;
+    height: 35px;
+    background: #e5e7eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #16a34a;
+  }
+
+  .wa-main-button {
+    width: 60px;
+    height: 60px;
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+    transition: transform 0.3s;
+  }
+
+  .wa-main-button:hover {
+    transform: scale(1.1);
+  }
 </style>
