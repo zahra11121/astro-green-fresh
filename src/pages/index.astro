@@ -2,7 +2,6 @@
 /**
  * MAIN LANDING PAGE - CV GREEN FRESH CIPANAS
  * Mode: Full Astro (Zero Hydration Strategis)
- * Update: SEO Optimization & Schema Markup (Lengkap)
  */
 import MainLayout from '@/layouts/MainLayout.astro';
 import Header from '@/components/Header.astro';
@@ -14,10 +13,12 @@ import WhoWeAre from '@/components/WhoWeAre.astro';
 import CashFlow from '@/components/CashFlow.astro';
 import EconomicImpact from '@/components/EconomicImpact.astro';
 import VisualGallery from '@/components/VisualGallery.astro';
+import ProductCatalog from '@/components/ProductCatalogClient.astro';
 
 // Icons & Data
 import { MapPin, ChevronRight } from 'lucide-react';
 import { jabodetabekCities } from '@/data/cities';
+import vegetableRawData from '../data/products.json';
 
 // SEO Optimasi
 const title = "Distributor Sayuran & Supplier Sayuran Segar Terpercaya - CV Green Fresh Cipanas";
@@ -27,235 +28,23 @@ const keywords = "distributor sayuran, supplier sayuran, supplier sayur, distrib
 // Base URL
 const baseUrl = "https://greenfresh.co.id";
 
-// Schema Markup (Lengkap dengan image, brand, shippingDetails, return policy)
-const schemaMarkup = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "CV Green Fresh Cipanas",
-  "description": "Distributor sayuran dan supplier sayuran segar terpercaya di Cipanas, melayani Jabodetabek",
-  "image": `${baseUrl}/og-image.jpg`,
-  "logo": `${baseUrl}/logo.png`,
-  "url": baseUrl,
-  "telephone": "+62-812-3456-7890",
-  "email": "info@greenfresh.co.id",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Jl. Raya Cipanas No. 123",
-    "addressLocality": "Cipanas",
-    "addressRegion": "Jawa Barat",
-    "postalCode": "43253",
-    "addressCountry": "Indonesia"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "-6.7253",
-    "longitude": "107.0394"
-  },
-  "openingHours": "Mo-Su 05:00-17:00",
-  "sameAs": [
-    "https://www.instagram.com/greenfreshcipanas",
-    "https://www.facebook.com/greenfreshcipanas"
-  ],
-  "priceRange": "$$",
-  "servesCuisine": "Indonesian Fresh Vegetables",
-  "areaServed": {
-    "@type": "City",
-    "name": "Jabodetabek"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Distribusi Sayuran Segar",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Sayuran Daun Segar",
-          "description": "Supplier sayuran daun segar grade A",
-          "image": `${baseUrl}/images/sayuran-daun.jpg`,
-          "brand": {
-            "@type": "Brand",
-            "name": "Green Fresh Cipanas"
-          },
-          "sku": "GFC-SD-001",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "IDR",
-            "availability": "https://schema.org/InStock",
-            "url": `${baseUrl}/produk/sayuran-daun`,
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": {
-                "@type": "MonetaryAmount",
-                "value": "0",
-                "currency": "IDR"
-              },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 0,
-                  "maxValue": 1,
-                  "unitCode": "DAY"
-                },
-                "transitTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 0,
-                  "maxValue": 1,
-                  "unitCode": "DAY"
-                }
-              },
-              "shippingDestination": {
-                "@type": "DefinedRegion",
-                "addressCountry": "ID"
-              }
-            },
-            "hasMerchantReturnPolicy": {
-              "@type": "MerchantReturnPolicy",
-              "applicableCountry": "ID",
-              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-            }
-          }
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Sayuran Buah Segar",
-          "description": "Distributor sayuran buah segar berkualitas",
-          "image": `${baseUrl}/images/sayuran-buah.jpg`,
-          "brand": {
-            "@type": "Brand",
-            "name": "Green Fresh Cipanas"
-          },
-          "sku": "GFC-SB-002",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "IDR",
-            "availability": "https://schema.org/InStock",
-            "url": `${baseUrl}/produk/sayuran-buah`,
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": {
-                "@type": "MonetaryAmount",
-                "value": "0",
-                "currency": "IDR"
-              },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 0,
-                  "maxValue": 1,
-                  "unitCode": "DAY"
-                },
-                "transitTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 0,
-                  "maxValue": 1,
-                  "unitCode": "DAY"
-                }
-              },
-              "shippingDestination": {
-                "@type": "DefinedRegion",
-                "addressCountry": "ID"
-              }
-            },
-            "hasMerchantReturnPolicy": {
-              "@type": "MerchantReturnPolicy",
-              "applicableCountry": "ID",
-              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-            }
-          }
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Paket Sayuran Restoran",
-          "description": "Paket suplai sayuran untuk restoran dan hotel",
-          "image": `${baseUrl}/images/paket-restoran.jpg`,
-          "brand": {
-            "@type": "Brand",
-            "name": "Green Fresh Cipanas"
-          },
-          "sku": "GFC-PR-003",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "IDR",
-            "availability": "https://schema.org/InStock",
-            "url": `${baseUrl}/produk/paket-restoran`,
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": {
-                "@type": "MonetaryAmount",
-                "value": "0",
-                "currency": "IDR"
-              },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 0,
-                  "maxValue": 1,
-                  "unitCode": "DAY"
-                },
-                "transitTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 0,
-                  "maxValue": 1,
-                  "unitCode": "DAY"
-                }
-              },
-              "shippingDestination": {
-                "@type": "DefinedRegion",
-                "addressCountry": "ID"
-              }
-            },
-            "hasMerchantReturnPolicy": {
-              "@type": "MerchantReturnPolicy",
-              "applicableCountry": "ID",
-              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "potentialAction": {
-    "@type": "OrderAction",
-    "target": `${baseUrl}/pesan`,
-    "deliveryMethod": "https://schema.org/OnSitePickup"
-  },
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "name": "Distribusi Sayuran 24 Jam",
-      "description": "Layanan distribusi sayuran segar 24 jam untuk Jabodetabek",
-      "price": "0",
-      "priceCurrency": "IDR"
-    },
-    {
-      "@type": "Offer",
-      "name": "Supplier Sayuran Hotel",
-      "description": "Pemasok sayuran premium untuk hotel bintang",
-      "price": "0",
-      "priceCurrency": "IDR"
+// Logika Unique Map untuk Product Catalog (Server-side Build)
+const uniqueMap = new Map();
+if (vegetableRawData) {
+  vegetableRawData.forEach(item => {
+    if (!uniqueMap.has(item.name)) {
+      uniqueMap.set(item.name, item);
     }
-  ]
-};
+  });
+}
+const vegetableData = Array.from(uniqueMap.values());
+
+// LCP Image untuk preload
+const lcpImage = vegetableData.length > 0 ? vegetableData[0].image : null;
 ---
 
 <MainLayout title={title} description={description} keywords={keywords}>
   <head>
-    <!-- Schema Markup -->
-    <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
-    
     <!-- Canonical URL -->
     <link rel="canonical" href={baseUrl} />
     
@@ -278,6 +67,11 @@ const schemaMarkup = {
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <link rel="sitemap" href="/sitemap.xml" />
+
+    <!-- Preload LCP Image -->
+    {lcpImage && (
+      <link rel="preload" as="image" href={lcpImage} />
+    )}
   </head>
   
   <div class="bg-[#fcfdfc] text-[#052c17] font-sans selection:bg-green-100 reveal-container">
@@ -299,71 +93,37 @@ const schemaMarkup = {
         <WhoWeAre />
       </section>
 
-      <!-- Section dengan target keyword di heading -->
+      <!-- SECTION: PRODUCT CATALOG -->
       <section class="py-16 md:py-24 bg-white border-b-2 border-green-50 reveal-up">
-        <div class="max-w-4xl mx-auto px-6">
-          <article class="prose prose-slate prose-lg max-w-none">
-            <div class="flex items-center gap-3 mb-8">
-              <div class="w-10 h-[2px] bg-[#15803d]"></div>
-              <h3 class="text-[10px] font-black text-[#15803d] uppercase tracking-[0.5em]">Industry Leadership</h3>
-            </div>
-            
-            <h1 class="text-3xl md:text-5xl font-black uppercase text-[#052c17] mb-8 tracking-tighter leading-none">
-              Distributor & Supplier Sayuran Segar <span class="text-green-600">Terintegrasi.</span>
-            </h1>
-
-            <div class="space-y-6 text-slate-600 leading-relaxed font-medium">
-              <p>
-                Sebagai <strong class="text-green-800">supplier sayuran</strong> utama yang berbasis di dataran tinggi Cipanas, CV Green Fresh Cipanas telah mendedikasikan diri untuk merevolusi rantai pasok agrikultur di Indonesia. Kami memahami bahwa tantangan terbesar bagi operasional restoran, hotel, dan katering adalah inkonsistensi kualitas dan fluktuasi harga pasar yang tidak menentu. Dengan mengadopsi model <em>Direct-Farming</em>, kami menjamin bahwa setiap komoditas yang tiba di dapur Anda adalah hasil panen terbaik yang diproses melalui standar kurasi ketat.
-              </p>
-
-              <p>
-                Keunggulan kami terletak pada integrasi hulu ke hilir. Lahan pertanian kami di Cipanas dikelola dengan teknik budidaya modern yang memperhatikan aspek kesehatan tanah dan keberlanjutan. Hal ini memungkinkan kami untuk menyediakan pasokan sayuran Grade A secara stabil sepanjang tahun, bahkan di tengah tantangan cuaca ekstrem. Sebagai <strong class="text-green-800">distributor sayuran segar</strong> terpercaya, kami memangkas jalur distribusi tradisional yang panjang, sehingga kesegaran produk (<em>crispness</em>) tetap terjaga maksimal saat pengiriman.
-              </p>
-
-              <div class="grid md:grid-cols-2 gap-8 my-12 p-8 bg-green-50 rounded-3xl border border-green-100 shadow-sm">
-                <div>
-                  <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Komitmen Kualitas</h4>
-                  <p class="text-sm">Setiap unit komoditas melewati proses sortasi manual dan pembersihan standar industri guna meminimalisir <em>rejection rate</em> di gudang mitra.</p>
-                </div>
-                <div>
-                  <h4 class="text-[#052c17] font-black uppercase text-sm mb-3 tracking-wider">Efisiensi Finansial</h4>
-                  <p class="text-sm">Kami mendukung pertumbuhan bisnis mitra melalui fleksibilitas sistem pembayaran (Term of Payment) dan transparansi faktur pajak PKP resmi.</p>
-                </div>
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
+            <div class="space-y-3">
+              <div class="flex items-center gap-2">
+                <span class="w-8 h-[1px] bg-[#15803d]"></span>
+                <h3 class="text-[10px] font-black text-[#15803d] uppercase tracking-[0.4em]">Produk Unggulan</h3>
               </div>
-
-              <p>
-                Logistik adalah nadi dari layanan kami. Dengan sistem <strong class="text-green-800">distribusi sayur 24 jam</strong>, armada kami bergerak setiap subuh untuk menembus titik-titik vital di Jakarta, Bogor, Depok, Tangerang, Bekasi, hingga Cikarang. Kami tidak hanya sekadar mengirimkan barang, kami memberikan kepastian operasional bagi tim purchasing dan chef agar mereka dapat fokus pada kreasi menu tanpa khawatir akan kendala bahan baku.
-              </p>
-              
-              <!-- Target keyword section -->
-              <div class="bg-white p-6 rounded-xl border border-green-200 shadow-sm my-8">
-                <h2 class="text-xl font-bold text-[#052c17] mb-3">Distributor & Supplier Sayuran Terpercaya</h2>
-                <p class="text-sm">
-                  CV Green Fresh Cipanas adalah <strong>distributor sayuran</strong> dan <strong>supplier sayuran</strong> terpercaya yang melayani kebutuhan bisnis kuliner di Jabodetabek dengan sistem logistik 24 jam.
-                </p>
-              </div>
-
-              <p>
-                Memilih CV Green Fresh Cipanas berarti memilih stabilitas, transparansi, dan kualitas prima. Kami mengundang Anda untuk mendiskusikan kebutuhan suplai spesifik bisnis Anda dan bergabung dalam jaringan kemitraan profesional kami yang telah dipercaya oleh ratusan unit bisnis kuliner di Jabodetabek.
+              <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-[#052c17]">
+                Katalog <span class="text-green-600">Sayuran</span>
+              </h2>
+              <p class="text-slate-600 font-bold text-sm md:text-lg max-w-2xl">
+                Lebih dari 70 jenis sayuran grade A langsung dari petani Cipanas dengan sortir premium dan stok harian stabil.
               </p>
             </div>
-          </article>
+            <a 
+              href="/katalog" 
+              class="inline-flex items-center gap-2 px-6 py-3 bg-[#15803d] text-white font-bold rounded-xl hover:bg-[#0f6b33] transition-all shadow-lg shadow-green-100 whitespace-nowrap"
+            >
+              Lihat Semua Produk
+              <ChevronRight size={18} />
+            </a>
+          </div>
+          
+          <ProductCatalog initialData={vegetableData} />
         </div>
       </section>
 
       <section class="py-16 md:py-24 bg-[#f8faf8] border-b-2 border-green-100 reveal-up">
         <div class="max-w-[1800px] mx-auto px-6">
-          <div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
-            <div class="space-y-3">
-              <div class="flex items-center gap-2">
-                <span class="w-8 h-[1px] bg-[#15803d]"></span>
-                <h3 class="text-[10px] font-black text-[#15803d] uppercase tracking-[0.4em]">Operational Excellence</h3>
-              </div>
-              <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-[#052c17]">Dokumentasi Lahan.</h2>
-              <p class="text-slate-600 font-bold text-sm md:text-lg">Transparansi proses dari sortasi hingga pengiriman akhir.</p>
-            </div>
-          </div>
           <VisualGallery />
         </div>
       </section>
