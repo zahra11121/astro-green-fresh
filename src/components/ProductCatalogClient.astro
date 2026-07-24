@@ -1,7 +1,7 @@
 ---
 /**
- * PRODUCT CATALOG - ASTRO VERSION (SEO Optimized)
- * Strategi: Full HTML Discovery & Anti-Blank Protection.
+ * PRODUCT CATALOG - ASTRO VERSION (SEO Optimized + Load More)
+ * Strategi: Full HTML Discovery, Anti-Blank Protection & Batch Pagination.
  */
 import { Search as SearchIcon, CheckCircle2 as CheckIcon, Leaf } from 'lucide-react';
 
@@ -99,6 +99,15 @@ const getCategory = (name = "") => {
       })}
     </div>
 
+    <div id="load-more-container" class="mt-16 text-center">
+      <button
+        id="load-more-btn"
+        class="bg-[#052c17] hover:bg-[#15803d] text-white font-bold text-xs md:text-sm px-8 py-4 rounded-full shadow-lg hover:shadow-green-900/20 transition-all duration-300 cursor-pointer"
+      >
+        Muat Lebih Banyak
+      </button>
+    </div>
+
     <div id="no-results" class="hidden text-center py-24 md:py-32">
       <div class="inline-block p-4 md:p-6 rounded-full bg-green-50 mb-6">
         <Leaf class="text-green-200" size={40} />
@@ -110,20 +119,17 @@ const getCategory = (name = "") => {
 </section>
 
 <style>
-  /* 1. STATE DEFAULT: Terlihat (Agar Bot SEO dan User tanpa JS tidak melihat blank) */
   .reveal-up {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* 2. STATE ANIMASI: Hanya sembunyikan jika JS aktif (class ditambahkan via script fajar) */
   :global(.js-enabled) .reveal-up {
     opacity: 0;
     transform: translateY(20px);
   }
 
-  /* 3. STATE REVEAL: Munculkan kembali saat masuk layar */
   :global(.is-visible).reveal-up,
   :global(.is-visible) .reveal-up {
     opacity: 1 !important;
@@ -132,16 +138,21 @@ const getCategory = (name = "") => {
 </style>
 
 <script>
-  // Memberi tahu CSS bahwa JavaScript aktif
   document.documentElement.classList.add('js-enabled');
 
   const setupCatalog = () => {
     const searchInput = document.getElementById('catalog-search') as HTMLInputElement;
     const categoryBtns = document.querySelectorAll('.category-btn');
-    const products = document.querySelectorAll('.product-item');
+    const products = Array.from(document.querySelectorAll('.product-item')) as HTMLElement[];
     const noResults = document.getElementById('no-results');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const loadMoreContainer = document.getElementById('load-more-container');
 
-    // Observer yang lebih agresif memantau semua elemen reveal
+    const ITEMS_PER_PAGE = 10;
+    let visibleLimit = ITEMS_PER_PAGE;
+    let currentCategory = "Semua";
+    let currentSearch = "";
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -153,36 +164,47 @@ const getCategory = (name = "") => {
       rootMargin: '0px 0px -50px 0px' 
     });
 
-    // Pantau elemen reveal secara spesifik
     document.querySelectorAll('.reveal-up, .product-item, .reveal-main').forEach(el => observer.observe(el));
 
-    // Filter Logic
-    let currentCategory = "Semua";
-    let currentSearch = "";
-
-    const filterProducts = () => {
-      let visibleCount = 0;
-      products.forEach(p => {
+    const updateDisplay = () => {
+      const filteredProducts = products.filter(p => {
         const name = p.getAttribute('data-name') || "";
         const cat = p.getAttribute('data-category') || "";
         const matchSearch = name.includes(currentSearch.toLowerCase());
         const matchCategory = currentCategory === "Semua" || cat === currentCategory;
-
-        if (matchSearch && matchCategory) {
-          (p as HTMLElement).style.display = 'flex';
-          visibleCount++;
-          // Paksa muncul jika sedang difilter
-          p.classList.add('is-visible');
-        } else {
-          (p as HTMLElement).style.display = 'none';
-        }
+        return matchSearch && matchCategory;
       });
-      noResults?.classList.toggle('hidden', visibleCount > 0);
+
+      products.forEach(p => {
+        p.style.display = 'none';
+      });
+
+      const itemsToDisplay = filteredProducts.slice(0, visibleLimit);
+      itemsToDisplay.forEach(p => {
+        p.style.display = 'flex';
+        p.classList.add('is-visible');
+      });
+
+      if (loadMoreContainer) {
+        if (filteredProducts.length > visibleLimit) {
+          loadMoreContainer.style.display = 'block';
+        } else {
+          loadMoreContainer.style.display = 'none';
+        }
+      }
+
+      noResults?.classList.toggle('hidden', filteredProducts.length > 0);
     };
+
+    loadMoreBtn?.addEventListener('click', () => {
+      visibleLimit += ITEMS_PER_PAGE;
+      updateDisplay();
+    });
 
     searchInput?.addEventListener('input', (e) => {
       currentSearch = (e.target as HTMLInputElement).value;
-      filterProducts();
+      visibleLimit = ITEMS_PER_PAGE;
+      updateDisplay();
     });
 
     categoryBtns.forEach(btn => {
@@ -193,14 +215,16 @@ const getCategory = (name = "") => {
         });
         btn.classList.remove('bg-green-50', 'text-[#15803d]');
         btn.classList.add('bg-[#052c17]', 'text-white', 'shadow-lg');
+        
         currentCategory = btn.getAttribute('data-category-btn') || "Semua";
-        filterProducts();
+        visibleLimit = ITEMS_PER_PAGE;
+        updateDisplay();
       });
     });
+
+    updateDisplay();
   };
 
-  // Jalankan init
   setupCatalog();
-  // Support Astro View Transitions
   document.addEventListener('astro:after-swap', setupCatalog);
 </script>
